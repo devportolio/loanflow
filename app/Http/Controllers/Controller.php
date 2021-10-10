@@ -11,4 +11,9 @@ use App\Traits\ApiResponser;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests, ApiResponser;
+
+    public function jsonResponse($data)
+    {
+        return response()->json($data);
+    }
 }

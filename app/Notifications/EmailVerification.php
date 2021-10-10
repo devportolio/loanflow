@@ -18,7 +18,10 @@ class EmailVerification extends VerifyEmailBase
             return call_user_func(static::$toMailCallback, $notifiable);
         }
 
-        $spa_url = config('app.frontend_url')."?email-verify-url=".$this->verificationUrl($notifiable);
+        // Replace & with * for frontend encoding
+        $frontend_url = str_replace('&', '*', $this->verificationUrl($notifiable));
+
+        $spa_url = config('app.frontend_url')."/verify-email?url=".$frontend_url;
 
         return (new MailMessage)
             ->subject('Verify Email Address')

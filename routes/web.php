@@ -2,4 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', fn() => "Waiting for frontend");
+Route::get('{any}', fn() => view('index'))->where('any', '.*');

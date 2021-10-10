@@ -14,7 +14,7 @@ use App\Notifications\EmailVerification;
 class UserService
 {
 
-    private function getAuthUser()
+    public function getAuthUser()
     {
         return new UserResource(auth()->user());
     }

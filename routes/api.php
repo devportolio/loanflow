@@ -12,3 +12,8 @@ Route::post('forgot-password', 'User\PasswordController@forgotPassword')->name('
 Route::post('reset-password', 'User\PasswordController@resetPassword')->name('reset-password');
 
 Route::get('verify-email/{id}/{hash}', 'User\EmailVerificationController@verify')->name('verification.verify')->middleware('auth:sanctum');
+
+
+Route::group(['middleware' => ['auth:sanctum']], function() {
+    Route::get('me', 'User\UserController@show')->name('user');
+});

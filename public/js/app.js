@@ -12,6 +12,3518 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
+/***/ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "__DO_NOT_USE__ActionTypes": () => (/* reexport safe */ redux__WEBPACK_IMPORTED_MODULE_0__.__DO_NOT_USE__ActionTypes),
+/* harmony export */   "applyMiddleware": () => (/* reexport safe */ redux__WEBPACK_IMPORTED_MODULE_0__.applyMiddleware),
+/* harmony export */   "bindActionCreators": () => (/* reexport safe */ redux__WEBPACK_IMPORTED_MODULE_0__.bindActionCreators),
+/* harmony export */   "combineReducers": () => (/* reexport safe */ redux__WEBPACK_IMPORTED_MODULE_0__.combineReducers),
+/* harmony export */   "compose": () => (/* reexport safe */ redux__WEBPACK_IMPORTED_MODULE_0__.compose),
+/* harmony export */   "createStore": () => (/* reexport safe */ redux__WEBPACK_IMPORTED_MODULE_0__.createStore),
+/* harmony export */   "MiddlewareArray": () => (/* binding */ MiddlewareArray),
+/* harmony export */   "configureStore": () => (/* binding */ configureStore),
+/* harmony export */   "createAction": () => (/* binding */ createAction),
+/* harmony export */   "createAsyncThunk": () => (/* binding */ createAsyncThunk),
+/* harmony export */   "createDraftSafeSelector": () => (/* binding */ createDraftSafeSelector),
+/* harmony export */   "createEntityAdapter": () => (/* binding */ createEntityAdapter),
+/* harmony export */   "createImmutableStateInvariantMiddleware": () => (/* binding */ createImmutableStateInvariantMiddleware),
+/* harmony export */   "createNextState": () => (/* reexport safe */ immer__WEBPACK_IMPORTED_MODULE_2__["default"]),
+/* harmony export */   "createReducer": () => (/* binding */ createReducer),
+/* harmony export */   "createSelector": () => (/* reexport safe */ reselect__WEBPACK_IMPORTED_MODULE_1__.createSelector),
+/* harmony export */   "createSerializableStateInvariantMiddleware": () => (/* binding */ createSerializableStateInvariantMiddleware),
+/* harmony export */   "createSlice": () => (/* binding */ createSlice),
+/* harmony export */   "current": () => (/* reexport safe */ immer__WEBPACK_IMPORTED_MODULE_2__.current),
+/* harmony export */   "findNonSerializableValue": () => (/* binding */ findNonSerializableValue),
+/* harmony export */   "freeze": () => (/* reexport safe */ immer__WEBPACK_IMPORTED_MODULE_2__.freeze),
+/* harmony export */   "getDefaultMiddleware": () => (/* binding */ getDefaultMiddleware),
+/* harmony export */   "getType": () => (/* binding */ getType),
+/* harmony export */   "isAllOf": () => (/* binding */ isAllOf),
+/* harmony export */   "isAnyOf": () => (/* binding */ isAnyOf),
+/* harmony export */   "isAsyncThunkAction": () => (/* binding */ isAsyncThunkAction),
+/* harmony export */   "isDraft": () => (/* reexport safe */ immer__WEBPACK_IMPORTED_MODULE_2__.isDraft),
+/* harmony export */   "isFulfilled": () => (/* binding */ isFulfilled),
+/* harmony export */   "isImmutableDefault": () => (/* binding */ isImmutableDefault),
+/* harmony export */   "isPending": () => (/* binding */ isPending),
+/* harmony export */   "isPlain": () => (/* binding */ isPlain),
+/* harmony export */   "isPlainObject": () => (/* binding */ isPlainObject),
+/* harmony export */   "isRejected": () => (/* binding */ isRejected),
+/* harmony export */   "isRejectedWithValue": () => (/* binding */ isRejectedWithValue),
+/* harmony export */   "miniSerializeError": () => (/* binding */ miniSerializeError),
+/* harmony export */   "nanoid": () => (/* binding */ nanoid),
+/* harmony export */   "original": () => (/* reexport safe */ immer__WEBPACK_IMPORTED_MODULE_2__.original),
+/* harmony export */   "unwrapResult": () => (/* binding */ unwrapResult)
+/* harmony export */ });
+/* harmony import */ var immer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! immer */ "./node_modules/immer/dist/immer.esm.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reselect */ "./node_modules/reselect/es/index.js");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __spreadArray = (undefined && undefined.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = function (obj, key, value) { return key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value: value }) : obj[key] = value; };
+var __spreadValues = function (a, b) {
+    for (var prop in b || (b = {}))
+        if (__hasOwnProp.call(b, prop))
+            __defNormalProp(a, prop, b[prop]);
+    if (__getOwnPropSymbols)
+        for (var _i = 0, _b = __getOwnPropSymbols(b); _i < _b.length; _i++) {
+            var prop = _b[_i];
+            if (__propIsEnum.call(b, prop))
+                __defNormalProp(a, prop, b[prop]);
+        }
+    return a;
+};
+var __spreadProps = function (a, b) { return __defProps(a, __getOwnPropDescs(b)); };
+var __async = function (__this, __arguments, generator) {
+    return new Promise(function (resolve, reject) {
+        var fulfilled = function (value) {
+            try {
+                step(generator.next(value));
+            }
+            catch (e) {
+                reject(e);
+            }
+        };
+        var rejected = function (value) {
+            try {
+                step(generator.throw(value));
+            }
+            catch (e) {
+                reject(e);
+            }
+        };
+        var step = function (x) { return x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected); };
+        step((generator = generator.apply(__this, __arguments)).next());
+    });
+};
+// src/index.ts
+
+
+
+
+// src/createDraftSafeSelector.ts
+
+
+var createDraftSafeSelector = function () {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    var selector = reselect__WEBPACK_IMPORTED_MODULE_1__.createSelector.apply(void 0, args);
+    var wrappedSelector = function (value) {
+        var rest = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            rest[_i - 1] = arguments[_i];
+        }
+        return selector.apply(void 0, __spreadArray([(0,immer__WEBPACK_IMPORTED_MODULE_2__.isDraft)(value) ? (0,immer__WEBPACK_IMPORTED_MODULE_2__.current)(value) : value], rest));
+    };
+    return wrappedSelector;
+};
+// src/configureStore.ts
+
+// src/devtoolsExtension.ts
+
+var composeWithDevTools = typeof window !== "undefined" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : function () {
+    if (arguments.length === 0)
+        return void 0;
+    if (typeof arguments[0] === "object")
+        return redux__WEBPACK_IMPORTED_MODULE_0__.compose;
+    return redux__WEBPACK_IMPORTED_MODULE_0__.compose.apply(null, arguments);
+};
+var devToolsEnhancer = typeof window !== "undefined" && window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__ : function () {
+    return function (noop) {
+        return noop;
+    };
+};
+// src/isPlainObject.ts
+function isPlainObject(value) {
+    if (typeof value !== "object" || value === null)
+        return false;
+    var proto = value;
+    while (Object.getPrototypeOf(proto) !== null) {
+        proto = Object.getPrototypeOf(proto);
+    }
+    return Object.getPrototypeOf(value) === proto;
+}
+// src/getDefaultMiddleware.ts
+
+// src/utils.ts
+function getTimeMeasureUtils(maxDelay, fnName) {
+    var elapsed = 0;
+    return {
+        measureTime: function (fn) {
+            var started = Date.now();
+            try {
+                return fn();
+            }
+            finally {
+                var finished = Date.now();
+                elapsed += finished - started;
+            }
+        },
+        warnIfExceeded: function () {
+            if (elapsed > maxDelay) {
+                console.warn(fnName + " took " + elapsed + "ms, which is more than the warning threshold of " + maxDelay + "ms. \nIf your state or actions are very large, you may want to disable the middleware as it might cause too much of a slowdown in development mode. See https://redux-toolkit.js.org/api/getDefaultMiddleware for instructions.\nIt is disabled in production builds, so you don't need to worry about that.");
+            }
+        }
+    };
+}
+var MiddlewareArray = /** @class */ (function (_super) {
+    __extends(MiddlewareArray, _super);
+    function MiddlewareArray() {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        var _this = _super.apply(this, args) || this;
+        Object.setPrototypeOf(_this, MiddlewareArray.prototype);
+        return _this;
+    }
+    Object.defineProperty(MiddlewareArray, Symbol.species, {
+        get: function () {
+            return MiddlewareArray;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MiddlewareArray.prototype.concat = function () {
+        var arr = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            arr[_i] = arguments[_i];
+        }
+        return _super.prototype.concat.apply(this, arr);
+    };
+    MiddlewareArray.prototype.prepend = function () {
+        var arr = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            arr[_i] = arguments[_i];
+        }
+        if (arr.length === 1 && Array.isArray(arr[0])) {
+            return new (MiddlewareArray.bind.apply(MiddlewareArray, __spreadArray([void 0], arr[0].concat(this))))();
+        }
+        return new (MiddlewareArray.bind.apply(MiddlewareArray, __spreadArray([void 0], arr.concat(this))))();
+    };
+    return MiddlewareArray;
+}(Array));
+// src/immutableStateInvariantMiddleware.ts
+var isProduction = "development" === "production";
+var prefix = "Invariant failed";
+function invariant(condition, message) {
+    if (condition) {
+        return;
+    }
+    if (isProduction) {
+        throw new Error(prefix);
+    }
+    throw new Error(prefix + ": " + (message || ""));
+}
+function stringify(obj, serializer, indent, decycler) {
+    return JSON.stringify(obj, getSerialize(serializer, decycler), indent);
+}
+function getSerialize(serializer, decycler) {
+    var stack = [], keys = [];
+    if (!decycler)
+        decycler = function (_, value) {
+            if (stack[0] === value)
+                return "[Circular ~]";
+            return "[Circular ~." + keys.slice(0, stack.indexOf(value)).join(".") + "]";
+        };
+    return function (key, value) {
+        if (stack.length > 0) {
+            var thisPos = stack.indexOf(this);
+            ~thisPos ? stack.splice(thisPos + 1) : stack.push(this);
+            ~thisPos ? keys.splice(thisPos, Infinity, key) : keys.push(key);
+            if (~stack.indexOf(value))
+                value = decycler.call(this, key, value);
+        }
+        else
+            stack.push(value);
+        return serializer == null ? value : serializer.call(this, key, value);
+    };
+}
+function isImmutableDefault(value) {
+    return typeof value !== "object" || value === null || typeof value === "undefined" || Object.isFrozen(value);
+}
+function trackForMutations(isImmutable, ignorePaths, obj) {
+    var trackedProperties = trackProperties(isImmutable, ignorePaths, obj);
+    return {
+        detectMutations: function () {
+            return detectMutations(isImmutable, ignorePaths, trackedProperties, obj);
+        }
+    };
+}
+function trackProperties(isImmutable, ignorePaths, obj, path) {
+    if (ignorePaths === void 0) { ignorePaths = []; }
+    if (path === void 0) { path = ""; }
+    var tracked = { value: obj };
+    if (!isImmutable(obj)) {
+        tracked.children = {};
+        for (var key in obj) {
+            var childPath = path ? path + "." + key : key;
+            if (ignorePaths.length && ignorePaths.indexOf(childPath) !== -1) {
+                continue;
+            }
+            tracked.children[key] = trackProperties(isImmutable, ignorePaths, obj[key], childPath);
+        }
+    }
+    return tracked;
+}
+function detectMutations(isImmutable, ignorePaths, trackedProperty, obj, sameParentRef, path) {
+    if (ignorePaths === void 0) { ignorePaths = []; }
+    if (sameParentRef === void 0) { sameParentRef = false; }
+    if (path === void 0) { path = ""; }
+    var prevObj = trackedProperty ? trackedProperty.value : void 0;
+    var sameRef = prevObj === obj;
+    if (sameParentRef && !sameRef && !Number.isNaN(obj)) {
+        return { wasMutated: true, path: path };
+    }
+    if (isImmutable(prevObj) || isImmutable(obj)) {
+        return { wasMutated: false };
+    }
+    var keysToDetect = {};
+    for (var key in trackedProperty.children) {
+        keysToDetect[key] = true;
+    }
+    for (var key in obj) {
+        keysToDetect[key] = true;
+    }
+    for (var key in keysToDetect) {
+        var childPath = path ? path + "." + key : key;
+        if (ignorePaths.length && ignorePaths.indexOf(childPath) !== -1) {
+            continue;
+        }
+        var result = detectMutations(isImmutable, ignorePaths, trackedProperty.children[key], obj[key], sameRef, childPath);
+        if (result.wasMutated) {
+            return result;
+        }
+    }
+    return { wasMutated: false };
+}
+function createImmutableStateInvariantMiddleware(options) {
+    if (options === void 0) { options = {}; }
+    if (false) {}
+    var _b = options.isImmutable, isImmutable = _b === void 0 ? isImmutableDefault : _b, ignoredPaths = options.ignoredPaths, _c = options.warnAfter, warnAfter = _c === void 0 ? 32 : _c, ignore = options.ignore;
+    ignoredPaths = ignoredPaths || ignore;
+    var track = trackForMutations.bind(null, isImmutable, ignoredPaths);
+    return function (_b) {
+        var getState = _b.getState;
+        var state = getState();
+        var tracker = track(state);
+        var result;
+        return function (next) { return function (action) {
+            var measureUtils = getTimeMeasureUtils(warnAfter, "ImmutableStateInvariantMiddleware");
+            measureUtils.measureTime(function () {
+                state = getState();
+                result = tracker.detectMutations();
+                tracker = track(state);
+                invariant(!result.wasMutated, "A state mutation was detected between dispatches, in the path '" + (result.path || "") + "'.  This may cause incorrect behavior. (https://redux.js.org/style-guide/style-guide#do-not-mutate-state)");
+            });
+            var dispatchedAction = next(action);
+            measureUtils.measureTime(function () {
+                state = getState();
+                result = tracker.detectMutations();
+                tracker = track(state);
+                result.wasMutated && invariant(!result.wasMutated, "A state mutation was detected inside a dispatch, in the path: " + (result.path || "") + ". Take a look at the reducer(s) handling the action " + stringify(action) + ". (https://redux.js.org/style-guide/style-guide#do-not-mutate-state)");
+            });
+            measureUtils.warnIfExceeded();
+            return dispatchedAction;
+        }; };
+    };
+}
+// src/serializableStateInvariantMiddleware.ts
+function isPlain(val) {
+    var type = typeof val;
+    return type === "undefined" || val === null || type === "string" || type === "boolean" || type === "number" || Array.isArray(val) || isPlainObject(val);
+}
+function findNonSerializableValue(value, path, isSerializable, getEntries, ignoredPaths) {
+    if (path === void 0) { path = ""; }
+    if (isSerializable === void 0) { isSerializable = isPlain; }
+    if (ignoredPaths === void 0) { ignoredPaths = []; }
+    var foundNestedSerializable;
+    if (!isSerializable(value)) {
+        return {
+            keyPath: path || "<root>",
+            value: value
+        };
+    }
+    if (typeof value !== "object" || value === null) {
+        return false;
+    }
+    var entries = getEntries != null ? getEntries(value) : Object.entries(value);
+    var hasIgnoredPaths = ignoredPaths.length > 0;
+    for (var _i = 0, entries_1 = entries; _i < entries_1.length; _i++) {
+        var _b = entries_1[_i], key = _b[0], nestedValue = _b[1];
+        var nestedPath = path ? path + "." + key : key;
+        if (hasIgnoredPaths && ignoredPaths.indexOf(nestedPath) >= 0) {
+            continue;
+        }
+        if (!isSerializable(nestedValue)) {
+            return {
+                keyPath: nestedPath,
+                value: nestedValue
+            };
+        }
+        if (typeof nestedValue === "object") {
+            foundNestedSerializable = findNonSerializableValue(nestedValue, nestedPath, isSerializable, getEntries, ignoredPaths);
+            if (foundNestedSerializable) {
+                return foundNestedSerializable;
+            }
+        }
+    }
+    return false;
+}
+function createSerializableStateInvariantMiddleware(options) {
+    if (options === void 0) { options = {}; }
+    if (false) {}
+    var _b = options.isSerializable, isSerializable = _b === void 0 ? isPlain : _b, getEntries = options.getEntries, _c = options.ignoredActions, ignoredActions = _c === void 0 ? [] : _c, _d = options.ignoredActionPaths, ignoredActionPaths = _d === void 0 ? ["meta.arg", "meta.baseQueryMeta"] : _d, _e = options.ignoredPaths, ignoredPaths = _e === void 0 ? [] : _e, _f = options.warnAfter, warnAfter = _f === void 0 ? 32 : _f, _g = options.ignoreState, ignoreState = _g === void 0 ? false : _g;
+    return function (storeAPI) { return function (next) { return function (action) {
+        if (ignoredActions.length && ignoredActions.indexOf(action.type) !== -1) {
+            return next(action);
+        }
+        var measureUtils = getTimeMeasureUtils(warnAfter, "SerializableStateInvariantMiddleware");
+        measureUtils.measureTime(function () {
+            var foundActionNonSerializableValue = findNonSerializableValue(action, "", isSerializable, getEntries, ignoredActionPaths);
+            if (foundActionNonSerializableValue) {
+                var keyPath = foundActionNonSerializableValue.keyPath, value = foundActionNonSerializableValue.value;
+                console.error("A non-serializable value was detected in an action, in the path: `" + keyPath + "`. Value:", value, "\nTake a look at the logic that dispatched this action: ", action, "\n(See https://redux.js.org/faq/actions#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants)", "\n(To allow non-serializable values see: https://redux-toolkit.js.org/usage/usage-guide#working-with-non-serializable-data)");
+            }
+        });
+        var result = next(action);
+        if (!ignoreState) {
+            measureUtils.measureTime(function () {
+                var state = storeAPI.getState();
+                var foundStateNonSerializableValue = findNonSerializableValue(state, "", isSerializable, getEntries, ignoredPaths);
+                if (foundStateNonSerializableValue) {
+                    var keyPath = foundStateNonSerializableValue.keyPath, value = foundStateNonSerializableValue.value;
+                    console.error("A non-serializable value was detected in the state, in the path: `" + keyPath + "`. Value:", value, "\nTake a look at the reducer(s) handling this action type: " + action.type + ".\n(See https://redux.js.org/faq/organizing-state#can-i-put-functions-promises-or-other-non-serializable-items-in-my-store-state)");
+                }
+            });
+            measureUtils.warnIfExceeded();
+        }
+        return result;
+    }; }; };
+}
+// src/getDefaultMiddleware.ts
+function isBoolean(x) {
+    return typeof x === "boolean";
+}
+function curryGetDefaultMiddleware() {
+    return function curriedGetDefaultMiddleware(options) {
+        return getDefaultMiddleware(options);
+    };
+}
+function getDefaultMiddleware(options) {
+    if (options === void 0) { options = {}; }
+    var _b = options.thunk, thunk = _b === void 0 ? true : _b, _c = options.immutableCheck, immutableCheck = _c === void 0 ? true : _c, _d = options.serializableCheck, serializableCheck = _d === void 0 ? true : _d;
+    var middlewareArray = new MiddlewareArray();
+    if (thunk) {
+        if (isBoolean(thunk)) {
+            middlewareArray.push(redux_thunk__WEBPACK_IMPORTED_MODULE_3__["default"]);
+        }
+        else {
+            middlewareArray.push(redux_thunk__WEBPACK_IMPORTED_MODULE_3__["default"].withExtraArgument(thunk.extraArgument));
+        }
+    }
+    if (true) {
+        if (immutableCheck) {
+            var immutableOptions = {};
+            if (!isBoolean(immutableCheck)) {
+                immutableOptions = immutableCheck;
+            }
+            middlewareArray.unshift(createImmutableStateInvariantMiddleware(immutableOptions));
+        }
+        if (serializableCheck) {
+            var serializableOptions = {};
+            if (!isBoolean(serializableCheck)) {
+                serializableOptions = serializableCheck;
+            }
+            middlewareArray.push(createSerializableStateInvariantMiddleware(serializableOptions));
+        }
+    }
+    return middlewareArray;
+}
+// src/configureStore.ts
+var IS_PRODUCTION = "development" === "production";
+function configureStore(options) {
+    var curriedGetDefaultMiddleware = curryGetDefaultMiddleware();
+    var _b = options || {}, _c = _b.reducer, reducer = _c === void 0 ? void 0 : _c, _d = _b.middleware, middleware = _d === void 0 ? curriedGetDefaultMiddleware() : _d, _e = _b.devTools, devTools = _e === void 0 ? true : _e, _f = _b.preloadedState, preloadedState = _f === void 0 ? void 0 : _f, _g = _b.enhancers, enhancers = _g === void 0 ? void 0 : _g;
+    var rootReducer;
+    if (typeof reducer === "function") {
+        rootReducer = reducer;
+    }
+    else if (isPlainObject(reducer)) {
+        rootReducer = (0,redux__WEBPACK_IMPORTED_MODULE_0__.combineReducers)(reducer);
+    }
+    else {
+        throw new Error('"reducer" is a required argument, and must be a function or an object of functions that can be passed to combineReducers');
+    }
+    var finalMiddleware = middleware;
+    if (typeof finalMiddleware === "function") {
+        finalMiddleware = finalMiddleware(curriedGetDefaultMiddleware);
+        if (!IS_PRODUCTION && !Array.isArray(finalMiddleware)) {
+            throw new Error("when using a middleware builder function, an array of middleware must be returned");
+        }
+    }
+    if (!IS_PRODUCTION && finalMiddleware.some(function (item) { return typeof item !== "function"; })) {
+        throw new Error("each middleware provided to configureStore must be a function");
+    }
+    var middlewareEnhancer = redux__WEBPACK_IMPORTED_MODULE_0__.applyMiddleware.apply(void 0, finalMiddleware);
+    var finalCompose = redux__WEBPACK_IMPORTED_MODULE_0__.compose;
+    if (devTools) {
+        finalCompose = composeWithDevTools(__spreadValues({
+            trace: !IS_PRODUCTION
+        }, typeof devTools === "object" && devTools));
+    }
+    var storeEnhancers = [middlewareEnhancer];
+    if (Array.isArray(enhancers)) {
+        storeEnhancers = __spreadArray([middlewareEnhancer], enhancers);
+    }
+    else if (typeof enhancers === "function") {
+        storeEnhancers = enhancers(storeEnhancers);
+    }
+    var composedEnhancer = finalCompose.apply(void 0, storeEnhancers);
+    return (0,redux__WEBPACK_IMPORTED_MODULE_0__.createStore)(rootReducer, preloadedState, composedEnhancer);
+}
+// src/createAction.ts
+function createAction(type, prepareAction) {
+    function actionCreator() {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        if (prepareAction) {
+            var prepared = prepareAction.apply(void 0, args);
+            if (!prepared) {
+                throw new Error("prepareAction did not return an object");
+            }
+            return __spreadValues(__spreadValues({
+                type: type,
+                payload: prepared.payload
+            }, "meta" in prepared && { meta: prepared.meta }), "error" in prepared && { error: prepared.error });
+        }
+        return { type: type, payload: args[0] };
+    }
+    actionCreator.toString = function () { return "" + type; };
+    actionCreator.type = type;
+    actionCreator.match = function (action) { return action.type === type; };
+    return actionCreator;
+}
+function isFSA(action) {
+    return isPlainObject(action) && typeof action.type === "string" && Object.keys(action).every(isValidKey);
+}
+function isValidKey(key) {
+    return ["type", "payload", "error", "meta"].indexOf(key) > -1;
+}
+function getType(actionCreator) {
+    return "" + actionCreator;
+}
+// src/createReducer.ts
+
+// src/mapBuilders.ts
+function executeReducerBuilderCallback(builderCallback) {
+    var actionsMap = {};
+    var actionMatchers = [];
+    var defaultCaseReducer;
+    var builder = {
+        addCase: function (typeOrActionCreator, reducer) {
+            if (true) {
+                if (actionMatchers.length > 0) {
+                    throw new Error("`builder.addCase` should only be called before calling `builder.addMatcher`");
+                }
+                if (defaultCaseReducer) {
+                    throw new Error("`builder.addCase` should only be called before calling `builder.addDefaultCase`");
+                }
+            }
+            var type = typeof typeOrActionCreator === "string" ? typeOrActionCreator : typeOrActionCreator.type;
+            if (type in actionsMap) {
+                throw new Error("addCase cannot be called with two reducers for the same action type");
+            }
+            actionsMap[type] = reducer;
+            return builder;
+        },
+        addMatcher: function (matcher, reducer) {
+            if (true) {
+                if (defaultCaseReducer) {
+                    throw new Error("`builder.addMatcher` should only be called before calling `builder.addDefaultCase`");
+                }
+            }
+            actionMatchers.push({ matcher: matcher, reducer: reducer });
+            return builder;
+        },
+        addDefaultCase: function (reducer) {
+            if (true) {
+                if (defaultCaseReducer) {
+                    throw new Error("`builder.addDefaultCase` can only be called once");
+                }
+            }
+            defaultCaseReducer = reducer;
+            return builder;
+        }
+    };
+    builderCallback(builder);
+    return [actionsMap, actionMatchers, defaultCaseReducer];
+}
+// src/createReducer.ts
+function createReducer(initialState, mapOrBuilderCallback, actionMatchers, defaultCaseReducer) {
+    if (actionMatchers === void 0) { actionMatchers = []; }
+    var _b = typeof mapOrBuilderCallback === "function" ? executeReducerBuilderCallback(mapOrBuilderCallback) : [mapOrBuilderCallback, actionMatchers, defaultCaseReducer], actionsMap = _b[0], finalActionMatchers = _b[1], finalDefaultCaseReducer = _b[2];
+    var frozenInitialState = (0,immer__WEBPACK_IMPORTED_MODULE_2__["default"])(initialState, function () {
+    });
+    return function (state, action) {
+        if (state === void 0) { state = frozenInitialState; }
+        var caseReducers = __spreadArray([
+            actionsMap[action.type]
+        ], finalActionMatchers.filter(function (_b) {
+            var matcher = _b.matcher;
+            return matcher(action);
+        }).map(function (_b) {
+            var reducer = _b.reducer;
+            return reducer;
+        }));
+        if (caseReducers.filter(function (cr) { return !!cr; }).length === 0) {
+            caseReducers = [finalDefaultCaseReducer];
+        }
+        return caseReducers.reduce(function (previousState, caseReducer) {
+            if (caseReducer) {
+                if ((0,immer__WEBPACK_IMPORTED_MODULE_2__.isDraft)(previousState)) {
+                    var draft = previousState;
+                    var result = caseReducer(draft, action);
+                    if (typeof result === "undefined") {
+                        return previousState;
+                    }
+                    return result;
+                }
+                else if (!(0,immer__WEBPACK_IMPORTED_MODULE_2__.isDraftable)(previousState)) {
+                    var result = caseReducer(previousState, action);
+                    if (typeof result === "undefined") {
+                        if (previousState === null) {
+                            return previousState;
+                        }
+                        throw Error("A case reducer on a non-draftable value must not return undefined");
+                    }
+                    return result;
+                }
+                else {
+                    return (0,immer__WEBPACK_IMPORTED_MODULE_2__["default"])(previousState, function (draft) {
+                        return caseReducer(draft, action);
+                    });
+                }
+            }
+            return previousState;
+        }, state);
+    };
+}
+// src/createSlice.ts
+function getType2(slice, actionKey) {
+    return slice + "/" + actionKey;
+}
+function createSlice(options) {
+    var name = options.name, initialState = options.initialState;
+    if (!name) {
+        throw new Error("`name` is a required option for createSlice");
+    }
+    var reducers = options.reducers || {};
+    var _b = typeof options.extraReducers === "function" ? executeReducerBuilderCallback(options.extraReducers) : [options.extraReducers], _c = _b[0], extraReducers = _c === void 0 ? {} : _c, _d = _b[1], actionMatchers = _d === void 0 ? [] : _d, _e = _b[2], defaultCaseReducer = _e === void 0 ? void 0 : _e;
+    var reducerNames = Object.keys(reducers);
+    var sliceCaseReducersByName = {};
+    var sliceCaseReducersByType = {};
+    var actionCreators = {};
+    reducerNames.forEach(function (reducerName) {
+        var maybeReducerWithPrepare = reducers[reducerName];
+        var type = getType2(name, reducerName);
+        var caseReducer;
+        var prepareCallback;
+        if ("reducer" in maybeReducerWithPrepare) {
+            caseReducer = maybeReducerWithPrepare.reducer;
+            prepareCallback = maybeReducerWithPrepare.prepare;
+        }
+        else {
+            caseReducer = maybeReducerWithPrepare;
+        }
+        sliceCaseReducersByName[reducerName] = caseReducer;
+        sliceCaseReducersByType[type] = caseReducer;
+        actionCreators[reducerName] = prepareCallback ? createAction(type, prepareCallback) : createAction(type);
+    });
+    var finalCaseReducers = __spreadValues(__spreadValues({}, extraReducers), sliceCaseReducersByType);
+    var reducer = createReducer(initialState, finalCaseReducers, actionMatchers, defaultCaseReducer);
+    return {
+        name: name,
+        reducer: reducer,
+        actions: actionCreators,
+        caseReducers: sliceCaseReducersByName
+    };
+}
+// src/entities/entity_state.ts
+function getInitialEntityState() {
+    return {
+        ids: [],
+        entities: {}
+    };
+}
+function createInitialStateFactory() {
+    function getInitialState(additionalState) {
+        if (additionalState === void 0) { additionalState = {}; }
+        return Object.assign(getInitialEntityState(), additionalState);
+    }
+    return { getInitialState: getInitialState };
+}
+// src/entities/state_selectors.ts
+function createSelectorsFactory() {
+    function getSelectors(selectState) {
+        var selectIds = function (state) { return state.ids; };
+        var selectEntities = function (state) { return state.entities; };
+        var selectAll = createDraftSafeSelector(selectIds, selectEntities, function (ids, entities) { return ids.map(function (id) { return entities[id]; }); });
+        var selectId = function (_, id) { return id; };
+        var selectById = function (entities, id) { return entities[id]; };
+        var selectTotal = createDraftSafeSelector(selectIds, function (ids) { return ids.length; });
+        if (!selectState) {
+            return {
+                selectIds: selectIds,
+                selectEntities: selectEntities,
+                selectAll: selectAll,
+                selectTotal: selectTotal,
+                selectById: createDraftSafeSelector(selectEntities, selectId, selectById)
+            };
+        }
+        var selectGlobalizedEntities = createDraftSafeSelector(selectState, selectEntities);
+        return {
+            selectIds: createDraftSafeSelector(selectState, selectIds),
+            selectEntities: selectGlobalizedEntities,
+            selectAll: createDraftSafeSelector(selectState, selectAll),
+            selectTotal: createDraftSafeSelector(selectState, selectTotal),
+            selectById: createDraftSafeSelector(selectGlobalizedEntities, selectId, selectById)
+        };
+    }
+    return { getSelectors: getSelectors };
+}
+// src/entities/state_adapter.ts
+
+function createSingleArgumentStateOperator(mutator) {
+    var operator = createStateOperator(function (_, state) { return mutator(state); });
+    return function operation(state) {
+        return operator(state, void 0);
+    };
+}
+function createStateOperator(mutator) {
+    return function operation(state, arg) {
+        function isPayloadActionArgument(arg2) {
+            return isFSA(arg2);
+        }
+        var runMutator = function (draft) {
+            if (isPayloadActionArgument(arg)) {
+                mutator(arg.payload, draft);
+            }
+            else {
+                mutator(arg, draft);
+            }
+        };
+        if ((0,immer__WEBPACK_IMPORTED_MODULE_2__.isDraft)(state)) {
+            runMutator(state);
+            return state;
+        }
+        else {
+            return (0,immer__WEBPACK_IMPORTED_MODULE_2__["default"])(state, runMutator);
+        }
+    };
+}
+// src/entities/utils.ts
+function selectIdValue(entity, selectId) {
+    var key = selectId(entity);
+    if ( true && key === void 0) {
+        console.warn("The entity passed to the `selectId` implementation returned undefined.", "You should probably provide your own `selectId` implementation.", "The entity that was passed:", entity, "The `selectId` implementation:", selectId.toString());
+    }
+    return key;
+}
+function ensureEntitiesArray(entities) {
+    if (!Array.isArray(entities)) {
+        entities = Object.values(entities);
+    }
+    return entities;
+}
+function splitAddedUpdatedEntities(newEntities, selectId, state) {
+    newEntities = ensureEntitiesArray(newEntities);
+    var added = [];
+    var updated = [];
+    for (var _i = 0, newEntities_1 = newEntities; _i < newEntities_1.length; _i++) {
+        var entity = newEntities_1[_i];
+        var id = selectIdValue(entity, selectId);
+        if (id in state.entities) {
+            updated.push({ id: id, changes: entity });
+        }
+        else {
+            added.push(entity);
+        }
+    }
+    return [added, updated];
+}
+// src/entities/unsorted_state_adapter.ts
+function createUnsortedStateAdapter(selectId) {
+    function addOneMutably(entity, state) {
+        var key = selectIdValue(entity, selectId);
+        if (key in state.entities) {
+            return;
+        }
+        state.ids.push(key);
+        state.entities[key] = entity;
+    }
+    function addManyMutably(newEntities, state) {
+        newEntities = ensureEntitiesArray(newEntities);
+        for (var _i = 0, newEntities_2 = newEntities; _i < newEntities_2.length; _i++) {
+            var entity = newEntities_2[_i];
+            addOneMutably(entity, state);
+        }
+    }
+    function setOneMutably(entity, state) {
+        var key = selectIdValue(entity, selectId);
+        if (!(key in state.entities)) {
+            state.ids.push(key);
+        }
+        state.entities[key] = entity;
+    }
+    function setManyMutably(newEntities, state) {
+        newEntities = ensureEntitiesArray(newEntities);
+        for (var _i = 0, newEntities_3 = newEntities; _i < newEntities_3.length; _i++) {
+            var entity = newEntities_3[_i];
+            setOneMutably(entity, state);
+        }
+    }
+    function setAllMutably(newEntities, state) {
+        newEntities = ensureEntitiesArray(newEntities);
+        state.ids = [];
+        state.entities = {};
+        addManyMutably(newEntities, state);
+    }
+    function removeOneMutably(key, state) {
+        return removeManyMutably([key], state);
+    }
+    function removeManyMutably(keys, state) {
+        var didMutate = false;
+        keys.forEach(function (key) {
+            if (key in state.entities) {
+                delete state.entities[key];
+                didMutate = true;
+            }
+        });
+        if (didMutate) {
+            state.ids = state.ids.filter(function (id) { return id in state.entities; });
+        }
+    }
+    function removeAllMutably(state) {
+        Object.assign(state, {
+            ids: [],
+            entities: {}
+        });
+    }
+    function takeNewKey(keys, update, state) {
+        var original2 = state.entities[update.id];
+        var updated = Object.assign({}, original2, update.changes);
+        var newKey = selectIdValue(updated, selectId);
+        var hasNewKey = newKey !== update.id;
+        if (hasNewKey) {
+            keys[update.id] = newKey;
+            delete state.entities[update.id];
+        }
+        state.entities[newKey] = updated;
+        return hasNewKey;
+    }
+    function updateOneMutably(update, state) {
+        return updateManyMutably([update], state);
+    }
+    function updateManyMutably(updates, state) {
+        var newKeys = {};
+        var updatesPerEntity = {};
+        updates.forEach(function (update) {
+            if (update.id in state.entities) {
+                updatesPerEntity[update.id] = {
+                    id: update.id,
+                    changes: __spreadValues(__spreadValues({}, updatesPerEntity[update.id] ? updatesPerEntity[update.id].changes : null), update.changes)
+                };
+            }
+        });
+        updates = Object.values(updatesPerEntity);
+        var didMutateEntities = updates.length > 0;
+        if (didMutateEntities) {
+            var didMutateIds = updates.filter(function (update) { return takeNewKey(newKeys, update, state); }).length > 0;
+            if (didMutateIds) {
+                state.ids = state.ids.map(function (id) { return newKeys[id] || id; });
+            }
+        }
+    }
+    function upsertOneMutably(entity, state) {
+        return upsertManyMutably([entity], state);
+    }
+    function upsertManyMutably(newEntities, state) {
+        var _b = splitAddedUpdatedEntities(newEntities, selectId, state), added = _b[0], updated = _b[1];
+        updateManyMutably(updated, state);
+        addManyMutably(added, state);
+    }
+    return {
+        removeAll: createSingleArgumentStateOperator(removeAllMutably),
+        addOne: createStateOperator(addOneMutably),
+        addMany: createStateOperator(addManyMutably),
+        setOne: createStateOperator(setOneMutably),
+        setMany: createStateOperator(setManyMutably),
+        setAll: createStateOperator(setAllMutably),
+        updateOne: createStateOperator(updateOneMutably),
+        updateMany: createStateOperator(updateManyMutably),
+        upsertOne: createStateOperator(upsertOneMutably),
+        upsertMany: createStateOperator(upsertManyMutably),
+        removeOne: createStateOperator(removeOneMutably),
+        removeMany: createStateOperator(removeManyMutably)
+    };
+}
+// src/entities/sorted_state_adapter.ts
+function createSortedStateAdapter(selectId, sort) {
+    var _b = createUnsortedStateAdapter(selectId), removeOne = _b.removeOne, removeMany = _b.removeMany, removeAll = _b.removeAll;
+    function addOneMutably(entity, state) {
+        return addManyMutably([entity], state);
+    }
+    function addManyMutably(newEntities, state) {
+        newEntities = ensureEntitiesArray(newEntities);
+        var models = newEntities.filter(function (model) { return !(selectIdValue(model, selectId) in state.entities); });
+        if (models.length !== 0) {
+            merge(models, state);
+        }
+    }
+    function setOneMutably(entity, state) {
+        return setManyMutably([entity], state);
+    }
+    function setManyMutably(newEntities, state) {
+        newEntities = ensureEntitiesArray(newEntities);
+        if (newEntities.length !== 0) {
+            merge(newEntities, state);
+        }
+    }
+    function setAllMutably(newEntities, state) {
+        newEntities = ensureEntitiesArray(newEntities);
+        state.entities = {};
+        state.ids = [];
+        addManyMutably(newEntities, state);
+    }
+    function updateOneMutably(update, state) {
+        return updateManyMutably([update], state);
+    }
+    function takeUpdatedModel(models, update, state) {
+        if (!(update.id in state.entities)) {
+            return false;
+        }
+        var original2 = state.entities[update.id];
+        var updated = Object.assign({}, original2, update.changes);
+        var newKey = selectIdValue(updated, selectId);
+        delete state.entities[update.id];
+        models.push(updated);
+        return newKey !== update.id;
+    }
+    function updateManyMutably(updates, state) {
+        var models = [];
+        updates.forEach(function (update) { return takeUpdatedModel(models, update, state); });
+        if (models.length !== 0) {
+            merge(models, state);
+        }
+    }
+    function upsertOneMutably(entity, state) {
+        return upsertManyMutably([entity], state);
+    }
+    function upsertManyMutably(newEntities, state) {
+        var _b = splitAddedUpdatedEntities(newEntities, selectId, state), added = _b[0], updated = _b[1];
+        updateManyMutably(updated, state);
+        addManyMutably(added, state);
+    }
+    function areArraysEqual(a, b) {
+        if (a.length !== b.length) {
+            return false;
+        }
+        for (var i = 0; i < a.length && i < b.length; i++) {
+            if (a[i] === b[i]) {
+                continue;
+            }
+            return false;
+        }
+        return true;
+    }
+    function merge(models, state) {
+        models.forEach(function (model) {
+            state.entities[selectId(model)] = model;
+        });
+        var allEntities = Object.values(state.entities);
+        allEntities.sort(sort);
+        var newSortedIds = allEntities.map(selectId);
+        var ids = state.ids;
+        if (!areArraysEqual(ids, newSortedIds)) {
+            state.ids = newSortedIds;
+        }
+    }
+    return {
+        removeOne: removeOne,
+        removeMany: removeMany,
+        removeAll: removeAll,
+        addOne: createStateOperator(addOneMutably),
+        updateOne: createStateOperator(updateOneMutably),
+        upsertOne: createStateOperator(upsertOneMutably),
+        setOne: createStateOperator(setOneMutably),
+        setMany: createStateOperator(setManyMutably),
+        setAll: createStateOperator(setAllMutably),
+        addMany: createStateOperator(addManyMutably),
+        updateMany: createStateOperator(updateManyMutably),
+        upsertMany: createStateOperator(upsertManyMutably)
+    };
+}
+// src/entities/create_adapter.ts
+function createEntityAdapter(options) {
+    if (options === void 0) { options = {}; }
+    var _b = __spreadValues({
+        sortComparer: false,
+        selectId: function (instance) { return instance.id; }
+    }, options), selectId = _b.selectId, sortComparer = _b.sortComparer;
+    var stateFactory = createInitialStateFactory();
+    var selectorsFactory = createSelectorsFactory();
+    var stateAdapter = sortComparer ? createSortedStateAdapter(selectId, sortComparer) : createUnsortedStateAdapter(selectId);
+    return __spreadValues(__spreadValues(__spreadValues({
+        selectId: selectId,
+        sortComparer: sortComparer
+    }, stateFactory), selectorsFactory), stateAdapter);
+}
+// src/nanoid.ts
+var urlAlphabet = "ModuleSymbhasOwnPr-0123456789ABCDEFGHNRVfgctiUvz_KqYTJkLxpZXIjQW";
+var nanoid = function (size) {
+    if (size === void 0) { size = 21; }
+    var id = "";
+    var i = size;
+    while (i--) {
+        id += urlAlphabet[Math.random() * 64 | 0];
+    }
+    return id;
+};
+// src/createAsyncThunk.ts
+var commonProperties = [
+    "name",
+    "message",
+    "stack",
+    "code"
+];
+var RejectWithValue = /** @class */ (function () {
+    function RejectWithValue(payload, meta) {
+        this.payload = payload;
+        this.meta = meta;
+    }
+    return RejectWithValue;
+}());
+var FulfillWithMeta = /** @class */ (function () {
+    function FulfillWithMeta(payload, meta) {
+        this.payload = payload;
+        this.meta = meta;
+    }
+    return FulfillWithMeta;
+}());
+var miniSerializeError = function (value) {
+    if (typeof value === "object" && value !== null) {
+        var simpleError = {};
+        for (var _i = 0, commonProperties_1 = commonProperties; _i < commonProperties_1.length; _i++) {
+            var property = commonProperties_1[_i];
+            if (typeof value[property] === "string") {
+                simpleError[property] = value[property];
+            }
+        }
+        return simpleError;
+    }
+    return { message: String(value) };
+};
+function createAsyncThunk(typePrefix, payloadCreator, options) {
+    var fulfilled = createAction(typePrefix + "/fulfilled", function (payload, requestId, arg, meta) { return ({
+        payload: payload,
+        meta: __spreadProps(__spreadValues({}, meta || {}), {
+            arg: arg,
+            requestId: requestId,
+            requestStatus: "fulfilled"
+        })
+    }); });
+    var pending = createAction(typePrefix + "/pending", function (requestId, arg, meta) { return ({
+        payload: void 0,
+        meta: __spreadProps(__spreadValues({}, meta || {}), {
+            arg: arg,
+            requestId: requestId,
+            requestStatus: "pending"
+        })
+    }); });
+    var rejected = createAction(typePrefix + "/rejected", function (error, requestId, arg, payload, meta) { return ({
+        payload: payload,
+        error: (options && options.serializeError || miniSerializeError)(error || "Rejected"),
+        meta: __spreadProps(__spreadValues({}, meta || {}), {
+            arg: arg,
+            requestId: requestId,
+            rejectedWithValue: !!payload,
+            requestStatus: "rejected",
+            aborted: (error == null ? void 0 : error.name) === "AbortError",
+            condition: (error == null ? void 0 : error.name) === "ConditionError"
+        })
+    }); });
+    var displayedWarning = false;
+    var AC = typeof AbortController !== "undefined" ? AbortController : /** @class */ (function () {
+        function class_1() {
+            this.signal = {
+                aborted: false,
+                addEventListener: function () {
+                },
+                dispatchEvent: function () {
+                    return false;
+                },
+                onabort: function () {
+                },
+                removeEventListener: function () {
+                }
+            };
+        }
+        class_1.prototype.abort = function () {
+            if (true) {
+                if (!displayedWarning) {
+                    displayedWarning = true;
+                    console.info("This platform does not implement AbortController. \nIf you want to use the AbortController to react to `abort` events, please consider importing a polyfill like 'abortcontroller-polyfill/dist/abortcontroller-polyfill-only'.");
+                }
+            }
+        };
+        return class_1;
+    }());
+    function actionCreator(arg) {
+        return function (dispatch, getState, extra) {
+            var _a;
+            var requestId = ((_a = options == null ? void 0 : options.idGenerator) != null ? _a : nanoid)();
+            var abortController = new AC();
+            var abortReason;
+            var abortedPromise = new Promise(function (_, reject) { return abortController.signal.addEventListener("abort", function () { return reject({ name: "AbortError", message: abortReason || "Aborted" }); }); });
+            var started = false;
+            function abort(reason) {
+                if (started) {
+                    abortReason = reason;
+                    abortController.abort();
+                }
+            }
+            var promise = function () {
+                return __async(this, null, function () {
+                    var _a2, finalAction, err_1, skipDispatch;
+                    return __generator(this, function (_b) {
+                        switch (_b.label) {
+                            case 0:
+                                _b.trys.push([0, 2, , 3]);
+                                if (options && options.condition && options.condition(arg, { getState: getState, extra: extra }) === false) {
+                                    throw {
+                                        name: "ConditionError",
+                                        message: "Aborted due to condition callback returning false."
+                                    };
+                                }
+                                started = true;
+                                dispatch(pending(requestId, arg, (_a2 = options == null ? void 0 : options.getPendingMeta) == null ? void 0 : _a2.call(options, { requestId: requestId, arg: arg }, { getState: getState, extra: extra })));
+                                return [4 /*yield*/, Promise.race([
+                                        abortedPromise,
+                                        Promise.resolve(payloadCreator(arg, {
+                                            dispatch: dispatch,
+                                            getState: getState,
+                                            extra: extra,
+                                            requestId: requestId,
+                                            signal: abortController.signal,
+                                            rejectWithValue: function (value, meta) {
+                                                return new RejectWithValue(value, meta);
+                                            },
+                                            fulfillWithValue: function (value, meta) {
+                                                return new FulfillWithMeta(value, meta);
+                                            }
+                                        })).then(function (result) {
+                                            if (result instanceof RejectWithValue) {
+                                                throw result;
+                                            }
+                                            if (result instanceof FulfillWithMeta) {
+                                                return fulfilled(result.payload, requestId, arg, result.meta);
+                                            }
+                                            return fulfilled(result, requestId, arg);
+                                        })
+                                    ])];
+                            case 1:
+                                finalAction = _b.sent();
+                                return [3 /*break*/, 3];
+                            case 2:
+                                err_1 = _b.sent();
+                                finalAction = err_1 instanceof RejectWithValue ? rejected(null, requestId, arg, err_1.payload, err_1.meta) : rejected(err_1, requestId, arg);
+                                return [3 /*break*/, 3];
+                            case 3:
+                                skipDispatch = options && !options.dispatchConditionRejection && rejected.match(finalAction) && finalAction.meta.condition;
+                                if (!skipDispatch) {
+                                    dispatch(finalAction);
+                                }
+                                return [2 /*return*/, finalAction];
+                        }
+                    });
+                });
+            }();
+            return Object.assign(promise, {
+                abort: abort,
+                requestId: requestId,
+                arg: arg,
+                unwrap: function () {
+                    return promise.then(unwrapResult);
+                }
+            });
+        };
+    }
+    return Object.assign(actionCreator, {
+        pending: pending,
+        rejected: rejected,
+        fulfilled: fulfilled,
+        typePrefix: typePrefix
+    });
+}
+function unwrapResult(action) {
+    if (action.meta && action.meta.rejectedWithValue) {
+        throw action.payload;
+    }
+    if (action.error) {
+        throw action.error;
+    }
+    return action.payload;
+}
+// src/tsHelpers.ts
+var hasMatchFunction = function (v) {
+    return v && typeof v.match === "function";
+};
+// src/matchers.ts
+var matches = function (matcher, action) {
+    if (hasMatchFunction(matcher)) {
+        return matcher.match(action);
+    }
+    else {
+        return matcher(action);
+    }
+};
+function isAnyOf() {
+    var matchers = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        matchers[_i] = arguments[_i];
+    }
+    return function (action) {
+        return matchers.some(function (matcher) { return matches(matcher, action); });
+    };
+}
+function isAllOf() {
+    var matchers = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        matchers[_i] = arguments[_i];
+    }
+    return function (action) {
+        return matchers.every(function (matcher) { return matches(matcher, action); });
+    };
+}
+function hasExpectedRequestMetadata(action, validStatus) {
+    if (!action || !action.meta)
+        return false;
+    var hasValidRequestId = typeof action.meta.requestId === "string";
+    var hasValidRequestStatus = validStatus.indexOf(action.meta.requestStatus) > -1;
+    return hasValidRequestId && hasValidRequestStatus;
+}
+function isAsyncThunkArray(a) {
+    return typeof a[0] === "function" && "pending" in a[0] && "fulfilled" in a[0] && "rejected" in a[0];
+}
+function isPending() {
+    var asyncThunks = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        asyncThunks[_i] = arguments[_i];
+    }
+    if (asyncThunks.length === 0) {
+        return function (action) { return hasExpectedRequestMetadata(action, ["pending"]); };
+    }
+    if (!isAsyncThunkArray(asyncThunks)) {
+        return isPending()(asyncThunks[0]);
+    }
+    return function (action) {
+        var matchers = asyncThunks.map(function (asyncThunk) { return asyncThunk.pending; });
+        var combinedMatcher = isAnyOf.apply(void 0, matchers);
+        return combinedMatcher(action);
+    };
+}
+function isRejected() {
+    var asyncThunks = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        asyncThunks[_i] = arguments[_i];
+    }
+    if (asyncThunks.length === 0) {
+        return function (action) { return hasExpectedRequestMetadata(action, ["rejected"]); };
+    }
+    if (!isAsyncThunkArray(asyncThunks)) {
+        return isRejected()(asyncThunks[0]);
+    }
+    return function (action) {
+        var matchers = asyncThunks.map(function (asyncThunk) { return asyncThunk.rejected; });
+        var combinedMatcher = isAnyOf.apply(void 0, matchers);
+        return combinedMatcher(action);
+    };
+}
+function isRejectedWithValue() {
+    var asyncThunks = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        asyncThunks[_i] = arguments[_i];
+    }
+    var hasFlag = function (action) {
+        return action && action.meta && action.meta.rejectedWithValue;
+    };
+    if (asyncThunks.length === 0) {
+        return function (action) {
+            var combinedMatcher = isAllOf(isRejected.apply(void 0, asyncThunks), hasFlag);
+            return combinedMatcher(action);
+        };
+    }
+    if (!isAsyncThunkArray(asyncThunks)) {
+        return isRejectedWithValue()(asyncThunks[0]);
+    }
+    return function (action) {
+        var combinedMatcher = isAllOf(isRejected.apply(void 0, asyncThunks), hasFlag);
+        return combinedMatcher(action);
+    };
+}
+function isFulfilled() {
+    var asyncThunks = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        asyncThunks[_i] = arguments[_i];
+    }
+    if (asyncThunks.length === 0) {
+        return function (action) { return hasExpectedRequestMetadata(action, ["fulfilled"]); };
+    }
+    if (!isAsyncThunkArray(asyncThunks)) {
+        return isFulfilled()(asyncThunks[0]);
+    }
+    return function (action) {
+        var matchers = asyncThunks.map(function (asyncThunk) { return asyncThunk.fulfilled; });
+        var combinedMatcher = isAnyOf.apply(void 0, matchers);
+        return combinedMatcher(action);
+    };
+}
+function isAsyncThunkAction() {
+    var asyncThunks = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        asyncThunks[_i] = arguments[_i];
+    }
+    if (asyncThunks.length === 0) {
+        return function (action) { return hasExpectedRequestMetadata(action, ["pending", "fulfilled", "rejected"]); };
+    }
+    if (!isAsyncThunkArray(asyncThunks)) {
+        return isAsyncThunkAction()(asyncThunks[0]);
+    }
+    return function (action) {
+        var matchers = [];
+        for (var _i = 0, asyncThunks_1 = asyncThunks; _i < asyncThunks_1.length; _i++) {
+            var asyncThunk = asyncThunks_1[_i];
+            matchers.push(asyncThunk.pending, asyncThunk.rejected, asyncThunk.fulfilled);
+        }
+        var combinedMatcher = isAnyOf.apply(void 0, matchers);
+        return combinedMatcher(action);
+    };
+}
+// src/index.ts
+(0,immer__WEBPACK_IMPORTED_MODULE_2__.enableES5)();
+
+//# sourceMappingURL=redux-toolkit.esm.js.map
+
+/***/ }),
+
+/***/ "./node_modules/axios/index.js":
+/*!*************************************!*\
+  !*** ./node_modules/axios/index.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/lib/axios.js");
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/adapters/xhr.js":
+/*!************************************************!*\
+  !*** ./node_modules/axios/lib/adapters/xhr.js ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var settle = __webpack_require__(/*! ./../core/settle */ "./node_modules/axios/lib/core/settle.js");
+var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
+var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
+var buildFullPath = __webpack_require__(/*! ../core/buildFullPath */ "./node_modules/axios/lib/core/buildFullPath.js");
+var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "./node_modules/axios/lib/helpers/parseHeaders.js");
+var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ "./node_modules/axios/lib/helpers/isURLSameOrigin.js");
+var createError = __webpack_require__(/*! ../core/createError */ "./node_modules/axios/lib/core/createError.js");
+var defaults = __webpack_require__(/*! ../defaults */ "./node_modules/axios/lib/defaults.js");
+var Cancel = __webpack_require__(/*! ../cancel/Cancel */ "./node_modules/axios/lib/cancel/Cancel.js");
+
+module.exports = function xhrAdapter(config) {
+  return new Promise(function dispatchXhrRequest(resolve, reject) {
+    var requestData = config.data;
+    var requestHeaders = config.headers;
+    var responseType = config.responseType;
+    var onCanceled;
+    function done() {
+      if (config.cancelToken) {
+        config.cancelToken.unsubscribe(onCanceled);
+      }
+
+      if (config.signal) {
+        config.signal.removeEventListener('abort', onCanceled);
+      }
+    }
+
+    if (utils.isFormData(requestData)) {
+      delete requestHeaders['Content-Type']; // Let the browser set it
+    }
+
+    var request = new XMLHttpRequest();
+
+    // HTTP basic authentication
+    if (config.auth) {
+      var username = config.auth.username || '';
+      var password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
+      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+    }
+
+    var fullPath = buildFullPath(config.baseURL, config.url);
+    request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
+
+    // Set the request timeout in MS
+    request.timeout = config.timeout;
+
+    function onloadend() {
+      if (!request) {
+        return;
+      }
+      // Prepare the response
+      var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+      var responseData = !responseType || responseType === 'text' ||  responseType === 'json' ?
+        request.responseText : request.response;
+      var response = {
+        data: responseData,
+        status: request.status,
+        statusText: request.statusText,
+        headers: responseHeaders,
+        config: config,
+        request: request
+      };
+
+      settle(function _resolve(value) {
+        resolve(value);
+        done();
+      }, function _reject(err) {
+        reject(err);
+        done();
+      }, response);
+
+      // Clean up request
+      request = null;
+    }
+
+    if ('onloadend' in request) {
+      // Use onloadend if available
+      request.onloadend = onloadend;
+    } else {
+      // Listen for ready state to emulate onloadend
+      request.onreadystatechange = function handleLoad() {
+        if (!request || request.readyState !== 4) {
+          return;
+        }
+
+        // The request errored out and we didn't get a response, this will be
+        // handled by onerror instead
+        // With one exception: request that using file: protocol, most browsers
+        // will return status as 0 even though it's a successful request
+        if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+          return;
+        }
+        // readystate handler is calling before onerror or ontimeout handlers,
+        // so we should call onloadend on the next 'tick'
+        setTimeout(onloadend);
+      };
+    }
+
+    // Handle browser request cancellation (as opposed to a manual cancellation)
+    request.onabort = function handleAbort() {
+      if (!request) {
+        return;
+      }
+
+      reject(createError('Request aborted', config, 'ECONNABORTED', request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle low level network errors
+    request.onerror = function handleError() {
+      // Real errors are hidden from us by the browser
+      // onerror should only fire if it's a network error
+      reject(createError('Network Error', config, null, request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle timeout
+    request.ontimeout = function handleTimeout() {
+      var timeoutErrorMessage = 'timeout of ' + config.timeout + 'ms exceeded';
+      var transitional = config.transitional || defaults.transitional;
+      if (config.timeoutErrorMessage) {
+        timeoutErrorMessage = config.timeoutErrorMessage;
+      }
+      reject(createError(
+        timeoutErrorMessage,
+        config,
+        transitional.clarifyTimeoutError ? 'ETIMEDOUT' : 'ECONNABORTED',
+        request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Add xsrf header
+    // This is only done if running in a standard browser environment.
+    // Specifically not if we're in a web worker, or react-native.
+    if (utils.isStandardBrowserEnv()) {
+      // Add xsrf header
+      var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ?
+        cookies.read(config.xsrfCookieName) :
+        undefined;
+
+      if (xsrfValue) {
+        requestHeaders[config.xsrfHeaderName] = xsrfValue;
+      }
+    }
+
+    // Add headers to the request
+    if ('setRequestHeader' in request) {
+      utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+        if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
+          // Remove Content-Type if data is undefined
+          delete requestHeaders[key];
+        } else {
+          // Otherwise add header to the request
+          request.setRequestHeader(key, val);
+        }
+      });
+    }
+
+    // Add withCredentials to request if needed
+    if (!utils.isUndefined(config.withCredentials)) {
+      request.withCredentials = !!config.withCredentials;
+    }
+
+    // Add responseType to request if needed
+    if (responseType && responseType !== 'json') {
+      request.responseType = config.responseType;
+    }
+
+    // Handle progress if needed
+    if (typeof config.onDownloadProgress === 'function') {
+      request.addEventListener('progress', config.onDownloadProgress);
+    }
+
+    // Not all browsers support upload events
+    if (typeof config.onUploadProgress === 'function' && request.upload) {
+      request.upload.addEventListener('progress', config.onUploadProgress);
+    }
+
+    if (config.cancelToken || config.signal) {
+      // Handle cancellation
+      // eslint-disable-next-line func-names
+      onCanceled = function(cancel) {
+        if (!request) {
+          return;
+        }
+        reject(!cancel || (cancel && cancel.type) ? new Cancel('canceled') : cancel);
+        request.abort();
+        request = null;
+      };
+
+      config.cancelToken && config.cancelToken.subscribe(onCanceled);
+      if (config.signal) {
+        config.signal.aborted ? onCanceled() : config.signal.addEventListener('abort', onCanceled);
+      }
+    }
+
+    if (!requestData) {
+      requestData = null;
+    }
+
+    // Send the request
+    request.send(requestData);
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/axios.js":
+/*!*****************************************!*\
+  !*** ./node_modules/axios/lib/axios.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
+var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
+var Axios = __webpack_require__(/*! ./core/Axios */ "./node_modules/axios/lib/core/Axios.js");
+var mergeConfig = __webpack_require__(/*! ./core/mergeConfig */ "./node_modules/axios/lib/core/mergeConfig.js");
+var defaults = __webpack_require__(/*! ./defaults */ "./node_modules/axios/lib/defaults.js");
+
+/**
+ * Create an instance of Axios
+ *
+ * @param {Object} defaultConfig The default config for the instance
+ * @return {Axios} A new instance of Axios
+ */
+function createInstance(defaultConfig) {
+  var context = new Axios(defaultConfig);
+  var instance = bind(Axios.prototype.request, context);
+
+  // Copy axios.prototype to instance
+  utils.extend(instance, Axios.prototype, context);
+
+  // Copy context to instance
+  utils.extend(instance, context);
+
+  // Factory for creating new instances
+  instance.create = function create(instanceConfig) {
+    return createInstance(mergeConfig(defaultConfig, instanceConfig));
+  };
+
+  return instance;
+}
+
+// Create the default instance to be exported
+var axios = createInstance(defaults);
+
+// Expose Axios class to allow class inheritance
+axios.Axios = Axios;
+
+// Expose Cancel & CancelToken
+axios.Cancel = __webpack_require__(/*! ./cancel/Cancel */ "./node_modules/axios/lib/cancel/Cancel.js");
+axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ "./node_modules/axios/lib/cancel/CancelToken.js");
+axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
+axios.VERSION = __webpack_require__(/*! ./env/data */ "./node_modules/axios/lib/env/data.js").version;
+
+// Expose all/spread
+axios.all = function all(promises) {
+  return Promise.all(promises);
+};
+axios.spread = __webpack_require__(/*! ./helpers/spread */ "./node_modules/axios/lib/helpers/spread.js");
+
+// Expose isAxiosError
+axios.isAxiosError = __webpack_require__(/*! ./helpers/isAxiosError */ "./node_modules/axios/lib/helpers/isAxiosError.js");
+
+module.exports = axios;
+
+// Allow use of default import syntax in TypeScript
+module.exports["default"] = axios;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/cancel/Cancel.js":
+/*!*************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/Cancel.js ***!
+  \*************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/**
+ * A `Cancel` is an object that is thrown when an operation is canceled.
+ *
+ * @class
+ * @param {string=} message The message.
+ */
+function Cancel(message) {
+  this.message = message;
+}
+
+Cancel.prototype.toString = function toString() {
+  return 'Cancel' + (this.message ? ': ' + this.message : '');
+};
+
+Cancel.prototype.__CANCEL__ = true;
+
+module.exports = Cancel;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/cancel/CancelToken.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/CancelToken.js ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var Cancel = __webpack_require__(/*! ./Cancel */ "./node_modules/axios/lib/cancel/Cancel.js");
+
+/**
+ * A `CancelToken` is an object that can be used to request cancellation of an operation.
+ *
+ * @class
+ * @param {Function} executor The executor function.
+ */
+function CancelToken(executor) {
+  if (typeof executor !== 'function') {
+    throw new TypeError('executor must be a function.');
+  }
+
+  var resolvePromise;
+
+  this.promise = new Promise(function promiseExecutor(resolve) {
+    resolvePromise = resolve;
+  });
+
+  var token = this;
+
+  // eslint-disable-next-line func-names
+  this.promise.then(function(cancel) {
+    if (!token._listeners) return;
+
+    var i;
+    var l = token._listeners.length;
+
+    for (i = 0; i < l; i++) {
+      token._listeners[i](cancel);
+    }
+    token._listeners = null;
+  });
+
+  // eslint-disable-next-line func-names
+  this.promise.then = function(onfulfilled) {
+    var _resolve;
+    // eslint-disable-next-line func-names
+    var promise = new Promise(function(resolve) {
+      token.subscribe(resolve);
+      _resolve = resolve;
+    }).then(onfulfilled);
+
+    promise.cancel = function reject() {
+      token.unsubscribe(_resolve);
+    };
+
+    return promise;
+  };
+
+  executor(function cancel(message) {
+    if (token.reason) {
+      // Cancellation has already been requested
+      return;
+    }
+
+    token.reason = new Cancel(message);
+    resolvePromise(token.reason);
+  });
+}
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+  if (this.reason) {
+    throw this.reason;
+  }
+};
+
+/**
+ * Subscribe to the cancel signal
+ */
+
+CancelToken.prototype.subscribe = function subscribe(listener) {
+  if (this.reason) {
+    listener(this.reason);
+    return;
+  }
+
+  if (this._listeners) {
+    this._listeners.push(listener);
+  } else {
+    this._listeners = [listener];
+  }
+};
+
+/**
+ * Unsubscribe from the cancel signal
+ */
+
+CancelToken.prototype.unsubscribe = function unsubscribe(listener) {
+  if (!this._listeners) {
+    return;
+  }
+  var index = this._listeners.indexOf(listener);
+  if (index !== -1) {
+    this._listeners.splice(index, 1);
+  }
+};
+
+/**
+ * Returns an object that contains a new `CancelToken` and a function that, when called,
+ * cancels the `CancelToken`.
+ */
+CancelToken.source = function source() {
+  var cancel;
+  var token = new CancelToken(function executor(c) {
+    cancel = c;
+  });
+  return {
+    token: token,
+    cancel: cancel
+  };
+};
+
+module.exports = CancelToken;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/cancel/isCancel.js":
+/*!***************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/isCancel.js ***!
+  \***************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function isCancel(value) {
+  return !!(value && value.__CANCEL__);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/Axios.js":
+/*!**********************************************!*\
+  !*** ./node_modules/axios/lib/core/Axios.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var buildURL = __webpack_require__(/*! ../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
+var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ "./node_modules/axios/lib/core/InterceptorManager.js");
+var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ "./node_modules/axios/lib/core/dispatchRequest.js");
+var mergeConfig = __webpack_require__(/*! ./mergeConfig */ "./node_modules/axios/lib/core/mergeConfig.js");
+var validator = __webpack_require__(/*! ../helpers/validator */ "./node_modules/axios/lib/helpers/validator.js");
+
+var validators = validator.validators;
+/**
+ * Create a new instance of Axios
+ *
+ * @param {Object} instanceConfig The default config for the instance
+ */
+function Axios(instanceConfig) {
+  this.defaults = instanceConfig;
+  this.interceptors = {
+    request: new InterceptorManager(),
+    response: new InterceptorManager()
+  };
+}
+
+/**
+ * Dispatch a request
+ *
+ * @param {Object} config The config specific for this request (merged with this.defaults)
+ */
+Axios.prototype.request = function request(config) {
+  /*eslint no-param-reassign:0*/
+  // Allow for axios('example/url'[, config]) a la fetch API
+  if (typeof config === 'string') {
+    config = arguments[1] || {};
+    config.url = arguments[0];
+  } else {
+    config = config || {};
+  }
+
+  config = mergeConfig(this.defaults, config);
+
+  // Set config.method
+  if (config.method) {
+    config.method = config.method.toLowerCase();
+  } else if (this.defaults.method) {
+    config.method = this.defaults.method.toLowerCase();
+  } else {
+    config.method = 'get';
+  }
+
+  var transitional = config.transitional;
+
+  if (transitional !== undefined) {
+    validator.assertOptions(transitional, {
+      silentJSONParsing: validators.transitional(validators.boolean),
+      forcedJSONParsing: validators.transitional(validators.boolean),
+      clarifyTimeoutError: validators.transitional(validators.boolean)
+    }, false);
+  }
+
+  // filter out skipped interceptors
+  var requestInterceptorChain = [];
+  var synchronousRequestInterceptors = true;
+  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+    if (typeof interceptor.runWhen === 'function' && interceptor.runWhen(config) === false) {
+      return;
+    }
+
+    synchronousRequestInterceptors = synchronousRequestInterceptors && interceptor.synchronous;
+
+    requestInterceptorChain.unshift(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  var responseInterceptorChain = [];
+  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+    responseInterceptorChain.push(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  var promise;
+
+  if (!synchronousRequestInterceptors) {
+    var chain = [dispatchRequest, undefined];
+
+    Array.prototype.unshift.apply(chain, requestInterceptorChain);
+    chain = chain.concat(responseInterceptorChain);
+
+    promise = Promise.resolve(config);
+    while (chain.length) {
+      promise = promise.then(chain.shift(), chain.shift());
+    }
+
+    return promise;
+  }
+
+
+  var newConfig = config;
+  while (requestInterceptorChain.length) {
+    var onFulfilled = requestInterceptorChain.shift();
+    var onRejected = requestInterceptorChain.shift();
+    try {
+      newConfig = onFulfilled(newConfig);
+    } catch (error) {
+      onRejected(error);
+      break;
+    }
+  }
+
+  try {
+    promise = dispatchRequest(newConfig);
+  } catch (error) {
+    return Promise.reject(error);
+  }
+
+  while (responseInterceptorChain.length) {
+    promise = promise.then(responseInterceptorChain.shift(), responseInterceptorChain.shift());
+  }
+
+  return promise;
+};
+
+Axios.prototype.getUri = function getUri(config) {
+  config = mergeConfig(this.defaults, config);
+  return buildURL(config.url, config.params, config.paramsSerializer).replace(/^\?/, '');
+};
+
+// Provide aliases for supported request methods
+utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, config) {
+    return this.request(mergeConfig(config || {}, {
+      method: method,
+      url: url,
+      data: (config || {}).data
+    }));
+  };
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, data, config) {
+    return this.request(mergeConfig(config || {}, {
+      method: method,
+      url: url,
+      data: data
+    }));
+  };
+});
+
+module.exports = Axios;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/InterceptorManager.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/axios/lib/core/InterceptorManager.js ***!
+  \***********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+function InterceptorManager() {
+  this.handlers = [];
+}
+
+/**
+ * Add a new interceptor to the stack
+ *
+ * @param {Function} fulfilled The function to handle `then` for a `Promise`
+ * @param {Function} rejected The function to handle `reject` for a `Promise`
+ *
+ * @return {Number} An ID used to remove interceptor later
+ */
+InterceptorManager.prototype.use = function use(fulfilled, rejected, options) {
+  this.handlers.push({
+    fulfilled: fulfilled,
+    rejected: rejected,
+    synchronous: options ? options.synchronous : false,
+    runWhen: options ? options.runWhen : null
+  });
+  return this.handlers.length - 1;
+};
+
+/**
+ * Remove an interceptor from the stack
+ *
+ * @param {Number} id The ID that was returned by `use`
+ */
+InterceptorManager.prototype.eject = function eject(id) {
+  if (this.handlers[id]) {
+    this.handlers[id] = null;
+  }
+};
+
+/**
+ * Iterate over all the registered interceptors
+ *
+ * This method is particularly useful for skipping over any
+ * interceptors that may have become `null` calling `eject`.
+ *
+ * @param {Function} fn The function to call for each interceptor
+ */
+InterceptorManager.prototype.forEach = function forEach(fn) {
+  utils.forEach(this.handlers, function forEachHandler(h) {
+    if (h !== null) {
+      fn(h);
+    }
+  });
+};
+
+module.exports = InterceptorManager;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/buildFullPath.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/core/buildFullPath.js ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var isAbsoluteURL = __webpack_require__(/*! ../helpers/isAbsoluteURL */ "./node_modules/axios/lib/helpers/isAbsoluteURL.js");
+var combineURLs = __webpack_require__(/*! ../helpers/combineURLs */ "./node_modules/axios/lib/helpers/combineURLs.js");
+
+/**
+ * Creates a new URL by combining the baseURL with the requestedURL,
+ * only when the requestedURL is not already an absolute URL.
+ * If the requestURL is absolute, this function returns the requestedURL untouched.
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} requestedURL Absolute or relative URL to combine
+ * @returns {string} The combined full path
+ */
+module.exports = function buildFullPath(baseURL, requestedURL) {
+  if (baseURL && !isAbsoluteURL(requestedURL)) {
+    return combineURLs(baseURL, requestedURL);
+  }
+  return requestedURL;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/createError.js":
+/*!****************************************************!*\
+  !*** ./node_modules/axios/lib/core/createError.js ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var enhanceError = __webpack_require__(/*! ./enhanceError */ "./node_modules/axios/lib/core/enhanceError.js");
+
+/**
+ * Create an Error with the specified message, config, error code, request and response.
+ *
+ * @param {string} message The error message.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The created error.
+ */
+module.exports = function createError(message, config, code, request, response) {
+  var error = new Error(message);
+  return enhanceError(error, config, code, request, response);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/dispatchRequest.js":
+/*!********************************************************!*\
+  !*** ./node_modules/axios/lib/core/dispatchRequest.js ***!
+  \********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var transformData = __webpack_require__(/*! ./transformData */ "./node_modules/axios/lib/core/transformData.js");
+var isCancel = __webpack_require__(/*! ../cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
+var defaults = __webpack_require__(/*! ../defaults */ "./node_modules/axios/lib/defaults.js");
+var Cancel = __webpack_require__(/*! ../cancel/Cancel */ "./node_modules/axios/lib/cancel/Cancel.js");
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+function throwIfCancellationRequested(config) {
+  if (config.cancelToken) {
+    config.cancelToken.throwIfRequested();
+  }
+
+  if (config.signal && config.signal.aborted) {
+    throw new Cancel('canceled');
+  }
+}
+
+/**
+ * Dispatch a request to the server using the configured adapter.
+ *
+ * @param {object} config The config that is to be used for the request
+ * @returns {Promise} The Promise to be fulfilled
+ */
+module.exports = function dispatchRequest(config) {
+  throwIfCancellationRequested(config);
+
+  // Ensure headers exist
+  config.headers = config.headers || {};
+
+  // Transform request data
+  config.data = transformData.call(
+    config,
+    config.data,
+    config.headers,
+    config.transformRequest
+  );
+
+  // Flatten headers
+  config.headers = utils.merge(
+    config.headers.common || {},
+    config.headers[config.method] || {},
+    config.headers
+  );
+
+  utils.forEach(
+    ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
+    function cleanHeaderConfig(method) {
+      delete config.headers[method];
+    }
+  );
+
+  var adapter = config.adapter || defaults.adapter;
+
+  return adapter(config).then(function onAdapterResolution(response) {
+    throwIfCancellationRequested(config);
+
+    // Transform response data
+    response.data = transformData.call(
+      config,
+      response.data,
+      response.headers,
+      config.transformResponse
+    );
+
+    return response;
+  }, function onAdapterRejection(reason) {
+    if (!isCancel(reason)) {
+      throwIfCancellationRequested(config);
+
+      // Transform response data
+      if (reason && reason.response) {
+        reason.response.data = transformData.call(
+          config,
+          reason.response.data,
+          reason.response.headers,
+          config.transformResponse
+        );
+      }
+    }
+
+    return Promise.reject(reason);
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/enhanceError.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/axios/lib/core/enhanceError.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/**
+ * Update an Error with the specified config, error code, and response.
+ *
+ * @param {Error} error The error to update.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The error.
+ */
+module.exports = function enhanceError(error, config, code, request, response) {
+  error.config = config;
+  if (code) {
+    error.code = code;
+  }
+
+  error.request = request;
+  error.response = response;
+  error.isAxiosError = true;
+
+  error.toJSON = function toJSON() {
+    return {
+      // Standard
+      message: this.message,
+      name: this.name,
+      // Microsoft
+      description: this.description,
+      number: this.number,
+      // Mozilla
+      fileName: this.fileName,
+      lineNumber: this.lineNumber,
+      columnNumber: this.columnNumber,
+      stack: this.stack,
+      // Axios
+      config: this.config,
+      code: this.code,
+      status: this.response && this.response.status ? this.response.status : null
+    };
+  };
+  return error;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/mergeConfig.js":
+/*!****************************************************!*\
+  !*** ./node_modules/axios/lib/core/mergeConfig.js ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
+
+/**
+ * Config-specific merge-function which creates a new config-object
+ * by merging two configuration objects together.
+ *
+ * @param {Object} config1
+ * @param {Object} config2
+ * @returns {Object} New object resulting from merging config2 to config1
+ */
+module.exports = function mergeConfig(config1, config2) {
+  // eslint-disable-next-line no-param-reassign
+  config2 = config2 || {};
+  var config = {};
+
+  function getMergedValue(target, source) {
+    if (utils.isPlainObject(target) && utils.isPlainObject(source)) {
+      return utils.merge(target, source);
+    } else if (utils.isPlainObject(source)) {
+      return utils.merge({}, source);
+    } else if (utils.isArray(source)) {
+      return source.slice();
+    }
+    return source;
+  }
+
+  // eslint-disable-next-line consistent-return
+  function mergeDeepProperties(prop) {
+    if (!utils.isUndefined(config2[prop])) {
+      return getMergedValue(config1[prop], config2[prop]);
+    } else if (!utils.isUndefined(config1[prop])) {
+      return getMergedValue(undefined, config1[prop]);
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  function valueFromConfig2(prop) {
+    if (!utils.isUndefined(config2[prop])) {
+      return getMergedValue(undefined, config2[prop]);
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  function defaultToConfig2(prop) {
+    if (!utils.isUndefined(config2[prop])) {
+      return getMergedValue(undefined, config2[prop]);
+    } else if (!utils.isUndefined(config1[prop])) {
+      return getMergedValue(undefined, config1[prop]);
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  function mergeDirectKeys(prop) {
+    if (prop in config2) {
+      return getMergedValue(config1[prop], config2[prop]);
+    } else if (prop in config1) {
+      return getMergedValue(undefined, config1[prop]);
+    }
+  }
+
+  var mergeMap = {
+    'url': valueFromConfig2,
+    'method': valueFromConfig2,
+    'data': valueFromConfig2,
+    'baseURL': defaultToConfig2,
+    'transformRequest': defaultToConfig2,
+    'transformResponse': defaultToConfig2,
+    'paramsSerializer': defaultToConfig2,
+    'timeout': defaultToConfig2,
+    'timeoutMessage': defaultToConfig2,
+    'withCredentials': defaultToConfig2,
+    'adapter': defaultToConfig2,
+    'responseType': defaultToConfig2,
+    'xsrfCookieName': defaultToConfig2,
+    'xsrfHeaderName': defaultToConfig2,
+    'onUploadProgress': defaultToConfig2,
+    'onDownloadProgress': defaultToConfig2,
+    'decompress': defaultToConfig2,
+    'maxContentLength': defaultToConfig2,
+    'maxBodyLength': defaultToConfig2,
+    'transport': defaultToConfig2,
+    'httpAgent': defaultToConfig2,
+    'httpsAgent': defaultToConfig2,
+    'cancelToken': defaultToConfig2,
+    'socketPath': defaultToConfig2,
+    'responseEncoding': defaultToConfig2,
+    'validateStatus': mergeDirectKeys
+  };
+
+  utils.forEach(Object.keys(config1).concat(Object.keys(config2)), function computeConfigValue(prop) {
+    var merge = mergeMap[prop] || mergeDeepProperties;
+    var configValue = merge(prop);
+    (utils.isUndefined(configValue) && merge !== mergeDirectKeys) || (config[prop] = configValue);
+  });
+
+  return config;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/settle.js":
+/*!***********************************************!*\
+  !*** ./node_modules/axios/lib/core/settle.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var createError = __webpack_require__(/*! ./createError */ "./node_modules/axios/lib/core/createError.js");
+
+/**
+ * Resolve or reject a Promise based on response status.
+ *
+ * @param {Function} resolve A function that resolves the promise.
+ * @param {Function} reject A function that rejects the promise.
+ * @param {object} response The response.
+ */
+module.exports = function settle(resolve, reject, response) {
+  var validateStatus = response.config.validateStatus;
+  if (!response.status || !validateStatus || validateStatus(response.status)) {
+    resolve(response);
+  } else {
+    reject(createError(
+      'Request failed with status code ' + response.status,
+      response.config,
+      null,
+      response.request,
+      response
+    ));
+  }
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/transformData.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/core/transformData.js ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var defaults = __webpack_require__(/*! ./../defaults */ "./node_modules/axios/lib/defaults.js");
+
+/**
+ * Transform the data for a request or a response
+ *
+ * @param {Object|String} data The data to be transformed
+ * @param {Array} headers The headers for the request or response
+ * @param {Array|Function} fns A single function or Array of functions
+ * @returns {*} The resulting transformed data
+ */
+module.exports = function transformData(data, headers, fns) {
+  var context = this || defaults;
+  /*eslint no-param-reassign:0*/
+  utils.forEach(fns, function transform(fn) {
+    data = fn.call(context, data, headers);
+  });
+
+  return data;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/defaults.js":
+/*!********************************************!*\
+  !*** ./node_modules/axios/lib/defaults.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+/* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
+
+
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
+var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ "./node_modules/axios/lib/helpers/normalizeHeaderName.js");
+var enhanceError = __webpack_require__(/*! ./core/enhanceError */ "./node_modules/axios/lib/core/enhanceError.js");
+
+var DEFAULT_CONTENT_TYPE = {
+  'Content-Type': 'application/x-www-form-urlencoded'
+};
+
+function setContentTypeIfUnset(headers, value) {
+  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+    headers['Content-Type'] = value;
+  }
+}
+
+function getDefaultAdapter() {
+  var adapter;
+  if (typeof XMLHttpRequest !== 'undefined') {
+    // For browsers use XHR adapter
+    adapter = __webpack_require__(/*! ./adapters/xhr */ "./node_modules/axios/lib/adapters/xhr.js");
+  } else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
+    // For node use HTTP adapter
+    adapter = __webpack_require__(/*! ./adapters/http */ "./node_modules/axios/lib/adapters/xhr.js");
+  }
+  return adapter;
+}
+
+function stringifySafely(rawValue, parser, encoder) {
+  if (utils.isString(rawValue)) {
+    try {
+      (parser || JSON.parse)(rawValue);
+      return utils.trim(rawValue);
+    } catch (e) {
+      if (e.name !== 'SyntaxError') {
+        throw e;
+      }
+    }
+  }
+
+  return (encoder || JSON.stringify)(rawValue);
+}
+
+var defaults = {
+
+  transitional: {
+    silentJSONParsing: true,
+    forcedJSONParsing: true,
+    clarifyTimeoutError: false
+  },
+
+  adapter: getDefaultAdapter(),
+
+  transformRequest: [function transformRequest(data, headers) {
+    normalizeHeaderName(headers, 'Accept');
+    normalizeHeaderName(headers, 'Content-Type');
+
+    if (utils.isFormData(data) ||
+      utils.isArrayBuffer(data) ||
+      utils.isBuffer(data) ||
+      utils.isStream(data) ||
+      utils.isFile(data) ||
+      utils.isBlob(data)
+    ) {
+      return data;
+    }
+    if (utils.isArrayBufferView(data)) {
+      return data.buffer;
+    }
+    if (utils.isURLSearchParams(data)) {
+      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+      return data.toString();
+    }
+    if (utils.isObject(data) || (headers && headers['Content-Type'] === 'application/json')) {
+      setContentTypeIfUnset(headers, 'application/json');
+      return stringifySafely(data);
+    }
+    return data;
+  }],
+
+  transformResponse: [function transformResponse(data) {
+    var transitional = this.transitional || defaults.transitional;
+    var silentJSONParsing = transitional && transitional.silentJSONParsing;
+    var forcedJSONParsing = transitional && transitional.forcedJSONParsing;
+    var strictJSONParsing = !silentJSONParsing && this.responseType === 'json';
+
+    if (strictJSONParsing || (forcedJSONParsing && utils.isString(data) && data.length)) {
+      try {
+        return JSON.parse(data);
+      } catch (e) {
+        if (strictJSONParsing) {
+          if (e.name === 'SyntaxError') {
+            throw enhanceError(e, this, 'E_JSON_PARSE');
+          }
+          throw e;
+        }
+      }
+    }
+
+    return data;
+  }],
+
+  /**
+   * A timeout in milliseconds to abort a request. If set to 0 (default) a
+   * timeout is not created.
+   */
+  timeout: 0,
+
+  xsrfCookieName: 'XSRF-TOKEN',
+  xsrfHeaderName: 'X-XSRF-TOKEN',
+
+  maxContentLength: -1,
+  maxBodyLength: -1,
+
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  },
+
+  headers: {
+    common: {
+      'Accept': 'application/json, text/plain, */*'
+    }
+  }
+};
+
+utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
+  defaults.headers[method] = {};
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+});
+
+module.exports = defaults;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/env/data.js":
+/*!********************************************!*\
+  !*** ./node_modules/axios/lib/env/data.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+module.exports = {
+  "version": "0.22.0"
+};
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/bind.js":
+/*!************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/bind.js ***!
+  \************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function bind(fn, thisArg) {
+  return function wrap() {
+    var args = new Array(arguments.length);
+    for (var i = 0; i < args.length; i++) {
+      args[i] = arguments[i];
+    }
+    return fn.apply(thisArg, args);
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/buildURL.js":
+/*!****************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/buildURL.js ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+function encode(val) {
+  return encodeURIComponent(val).
+    replace(/%3A/gi, ':').
+    replace(/%24/g, '$').
+    replace(/%2C/gi, ',').
+    replace(/%20/g, '+').
+    replace(/%5B/gi, '[').
+    replace(/%5D/gi, ']');
+}
+
+/**
+ * Build a URL by appending params to the end
+ *
+ * @param {string} url The base of the url (e.g., http://www.google.com)
+ * @param {object} [params] The params to be appended
+ * @returns {string} The formatted url
+ */
+module.exports = function buildURL(url, params, paramsSerializer) {
+  /*eslint no-param-reassign:0*/
+  if (!params) {
+    return url;
+  }
+
+  var serializedParams;
+  if (paramsSerializer) {
+    serializedParams = paramsSerializer(params);
+  } else if (utils.isURLSearchParams(params)) {
+    serializedParams = params.toString();
+  } else {
+    var parts = [];
+
+    utils.forEach(params, function serialize(val, key) {
+      if (val === null || typeof val === 'undefined') {
+        return;
+      }
+
+      if (utils.isArray(val)) {
+        key = key + '[]';
+      } else {
+        val = [val];
+      }
+
+      utils.forEach(val, function parseValue(v) {
+        if (utils.isDate(v)) {
+          v = v.toISOString();
+        } else if (utils.isObject(v)) {
+          v = JSON.stringify(v);
+        }
+        parts.push(encode(key) + '=' + encode(v));
+      });
+    });
+
+    serializedParams = parts.join('&');
+  }
+
+  if (serializedParams) {
+    var hashmarkIndex = url.indexOf('#');
+    if (hashmarkIndex !== -1) {
+      url = url.slice(0, hashmarkIndex);
+    }
+
+    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+  }
+
+  return url;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/combineURLs.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/combineURLs.js ***!
+  \*******************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/**
+ * Creates a new URL by combining the specified URLs
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} relativeURL The relative URL
+ * @returns {string} The combined URL
+ */
+module.exports = function combineURLs(baseURL, relativeURL) {
+  return relativeURL
+    ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '')
+    : baseURL;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/cookies.js":
+/*!***************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/cookies.js ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs support document.cookie
+    (function standardBrowserEnv() {
+      return {
+        write: function write(name, value, expires, path, domain, secure) {
+          var cookie = [];
+          cookie.push(name + '=' + encodeURIComponent(value));
+
+          if (utils.isNumber(expires)) {
+            cookie.push('expires=' + new Date(expires).toGMTString());
+          }
+
+          if (utils.isString(path)) {
+            cookie.push('path=' + path);
+          }
+
+          if (utils.isString(domain)) {
+            cookie.push('domain=' + domain);
+          }
+
+          if (secure === true) {
+            cookie.push('secure');
+          }
+
+          document.cookie = cookie.join('; ');
+        },
+
+        read: function read(name) {
+          var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+          return (match ? decodeURIComponent(match[3]) : null);
+        },
+
+        remove: function remove(name) {
+          this.write(name, '', Date.now() - 86400000);
+        }
+      };
+    })() :
+
+  // Non standard browser env (web workers, react-native) lack needed support.
+    (function nonStandardBrowserEnv() {
+      return {
+        write: function write() {},
+        read: function read() { return null; },
+        remove: function remove() {}
+      };
+    })()
+);
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/isAbsoluteURL.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
+  \*********************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/**
+ * Determines whether the specified URL is absolute
+ *
+ * @param {string} url The URL to test
+ * @returns {boolean} True if the specified URL is absolute, otherwise false
+ */
+module.exports = function isAbsoluteURL(url) {
+  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+  // by any combination of letters, digits, plus, period, or hyphen.
+  return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/isAxiosError.js":
+/*!********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/isAxiosError.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/**
+ * Determines whether the payload is an error thrown by Axios
+ *
+ * @param {*} payload The value to test
+ * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
+ */
+module.exports = function isAxiosError(payload) {
+  return (typeof payload === 'object') && (payload.isAxiosError === true);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/isURLSameOrigin.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
+  \***********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs have full support of the APIs needed to test
+  // whether the request URL is of the same origin as current location.
+    (function standardBrowserEnv() {
+      var msie = /(msie|trident)/i.test(navigator.userAgent);
+      var urlParsingNode = document.createElement('a');
+      var originURL;
+
+      /**
+    * Parse a URL to discover it's components
+    *
+    * @param {String} url The URL to be parsed
+    * @returns {Object}
+    */
+      function resolveURL(url) {
+        var href = url;
+
+        if (msie) {
+        // IE needs attribute set twice to normalize properties
+          urlParsingNode.setAttribute('href', href);
+          href = urlParsingNode.href;
+        }
+
+        urlParsingNode.setAttribute('href', href);
+
+        // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+        return {
+          href: urlParsingNode.href,
+          protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+          host: urlParsingNode.host,
+          search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+          hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+          hostname: urlParsingNode.hostname,
+          port: urlParsingNode.port,
+          pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+            urlParsingNode.pathname :
+            '/' + urlParsingNode.pathname
+        };
+      }
+
+      originURL = resolveURL(window.location.href);
+
+      /**
+    * Determine if a URL shares the same origin as the current location
+    *
+    * @param {String} requestURL The URL to test
+    * @returns {boolean} True if URL shares the same origin, otherwise false
+    */
+      return function isURLSameOrigin(requestURL) {
+        var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+        return (parsed.protocol === originURL.protocol &&
+            parsed.host === originURL.host);
+      };
+    })() :
+
+  // Non standard browser envs (web workers, react-native) lack needed support.
+    (function nonStandardBrowserEnv() {
+      return function isURLSameOrigin() {
+        return true;
+      };
+    })()
+);
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/normalizeHeaderName.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
+  \***************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
+
+module.exports = function normalizeHeaderName(headers, normalizedName) {
+  utils.forEach(headers, function processHeader(value, name) {
+    if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+      headers[normalizedName] = value;
+      delete headers[name];
+    }
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/parseHeaders.js":
+/*!********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/parseHeaders.js ***!
+  \********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+// Headers whose duplicates are ignored by node
+// c.f. https://nodejs.org/api/http.html#http_message_headers
+var ignoreDuplicateOf = [
+  'age', 'authorization', 'content-length', 'content-type', 'etag',
+  'expires', 'from', 'host', 'if-modified-since', 'if-unmodified-since',
+  'last-modified', 'location', 'max-forwards', 'proxy-authorization',
+  'referer', 'retry-after', 'user-agent'
+];
+
+/**
+ * Parse headers into an object
+ *
+ * ```
+ * Date: Wed, 27 Aug 2014 08:58:49 GMT
+ * Content-Type: application/json
+ * Connection: keep-alive
+ * Transfer-Encoding: chunked
+ * ```
+ *
+ * @param {String} headers Headers needing to be parsed
+ * @returns {Object} Headers parsed into an object
+ */
+module.exports = function parseHeaders(headers) {
+  var parsed = {};
+  var key;
+  var val;
+  var i;
+
+  if (!headers) { return parsed; }
+
+  utils.forEach(headers.split('\n'), function parser(line) {
+    i = line.indexOf(':');
+    key = utils.trim(line.substr(0, i)).toLowerCase();
+    val = utils.trim(line.substr(i + 1));
+
+    if (key) {
+      if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) {
+        return;
+      }
+      if (key === 'set-cookie') {
+        parsed[key] = (parsed[key] ? parsed[key] : []).concat([val]);
+      } else {
+        parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+      }
+    }
+  });
+
+  return parsed;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/spread.js":
+/*!**************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/spread.js ***!
+  \**************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/**
+ * Syntactic sugar for invoking a function and expanding an array for arguments.
+ *
+ * Common use case would be to use `Function.prototype.apply`.
+ *
+ *  ```js
+ *  function f(x, y, z) {}
+ *  var args = [1, 2, 3];
+ *  f.apply(null, args);
+ *  ```
+ *
+ * With `spread` this example can be re-written.
+ *
+ *  ```js
+ *  spread(function(x, y, z) {})([1, 2, 3]);
+ *  ```
+ *
+ * @param {Function} callback
+ * @returns {Function}
+ */
+module.exports = function spread(callback) {
+  return function wrap(arr) {
+    return callback.apply(null, arr);
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/validator.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/validator.js ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var VERSION = __webpack_require__(/*! ../env/data */ "./node_modules/axios/lib/env/data.js").version;
+
+var validators = {};
+
+// eslint-disable-next-line func-names
+['object', 'boolean', 'number', 'function', 'string', 'symbol'].forEach(function(type, i) {
+  validators[type] = function validator(thing) {
+    return typeof thing === type || 'a' + (i < 1 ? 'n ' : ' ') + type;
+  };
+});
+
+var deprecatedWarnings = {};
+
+/**
+ * Transitional option validator
+ * @param {function|boolean?} validator - set to false if the transitional option has been removed
+ * @param {string?} version - deprecated version / removed since version
+ * @param {string?} message - some message with additional info
+ * @returns {function}
+ */
+validators.transitional = function transitional(validator, version, message) {
+  function formatMessage(opt, desc) {
+    return '[Axios v' + VERSION + '] Transitional option \'' + opt + '\'' + desc + (message ? '. ' + message : '');
+  }
+
+  // eslint-disable-next-line func-names
+  return function(value, opt, opts) {
+    if (validator === false) {
+      throw new Error(formatMessage(opt, ' has been removed' + (version ? ' in ' + version : '')));
+    }
+
+    if (version && !deprecatedWarnings[opt]) {
+      deprecatedWarnings[opt] = true;
+      // eslint-disable-next-line no-console
+      console.warn(
+        formatMessage(
+          opt,
+          ' has been deprecated since v' + version + ' and will be removed in the near future'
+        )
+      );
+    }
+
+    return validator ? validator(value, opt, opts) : true;
+  };
+};
+
+/**
+ * Assert object's properties type
+ * @param {object} options
+ * @param {object} schema
+ * @param {boolean?} allowUnknown
+ */
+
+function assertOptions(options, schema, allowUnknown) {
+  if (typeof options !== 'object') {
+    throw new TypeError('options must be an object');
+  }
+  var keys = Object.keys(options);
+  var i = keys.length;
+  while (i-- > 0) {
+    var opt = keys[i];
+    var validator = schema[opt];
+    if (validator) {
+      var value = options[opt];
+      var result = value === undefined || validator(value, opt, options);
+      if (result !== true) {
+        throw new TypeError('option ' + opt + ' must be ' + result);
+      }
+      continue;
+    }
+    if (allowUnknown !== true) {
+      throw Error('Unknown option ' + opt);
+    }
+  }
+}
+
+module.exports = {
+  assertOptions: assertOptions,
+  validators: validators
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/utils.js":
+/*!*****************************************!*\
+  !*** ./node_modules/axios/lib/utils.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
+
+// utils is a library of generic helper functions non-specific to axios
+
+var toString = Object.prototype.toString;
+
+/**
+ * Determine if a value is an Array
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Array, otherwise false
+ */
+function isArray(val) {
+  return toString.call(val) === '[object Array]';
+}
+
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */
+function isUndefined(val) {
+  return typeof val === 'undefined';
+}
+
+/**
+ * Determine if a value is a Buffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Buffer, otherwise false
+ */
+function isBuffer(val) {
+  return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor)
+    && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val);
+}
+
+/**
+ * Determine if a value is an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+ */
+function isArrayBuffer(val) {
+  return toString.call(val) === '[object ArrayBuffer]';
+}
+
+/**
+ * Determine if a value is a FormData
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an FormData, otherwise false
+ */
+function isFormData(val) {
+  return (typeof FormData !== 'undefined') && (val instanceof FormData);
+}
+
+/**
+ * Determine if a value is a view on an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+ */
+function isArrayBufferView(val) {
+  var result;
+  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+    result = ArrayBuffer.isView(val);
+  } else {
+    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+  }
+  return result;
+}
+
+/**
+ * Determine if a value is a String
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a String, otherwise false
+ */
+function isString(val) {
+  return typeof val === 'string';
+}
+
+/**
+ * Determine if a value is a Number
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Number, otherwise false
+ */
+function isNumber(val) {
+  return typeof val === 'number';
+}
+
+/**
+ * Determine if a value is an Object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Object, otherwise false
+ */
+function isObject(val) {
+  return val !== null && typeof val === 'object';
+}
+
+/**
+ * Determine if a value is a plain Object
+ *
+ * @param {Object} val The value to test
+ * @return {boolean} True if value is a plain Object, otherwise false
+ */
+function isPlainObject(val) {
+  if (toString.call(val) !== '[object Object]') {
+    return false;
+  }
+
+  var prototype = Object.getPrototypeOf(val);
+  return prototype === null || prototype === Object.prototype;
+}
+
+/**
+ * Determine if a value is a Date
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Date, otherwise false
+ */
+function isDate(val) {
+  return toString.call(val) === '[object Date]';
+}
+
+/**
+ * Determine if a value is a File
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a File, otherwise false
+ */
+function isFile(val) {
+  return toString.call(val) === '[object File]';
+}
+
+/**
+ * Determine if a value is a Blob
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Blob, otherwise false
+ */
+function isBlob(val) {
+  return toString.call(val) === '[object Blob]';
+}
+
+/**
+ * Determine if a value is a Function
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Function, otherwise false
+ */
+function isFunction(val) {
+  return toString.call(val) === '[object Function]';
+}
+
+/**
+ * Determine if a value is a Stream
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Stream, otherwise false
+ */
+function isStream(val) {
+  return isObject(val) && isFunction(val.pipe);
+}
+
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */
+function isURLSearchParams(val) {
+  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+}
+
+/**
+ * Trim excess whitespace off the beginning and end of a string
+ *
+ * @param {String} str The String to trim
+ * @returns {String} The String freed of excess whitespace
+ */
+function trim(str) {
+  return str.trim ? str.trim() : str.replace(/^\s+|\s+$/g, '');
+}
+
+/**
+ * Determine if we're running in a standard browser environment
+ *
+ * This allows axios to run in a web worker, and react-native.
+ * Both environments support XMLHttpRequest, but not fully standard globals.
+ *
+ * web workers:
+ *  typeof window -> undefined
+ *  typeof document -> undefined
+ *
+ * react-native:
+ *  navigator.product -> 'ReactNative'
+ * nativescript
+ *  navigator.product -> 'NativeScript' or 'NS'
+ */
+function isStandardBrowserEnv() {
+  if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' ||
+                                           navigator.product === 'NativeScript' ||
+                                           navigator.product === 'NS')) {
+    return false;
+  }
+  return (
+    typeof window !== 'undefined' &&
+    typeof document !== 'undefined'
+  );
+}
+
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ */
+function forEach(obj, fn) {
+  // Don't bother if no value provided
+  if (obj === null || typeof obj === 'undefined') {
+    return;
+  }
+
+  // Force an array if not already something iterable
+  if (typeof obj !== 'object') {
+    /*eslint no-param-reassign:0*/
+    obj = [obj];
+  }
+
+  if (isArray(obj)) {
+    // Iterate over array values
+    for (var i = 0, l = obj.length; i < l; i++) {
+      fn.call(null, obj[i], i, obj);
+    }
+  } else {
+    // Iterate over object keys
+    for (var key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        fn.call(null, obj[key], key, obj);
+      }
+    }
+  }
+}
+
+/**
+ * Accepts varargs expecting each argument to be an object, then
+ * immutably merges the properties of each object and returns result.
+ *
+ * When multiple objects contain the same key the later object in
+ * the arguments list will take precedence.
+ *
+ * Example:
+ *
+ * ```js
+ * var result = merge({foo: 123}, {foo: 456});
+ * console.log(result.foo); // outputs 456
+ * ```
+ *
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+function merge(/* obj1, obj2, obj3, ... */) {
+  var result = {};
+  function assignValue(val, key) {
+    if (isPlainObject(result[key]) && isPlainObject(val)) {
+      result[key] = merge(result[key], val);
+    } else if (isPlainObject(val)) {
+      result[key] = merge({}, val);
+    } else if (isArray(val)) {
+      result[key] = val.slice();
+    } else {
+      result[key] = val;
+    }
+  }
+
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+
+/**
+ * Extends object a by mutably adding to it the properties of object b.
+ *
+ * @param {Object} a The object to be extended
+ * @param {Object} b The object to copy properties from
+ * @param {Object} thisArg The object to bind function to
+ * @return {Object} The resulting value of object a
+ */
+function extend(a, b, thisArg) {
+  forEach(b, function assignValue(val, key) {
+    if (thisArg && typeof val === 'function') {
+      a[key] = bind(val, thisArg);
+    } else {
+      a[key] = val;
+    }
+  });
+  return a;
+}
+
+/**
+ * Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
+ *
+ * @param {string} content with BOM
+ * @return {string} content value without BOM
+ */
+function stripBOM(content) {
+  if (content.charCodeAt(0) === 0xFEFF) {
+    content = content.slice(1);
+  }
+  return content;
+}
+
+module.exports = {
+  isArray: isArray,
+  isArrayBuffer: isArrayBuffer,
+  isBuffer: isBuffer,
+  isFormData: isFormData,
+  isArrayBufferView: isArrayBufferView,
+  isString: isString,
+  isNumber: isNumber,
+  isObject: isObject,
+  isPlainObject: isPlainObject,
+  isUndefined: isUndefined,
+  isDate: isDate,
+  isFile: isFile,
+  isBlob: isBlob,
+  isFunction: isFunction,
+  isStream: isStream,
+  isURLSearchParams: isURLSearchParams,
+  isStandardBrowserEnv: isStandardBrowserEnv,
+  forEach: forEach,
+  merge: merge,
+  extend: extend,
+  trim: trim,
+  stripBOM: stripBOM
+};
+
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -25,9 +3537,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! recoil */ "./node_modules/recoil/es/recoil.js");
-/* harmony import */ var _components_RouteItems__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/RouteItems */ "./resources/js/components/RouteItems.js");
-/* harmony import */ var _utilities_state__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utilities/state */ "./resources/js/utilities/state.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store */ "./resources/js/store/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_RouteItems__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/RouteItems */ "./resources/js/components/RouteItems.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
@@ -37,8 +3549,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(recoil__WEBPACK_IMPORTED_MODULE_2__.RecoilRoot, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_RouteItems__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
+    store: _store__WEBPACK_IMPORTED_MODULE_2__["default"],
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_RouteItems__WEBPACK_IMPORTED_MODULE_4__["default"], {})
   });
 };
 
@@ -172,10 +3685,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var use_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! use-http */ "./node_modules/use-http/dist/esm/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _store_authSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../store/authSlice */ "./resources/js/store/authSlice.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -195,39 +3709,36 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 function ForgotPassword() {
-  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
+  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
 
   var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_2__.useForm)(),
       register = _useForm.register,
       handleSubmit = _useForm.handleSubmit,
       errors = _useForm.formState.errors;
 
-  var _useFetch = (0,use_http__WEBPACK_IMPORTED_MODULE_3__["default"])('http://loanflow.local/api'),
-      post = _useFetch.post,
-      response = _useFetch.response,
-      loading = _useFetch.loading,
-      error = _useFetch.error;
+  var _useSelector = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
+    return state.auth;
+  }),
+      errorMessage = _useSelector.errorMessage,
+      isLoading = _useSelector.isLoading;
+
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
 
   var onSubmit = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(data) {
-      var result;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return post('forgot-password', data);
+              return dispatch((0,_store_authSlice__WEBPACK_IMPORTED_MODULE_4__.fetchForgotPassword)(data)).unwrap();
 
             case 2:
-              result = _context.sent;
-              console.log(result);
+              history.push("/");
 
-              if (response.ok) {
-                history.push("/");
-              }
-
-            case 5:
+            case 3:
             case "end":
               return _context.stop();
           }
@@ -240,25 +3751,29 @@ function ForgotPassword() {
     };
   }();
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("form", {
       onSubmit: handleSubmit(onSubmit),
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
         children: "Forgot password"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+        children: isLoading && 'Loading....'
+      }), errorMessage ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+        children: errorMessage
+      }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", _objectSpread({
           placeholder: "Email",
           type: "email"
         }, register("email", {
           required: true
-        }))), errors.email && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        }))), errors.email && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
           children: "This field is required"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
         type: "submit"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
         to: "/login",
         children: "Back to login"
       })
@@ -283,13 +3798,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var use_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! use-http */ "./node_modules/use-http/dist/esm/index.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _utilities_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilities/http */ "./resources/js/utilities/http.js");
-/* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! recoil */ "./node_modules/recoil/es/recoil.js");
-/* harmony import */ var _store_auth_authState__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../store/auth/authState */ "./resources/js/store/auth/authState.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _utilities_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/http */ "./resources/js/utilities/http.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_authSlice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../store/authSlice */ "./resources/js/store/authSlice.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -311,43 +3825,35 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-
 function Login() {
-  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_8__.useHistory)();
+  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_7__.useHistory)();
 
   var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_2__.useForm)(),
       register = _useForm.register,
       handleSubmit = _useForm.handleSubmit,
       errors = _useForm.formState.errors;
 
-  var _useFetch = (0,use_http__WEBPACK_IMPORTED_MODULE_3__["default"])(_utilities_http__WEBPACK_IMPORTED_MODULE_4__.apiUrl),
-      post = _useFetch.post,
-      response = _useFetch.response;
+  var _useSelector = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useSelector)(function (state) {
+    return state.auth;
+  }),
+      errorMessage = _useSelector.errorMessage,
+      isLoading = _useSelector.isLoading;
 
-  var setAuth = (0,recoil__WEBPACK_IMPORTED_MODULE_5__.useSetRecoilState)(_store_auth_authState__WEBPACK_IMPORTED_MODULE_6__.authState);
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useDispatch)();
 
   var onSubmit = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(data) {
-      var result;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return post('login', data);
+              return dispatch((0,_store_authSlice__WEBPACK_IMPORTED_MODULE_5__.fetchLogin)(data)).unwrap();
 
             case 2:
-              result = _context.sent;
+              history.push(_utilities_http__WEBPACK_IMPORTED_MODULE_3__.authRedirect);
 
-              if (response.ok) {
-                window.localStorage.setItem('ACCESS_TOKEN', result.access_token);
-                setAuth(result);
-                history.push(_utilities_http__WEBPACK_IMPORTED_MODULE_4__.authRedirect);
-              } else {
-                alert("invalid credentials");
-              }
-
-            case 4:
+            case 3:
             case "end":
               return _context.stop();
           }
@@ -360,40 +3866,44 @@ function Login() {
     };
   }();
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("form", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("form", {
       onSubmit: handleSubmit(onSubmit),
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
         children: "Login"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("p", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", _objectSpread({
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+        children: isLoading && 'Loading....'
+      }), errorMessage ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+        children: errorMessage
+      }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", _objectSpread({
           placeholder: "Email",
           type: "email"
         }, register("email", {
           required: true
-        }))), errors.email && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+        }))), errors.email && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           children: "This field is required"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("p", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", _objectSpread({
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", _objectSpread({
           placeholder: "Password",
           type: "password"
         }, register("password", {
           required: true
-        }))), errors.password && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+        }))), errors.password && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           children: "This field is required"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
         type: "submit",
         value: "Login"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
         to: "/forgot-password",
         children: "Forgot Password?"
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("p", {
-      children: ["No account yet? ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
+      children: ["No account yet? ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
         to: "/register",
         children: "Register"
       })]
@@ -418,11 +3928,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var use_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! use-http */ "./node_modules/use-http/dist/esm/index.js");
-/* harmony import */ var _utilities_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilities/http */ "./resources/js/utilities/http.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _store_authSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../store/authSlice */ "./resources/js/store/authSlice.js");
+/* harmony import */ var _utilities_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utilities/http */ "./resources/js/utilities/http.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -443,38 +3954,36 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 function Register() {
-  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
+  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_7__.useHistory)();
 
   var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_2__.useForm)(),
       register = _useForm.register,
       handleSubmit = _useForm.handleSubmit,
       errors = _useForm.formState.errors;
 
-  var _useFetch = (0,use_http__WEBPACK_IMPORTED_MODULE_3__["default"])(_utilities_http__WEBPACK_IMPORTED_MODULE_4__.apiUrl),
-      post = _useFetch.post,
-      response = _useFetch.response;
+  var _useSelector = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
+    return state.auth;
+  }),
+      errorMessage = _useSelector.errorMessage,
+      isLoading = _useSelector.isLoading;
+
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
 
   var onSubmit = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(data) {
-      var result;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return post('register', data);
+              return dispatch((0,_store_authSlice__WEBPACK_IMPORTED_MODULE_4__.fetchRegister)(data)).unwrap();
 
             case 2:
-              result = _context.sent;
+              history.push(_utilities_http__WEBPACK_IMPORTED_MODULE_5__.authRedirect);
 
-              if (response.ok) {
-                window.localStorage.setItem('ACCESS_TOKEN', result.access_token);
-                setAuth(result);
-                history.push("/");
-              }
-
-            case 4:
+            case 3:
             case "end":
               return _context.stop();
           }
@@ -487,43 +3996,47 @@ function Register() {
     };
   }();
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("form", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("form", {
       onSubmit: handleSubmit(onSubmit),
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
         children: "Register"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", _objectSpread({
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+        children: isLoading && 'Loading....'
+      }), errorMessage ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+        children: errorMessage
+      }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", _objectSpread({
           placeholder: "Name",
           type: "text"
         }, register("name", {
           required: true
-        }))), errors.name && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        }))), errors.name && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           children: "This field is required"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", _objectSpread({
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", _objectSpread({
           placeholder: "Email",
           type: "email"
         }, register("email", {
           required: true
-        }))), errors.email && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        }))), errors.email && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           children: "This field is required"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", _objectSpread({
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", _objectSpread({
           placeholder: "Password",
           type: "password"
         }, register("password", {
           required: true
-        }))), errors.password && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        }))), errors.password && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           children: "This field is required"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
         type: "submit"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-      children: ["Already has an account? ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
+      children: ["Already has an account? ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
         to: "/login",
         children: "Login"
       })]
@@ -548,9 +4061,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var use_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! use-http */ "./node_modules/use-http/dist/esm/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _store_authSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../store/authSlice */ "./resources/js/store/authSlice.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
@@ -570,12 +4084,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 function useQuery() {
-  return new URLSearchParams((0,react_router__WEBPACK_IMPORTED_MODULE_5__.useLocation)().search);
+  return new URLSearchParams((0,react_router__WEBPACK_IMPORTED_MODULE_6__.useLocation)().search);
 }
 
 function ResetPassword() {
-  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
+  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
   var query = useQuery();
 
   var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_2__.useForm)(),
@@ -583,36 +4098,32 @@ function ResetPassword() {
       handleSubmit = _useForm.handleSubmit,
       errors = _useForm.formState.errors;
 
-  var _useFetch = (0,use_http__WEBPACK_IMPORTED_MODULE_3__["default"])('http://loanflow.local/api'),
-      post = _useFetch.post,
-      response = _useFetch.response,
-      loading = _useFetch.loading,
-      error = _useFetch.error;
+  var _useSelector = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
+    return state.auth;
+  }),
+      errorMessage = _useSelector.errorMessage,
+      isLoading = _useSelector.isLoading;
 
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
   var token = query.get('token');
   var email = query.get('email');
 
   var onSubmit = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(data) {
-      var result;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return post('reset-password', _objectSpread({
+              return dispatch((0,_store_authSlice__WEBPACK_IMPORTED_MODULE_4__.fetchResetPassword)(_objectSpread({
                 token: token,
                 email: email
-              }, data));
+              }, data))).unwrap();
 
             case 2:
-              result = _context.sent;
+              history.push("/login");
 
-              if (response.ok) {
-                history.push("/");
-              }
-
-            case 4:
+            case 3:
             case "end":
               return _context.stop();
           }
@@ -625,28 +4136,32 @@ function ResetPassword() {
     };
   }();
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("form", {
     onSubmit: handleSubmit(onSubmit),
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
       children: "Forgot password"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+      children: isLoading && 'Loading....'
+    }), errorMessage ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+      children: errorMessage
+    }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
         placeholder: "Email",
         readOnly: true,
         defaultValue: email
-      }), errors.email && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      }), errors.email && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         children: "This field is required"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", _objectSpread({
         placeholder: "Password",
         type: "password"
       }, register("password", {
         required: true
-      }))), errors.password && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      }))), errors.password && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         children: "This field is required"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
       type: "submit"
     })]
   });
@@ -668,10 +4183,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var use_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! use-http */ "./node_modules/use-http/dist/esm/index.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _utilities_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/http */ "./resources/js/utilities/http.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _store_authSlice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store/authSlice */ "./resources/js/store/authSlice.js");
+/* harmony import */ var _utilities_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilities/http */ "./resources/js/utilities/http.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -683,49 +4199,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 function VerifyEmail() {
-  var query = (0,_utilities_http__WEBPACK_IMPORTED_MODULE_3__.useQuery)();
-  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
-  var accessToken = window.localStorage.getItem('ACCESS_TOKEN');
-  var options = {
-    headers: {
-      Accept: 'application/json',
-      Authorization: "Bearer ".concat(accessToken)
-    }
-  };
+  var query = (0,_utilities_http__WEBPACK_IMPORTED_MODULE_4__.useQuery)();
+  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
   var verifyEmailUrl = query.get('url').split('*').join('&');
   var splitUrl = verifyEmailUrl.split('/api/');
-  var baseUrl = "".concat(splitUrl[0], "/api");
   var fetchUrl = splitUrl[1];
-
-  var _useFetch = (0,use_http__WEBPACK_IMPORTED_MODULE_2__["default"])(baseUrl, options),
-      get = _useFetch.get,
-      response = _useFetch.response;
-
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    fetchQuery();
+    fetch();
   }, []);
 
-  var fetchQuery = /*#__PURE__*/function () {
+  var fetch = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-      var result;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return get(fetchUrl);
+              return dispatch((0,_store_authSlice__WEBPACK_IMPORTED_MODULE_3__.fetchVerifyEmail)(fetchUrl)).unwrap();
 
             case 2:
-              result = _context.sent;
+              history.push(_utilities_http__WEBPACK_IMPORTED_MODULE_4__.authRedirect);
 
-              if (response.ok) {
-                setTimeout(function () {
-                  return history.push("/");
-                }, 2000);
-              }
-
-            case 4:
+            case 3:
             case "end":
               return _context.stop();
           }
@@ -733,12 +4231,12 @@ function VerifyEmail() {
       }, _callee);
     }));
 
-    return function fetchQuery() {
+    return function fetch() {
       return _ref.apply(this, arguments);
     };
   }();
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
     children: "Email Verified"
   });
 }
@@ -757,45 +4255,287 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Dashboard)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! recoil */ "./node_modules/recoil/es/recoil.js");
-/* harmony import */ var _store_auth_authState__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../store/auth/authState */ "./resources/js/store/auth/authState.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 function Dashboard() {
-  var auth = (0,recoil__WEBPACK_IMPORTED_MODULE_1__.useRecoilValue)(_store_auth_authState__WEBPACK_IMPORTED_MODULE_2__.authState);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
       children: "Dashboard"
-    }), JSON.stringify(auth.user)]
+    })
   });
 }
 
 /***/ }),
 
-/***/ "./resources/js/store/auth/authState.js":
-/*!**********************************************!*\
-  !*** ./resources/js/store/auth/authState.js ***!
-  \**********************************************/
+/***/ "./resources/js/store/authSlice.js":
+/*!*****************************************!*\
+  !*** ./resources/js/store/authSlice.js ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "authState": () => (/* binding */ authState)
+/* harmony export */   "fetchLogin": () => (/* binding */ fetchLogin),
+/* harmony export */   "fetchRegister": () => (/* binding */ fetchRegister),
+/* harmony export */   "fetchVerifyEmail": () => (/* binding */ fetchVerifyEmail),
+/* harmony export */   "fetchForgotPassword": () => (/* binding */ fetchForgotPassword),
+/* harmony export */   "fetchResetPassword": () => (/* binding */ fetchResetPassword),
+/* harmony export */   "authSlice": () => (/* binding */ authSlice),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! recoil */ "./node_modules/recoil/es/recoil.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
+/* harmony import */ var _utilities_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/http */ "./resources/js/utilities/http.js");
+var _extraReducers;
 
-var authState = (0,recoil__WEBPACK_IMPORTED_MODULE_0__.atom)({
-  key: 'authState',
-  "default": {
+function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+var fetchLogin = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchLogin', /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(data, _ref) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            rejectWithValue = _ref.rejectWithValue;
+            _context.prev = 1;
+            _context.next = 4;
+            return (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp)().post('login', data);
+
+          case 4:
+            response = _context.sent;
+            return _context.abrupt("return", response.data);
+
+          case 8:
+            _context.prev = 8;
+            _context.t0 = _context["catch"](1);
+            return _context.abrupt("return", rejectWithValue(_context.t0.response.data));
+
+          case 11:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[1, 8]]);
+  }));
+
+  return function (_x, _x2) {
+    return _ref2.apply(this, arguments);
+  };
+}());
+var fetchRegister = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchRegister', /*#__PURE__*/function () {
+  var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(data, _ref3) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            rejectWithValue = _ref3.rejectWithValue;
+            _context2.prev = 1;
+            _context2.next = 4;
+            return (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp)().post('register', data);
+
+          case 4:
+            response = _context2.sent;
+            return _context2.abrupt("return", response.data);
+
+          case 8:
+            _context2.prev = 8;
+            _context2.t0 = _context2["catch"](1);
+            return _context2.abrupt("return", rejectWithValue(_context2.t0.response.data));
+
+          case 11:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2, null, [[1, 8]]);
+  }));
+
+  return function (_x3, _x4) {
+    return _ref4.apply(this, arguments);
+  };
+}());
+var fetchVerifyEmail = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchVerifyEmail', /*#__PURE__*/function () {
+  var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(fetchUrl, _ref5) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            rejectWithValue = _ref5.rejectWithValue;
+            _context3.prev = 1;
+            _context3.next = 4;
+            return (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp)().get(fetchUrl);
+
+          case 4:
+            response = _context3.sent;
+            return _context3.abrupt("return", response ? response.data : null);
+
+          case 8:
+            _context3.prev = 8;
+            _context3.t0 = _context3["catch"](1);
+            console.log(_context3.t0);
+            return _context3.abrupt("return", rejectWithValue(_context3.t0.response.data));
+
+          case 12:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3, null, [[1, 8]]);
+  }));
+
+  return function (_x5, _x6) {
+    return _ref6.apply(this, arguments);
+  };
+}());
+var fetchForgotPassword = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchForgotPassword', /*#__PURE__*/function () {
+  var _ref8 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(data, _ref7) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            rejectWithValue = _ref7.rejectWithValue;
+            _context4.prev = 1;
+            _context4.next = 4;
+            return (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp)().post('forgot-password', data);
+
+          case 4:
+            response = _context4.sent;
+            return _context4.abrupt("return", response.data);
+
+          case 8:
+            _context4.prev = 8;
+            _context4.t0 = _context4["catch"](1);
+            console.log(_context4.t0);
+            return _context4.abrupt("return", rejectWithValue(_context4.t0.response.data));
+
+          case 12:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4, null, [[1, 8]]);
+  }));
+
+  return function (_x7, _x8) {
+    return _ref8.apply(this, arguments);
+  };
+}());
+var fetchResetPassword = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchResetPassword', /*#__PURE__*/function () {
+  var _ref10 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(data, _ref9) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            rejectWithValue = _ref9.rejectWithValue;
+            _context5.prev = 1;
+            _context5.next = 4;
+            return (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp)().post('reset-password', data);
+
+          case 4:
+            response = _context5.sent;
+            return _context5.abrupt("return", response.data);
+
+          case 8:
+            _context5.prev = 8;
+            _context5.t0 = _context5["catch"](1);
+            return _context5.abrupt("return", rejectWithValue(_context5.t0.response.data));
+
+          case 11:
+          case "end":
+            return _context5.stop();
+        }
+      }
+    }, _callee5, null, [[1, 8]]);
+  }));
+
+  return function (_x9, _x10) {
+    return _ref10.apply(this, arguments);
+  };
+}());
+var authSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createSlice)({
+  name: 'auth',
+  initialState: {
     user: null,
-    token: window.localStorage.getItem('ACCESS_TOKEN')
-  }
+    accessToken: null,
+    errorMessage: '',
+    isLoading: false
+  },
+  extraReducers: (_extraReducers = {}, _defineProperty(_extraReducers, fetchLogin.pending, function (state, action) {
+    state.isLoading = true;
+  }), _defineProperty(_extraReducers, fetchLogin.fulfilled, function (state, _ref11) {
+    var payload = _ref11.payload;
+    var user = payload.user,
+        accessToken = payload.access_token;
+    state.user = user;
+    state.accessToken = accessToken;
+    state.errorMessage = '';
+    state.isLoading = false;
+    (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.setToken)(accessToken);
+  }), _defineProperty(_extraReducers, fetchLogin.rejected, function (state, action) {
+    state.errorMessage = action.payload ? action.payload.message : 'Error';
+    state.isLoading = false;
+  }), _defineProperty(_extraReducers, fetchRegister.pending, function (state, action) {
+    state.isLoading = true;
+  }), _defineProperty(_extraReducers, fetchRegister.fulfilled, function (state, _ref12) {
+    var payload = _ref12.payload;
+    var user = payload.user,
+        accessToken = payload.access_token;
+    state.user = user;
+    state.accessToken = accessToken;
+    state.errorMessage = '';
+    state.isLoading = false;
+    (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.setToken)(accessToken);
+  }), _defineProperty(_extraReducers, fetchRegister.rejected, function (state, action) {
+    state.errorMessage = action.payload ? action.payload.message : 'Error';
+    state.isLoading = false;
+  }), _extraReducers)
 });
+
+_objectDestructuringEmpty(authSlice.actions);
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (authSlice.reducer);
+
+/***/ }),
+
+/***/ "./resources/js/store/index.js":
+/*!*************************************!*\
+  !*** ./resources/js/store/index.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
+/* harmony import */ var _store_authSlice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/authSlice */ "./resources/js/store/authSlice.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.configureStore)({
+  reducer: {
+    auth: _store_authSlice__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+}));
 
 /***/ }),
 
@@ -809,116 +4549,31 @@ var authState = (0,recoil__WEBPACK_IMPORTED_MODULE_0__.atom)({
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "authRedirect": () => (/* binding */ authRedirect),
-/* harmony export */   "apiUrl": () => (/* binding */ apiUrl),
-/* harmony export */   "useQuery": () => (/* binding */ useQuery)
+/* harmony export */   "useQuery": () => (/* binding */ useQuery),
+/* harmony export */   "setToken": () => (/* binding */ setToken),
+/* harmony export */   "apiHttp": () => (/* binding */ apiHttp)
 /* harmony export */ });
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+
 
 var authRedirect = '/dashboard';
-var apiUrl = 'http://loanflow.local/api';
 var useQuery = function useQuery() {
-  return new URLSearchParams((0,react_router__WEBPACK_IMPORTED_MODULE_0__.useLocation)().search);
+  return new URLSearchParams((0,react_router__WEBPACK_IMPORTED_MODULE_1__.useLocation)().search);
 };
-
-/***/ }),
-
-/***/ "./resources/js/utilities/state.js":
-/*!*****************************************!*\
-  !*** ./resources/js/utilities/state.js ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "RecoilDebugObserver": () => (/* binding */ RecoilDebugObserver)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! recoil */ "./node_modules/recoil/es/recoil.js");
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-/**
- * Usage:
- * const App = () => (
- *   <RecoilRoot>
- *     <RecoilDebugObserver />
- *     <AppEntryComponent />
- *   </RecoilRoot>
- * );
- */
-
-var RecoilDebugObserver = function RecoilDebugObserver() {
-  return null;
+var setToken = function setToken(token) {
+  window.localStorage.setItem('ACCESS_TOKEN', token);
 };
-
-var reduxDevtoolsExtension = typeof window !== "undefined" && window.__REDUX_DEVTOOLS_EXTENSION__;
-
-if (reduxDevtoolsExtension) {
-  var reducer = function reducer() {
-    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-    var _ref = arguments.length > 1 ? arguments[1] : undefined,
-        type = _ref.type,
-        payload = _ref.payload;
-
-    if (String(type).startsWith("[recoil]")) {
-      return _objectSpread(_objectSpread({}, state), {}, _defineProperty({}, payload.node.key, payload.loadable));
-    } else {
-      return state;
-    }
-  };
-
-  var store = (0,redux__WEBPACK_IMPORTED_MODULE_2__.createStore)(reducer, reduxDevtoolsExtension({
-    name: "recoil debug observer",
-    maxAge: 100
-  }));
-
-  RecoilDebugObserver = function RecoilDebugObserver() {
-    var snapshot = (0,recoil__WEBPACK_IMPORTED_MODULE_1__.useRecoilSnapshot)();
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-      var _iterator = _createForOfIteratorHelper(snapshot.getNodes_UNSTABLE({
-        isModified: true
-      })),
-          _step;
-
-      try {
-        for (_iterator.s(); !(_step = _iterator.n()).done;) {
-          var node = _step.value;
-          var loadable = snapshot.getLoadable(node);
-          var action = {
-            type: "[recoil] ".concat(node.key, "/").concat(loadable.state),
-            payload: {
-              node: node,
-              loadable: loadable
-            }
-          };
-          store.dispatch(action);
-        }
-      } catch (err) {
-        _iterator.e(err);
-      } finally {
-        _iterator.f();
-      }
-    }, [snapshot]);
-    return null;
-  };
-}
-
-
+var apiHttp = function apiHttp() {
+  var instance = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
+    baseURL: 'api'
+  });
+  instance.defaults.headers.common['Authorization'] = "Bearer ".concat(window.localStorage.getItem('ACCESS_TOKEN'));
+  instance.defaults.headers.common['Content-Type'] = 'application/json';
+  instance.defaults.headers.common['Accept'] = 'application/json';
+  return instance;
+};
 
 /***/ }),
 
@@ -1981,6 +5636,44 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
+/***/ "./node_modules/immer/dist/immer.esm.js":
+/*!**********************************************!*\
+  !*** ./node_modules/immer/dist/immer.esm.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "Immer": () => (/* binding */ un),
+/* harmony export */   "applyPatches": () => (/* binding */ pn),
+/* harmony export */   "castDraft": () => (/* binding */ K),
+/* harmony export */   "castImmutable": () => (/* binding */ $),
+/* harmony export */   "createDraft": () => (/* binding */ ln),
+/* harmony export */   "current": () => (/* binding */ D),
+/* harmony export */   "enableAllPlugins": () => (/* binding */ J),
+/* harmony export */   "enableES5": () => (/* binding */ N),
+/* harmony export */   "enableMapSet": () => (/* binding */ C),
+/* harmony export */   "enablePatches": () => (/* binding */ T),
+/* harmony export */   "finishDraft": () => (/* binding */ dn),
+/* harmony export */   "freeze": () => (/* binding */ d),
+/* harmony export */   "immerable": () => (/* binding */ L),
+/* harmony export */   "isDraft": () => (/* binding */ t),
+/* harmony export */   "isDraftable": () => (/* binding */ r),
+/* harmony export */   "nothing": () => (/* binding */ H),
+/* harmony export */   "original": () => (/* binding */ e),
+/* harmony export */   "produce": () => (/* binding */ fn),
+/* harmony export */   "produceWithPatches": () => (/* binding */ cn),
+/* harmony export */   "setAutoFreeze": () => (/* binding */ sn),
+/* harmony export */   "setUseProxies": () => (/* binding */ vn)
+/* harmony export */ });
+function n(n){for(var t=arguments.length,r=Array(t>1?t-1:0),e=1;e<t;e++)r[e-1]=arguments[e];if(true){var i=Y[n],o=i?"function"==typeof i?i.apply(null,r):i:"unknown error nr: "+n;throw Error("[Immer] "+o)}throw Error("[Immer] minified error nr: "+n+(r.length?" "+r.map((function(n){return"'"+n+"'"})).join(","):"")+". Find the full error at: https://bit.ly/3cXEKWf")}function t(n){return!!n&&!!n[Q]}function r(n){return!!n&&(function(n){if(!n||"object"!=typeof n)return!1;var t=Object.getPrototypeOf(n);if(null===t)return!0;var r=Object.hasOwnProperty.call(t,"constructor")&&t.constructor;return r===Object||"function"==typeof r&&Function.toString.call(r)===Z}(n)||Array.isArray(n)||!!n[L]||!!n.constructor[L]||s(n)||v(n))}function e(r){return t(r)||n(23,r),r[Q].t}function i(n,t,r){void 0===r&&(r=!1),0===o(n)?(r?Object.keys:nn)(n).forEach((function(e){r&&"symbol"==typeof e||t(e,n[e],n)})):n.forEach((function(r,e){return t(e,r,n)}))}function o(n){var t=n[Q];return t?t.i>3?t.i-4:t.i:Array.isArray(n)?1:s(n)?2:v(n)?3:0}function u(n,t){return 2===o(n)?n.has(t):Object.prototype.hasOwnProperty.call(n,t)}function a(n,t){return 2===o(n)?n.get(t):n[t]}function f(n,t,r){var e=o(n);2===e?n.set(t,r):3===e?(n.delete(t),n.add(r)):n[t]=r}function c(n,t){return n===t?0!==n||1/n==1/t:n!=n&&t!=t}function s(n){return X&&n instanceof Map}function v(n){return q&&n instanceof Set}function p(n){return n.o||n.t}function l(n){if(Array.isArray(n))return Array.prototype.slice.call(n);var t=tn(n);delete t[Q];for(var r=nn(t),e=0;e<r.length;e++){var i=r[e],o=t[i];!1===o.writable&&(o.writable=!0,o.configurable=!0),(o.get||o.set)&&(t[i]={configurable:!0,writable:!0,enumerable:o.enumerable,value:n[i]})}return Object.create(Object.getPrototypeOf(n),t)}function d(n,e){return void 0===e&&(e=!1),y(n)||t(n)||!r(n)?n:(o(n)>1&&(n.set=n.add=n.clear=n.delete=h),Object.freeze(n),e&&i(n,(function(n,t){return d(t,!0)}),!0),n)}function h(){n(2)}function y(n){return null==n||"object"!=typeof n||Object.isFrozen(n)}function b(t){var r=rn[t];return r||n(18,t),r}function m(n,t){rn[n]||(rn[n]=t)}function _(){return false||U||n(0),U}function j(n,t){t&&(b("Patches"),n.u=[],n.s=[],n.v=t)}function O(n){g(n),n.p.forEach(S),n.p=null}function g(n){n===U&&(U=n.l)}function w(n){return U={p:[],l:U,h:n,m:!0,_:0}}function S(n){var t=n[Q];0===t.i||1===t.i?t.j():t.O=!0}function P(t,e){e._=e.p.length;var i=e.p[0],o=void 0!==t&&t!==i;return e.h.g||b("ES5").S(e,t,o),o?(i[Q].P&&(O(e),n(4)),r(t)&&(t=M(e,t),e.l||x(e,t)),e.u&&b("Patches").M(i[Q],t,e.u,e.s)):t=M(e,i,[]),O(e),e.u&&e.v(e.u,e.s),t!==H?t:void 0}function M(n,t,r){if(y(t))return t;var e=t[Q];if(!e)return i(t,(function(i,o){return A(n,e,t,i,o,r)}),!0),t;if(e.A!==n)return t;if(!e.P)return x(n,e.t,!0),e.t;if(!e.I){e.I=!0,e.A._--;var o=4===e.i||5===e.i?e.o=l(e.k):e.o;i(3===e.i?new Set(o):o,(function(t,i){return A(n,e,o,t,i,r)})),x(n,o,!1),r&&n.u&&b("Patches").R(e,r,n.u,n.s)}return e.o}function A(e,i,o,a,c,s){if( true&&c===o&&n(5),t(c)){var v=M(e,c,s&&i&&3!==i.i&&!u(i.D,a)?s.concat(a):void 0);if(f(o,a,v),!t(v))return;e.m=!1}if(r(c)&&!y(c)){if(!e.h.F&&e._<1)return;M(e,c),i&&i.A.l||x(e,c)}}function x(n,t,r){void 0===r&&(r=!1),n.h.F&&n.m&&d(t,r)}function z(n,t){var r=n[Q];return(r?p(r):n)[t]}function I(n,t){if(t in n)for(var r=Object.getPrototypeOf(n);r;){var e=Object.getOwnPropertyDescriptor(r,t);if(e)return e;r=Object.getPrototypeOf(r)}}function k(n){n.P||(n.P=!0,n.l&&k(n.l))}function E(n){n.o||(n.o=l(n.t))}function R(n,t,r){var e=s(t)?b("MapSet").N(t,r):v(t)?b("MapSet").T(t,r):n.g?function(n,t){var r=Array.isArray(n),e={i:r?1:0,A:t?t.A:_(),P:!1,I:!1,D:{},l:t,t:n,k:null,o:null,j:null,C:!1},i=e,o=en;r&&(i=[e],o=on);var u=Proxy.revocable(i,o),a=u.revoke,f=u.proxy;return e.k=f,e.j=a,f}(t,r):b("ES5").J(t,r);return(r?r.A:_()).p.push(e),e}function D(e){return t(e)||n(22,e),function n(t){if(!r(t))return t;var e,u=t[Q],c=o(t);if(u){if(!u.P&&(u.i<4||!b("ES5").K(u)))return u.t;u.I=!0,e=F(t,c),u.I=!1}else e=F(t,c);return i(e,(function(t,r){u&&a(u.t,t)===r||f(e,t,n(r))})),3===c?new Set(e):e}(e)}function F(n,t){switch(t){case 2:return new Map(n);case 3:return Array.from(n)}return l(n)}function N(){function r(n,t){var r=s[n];return r?r.enumerable=t:s[n]=r={configurable:!0,enumerable:t,get:function(){var t=this[Q];return true&&f(t),en.get(t,n)},set:function(t){var r=this[Q]; true&&f(r),en.set(r,n,t)}},r}function e(n){for(var t=n.length-1;t>=0;t--){var r=n[t][Q];if(!r.P)switch(r.i){case 5:a(r)&&k(r);break;case 4:o(r)&&k(r)}}}function o(n){for(var t=n.t,r=n.k,e=nn(r),i=e.length-1;i>=0;i--){var o=e[i];if(o!==Q){var a=t[o];if(void 0===a&&!u(t,o))return!0;var f=r[o],s=f&&f[Q];if(s?s.t!==a:!c(f,a))return!0}}var v=!!t[Q];return e.length!==nn(t).length+(v?0:1)}function a(n){var t=n.k;if(t.length!==n.t.length)return!0;var r=Object.getOwnPropertyDescriptor(t,t.length-1);return!(!r||r.get)}function f(t){t.O&&n(3,JSON.stringify(p(t)))}var s={};m("ES5",{J:function(n,t){var e=Array.isArray(n),i=function(n,t){if(n){for(var e=Array(t.length),i=0;i<t.length;i++)Object.defineProperty(e,""+i,r(i,!0));return e}var o=tn(t);delete o[Q];for(var u=nn(o),a=0;a<u.length;a++){var f=u[a];o[f]=r(f,n||!!o[f].enumerable)}return Object.create(Object.getPrototypeOf(t),o)}(e,n),o={i:e?5:4,A:t?t.A:_(),P:!1,I:!1,D:{},l:t,t:n,k:i,o:null,O:!1,C:!1};return Object.defineProperty(i,Q,{value:o,writable:!0}),i},S:function(n,r,o){o?t(r)&&r[Q].A===n&&e(n.p):(n.u&&function n(t){if(t&&"object"==typeof t){var r=t[Q];if(r){var e=r.t,o=r.k,f=r.D,c=r.i;if(4===c)i(o,(function(t){t!==Q&&(void 0!==e[t]||u(e,t)?f[t]||n(o[t]):(f[t]=!0,k(r)))})),i(e,(function(n){void 0!==o[n]||u(o,n)||(f[n]=!1,k(r))}));else if(5===c){if(a(r)&&(k(r),f.length=!0),o.length<e.length)for(var s=o.length;s<e.length;s++)f[s]=!1;else for(var v=e.length;v<o.length;v++)f[v]=!0;for(var p=Math.min(o.length,e.length),l=0;l<p;l++)void 0===f[l]&&n(o[l])}}}}(n.p[0]),e(n.p))},K:function(n){return 4===n.i?o(n):a(n)}})}function T(){function e(n){if(!r(n))return n;if(Array.isArray(n))return n.map(e);if(s(n))return new Map(Array.from(n.entries()).map((function(n){return[n[0],e(n[1])]})));if(v(n))return new Set(Array.from(n).map(e));var t=Object.create(Object.getPrototypeOf(n));for(var i in n)t[i]=e(n[i]);return u(n,L)&&(t[L]=n[L]),t}function f(n){return t(n)?e(n):n}var c="add";m("Patches",{$:function(t,r){return r.forEach((function(r){for(var i=r.path,u=r.op,f=t,s=0;s<i.length-1;s++){var v=o(f),p=""+i[s];0!==v&&1!==v||"__proto__"!==p&&"constructor"!==p||n(24),"function"==typeof f&&"prototype"===p&&n(24),"object"!=typeof(f=a(f,p))&&n(15,i.join("/"))}var l=o(f),d=e(r.value),h=i[i.length-1];switch(u){case"replace":switch(l){case 2:return f.set(h,d);case 3:n(16);default:return f[h]=d}case c:switch(l){case 1:return f.splice(h,0,d);case 2:return f.set(h,d);case 3:return f.add(d);default:return f[h]=d}case"remove":switch(l){case 1:return f.splice(h,1);case 2:return f.delete(h);case 3:return f.delete(r.value);default:return delete f[h]}default:n(17,u)}})),t},R:function(n,t,r,e){switch(n.i){case 0:case 4:case 2:return function(n,t,r,e){var o=n.t,s=n.o;i(n.D,(function(n,i){var v=a(o,n),p=a(s,n),l=i?u(o,n)?"replace":c:"remove";if(v!==p||"replace"!==l){var d=t.concat(n);r.push("remove"===l?{op:l,path:d}:{op:l,path:d,value:p}),e.push(l===c?{op:"remove",path:d}:"remove"===l?{op:c,path:d,value:f(v)}:{op:"replace",path:d,value:f(v)})}}))}(n,t,r,e);case 5:case 1:return function(n,t,r,e){var i=n.t,o=n.D,u=n.o;if(u.length<i.length){var a=[u,i];i=a[0],u=a[1];var s=[e,r];r=s[0],e=s[1]}for(var v=0;v<i.length;v++)if(o[v]&&u[v]!==i[v]){var p=t.concat([v]);r.push({op:"replace",path:p,value:f(u[v])}),e.push({op:"replace",path:p,value:f(i[v])})}for(var l=i.length;l<u.length;l++){var d=t.concat([l]);r.push({op:c,path:d,value:f(u[l])})}i.length<u.length&&e.push({op:"replace",path:t.concat(["length"]),value:i.length})}(n,t,r,e);case 3:return function(n,t,r,e){var i=n.t,o=n.o,u=0;i.forEach((function(n){if(!o.has(n)){var i=t.concat([u]);r.push({op:"remove",path:i,value:n}),e.unshift({op:c,path:i,value:n})}u++})),u=0,o.forEach((function(n){if(!i.has(n)){var o=t.concat([u]);r.push({op:c,path:o,value:n}),e.unshift({op:"remove",path:o,value:n})}u++}))}(n,t,r,e)}},M:function(n,t,r,e){r.push({op:"replace",path:[],value:t===H?void 0:t}),e.push({op:"replace",path:[],value:n.t})}})}function C(){function t(n,t){function r(){this.constructor=n}a(n,t),n.prototype=(r.prototype=t.prototype,new r)}function e(n){n.o||(n.D=new Map,n.o=new Map(n.t))}function o(n){n.o||(n.o=new Set,n.t.forEach((function(t){if(r(t)){var e=R(n.A.h,t,n);n.p.set(t,e),n.o.add(e)}else n.o.add(t)})))}function u(t){t.O&&n(3,JSON.stringify(p(t)))}var a=function(n,t){return(a=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(n,t){n.__proto__=t}||function(n,t){for(var r in t)t.hasOwnProperty(r)&&(n[r]=t[r])})(n,t)},f=function(){function n(n,t){return this[Q]={i:2,l:t,A:t?t.A:_(),P:!1,I:!1,o:void 0,D:void 0,t:n,k:this,C:!1,O:!1},this}t(n,Map);var o=n.prototype;return Object.defineProperty(o,"size",{get:function(){return p(this[Q]).size}}),o.has=function(n){return p(this[Q]).has(n)},o.set=function(n,t){var r=this[Q];return u(r),p(r).has(n)&&p(r).get(n)===t||(e(r),k(r),r.D.set(n,!0),r.o.set(n,t),r.D.set(n,!0)),this},o.delete=function(n){if(!this.has(n))return!1;var t=this[Q];return u(t),e(t),k(t),t.D.set(n,!1),t.o.delete(n),!0},o.clear=function(){var n=this[Q];u(n),p(n).size&&(e(n),k(n),n.D=new Map,i(n.t,(function(t){n.D.set(t,!1)})),n.o.clear())},o.forEach=function(n,t){var r=this;p(this[Q]).forEach((function(e,i){n.call(t,r.get(i),i,r)}))},o.get=function(n){var t=this[Q];u(t);var i=p(t).get(n);if(t.I||!r(i))return i;if(i!==t.t.get(n))return i;var o=R(t.A.h,i,t);return e(t),t.o.set(n,o),o},o.keys=function(){return p(this[Q]).keys()},o.values=function(){var n,t=this,r=this.keys();return(n={})[V]=function(){return t.values()},n.next=function(){var n=r.next();return n.done?n:{done:!1,value:t.get(n.value)}},n},o.entries=function(){var n,t=this,r=this.keys();return(n={})[V]=function(){return t.entries()},n.next=function(){var n=r.next();if(n.done)return n;var e=t.get(n.value);return{done:!1,value:[n.value,e]}},n},o[V]=function(){return this.entries()},n}(),c=function(){function n(n,t){return this[Q]={i:3,l:t,A:t?t.A:_(),P:!1,I:!1,o:void 0,t:n,k:this,p:new Map,O:!1,C:!1},this}t(n,Set);var r=n.prototype;return Object.defineProperty(r,"size",{get:function(){return p(this[Q]).size}}),r.has=function(n){var t=this[Q];return u(t),t.o?!!t.o.has(n)||!(!t.p.has(n)||!t.o.has(t.p.get(n))):t.t.has(n)},r.add=function(n){var t=this[Q];return u(t),this.has(n)||(o(t),k(t),t.o.add(n)),this},r.delete=function(n){if(!this.has(n))return!1;var t=this[Q];return u(t),o(t),k(t),t.o.delete(n)||!!t.p.has(n)&&t.o.delete(t.p.get(n))},r.clear=function(){var n=this[Q];u(n),p(n).size&&(o(n),k(n),n.o.clear())},r.values=function(){var n=this[Q];return u(n),o(n),n.o.values()},r.entries=function(){var n=this[Q];return u(n),o(n),n.o.entries()},r.keys=function(){return this.values()},r[V]=function(){return this.values()},r.forEach=function(n,t){for(var r=this.values(),e=r.next();!e.done;)n.call(t,e.value,e.value,this),e=r.next()},n}();m("MapSet",{N:function(n,t){return new f(n,t)},T:function(n,t){return new c(n,t)}})}function J(){N(),C(),T()}function K(n){return n}function $(n){return n}var G,U,W="undefined"!=typeof Symbol&&"symbol"==typeof Symbol("x"),X="undefined"!=typeof Map,q="undefined"!=typeof Set,B="undefined"!=typeof Proxy&&void 0!==Proxy.revocable&&"undefined"!=typeof Reflect,H=W?Symbol.for("immer-nothing"):((G={})["immer-nothing"]=!0,G),L=W?Symbol.for("immer-draftable"):"__$immer_draftable",Q=W?Symbol.for("immer-state"):"__$immer_state",V="undefined"!=typeof Symbol&&Symbol.iterator||"@@iterator",Y={0:"Illegal state",1:"Immer drafts cannot have computed properties",2:"This object has been frozen and should not be mutated",3:function(n){return"Cannot use a proxy that has been revoked. Did you pass an object from inside an immer function to an async process? "+n},4:"An immer producer returned a new value *and* modified its draft. Either return a new value *or* modify the draft.",5:"Immer forbids circular references",6:"The first or second argument to `produce` must be a function",7:"The third argument to `produce` must be a function or undefined",8:"First argument to `createDraft` must be a plain object, an array, or an immerable object",9:"First argument to `finishDraft` must be a draft returned by `createDraft`",10:"The given draft is already finalized",11:"Object.defineProperty() cannot be used on an Immer draft",12:"Object.setPrototypeOf() cannot be used on an Immer draft",13:"Immer only supports deleting array indices",14:"Immer only supports setting array indices and the 'length' property",15:function(n){return"Cannot apply patch, path doesn't resolve: "+n},16:'Sets cannot have "replace" patches.',17:function(n){return"Unsupported patch operation: "+n},18:function(n){return"The plugin for '"+n+"' has not been loaded into Immer. To enable the plugin, import and call `enable"+n+"()` when initializing your application."},20:"Cannot use proxies if Proxy, Proxy.revocable or Reflect are not available",21:function(n){return"produce can only be called on things that are draftable: plain objects, arrays, Map, Set or classes that are marked with '[immerable]: true'. Got '"+n+"'"},22:function(n){return"'current' expects a draft, got: "+n},23:function(n){return"'original' expects a draft, got: "+n},24:"Patching reserved attributes like __proto__, prototype and constructor is not allowed"},Z=""+Object.prototype.constructor,nn="undefined"!=typeof Reflect&&Reflect.ownKeys?Reflect.ownKeys:void 0!==Object.getOwnPropertySymbols?function(n){return Object.getOwnPropertyNames(n).concat(Object.getOwnPropertySymbols(n))}:Object.getOwnPropertyNames,tn=Object.getOwnPropertyDescriptors||function(n){var t={};return nn(n).forEach((function(r){t[r]=Object.getOwnPropertyDescriptor(n,r)})),t},rn={},en={get:function(n,t){if(t===Q)return n;var e=p(n);if(!u(e,t))return function(n,t,r){var e,i=I(t,r);return i?"value"in i?i.value:null===(e=i.get)||void 0===e?void 0:e.call(n.k):void 0}(n,e,t);var i=e[t];return n.I||!r(i)?i:i===z(n.t,t)?(E(n),n.o[t]=R(n.A.h,i,n)):i},has:function(n,t){return t in p(n)},ownKeys:function(n){return Reflect.ownKeys(p(n))},set:function(n,t,r){var e=I(p(n),t);if(null==e?void 0:e.set)return e.set.call(n.k,r),!0;if(!n.P){var i=z(p(n),t),o=null==i?void 0:i[Q];if(o&&o.t===r)return n.o[t]=r,n.D[t]=!1,!0;if(c(r,i)&&(void 0!==r||u(n.t,t)))return!0;E(n),k(n)}return n.o[t]===r&&"number"!=typeof r&&(void 0!==r||t in n.o)||(n.o[t]=r,n.D[t]=!0,!0)},deleteProperty:function(n,t){return void 0!==z(n.t,t)||t in n.t?(n.D[t]=!1,E(n),k(n)):delete n.D[t],n.o&&delete n.o[t],!0},getOwnPropertyDescriptor:function(n,t){var r=p(n),e=Reflect.getOwnPropertyDescriptor(r,t);return e?{writable:!0,configurable:1!==n.i||"length"!==t,enumerable:e.enumerable,value:r[t]}:e},defineProperty:function(){n(11)},getPrototypeOf:function(n){return Object.getPrototypeOf(n.t)},setPrototypeOf:function(){n(12)}},on={};i(en,(function(n,t){on[n]=function(){return arguments[0]=arguments[0][0],t.apply(this,arguments)}})),on.deleteProperty=function(t,r){return true&&isNaN(parseInt(r))&&n(13),en.deleteProperty.call(this,t[0],r)},on.set=function(t,r,e){return true&&"length"!==r&&isNaN(parseInt(r))&&n(14),en.set.call(this,t[0],r,e,t[0])};var un=function(){function e(t){var e=this;this.g=B,this.F=!0,this.produce=function(t,i,o){if("function"==typeof t&&"function"!=typeof i){var u=i;i=t;var a=e;return function(n){var t=this;void 0===n&&(n=u);for(var r=arguments.length,e=Array(r>1?r-1:0),o=1;o<r;o++)e[o-1]=arguments[o];return a.produce(n,(function(n){var r;return(r=i).call.apply(r,[t,n].concat(e))}))}}var f;if("function"!=typeof i&&n(6),void 0!==o&&"function"!=typeof o&&n(7),r(t)){var c=w(e),s=R(e,t,void 0),v=!0;try{f=i(s),v=!1}finally{v?O(c):g(c)}return"undefined"!=typeof Promise&&f instanceof Promise?f.then((function(n){return j(c,o),P(n,c)}),(function(n){throw O(c),n})):(j(c,o),P(f,c))}if(!t||"object"!=typeof t){if((f=i(t))===H)return;return void 0===f&&(f=t),e.F&&d(f,!0),f}n(21,t)},this.produceWithPatches=function(n,t){return"function"==typeof n?function(t){for(var r=arguments.length,i=Array(r>1?r-1:0),o=1;o<r;o++)i[o-1]=arguments[o];return e.produceWithPatches(t,(function(t){return n.apply(void 0,[t].concat(i))}))}:[e.produce(n,t,(function(n,t){r=n,i=t})),r,i];var r,i},"boolean"==typeof(null==t?void 0:t.useProxies)&&this.setUseProxies(t.useProxies),"boolean"==typeof(null==t?void 0:t.autoFreeze)&&this.setAutoFreeze(t.autoFreeze)}var i=e.prototype;return i.createDraft=function(e){r(e)||n(8),t(e)&&(e=D(e));var i=w(this),o=R(this,e,void 0);return o[Q].C=!0,g(i),o},i.finishDraft=function(t,r){var e=t&&t[Q]; true&&(e&&e.C||n(9),e.I&&n(10));var i=e.A;return j(i,r),P(void 0,i)},i.setAutoFreeze=function(n){this.F=n},i.setUseProxies=function(t){t&&!B&&n(20),this.g=t},i.applyPatches=function(n,r){var e;for(e=r.length-1;e>=0;e--){var i=r[e];if(0===i.path.length&&"replace"===i.op){n=i.value;break}}var o=b("Patches").$;return t(n)?o(n,r):this.produce(n,(function(n){return o(n,r.slice(e+1))}))},e}(),an=new un,fn=an.produce,cn=an.produceWithPatches.bind(an),sn=an.setAutoFreeze.bind(an),vn=an.setUseProxies.bind(an),pn=an.applyPatches.bind(an),ln=an.createDraft.bind(an),dn=an.finishDraft.bind(an);/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fn);
+//# sourceMappingURL=immer.esm.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/mini-create-react-context/dist/esm/index.js":
 /*!******************************************************************!*\
   !*** ./node_modules/mini-create-react-context/dist/esm/index.js ***!
@@ -2287,6 +5980,200 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 	return to;
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/process/browser.js":
+/*!*****************************************!*\
+  !*** ./node_modules/process/browser.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
 
 
 /***/ }),
@@ -31392,6 +35279,1759 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-redux/es/components/Context.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/components/Context.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ReactReduxContext": () => (/* binding */ ReactReduxContext),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var ReactReduxContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
+
+if (true) {
+  ReactReduxContext.displayName = 'ReactRedux';
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactReduxContext);
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/components/Provider.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-redux/es/components/Provider.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Context */ "./node_modules/react-redux/es/components/Context.js");
+/* harmony import */ var _utils_Subscription__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/es/utils/Subscription.js");
+/* harmony import */ var _utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/useIsomorphicLayoutEffect */ "./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js");
+
+
+
+
+
+
+function Provider(_ref) {
+  var store = _ref.store,
+      context = _ref.context,
+      children = _ref.children;
+  var contextValue = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+    var subscription = (0,_utils_Subscription__WEBPACK_IMPORTED_MODULE_3__.createSubscription)(store);
+    subscription.onStateChange = subscription.notifyNestedSubs;
+    return {
+      store: store,
+      subscription: subscription
+    };
+  }, [store]);
+  var previousState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+    return store.getState();
+  }, [store]);
+  (0,_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_4__.useIsomorphicLayoutEffect)(function () {
+    var subscription = contextValue.subscription;
+    subscription.trySubscribe();
+
+    if (previousState !== store.getState()) {
+      subscription.notifyNestedSubs();
+    }
+
+    return function () {
+      subscription.tryUnsubscribe();
+      subscription.onStateChange = null;
+    };
+  }, [contextValue, previousState]);
+  var Context = context || _Context__WEBPACK_IMPORTED_MODULE_2__.ReactReduxContext;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Context.Provider, {
+    value: contextValue
+  }, children);
+}
+
+if (true) {
+  Provider.propTypes = {
+    store: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape({
+      subscribe: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired),
+      dispatch: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired),
+      getState: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
+    }),
+    context: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
+    children: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().any)
+  };
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Provider);
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/components/connectAdvanced.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-redux/es/components/connectAdvanced.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ connectAdvanced)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
+/* harmony import */ var _utils_Subscription__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/es/utils/Subscription.js");
+/* harmony import */ var _utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/useIsomorphicLayoutEffect */ "./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js");
+/* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Context */ "./node_modules/react-redux/es/components/Context.js");
+
+
+var _excluded = ["getDisplayName", "methodName", "renderCountProp", "shouldHandleStateChanges", "storeKey", "withRef", "forwardRef", "context"],
+    _excluded2 = ["reactReduxForwardedRef"];
+
+
+
+
+
+ // Define some constant arrays just to avoid re-creating these
+
+var EMPTY_ARRAY = [];
+var NO_SUBSCRIPTION_ARRAY = [null, null];
+
+var stringifyComponent = function stringifyComponent(Comp) {
+  try {
+    return JSON.stringify(Comp);
+  } catch (err) {
+    return String(Comp);
+  }
+};
+
+function storeStateUpdatesReducer(state, action) {
+  var updateCount = state[1];
+  return [action.payload, updateCount + 1];
+}
+
+function useIsomorphicLayoutEffectWithArgs(effectFunc, effectArgs, dependencies) {
+  (0,_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_6__.useIsomorphicLayoutEffect)(function () {
+    return effectFunc.apply(void 0, effectArgs);
+  }, dependencies);
+}
+
+function captureWrapperProps(lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs) {
+  // We want to capture the wrapper props and child props we used for later comparisons
+  lastWrapperProps.current = wrapperProps;
+  lastChildProps.current = actualChildProps;
+  renderIsScheduled.current = false; // If the render was from a store update, clear out that reference and cascade the subscriber update
+
+  if (childPropsFromStoreUpdate.current) {
+    childPropsFromStoreUpdate.current = null;
+    notifyNestedSubs();
+  }
+}
+
+function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch) {
+  // If we're not subscribed to the store, nothing to do here
+  if (!shouldHandleStateChanges) return; // Capture values for checking if and when this component unmounts
+
+  var didUnsubscribe = false;
+  var lastThrownError = null; // We'll run this callback every time a store subscription update propagates to this component
+
+  var checkForUpdates = function checkForUpdates() {
+    if (didUnsubscribe) {
+      // Don't run stale listeners.
+      // Redux doesn't guarantee unsubscriptions happen until next dispatch.
+      return;
+    }
+
+    var latestStoreState = store.getState();
+    var newChildProps, error;
+
+    try {
+      // Actually run the selector with the most recent store state and wrapper props
+      // to determine what the child props should be
+      newChildProps = childPropsSelector(latestStoreState, lastWrapperProps.current);
+    } catch (e) {
+      error = e;
+      lastThrownError = e;
+    }
+
+    if (!error) {
+      lastThrownError = null;
+    } // If the child props haven't changed, nothing to do here - cascade the subscription update
+
+
+    if (newChildProps === lastChildProps.current) {
+      if (!renderIsScheduled.current) {
+        notifyNestedSubs();
+      }
+    } else {
+      // Save references to the new child props.  Note that we track the "child props from store update"
+      // as a ref instead of a useState/useReducer because we need a way to determine if that value has
+      // been processed.  If this went into useState/useReducer, we couldn't clear out the value without
+      // forcing another re-render, which we don't want.
+      lastChildProps.current = newChildProps;
+      childPropsFromStoreUpdate.current = newChildProps;
+      renderIsScheduled.current = true; // If the child props _did_ change (or we caught an error), this wrapper component needs to re-render
+
+      forceComponentUpdateDispatch({
+        type: 'STORE_UPDATED',
+        payload: {
+          error: error
+        }
+      });
+    }
+  }; // Actually subscribe to the nearest connected ancestor (or store)
+
+
+  subscription.onStateChange = checkForUpdates;
+  subscription.trySubscribe(); // Pull data from the store after first render in case the store has
+  // changed since we began.
+
+  checkForUpdates();
+
+  var unsubscribeWrapper = function unsubscribeWrapper() {
+    didUnsubscribe = true;
+    subscription.tryUnsubscribe();
+    subscription.onStateChange = null;
+
+    if (lastThrownError) {
+      // It's possible that we caught an error due to a bad mapState function, but the
+      // parent re-rendered without this component and we're about to unmount.
+      // This shouldn't happen as long as we do top-down subscriptions correctly, but
+      // if we ever do those wrong, this throw will surface the error in our tests.
+      // In that case, throw the error from here so it doesn't get lost.
+      throw lastThrownError;
+    }
+  };
+
+  return unsubscribeWrapper;
+}
+
+var initStateUpdates = function initStateUpdates() {
+  return [null, 0];
+};
+
+function connectAdvanced(
+/*
+  selectorFactory is a func that is responsible for returning the selector function used to
+  compute new props from state, props, and dispatch. For example:
+      export default connectAdvanced((dispatch, options) => (state, props) => ({
+      thing: state.things[props.thingId],
+      saveThing: fields => dispatch(actionCreators.saveThing(props.thingId, fields)),
+    }))(YourComponent)
+    Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
+  outside of their selector as an optimization. Options passed to connectAdvanced are passed to
+  the selectorFactory, along with displayName and WrappedComponent, as the second argument.
+    Note that selectorFactory is responsible for all caching/memoization of inbound and outbound
+  props. Do not use connectAdvanced directly without memoizing results between calls to your
+  selector, otherwise the Connect component will re-render on every state or props change.
+*/
+selectorFactory, // options object:
+_ref) {
+  if (_ref === void 0) {
+    _ref = {};
+  }
+
+  var _ref2 = _ref,
+      _ref2$getDisplayName = _ref2.getDisplayName,
+      getDisplayName = _ref2$getDisplayName === void 0 ? function (name) {
+    return "ConnectAdvanced(" + name + ")";
+  } : _ref2$getDisplayName,
+      _ref2$methodName = _ref2.methodName,
+      methodName = _ref2$methodName === void 0 ? 'connectAdvanced' : _ref2$methodName,
+      _ref2$renderCountProp = _ref2.renderCountProp,
+      renderCountProp = _ref2$renderCountProp === void 0 ? undefined : _ref2$renderCountProp,
+      _ref2$shouldHandleSta = _ref2.shouldHandleStateChanges,
+      shouldHandleStateChanges = _ref2$shouldHandleSta === void 0 ? true : _ref2$shouldHandleSta,
+      _ref2$storeKey = _ref2.storeKey,
+      storeKey = _ref2$storeKey === void 0 ? 'store' : _ref2$storeKey,
+      _ref2$withRef = _ref2.withRef,
+      withRef = _ref2$withRef === void 0 ? false : _ref2$withRef,
+      _ref2$forwardRef = _ref2.forwardRef,
+      forwardRef = _ref2$forwardRef === void 0 ? false : _ref2$forwardRef,
+      _ref2$context = _ref2.context,
+      context = _ref2$context === void 0 ? _Context__WEBPACK_IMPORTED_MODULE_7__.ReactReduxContext : _ref2$context,
+      connectOptions = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref2, _excluded);
+
+  if (true) {
+    if (renderCountProp !== undefined) {
+      throw new Error("renderCountProp is removed. render counting is built into the latest React Dev Tools profiling extension");
+    }
+
+    if (withRef) {
+      throw new Error('withRef is removed. To access the wrapped instance, use a ref on the connected component');
+    }
+
+    var customStoreWarningMessage = 'To use a custom Redux store for specific components, create a custom React context with ' + "React.createContext(), and pass the context object to React Redux's Provider and specific components" + ' like: <Provider context={MyContext}><ConnectedComponent context={MyContext} /></Provider>. ' + 'You may also pass a {context : MyContext} option to connect';
+
+    if (storeKey !== 'store') {
+      throw new Error('storeKey has been removed and does not do anything. ' + customStoreWarningMessage);
+    }
+  }
+
+  var Context = context;
+  return function wrapWithConnect(WrappedComponent) {
+    if ( true && !(0,react_is__WEBPACK_IMPORTED_MODULE_4__.isValidElementType)(WrappedComponent)) {
+      throw new Error("You must pass a component to the function returned by " + (methodName + ". Instead received " + stringifyComponent(WrappedComponent)));
+    }
+
+    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
+    var displayName = getDisplayName(wrappedComponentName);
+
+    var selectorFactoryOptions = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, connectOptions, {
+      getDisplayName: getDisplayName,
+      methodName: methodName,
+      renderCountProp: renderCountProp,
+      shouldHandleStateChanges: shouldHandleStateChanges,
+      storeKey: storeKey,
+      displayName: displayName,
+      wrappedComponentName: wrappedComponentName,
+      WrappedComponent: WrappedComponent
+    });
+
+    var pure = connectOptions.pure;
+
+    function createChildSelector(store) {
+      return selectorFactory(store.dispatch, selectorFactoryOptions);
+    } // If we aren't running in "pure" mode, we don't want to memoize values.
+    // To avoid conditionally calling hooks, we fall back to a tiny wrapper
+    // that just executes the given callback immediately.
+
+
+    var usePureOnlyMemo = pure ? react__WEBPACK_IMPORTED_MODULE_3__.useMemo : function (callback) {
+      return callback();
+    };
+
+    function ConnectFunction(props) {
+      var _useMemo = (0,react__WEBPACK_IMPORTED_MODULE_3__.useMemo)(function () {
+        // Distinguish between actual "data" props that were passed to the wrapper component,
+        // and values needed to control behavior (forwarded refs, alternate context instances).
+        // To maintain the wrapperProps object reference, memoize this destructuring.
+        var reactReduxForwardedRef = props.reactReduxForwardedRef,
+            wrapperProps = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(props, _excluded2);
+
+        return [props.context, reactReduxForwardedRef, wrapperProps];
+      }, [props]),
+          propsContext = _useMemo[0],
+          reactReduxForwardedRef = _useMemo[1],
+          wrapperProps = _useMemo[2];
+
+      var ContextToUse = (0,react__WEBPACK_IMPORTED_MODULE_3__.useMemo)(function () {
+        // Users may optionally pass in a custom context instance to use instead of our ReactReduxContext.
+        // Memoize the check that determines which context instance we should use.
+        return propsContext && propsContext.Consumer && (0,react_is__WEBPACK_IMPORTED_MODULE_4__.isContextConsumer)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(propsContext.Consumer, null)) ? propsContext : Context;
+      }, [propsContext, Context]); // Retrieve the store and ancestor subscription via context, if available
+
+      var contextValue = (0,react__WEBPACK_IMPORTED_MODULE_3__.useContext)(ContextToUse); // The store _must_ exist as either a prop or in context.
+      // We'll check to see if it _looks_ like a Redux store first.
+      // This allows us to pass through a `store` prop that is just a plain value.
+
+      var didStoreComeFromProps = Boolean(props.store) && Boolean(props.store.getState) && Boolean(props.store.dispatch);
+      var didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
+
+      if ( true && !didStoreComeFromProps && !didStoreComeFromContext) {
+        throw new Error("Could not find \"store\" in the context of " + ("\"" + displayName + "\". Either wrap the root component in a <Provider>, ") + "or pass a custom React context provider to <Provider> and the corresponding " + ("React context consumer to " + displayName + " in connect options."));
+      } // Based on the previous check, one of these must be true
+
+
+      var store = didStoreComeFromProps ? props.store : contextValue.store;
+      var childPropsSelector = (0,react__WEBPACK_IMPORTED_MODULE_3__.useMemo)(function () {
+        // The child props selector needs the store reference as an input.
+        // Re-create this selector whenever the store changes.
+        return createChildSelector(store);
+      }, [store]);
+
+      var _useMemo2 = (0,react__WEBPACK_IMPORTED_MODULE_3__.useMemo)(function () {
+        if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY; // This Subscription's source should match where store came from: props vs. context. A component
+        // connected to the store via props shouldn't use subscription from context, or vice versa.
+
+        // This Subscription's source should match where store came from: props vs. context. A component
+        // connected to the store via props shouldn't use subscription from context, or vice versa.
+        var subscription = (0,_utils_Subscription__WEBPACK_IMPORTED_MODULE_5__.createSubscription)(store, didStoreComeFromProps ? null : contextValue.subscription); // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
+        // the middle of the notification loop, where `subscription` will then be null. This can
+        // probably be avoided if Subscription's listeners logic is changed to not call listeners
+        // that have been unsubscribed in the  middle of the notification loop.
+
+        // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
+        // the middle of the notification loop, where `subscription` will then be null. This can
+        // probably be avoided if Subscription's listeners logic is changed to not call listeners
+        // that have been unsubscribed in the  middle of the notification loop.
+        var notifyNestedSubs = subscription.notifyNestedSubs.bind(subscription);
+        return [subscription, notifyNestedSubs];
+      }, [store, didStoreComeFromProps, contextValue]),
+          subscription = _useMemo2[0],
+          notifyNestedSubs = _useMemo2[1]; // Determine what {store, subscription} value should be put into nested context, if necessary,
+      // and memoize that value to avoid unnecessary context updates.
+
+
+      var overriddenContextValue = (0,react__WEBPACK_IMPORTED_MODULE_3__.useMemo)(function () {
+        if (didStoreComeFromProps) {
+          // This component is directly subscribed to a store from props.
+          // We don't want descendants reading from this store - pass down whatever
+          // the existing context value is from the nearest connected ancestor.
+          return contextValue;
+        } // Otherwise, put this component's subscription instance into context, so that
+        // connected descendants won't update until after this component is done
+
+
+        return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, contextValue, {
+          subscription: subscription
+        });
+      }, [didStoreComeFromProps, contextValue, subscription]); // We need to force this wrapper component to re-render whenever a Redux store update
+      // causes a change to the calculated child component props (or we caught an error in mapState)
+
+      var _useReducer = (0,react__WEBPACK_IMPORTED_MODULE_3__.useReducer)(storeStateUpdatesReducer, EMPTY_ARRAY, initStateUpdates),
+          _useReducer$ = _useReducer[0],
+          previousStateUpdateResult = _useReducer$[0],
+          forceComponentUpdateDispatch = _useReducer[1]; // Propagate any mapState/mapDispatch errors upwards
+
+
+      if (previousStateUpdateResult && previousStateUpdateResult.error) {
+        throw previousStateUpdateResult.error;
+      } // Set up refs to coordinate values between the subscription effect and the render logic
+
+
+      var lastChildProps = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)();
+      var lastWrapperProps = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(wrapperProps);
+      var childPropsFromStoreUpdate = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)();
+      var renderIsScheduled = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(false);
+      var actualChildProps = usePureOnlyMemo(function () {
+        // Tricky logic here:
+        // - This render may have been triggered by a Redux store update that produced new child props
+        // - However, we may have gotten new wrapper props after that
+        // If we have new child props, and the same wrapper props, we know we should use the new child props as-is.
+        // But, if we have new wrapper props, those might change the child props, so we have to recalculate things.
+        // So, we'll use the child props from store update only if the wrapper props are the same as last time.
+        if (childPropsFromStoreUpdate.current && wrapperProps === lastWrapperProps.current) {
+          return childPropsFromStoreUpdate.current;
+        } // TODO We're reading the store directly in render() here. Bad idea?
+        // This will likely cause Bad Things (TM) to happen in Concurrent Mode.
+        // Note that we do this because on renders _not_ caused by store updates, we need the latest store state
+        // to determine what the child props should be.
+
+
+        return childPropsSelector(store.getState(), wrapperProps);
+      }, [store, previousStateUpdateResult, wrapperProps]); // We need this to execute synchronously every time we re-render. However, React warns
+      // about useLayoutEffect in SSR, so we try to detect environment and fall back to
+      // just useEffect instead to avoid the warning, since neither will run anyway.
+
+      useIsomorphicLayoutEffectWithArgs(captureWrapperProps, [lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs]); // Our re-subscribe logic only runs when the store/subscription setup changes
+
+      useIsomorphicLayoutEffectWithArgs(subscribeUpdates, [shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch], [store, subscription, childPropsSelector]); // Now that all that's done, we can finally try to actually render the child component.
+      // We memoize the elements for the rendered child component as an optimization.
+
+      var renderedWrappedComponent = (0,react__WEBPACK_IMPORTED_MODULE_3__.useMemo)(function () {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(WrappedComponent, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, actualChildProps, {
+          ref: reactReduxForwardedRef
+        }));
+      }, [reactReduxForwardedRef, WrappedComponent, actualChildProps]); // If React sees the exact same element reference as last time, it bails out of re-rendering
+      // that child, same as if it was wrapped in React.memo() or returned false from shouldComponentUpdate.
+
+      var renderedChild = (0,react__WEBPACK_IMPORTED_MODULE_3__.useMemo)(function () {
+        if (shouldHandleStateChanges) {
+          // If this component is subscribed to store updates, we need to pass its own
+          // subscription instance down to our descendants. That means rendering the same
+          // Context instance, and putting a different value into the context.
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(ContextToUse.Provider, {
+            value: overriddenContextValue
+          }, renderedWrappedComponent);
+        }
+
+        return renderedWrappedComponent;
+      }, [ContextToUse, renderedWrappedComponent, overriddenContextValue]);
+      return renderedChild;
+    } // If we're in "pure" mode, ensure our wrapper component only re-renders when incoming props have changed.
+
+
+    var Connect = pure ? react__WEBPACK_IMPORTED_MODULE_3__.memo(ConnectFunction) : ConnectFunction;
+    Connect.WrappedComponent = WrappedComponent;
+    Connect.displayName = ConnectFunction.displayName = displayName;
+
+    if (forwardRef) {
+      var forwarded = react__WEBPACK_IMPORTED_MODULE_3__.forwardRef(function forwardConnectRef(props, ref) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(Connect, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+          reactReduxForwardedRef: ref
+        }));
+      });
+      forwarded.displayName = displayName;
+      forwarded.WrappedComponent = WrappedComponent;
+      return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2___default()(forwarded, WrappedComponent);
+    }
+
+    return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2___default()(Connect, WrappedComponent);
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/connect.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/connect.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createConnect": () => (/* binding */ createConnect),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/connectAdvanced */ "./node_modules/react-redux/es/components/connectAdvanced.js");
+/* harmony import */ var _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/shallowEqual */ "./node_modules/react-redux/es/utils/shallowEqual.js");
+/* harmony import */ var _mapDispatchToProps__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mapDispatchToProps */ "./node_modules/react-redux/es/connect/mapDispatchToProps.js");
+/* harmony import */ var _mapStateToProps__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./mapStateToProps */ "./node_modules/react-redux/es/connect/mapStateToProps.js");
+/* harmony import */ var _mergeProps__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./mergeProps */ "./node_modules/react-redux/es/connect/mergeProps.js");
+/* harmony import */ var _selectorFactory__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./selectorFactory */ "./node_modules/react-redux/es/connect/selectorFactory.js");
+
+
+var _excluded = ["pure", "areStatesEqual", "areOwnPropsEqual", "areStatePropsEqual", "areMergedPropsEqual"];
+
+
+
+
+
+
+/*
+  connect is a facade over connectAdvanced. It turns its args into a compatible
+  selectorFactory, which has the signature:
+
+    (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
+  
+  connect passes its args to connectAdvanced as options, which will in turn pass them to
+  selectorFactory each time a Connect component instance is instantiated or hot reloaded.
+
+  selectorFactory returns a final props selector from its mapStateToProps,
+  mapStateToPropsFactories, mapDispatchToProps, mapDispatchToPropsFactories, mergeProps,
+  mergePropsFactories, and pure args.
+
+  The resulting final props selector is called by the Connect component instance whenever
+  it receives new props or store state.
+ */
+
+function match(arg, factories, name) {
+  for (var i = factories.length - 1; i >= 0; i--) {
+    var result = factories[i](arg);
+    if (result) return result;
+  }
+
+  return function (dispatch, options) {
+    throw new Error("Invalid value of type " + typeof arg + " for " + name + " argument when connecting component " + options.wrappedComponentName + ".");
+  };
+}
+
+function strictEqual(a, b) {
+  return a === b;
+} // createConnect with default args builds the 'official' connect behavior. Calling it with
+// different options opens up some testing and extensibility scenarios
+
+
+function createConnect(_temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      _ref$connectHOC = _ref.connectHOC,
+      connectHOC = _ref$connectHOC === void 0 ? _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_2__["default"] : _ref$connectHOC,
+      _ref$mapStateToPropsF = _ref.mapStateToPropsFactories,
+      mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? _mapStateToProps__WEBPACK_IMPORTED_MODULE_5__["default"] : _ref$mapStateToPropsF,
+      _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories,
+      mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? _mapDispatchToProps__WEBPACK_IMPORTED_MODULE_4__["default"] : _ref$mapDispatchToPro,
+      _ref$mergePropsFactor = _ref.mergePropsFactories,
+      mergePropsFactories = _ref$mergePropsFactor === void 0 ? _mergeProps__WEBPACK_IMPORTED_MODULE_6__["default"] : _ref$mergePropsFactor,
+      _ref$selectorFactory = _ref.selectorFactory,
+      selectorFactory = _ref$selectorFactory === void 0 ? _selectorFactory__WEBPACK_IMPORTED_MODULE_7__["default"] : _ref$selectorFactory;
+
+  return function connect(mapStateToProps, mapDispatchToProps, mergeProps, _ref2) {
+    if (_ref2 === void 0) {
+      _ref2 = {};
+    }
+
+    var _ref3 = _ref2,
+        _ref3$pure = _ref3.pure,
+        pure = _ref3$pure === void 0 ? true : _ref3$pure,
+        _ref3$areStatesEqual = _ref3.areStatesEqual,
+        areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual,
+        _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual,
+        areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_3__["default"] : _ref3$areOwnPropsEqua,
+        _ref3$areStatePropsEq = _ref3.areStatePropsEqual,
+        areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_3__["default"] : _ref3$areStatePropsEq,
+        _ref3$areMergedPropsE = _ref3.areMergedPropsEqual,
+        areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_3__["default"] : _ref3$areMergedPropsE,
+        extraOptions = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref3, _excluded);
+
+    var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
+    var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
+    var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
+    return connectHOC(selectorFactory, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      // used in error messages
+      methodName: 'connect',
+      // used to compute Connect's displayName from the wrapped component's displayName.
+      getDisplayName: function getDisplayName(name) {
+        return "Connect(" + name + ")";
+      },
+      // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
+      shouldHandleStateChanges: Boolean(mapStateToProps),
+      // passed through to selectorFactory
+      initMapStateToProps: initMapStateToProps,
+      initMapDispatchToProps: initMapDispatchToProps,
+      initMergeProps: initMergeProps,
+      pure: pure,
+      areStatesEqual: areStatesEqual,
+      areOwnPropsEqual: areOwnPropsEqual,
+      areStatePropsEqual: areStatePropsEqual,
+      areMergedPropsEqual: areMergedPropsEqual
+    }, extraOptions));
+  };
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/createConnect());
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/mapDispatchToProps.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/mapDispatchToProps.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "whenMapDispatchToPropsIsFunction": () => (/* binding */ whenMapDispatchToPropsIsFunction),
+/* harmony export */   "whenMapDispatchToPropsIsMissing": () => (/* binding */ whenMapDispatchToPropsIsMissing),
+/* harmony export */   "whenMapDispatchToPropsIsObject": () => (/* binding */ whenMapDispatchToPropsIsObject),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _utils_bindActionCreators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/bindActionCreators */ "./node_modules/react-redux/es/utils/bindActionCreators.js");
+/* harmony import */ var _wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/es/connect/wrapMapToProps.js");
+
+
+function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
+  return typeof mapDispatchToProps === 'function' ? (0,_wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__.wrapMapToPropsFunc)(mapDispatchToProps, 'mapDispatchToProps') : undefined;
+}
+function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
+  return !mapDispatchToProps ? (0,_wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__.wrapMapToPropsConstant)(function (dispatch) {
+    return {
+      dispatch: dispatch
+    };
+  }) : undefined;
+}
+function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
+  return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? (0,_wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__.wrapMapToPropsConstant)(function (dispatch) {
+    return (0,_utils_bindActionCreators__WEBPACK_IMPORTED_MODULE_0__["default"])(mapDispatchToProps, dispatch);
+  }) : undefined;
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/mapStateToProps.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/mapStateToProps.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "whenMapStateToPropsIsFunction": () => (/* binding */ whenMapStateToPropsIsFunction),
+/* harmony export */   "whenMapStateToPropsIsMissing": () => (/* binding */ whenMapStateToPropsIsMissing),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wrapMapToProps__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/es/connect/wrapMapToProps.js");
+
+function whenMapStateToPropsIsFunction(mapStateToProps) {
+  return typeof mapStateToProps === 'function' ? (0,_wrapMapToProps__WEBPACK_IMPORTED_MODULE_0__.wrapMapToPropsFunc)(mapStateToProps, 'mapStateToProps') : undefined;
+}
+function whenMapStateToPropsIsMissing(mapStateToProps) {
+  return !mapStateToProps ? (0,_wrapMapToProps__WEBPACK_IMPORTED_MODULE_0__.wrapMapToPropsConstant)(function () {
+    return {};
+  }) : undefined;
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/mergeProps.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/mergeProps.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "defaultMergeProps": () => (/* binding */ defaultMergeProps),
+/* harmony export */   "wrapMergePropsFunc": () => (/* binding */ wrapMergePropsFunc),
+/* harmony export */   "whenMergePropsIsFunction": () => (/* binding */ whenMergePropsIsFunction),
+/* harmony export */   "whenMergePropsIsOmitted": () => (/* binding */ whenMergePropsIsOmitted),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _utils_verifyPlainObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/verifyPlainObject */ "./node_modules/react-redux/es/utils/verifyPlainObject.js");
+
+
+function defaultMergeProps(stateProps, dispatchProps, ownProps) {
+  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, ownProps, stateProps, dispatchProps);
+}
+function wrapMergePropsFunc(mergeProps) {
+  return function initMergePropsProxy(dispatch, _ref) {
+    var displayName = _ref.displayName,
+        pure = _ref.pure,
+        areMergedPropsEqual = _ref.areMergedPropsEqual;
+    var hasRunOnce = false;
+    var mergedProps;
+    return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
+      var nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+
+      if (hasRunOnce) {
+        if (!pure || !areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
+      } else {
+        hasRunOnce = true;
+        mergedProps = nextMergedProps;
+        if (true) (0,_utils_verifyPlainObject__WEBPACK_IMPORTED_MODULE_1__["default"])(mergedProps, displayName, 'mergeProps');
+      }
+
+      return mergedProps;
+    };
+  };
+}
+function whenMergePropsIsFunction(mergeProps) {
+  return typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : undefined;
+}
+function whenMergePropsIsOmitted(mergeProps) {
+  return !mergeProps ? function () {
+    return defaultMergeProps;
+  } : undefined;
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([whenMergePropsIsFunction, whenMergePropsIsOmitted]);
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/selectorFactory.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/selectorFactory.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "impureFinalPropsSelectorFactory": () => (/* binding */ impureFinalPropsSelectorFactory),
+/* harmony export */   "pureFinalPropsSelectorFactory": () => (/* binding */ pureFinalPropsSelectorFactory),
+/* harmony export */   "default": () => (/* binding */ finalPropsSelectorFactory)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _verifySubselectors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./verifySubselectors */ "./node_modules/react-redux/es/connect/verifySubselectors.js");
+
+var _excluded = ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"];
+
+function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
+  return function impureFinalPropsSelector(state, ownProps) {
+    return mergeProps(mapStateToProps(state, ownProps), mapDispatchToProps(dispatch, ownProps), ownProps);
+  };
+}
+function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, _ref) {
+  var areStatesEqual = _ref.areStatesEqual,
+      areOwnPropsEqual = _ref.areOwnPropsEqual,
+      areStatePropsEqual = _ref.areStatePropsEqual;
+  var hasRunAtLeastOnce = false;
+  var state;
+  var ownProps;
+  var stateProps;
+  var dispatchProps;
+  var mergedProps;
+
+  function handleFirstCall(firstState, firstOwnProps) {
+    state = firstState;
+    ownProps = firstOwnProps;
+    stateProps = mapStateToProps(state, ownProps);
+    dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    hasRunAtLeastOnce = true;
+    return mergedProps;
+  }
+
+  function handleNewPropsAndNewState() {
+    stateProps = mapStateToProps(state, ownProps);
+    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleNewProps() {
+    if (mapStateToProps.dependsOnOwnProps) stateProps = mapStateToProps(state, ownProps);
+    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleNewState() {
+    var nextStateProps = mapStateToProps(state, ownProps);
+    var statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
+    stateProps = nextStateProps;
+    if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleSubsequentCalls(nextState, nextOwnProps) {
+    var propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
+    var stateChanged = !areStatesEqual(nextState, state);
+    state = nextState;
+    ownProps = nextOwnProps;
+    if (propsChanged && stateChanged) return handleNewPropsAndNewState();
+    if (propsChanged) return handleNewProps();
+    if (stateChanged) return handleNewState();
+    return mergedProps;
+  }
+
+  return function pureFinalPropsSelector(nextState, nextOwnProps) {
+    return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
+  };
+} // TODO: Add more comments
+// If pure is true, the selector returned by selectorFactory will memoize its results,
+// allowing connectAdvanced's shouldComponentUpdate to return false if final
+// props have not changed. If false, the selector will always return a new
+// object and shouldComponentUpdate will always return true.
+
+function finalPropsSelectorFactory(dispatch, _ref2) {
+  var initMapStateToProps = _ref2.initMapStateToProps,
+      initMapDispatchToProps = _ref2.initMapDispatchToProps,
+      initMergeProps = _ref2.initMergeProps,
+      options = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref2, _excluded);
+
+  var mapStateToProps = initMapStateToProps(dispatch, options);
+  var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
+  var mergeProps = initMergeProps(dispatch, options);
+
+  if (true) {
+    (0,_verifySubselectors__WEBPACK_IMPORTED_MODULE_1__["default"])(mapStateToProps, mapDispatchToProps, mergeProps, options.displayName);
+  }
+
+  var selectorFactory = options.pure ? pureFinalPropsSelectorFactory : impureFinalPropsSelectorFactory;
+  return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/verifySubselectors.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/verifySubselectors.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ verifySubselectors)
+/* harmony export */ });
+/* harmony import */ var _utils_warning__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/warning */ "./node_modules/react-redux/es/utils/warning.js");
+
+
+function verify(selector, methodName, displayName) {
+  if (!selector) {
+    throw new Error("Unexpected value for " + methodName + " in " + displayName + ".");
+  } else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
+    if (!Object.prototype.hasOwnProperty.call(selector, 'dependsOnOwnProps')) {
+      (0,_utils_warning__WEBPACK_IMPORTED_MODULE_0__["default"])("The selector for " + methodName + " of " + displayName + " did not specify a value for dependsOnOwnProps.");
+    }
+  }
+}
+
+function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, displayName) {
+  verify(mapStateToProps, 'mapStateToProps', displayName);
+  verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
+  verify(mergeProps, 'mergeProps', displayName);
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/wrapMapToProps.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/wrapMapToProps.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "wrapMapToPropsConstant": () => (/* binding */ wrapMapToPropsConstant),
+/* harmony export */   "getDependsOnOwnProps": () => (/* binding */ getDependsOnOwnProps),
+/* harmony export */   "wrapMapToPropsFunc": () => (/* binding */ wrapMapToPropsFunc)
+/* harmony export */ });
+/* harmony import */ var _utils_verifyPlainObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/verifyPlainObject */ "./node_modules/react-redux/es/utils/verifyPlainObject.js");
+
+function wrapMapToPropsConstant(getConstant) {
+  return function initConstantSelector(dispatch, options) {
+    var constant = getConstant(dispatch, options);
+
+    function constantSelector() {
+      return constant;
+    }
+
+    constantSelector.dependsOnOwnProps = false;
+    return constantSelector;
+  };
+} // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
+// to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
+// whether mapToProps needs to be invoked when props have changed.
+//
+// A length of one signals that mapToProps does not depend on props from the parent component.
+// A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
+// therefore not reporting its length accurately..
+
+function getDependsOnOwnProps(mapToProps) {
+  return mapToProps.dependsOnOwnProps !== null && mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
+} // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
+// this function wraps mapToProps in a proxy function which does several things:
+//
+//  * Detects whether the mapToProps function being called depends on props, which
+//    is used by selectorFactory to decide if it should reinvoke on props changes.
+//
+//  * On first call, handles mapToProps if returns another function, and treats that
+//    new function as the true mapToProps for subsequent calls.
+//
+//  * On first call, verifies the first result is a plain object, in order to warn
+//    the developer that their mapToProps function is not returning a valid result.
+//
+
+function wrapMapToPropsFunc(mapToProps, methodName) {
+  return function initProxySelector(dispatch, _ref) {
+    var displayName = _ref.displayName;
+
+    var proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
+      return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch);
+    }; // allow detectFactoryAndVerify to get ownProps
+
+
+    proxy.dependsOnOwnProps = true;
+
+    proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
+      proxy.mapToProps = mapToProps;
+      proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
+      var props = proxy(stateOrDispatch, ownProps);
+
+      if (typeof props === 'function') {
+        proxy.mapToProps = props;
+        proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
+        props = proxy(stateOrDispatch, ownProps);
+      }
+
+      if (true) (0,_utils_verifyPlainObject__WEBPACK_IMPORTED_MODULE_0__["default"])(props, displayName, methodName);
+      return props;
+    };
+
+    return proxy;
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/exports.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-redux/es/exports.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Provider": () => (/* reexport safe */ _components_Provider__WEBPACK_IMPORTED_MODULE_0__["default"]),
+/* harmony export */   "connectAdvanced": () => (/* reexport safe */ _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   "ReactReduxContext": () => (/* reexport safe */ _components_Context__WEBPACK_IMPORTED_MODULE_2__.ReactReduxContext),
+/* harmony export */   "connect": () => (/* reexport safe */ _connect_connect__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   "useDispatch": () => (/* reexport safe */ _hooks_useDispatch__WEBPACK_IMPORTED_MODULE_4__.useDispatch),
+/* harmony export */   "createDispatchHook": () => (/* reexport safe */ _hooks_useDispatch__WEBPACK_IMPORTED_MODULE_4__.createDispatchHook),
+/* harmony export */   "useSelector": () => (/* reexport safe */ _hooks_useSelector__WEBPACK_IMPORTED_MODULE_5__.useSelector),
+/* harmony export */   "createSelectorHook": () => (/* reexport safe */ _hooks_useSelector__WEBPACK_IMPORTED_MODULE_5__.createSelectorHook),
+/* harmony export */   "useStore": () => (/* reexport safe */ _hooks_useStore__WEBPACK_IMPORTED_MODULE_6__.useStore),
+/* harmony export */   "createStoreHook": () => (/* reexport safe */ _hooks_useStore__WEBPACK_IMPORTED_MODULE_6__.createStoreHook),
+/* harmony export */   "shallowEqual": () => (/* reexport safe */ _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_7__["default"])
+/* harmony export */ });
+/* harmony import */ var _components_Provider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Provider */ "./node_modules/react-redux/es/components/Provider.js");
+/* harmony import */ var _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/connectAdvanced */ "./node_modules/react-redux/es/components/connectAdvanced.js");
+/* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Context */ "./node_modules/react-redux/es/components/Context.js");
+/* harmony import */ var _connect_connect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./connect/connect */ "./node_modules/react-redux/es/connect/connect.js");
+/* harmony import */ var _hooks_useDispatch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hooks/useDispatch */ "./node_modules/react-redux/es/hooks/useDispatch.js");
+/* harmony import */ var _hooks_useSelector__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./hooks/useSelector */ "./node_modules/react-redux/es/hooks/useSelector.js");
+/* harmony import */ var _hooks_useStore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./hooks/useStore */ "./node_modules/react-redux/es/hooks/useStore.js");
+/* harmony import */ var _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/shallowEqual */ "./node_modules/react-redux/es/utils/shallowEqual.js");
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/hooks/useDispatch.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useDispatch.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createDispatchHook": () => (/* binding */ createDispatchHook),
+/* harmony export */   "useDispatch": () => (/* binding */ useDispatch)
+/* harmony export */ });
+/* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Context */ "./node_modules/react-redux/es/components/Context.js");
+/* harmony import */ var _useStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useStore */ "./node_modules/react-redux/es/hooks/useStore.js");
+
+
+/**
+ * Hook factory, which creates a `useDispatch` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useDispatch` hook bound to the specified context.
+ */
+
+function createDispatchHook(context) {
+  if (context === void 0) {
+    context = _components_Context__WEBPACK_IMPORTED_MODULE_0__.ReactReduxContext;
+  }
+
+  var useStore = context === _components_Context__WEBPACK_IMPORTED_MODULE_0__.ReactReduxContext ? _useStore__WEBPACK_IMPORTED_MODULE_1__.useStore : (0,_useStore__WEBPACK_IMPORTED_MODULE_1__.createStoreHook)(context);
+  return function useDispatch() {
+    var store = useStore();
+    return store.dispatch;
+  };
+}
+/**
+ * A hook to access the redux `dispatch` function.
+ *
+ * @returns {any|function} redux store's `dispatch` function
+ *
+ * @example
+ *
+ * import React, { useCallback } from 'react'
+ * import { useDispatch } from 'react-redux'
+ *
+ * export const CounterComponent = ({ value }) => {
+ *   const dispatch = useDispatch()
+ *   const increaseCounter = useCallback(() => dispatch({ type: 'increase-counter' }), [])
+ *   return (
+ *     <div>
+ *       <span>{value}</span>
+ *       <button onClick={increaseCounter}>Increase counter</button>
+ *     </div>
+ *   )
+ * }
+ */
+
+var useDispatch = /*#__PURE__*/createDispatchHook();
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/hooks/useReduxContext.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useReduxContext.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useReduxContext": () => (/* binding */ useReduxContext)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Context */ "./node_modules/react-redux/es/components/Context.js");
+
+
+/**
+ * A hook to access the value of the `ReactReduxContext`. This is a low-level
+ * hook that you should usually not need to call directly.
+ *
+ * @returns {any} the value of the `ReactReduxContext`
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useReduxContext } from 'react-redux'
+ *
+ * export const CounterComponent = ({ value }) => {
+ *   const { store } = useReduxContext()
+ *   return <div>{store.getState()}</div>
+ * }
+ */
+
+function useReduxContext() {
+  var contextValue = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_components_Context__WEBPACK_IMPORTED_MODULE_1__.ReactReduxContext);
+
+  if ( true && !contextValue) {
+    throw new Error('could not find react-redux context value; please ensure the component is wrapped in a <Provider>');
+  }
+
+  return contextValue;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/hooks/useSelector.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useSelector.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createSelectorHook": () => (/* binding */ createSelectorHook),
+/* harmony export */   "useSelector": () => (/* binding */ useSelector)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _useReduxContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useReduxContext */ "./node_modules/react-redux/es/hooks/useReduxContext.js");
+/* harmony import */ var _utils_Subscription__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/es/utils/Subscription.js");
+/* harmony import */ var _utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/useIsomorphicLayoutEffect */ "./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js");
+/* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Context */ "./node_modules/react-redux/es/components/Context.js");
+
+
+
+
+
+
+var refEquality = function refEquality(a, b) {
+  return a === b;
+};
+
+function useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub) {
+  var _useReducer = (0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(function (s) {
+    return s + 1;
+  }, 0),
+      forceRender = _useReducer[1];
+
+  var subscription = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+    return (0,_utils_Subscription__WEBPACK_IMPORTED_MODULE_2__.createSubscription)(store, contextSub);
+  }, [store, contextSub]);
+  var latestSubscriptionCallbackError = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+  var latestSelector = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+  var latestStoreState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+  var latestSelectedState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+  var storeState = store.getState();
+  var selectedState;
+
+  try {
+    if (selector !== latestSelector.current || storeState !== latestStoreState.current || latestSubscriptionCallbackError.current) {
+      var newSelectedState = selector(storeState); // ensure latest selected state is reused so that a custom equality function can result in identical references
+
+      if (latestSelectedState.current === undefined || !equalityFn(newSelectedState, latestSelectedState.current)) {
+        selectedState = newSelectedState;
+      } else {
+        selectedState = latestSelectedState.current;
+      }
+    } else {
+      selectedState = latestSelectedState.current;
+    }
+  } catch (err) {
+    if (latestSubscriptionCallbackError.current) {
+      err.message += "\nThe error may be correlated with this previous error:\n" + latestSubscriptionCallbackError.current.stack + "\n\n";
+    }
+
+    throw err;
+  }
+
+  (0,_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_3__.useIsomorphicLayoutEffect)(function () {
+    latestSelector.current = selector;
+    latestStoreState.current = storeState;
+    latestSelectedState.current = selectedState;
+    latestSubscriptionCallbackError.current = undefined;
+  });
+  (0,_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_3__.useIsomorphicLayoutEffect)(function () {
+    function checkForUpdates() {
+      try {
+        var newStoreState = store.getState(); // Avoid calling selector multiple times if the store's state has not changed
+
+        if (newStoreState === latestStoreState.current) {
+          return;
+        }
+
+        var _newSelectedState = latestSelector.current(newStoreState);
+
+        if (equalityFn(_newSelectedState, latestSelectedState.current)) {
+          return;
+        }
+
+        latestSelectedState.current = _newSelectedState;
+        latestStoreState.current = newStoreState;
+      } catch (err) {
+        // we ignore all errors here, since when the component
+        // is re-rendered, the selectors are called again, and
+        // will throw again, if neither props nor store state
+        // changed
+        latestSubscriptionCallbackError.current = err;
+      }
+
+      forceRender();
+    }
+
+    subscription.onStateChange = checkForUpdates;
+    subscription.trySubscribe();
+    checkForUpdates();
+    return function () {
+      return subscription.tryUnsubscribe();
+    };
+  }, [store, subscription]);
+  return selectedState;
+}
+/**
+ * Hook factory, which creates a `useSelector` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useSelector` hook bound to the specified context.
+ */
+
+
+function createSelectorHook(context) {
+  if (context === void 0) {
+    context = _components_Context__WEBPACK_IMPORTED_MODULE_4__.ReactReduxContext;
+  }
+
+  var useReduxContext = context === _components_Context__WEBPACK_IMPORTED_MODULE_4__.ReactReduxContext ? _useReduxContext__WEBPACK_IMPORTED_MODULE_1__.useReduxContext : function () {
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(context);
+  };
+  return function useSelector(selector, equalityFn) {
+    if (equalityFn === void 0) {
+      equalityFn = refEquality;
+    }
+
+    if (true) {
+      if (!selector) {
+        throw new Error("You must pass a selector to useSelector");
+      }
+
+      if (typeof selector !== 'function') {
+        throw new Error("You must pass a function as a selector to useSelector");
+      }
+
+      if (typeof equalityFn !== 'function') {
+        throw new Error("You must pass a function as an equality function to useSelector");
+      }
+    }
+
+    var _useReduxContext = useReduxContext(),
+        store = _useReduxContext.store,
+        contextSub = _useReduxContext.subscription;
+
+    var selectedState = useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub);
+    (0,react__WEBPACK_IMPORTED_MODULE_0__.useDebugValue)(selectedState);
+    return selectedState;
+  };
+}
+/**
+ * A hook to access the redux store's state. This hook takes a selector function
+ * as an argument. The selector is called with the store state.
+ *
+ * This hook takes an optional equality comparison function as the second parameter
+ * that allows you to customize the way the selected state is compared to determine
+ * whether the component needs to be re-rendered.
+ *
+ * @param {Function} selector the selector function
+ * @param {Function=} equalityFn the function that will be used to determine equality
+ *
+ * @returns {any} the selected state
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useSelector } from 'react-redux'
+ *
+ * export const CounterComponent = () => {
+ *   const counter = useSelector(state => state.counter)
+ *   return <div>{counter}</div>
+ * }
+ */
+
+var useSelector = /*#__PURE__*/createSelectorHook();
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/hooks/useStore.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useStore.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createStoreHook": () => (/* binding */ createStoreHook),
+/* harmony export */   "useStore": () => (/* binding */ useStore)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Context */ "./node_modules/react-redux/es/components/Context.js");
+/* harmony import */ var _useReduxContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useReduxContext */ "./node_modules/react-redux/es/hooks/useReduxContext.js");
+
+
+
+/**
+ * Hook factory, which creates a `useStore` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useStore` hook bound to the specified context.
+ */
+
+function createStoreHook(context) {
+  if (context === void 0) {
+    context = _components_Context__WEBPACK_IMPORTED_MODULE_1__.ReactReduxContext;
+  }
+
+  var useReduxContext = context === _components_Context__WEBPACK_IMPORTED_MODULE_1__.ReactReduxContext ? _useReduxContext__WEBPACK_IMPORTED_MODULE_2__.useReduxContext : function () {
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(context);
+  };
+  return function useStore() {
+    var _useReduxContext = useReduxContext(),
+        store = _useReduxContext.store;
+
+    return store;
+  };
+}
+/**
+ * A hook to access the redux store.
+ *
+ * @returns {any} the redux store
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useStore } from 'react-redux'
+ *
+ * export const ExampleComponent = () => {
+ *   const store = useStore()
+ *   return <div>{store.getState()}</div>
+ * }
+ */
+
+var useStore = /*#__PURE__*/createStoreHook();
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/react-redux/es/index.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Provider": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.Provider),
+/* harmony export */   "ReactReduxContext": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.ReactReduxContext),
+/* harmony export */   "connect": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.connect),
+/* harmony export */   "connectAdvanced": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.connectAdvanced),
+/* harmony export */   "createDispatchHook": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.createDispatchHook),
+/* harmony export */   "createSelectorHook": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.createSelectorHook),
+/* harmony export */   "createStoreHook": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.createStoreHook),
+/* harmony export */   "shallowEqual": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.shallowEqual),
+/* harmony export */   "useDispatch": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.useDispatch),
+/* harmony export */   "useSelector": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.useSelector),
+/* harmony export */   "useStore": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.useStore),
+/* harmony export */   "batch": () => (/* reexport safe */ _utils_reactBatchedUpdates__WEBPACK_IMPORTED_MODULE_1__.unstable_batchedUpdates)
+/* harmony export */ });
+/* harmony import */ var _exports__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./exports */ "./node_modules/react-redux/es/exports.js");
+/* harmony import */ var _utils_reactBatchedUpdates__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/reactBatchedUpdates */ "./node_modules/react-redux/es/utils/reactBatchedUpdates.js");
+/* harmony import */ var _utils_batch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/batch */ "./node_modules/react-redux/es/utils/batch.js");
+
+
+ // Enable batched updates in our subscriptions for use
+// with standard React renderers (ReactDOM, React Native)
+
+(0,_utils_batch__WEBPACK_IMPORTED_MODULE_2__.setBatch)(_utils_reactBatchedUpdates__WEBPACK_IMPORTED_MODULE_1__.unstable_batchedUpdates);
+
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/Subscription.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/Subscription.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createSubscription": () => (/* binding */ createSubscription)
+/* harmony export */ });
+/* harmony import */ var _batch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./batch */ "./node_modules/react-redux/es/utils/batch.js");
+ // encapsulates the subscription logic for connecting a component to the redux store, as
+// well as nesting subscriptions of descendant components, so that we can ensure the
+// ancestor components re-render before descendants
+
+function createListenerCollection() {
+  var batch = (0,_batch__WEBPACK_IMPORTED_MODULE_0__.getBatch)();
+  var first = null;
+  var last = null;
+  return {
+    clear: function clear() {
+      first = null;
+      last = null;
+    },
+    notify: function notify() {
+      batch(function () {
+        var listener = first;
+
+        while (listener) {
+          listener.callback();
+          listener = listener.next;
+        }
+      });
+    },
+    get: function get() {
+      var listeners = [];
+      var listener = first;
+
+      while (listener) {
+        listeners.push(listener);
+        listener = listener.next;
+      }
+
+      return listeners;
+    },
+    subscribe: function subscribe(callback) {
+      var isSubscribed = true;
+      var listener = last = {
+        callback: callback,
+        next: null,
+        prev: last
+      };
+
+      if (listener.prev) {
+        listener.prev.next = listener;
+      } else {
+        first = listener;
+      }
+
+      return function unsubscribe() {
+        if (!isSubscribed || first === null) return;
+        isSubscribed = false;
+
+        if (listener.next) {
+          listener.next.prev = listener.prev;
+        } else {
+          last = listener.prev;
+        }
+
+        if (listener.prev) {
+          listener.prev.next = listener.next;
+        } else {
+          first = listener.next;
+        }
+      };
+    }
+  };
+}
+
+var nullListeners = {
+  notify: function notify() {},
+  get: function get() {
+    return [];
+  }
+};
+function createSubscription(store, parentSub) {
+  var unsubscribe;
+  var listeners = nullListeners;
+
+  function addNestedSub(listener) {
+    trySubscribe();
+    return listeners.subscribe(listener);
+  }
+
+  function notifyNestedSubs() {
+    listeners.notify();
+  }
+
+  function handleChangeWrapper() {
+    if (subscription.onStateChange) {
+      subscription.onStateChange();
+    }
+  }
+
+  function isSubscribed() {
+    return Boolean(unsubscribe);
+  }
+
+  function trySubscribe() {
+    if (!unsubscribe) {
+      unsubscribe = parentSub ? parentSub.addNestedSub(handleChangeWrapper) : store.subscribe(handleChangeWrapper);
+      listeners = createListenerCollection();
+    }
+  }
+
+  function tryUnsubscribe() {
+    if (unsubscribe) {
+      unsubscribe();
+      unsubscribe = undefined;
+      listeners.clear();
+      listeners = nullListeners;
+    }
+  }
+
+  var subscription = {
+    addNestedSub: addNestedSub,
+    notifyNestedSubs: notifyNestedSubs,
+    handleChangeWrapper: handleChangeWrapper,
+    isSubscribed: isSubscribed,
+    trySubscribe: trySubscribe,
+    tryUnsubscribe: tryUnsubscribe,
+    getListeners: function getListeners() {
+      return listeners;
+    }
+  };
+  return subscription;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/batch.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/batch.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "setBatch": () => (/* binding */ setBatch),
+/* harmony export */   "getBatch": () => (/* binding */ getBatch)
+/* harmony export */ });
+// Default to a dummy "batch" implementation that just runs the callback
+function defaultNoopBatch(callback) {
+  callback();
+}
+
+var batch = defaultNoopBatch; // Allow injecting another batching function later
+
+var setBatch = function setBatch(newBatch) {
+  return batch = newBatch;
+}; // Supply a getter just to skip dealing with ESM bindings
+
+var getBatch = function getBatch() {
+  return batch;
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/bindActionCreators.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/bindActionCreators.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ bindActionCreators)
+/* harmony export */ });
+function bindActionCreators(actionCreators, dispatch) {
+  var boundActionCreators = {};
+
+  var _loop = function _loop(key) {
+    var actionCreator = actionCreators[key];
+
+    if (typeof actionCreator === 'function') {
+      boundActionCreators[key] = function () {
+        return dispatch(actionCreator.apply(void 0, arguments));
+      };
+    }
+  };
+
+  for (var key in actionCreators) {
+    _loop(key);
+  }
+
+  return boundActionCreators;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/isPlainObject.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/isPlainObject.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ isPlainObject)
+/* harmony export */ });
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+function isPlainObject(obj) {
+  if (typeof obj !== 'object' || obj === null) return false;
+  var proto = Object.getPrototypeOf(obj);
+  if (proto === null) return true;
+  var baseProto = proto;
+
+  while (Object.getPrototypeOf(baseProto) !== null) {
+    baseProto = Object.getPrototypeOf(baseProto);
+  }
+
+  return proto === baseProto;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/reactBatchedUpdates.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/reactBatchedUpdates.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "unstable_batchedUpdates": () => (/* reexport safe */ react_dom__WEBPACK_IMPORTED_MODULE_0__.unstable_batchedUpdates)
+/* harmony export */ });
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* eslint-disable import/no-unresolved */
+
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/shallowEqual.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/shallowEqual.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ shallowEqual)
+/* harmony export */ });
+function is(x, y) {
+  if (x === y) {
+    return x !== 0 || y !== 0 || 1 / x === 1 / y;
+  } else {
+    return x !== x && y !== y;
+  }
+}
+
+function shallowEqual(objA, objB) {
+  if (is(objA, objB)) return true;
+
+  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
+    return false;
+  }
+
+  var keysA = Object.keys(objA);
+  var keysB = Object.keys(objB);
+  if (keysA.length !== keysB.length) return false;
+
+  for (var i = 0; i < keysA.length; i++) {
+    if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useIsomorphicLayoutEffect": () => (/* binding */ useIsomorphicLayoutEffect)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+ // React currently throws a warning when using useLayoutEffect on the server.
+// To get around it, we can conditionally useEffect on the server (no-op) and
+// useLayoutEffect in the browser. We need useLayoutEffect to ensure the store
+// subscription callback always has the selector from the latest render commit
+// available, otherwise a store update may happen between render and the effect,
+// which may cause missed updates; we also must ensure the store subscription
+// is created synchronously, otherwise a store update may occur before the
+// subscription is created and an inconsistent state may be observed
+
+var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect : react__WEBPACK_IMPORTED_MODULE_0__.useEffect;
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/verifyPlainObject.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/verifyPlainObject.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ verifyPlainObject)
+/* harmony export */ });
+/* harmony import */ var _isPlainObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isPlainObject */ "./node_modules/react-redux/es/utils/isPlainObject.js");
+/* harmony import */ var _warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./warning */ "./node_modules/react-redux/es/utils/warning.js");
+
+
+function verifyPlainObject(value, displayName, methodName) {
+  if (!(0,_isPlainObject__WEBPACK_IMPORTED_MODULE_0__["default"])(value)) {
+    (0,_warning__WEBPACK_IMPORTED_MODULE_1__["default"])(methodName + "() in " + displayName + " must return a plain object. Instead received " + value + ".");
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/warning.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/warning.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ warning)
+/* harmony export */ });
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+
+
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+    /* eslint-disable no-empty */
+  } catch (e) {}
+  /* eslint-enable no-empty */
+
+}
+
+/***/ }),
+
 /***/ "./node_modules/react-router-dom/esm/react-router-dom.js":
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
@@ -36605,8030 +42245,37 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/recoil/es/recoil.js":
-/*!******************************************!*\
-  !*** ./node_modules/recoil/es/recoil.js ***!
-  \******************************************/
+/***/ "./node_modules/redux-thunk/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/redux-thunk/es/index.js ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "DefaultValue": () => (/* binding */ Recoil_index_1),
-/* harmony export */   "RecoilRoot": () => (/* binding */ Recoil_index_2),
-/* harmony export */   "atom": () => (/* binding */ Recoil_index_4),
-/* harmony export */   "atomFamily": () => (/* binding */ Recoil_index_7),
-/* harmony export */   "batchUpdates": () => (/* binding */ Recoil_index_33),
-/* harmony export */   "constSelector": () => (/* binding */ Recoil_index_9),
-/* harmony export */   "errorSelector": () => (/* binding */ Recoil_index_10),
-/* harmony export */   "isRecoilValue": () => (/* binding */ Recoil_index_32),
-/* harmony export */   "noWait": () => (/* binding */ Recoil_index_27),
-/* harmony export */   "readOnlySelector": () => (/* binding */ Recoil_index_11),
-/* harmony export */   "retentionZone": () => (/* binding */ Recoil_index_6),
-/* harmony export */   "selector": () => (/* binding */ Recoil_index_5),
-/* harmony export */   "selectorFamily": () => (/* binding */ Recoil_index_8),
-/* harmony export */   "setBatcher": () => (/* binding */ Recoil_index_34),
-/* harmony export */   "snapshot_UNSTABLE": () => (/* binding */ Recoil_index_35),
-/* harmony export */   "useGetRecoilValueInfo_UNSTABLE": () => (/* binding */ Recoil_index_18),
-/* harmony export */   "useGotoRecoilSnapshot": () => (/* binding */ Recoil_index_22),
-/* harmony export */   "useRecoilBridgeAcrossReactRoots_UNSTABLE": () => (/* binding */ Recoil_index_3),
-/* harmony export */   "useRecoilCallback": () => (/* binding */ Recoil_index_20),
-/* harmony export */   "useRecoilSnapshot": () => (/* binding */ Recoil_index_23),
-/* harmony export */   "useRecoilState": () => (/* binding */ Recoil_index_14),
-/* harmony export */   "useRecoilStateLoadable": () => (/* binding */ Recoil_index_15),
-/* harmony export */   "useRecoilTransactionObserver_UNSTABLE": () => (/* binding */ Recoil_index_24),
-/* harmony export */   "useRecoilTransaction_UNSTABLE": () => (/* binding */ Recoil_index_21),
-/* harmony export */   "useRecoilValue": () => (/* binding */ Recoil_index_12),
-/* harmony export */   "useRecoilValueLoadable": () => (/* binding */ Recoil_index_13),
-/* harmony export */   "useResetRecoilState": () => (/* binding */ Recoil_index_17),
-/* harmony export */   "useRetain": () => (/* binding */ Recoil_index_19),
-/* harmony export */   "useSetRecoilState": () => (/* binding */ Recoil_index_16),
-/* harmony export */   "useSetUnvalidatedAtomValues_UNSTABLE": () => (/* binding */ Recoil_index_26),
-/* harmony export */   "useTransactionObservation_UNSTABLE": () => (/* binding */ Recoil_index_25),
-/* harmony export */   "waitForAll": () => (/* binding */ Recoil_index_30),
-/* harmony export */   "waitForAllSettled": () => (/* binding */ Recoil_index_31),
-/* harmony export */   "waitForAny": () => (/* binding */ Recoil_index_29),
-/* harmony export */   "waitForNone": () => (/* binding */ Recoil_index_28)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-
-
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-// Split declaration and implementation to allow this function to pretend to
-// check for actual instance of Promise instead of something with a `then`
-// method.
-// eslint-disable-next-line no-redeclare
-function isPromise(p) {
-  return !!p && typeof p.then === 'function';
-}
-
-var Recoil_isPromise = isPromise;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-function nullthrows(x, message) {
-  if (x != null) {
-    return x;
-  }
-
-  throw new Error(message !== null && message !== void 0 ? message : 'Got unexpected null or undefined');
-}
-
-var Recoil_nullthrows = nullthrows;
-
-// TODO Convert Loadable to a Class to allow for runtime type detection.
-// Containing static factories of withValue(), withError(), withPromise(), and all()
-
-
-class Canceled {}
-
-const CANCELED = new Canceled();
-const loadableAccessors = {
-  valueMaybe() {
-    return undefined;
-  },
-
-  valueOrThrow() {
-    const error = new Error( // $FlowFixMe[object-this-reference]
-    `Loadable expected value, but in "${this.state}" state`); // V8 keeps closures alive until stack is accessed, this prevents a memory leak
-    throw error;
-  },
-
-  errorMaybe() {
-    return undefined;
-  },
-
-  errorOrThrow() {
-    const error = new Error( // $FlowFixMe[object-this-reference]
-    `Loadable expected error, but in "${this.state}" state`); // V8 keeps closures alive until stack is accessed, this prevents a memory leak
-    throw error;
-  },
-
-  promiseMaybe() {
-    return undefined;
-  },
-
-  promiseOrThrow() {
-    const error = new Error( // $FlowFixMe[object-this-reference]
-    `Loadable expected promise, but in "${this.state}" state`); // V8 keeps closures alive until stack is accessed, this prevents a memory leak
-    throw error;
-  },
-
-  is(other) {
-    // $FlowFixMe[object-this-reference]
-    return other.state === this.state && other.contents === this.contents;
-  },
-
-  // TODO Convert Loadable to a Class to better support chaining
-  //      by returning a Loadable from a map function
-  map(map) {
-    // $FlowFixMe[object-this-reference]
-    if (this.state === 'hasError') {
-      // $FlowFixMe[object-this-reference]
-      return this;
-    } // $FlowFixMe[object-this-reference]
-
-
-    if (this.state === 'hasValue') {
-      try {
-        // $FlowFixMe[object-this-reference]
-        const next = map(this.contents); // TODO if next instanceof Loadable, then return next
-
-        return Recoil_isPromise(next) ? loadableWithPromise(next.then(value => ({
-          __value: value
-        }))) : loadableWithValue(next);
-      } catch (e) {
-        return Recoil_isPromise(e) ? // If we "suspended", then try again.
-        // errors and subsequent retries will be handled in 'loading' case
-        // $FlowFixMe[object-this-reference]
-        loadableWithPromise(e.next(() => map(this.contents))) : loadableWithError(e);
-      }
-    } // $FlowFixMe[object-this-reference]
-
-
-    if (this.state === 'loading') {
-      return loadableWithPromise( // $FlowFixMe[object-this-reference]
-      this.contents // TODO if map returns a loadable, then return the value or promise or throw the error
-      .then(value => ({
-        __value: map(value.__value)
-      })).catch(e => {
-        if (Recoil_isPromise(e)) {
-          // we were "suspended," try again
-          // $FlowFixMe[object-this-reference]
-          return e.then(() => map(this.contents));
+function createThunkMiddleware(extraArgument) {
+  return function (_ref) {
+    var dispatch = _ref.dispatch,
+        getState = _ref.getState;
+    return function (next) {
+      return function (action) {
+        if (typeof action === 'function') {
+          return action(dispatch, getState, extraArgument);
         }
 
-        throw e;
-      }));
-    }
-
-    const error = new Error('Invalid Loadable state'); // V8 keeps closures alive until stack is accessed, this prevents a memory leak
-    throw error;
-  }
-
-};
-
-function loadableWithValue(value) {
-  // Build objects this way since Flow doesn't support disjoint unions for class properties
-  return Object.freeze({
-    state: 'hasValue',
-    contents: value,
-    ...loadableAccessors,
-
-    getValue() {
-      return this.contents;
-    },
-
-    toPromise() {
-      return Promise.resolve(this.contents);
-    },
-
-    valueMaybe() {
-      return this.contents;
-    },
-
-    valueOrThrow() {
-      return this.contents;
-    }
-
-  });
-}
-
-function loadableWithError(error) {
-  return Object.freeze({
-    state: 'hasError',
-    contents: error,
-    ...loadableAccessors,
-
-    getValue() {
-      throw this.contents;
-    },
-
-    toPromise() {
-      return Promise.reject(this.contents);
-    },
-
-    errorMaybe() {
-      return this.contents;
-    },
-
-    errorOrThrow() {
-      return this.contents;
-    }
-
-  });
-} // TODO Probably need to clean-up this API to accept `Promise<T>`
-// with an alternative params or mechanism for internal key proxy.
-
-
-function loadableWithPromise(promise) {
-  return Object.freeze({
-    state: 'loading',
-    contents: promise,
-    ...loadableAccessors,
-
-    getValue() {
-      throw this.contents.then(({
-        __value
-      }) => __value);
-    },
-
-    toPromise() {
-      return this.contents.then(({
-        __value
-      }) => __value);
-    },
-
-    promiseMaybe() {
-      return this.contents.then(({
-        __value
-      }) => __value);
-    },
-
-    promiseOrThrow() {
-      return this.contents.then(({
-        __value
-      }) => __value);
-    }
-
-  });
-}
-
-function loadableLoading() {
-  return loadableWithPromise(new Promise(() => {}));
-}
-
-function loadableAll(inputs) {
-  return inputs.every(i => i.state === 'hasValue') ? loadableWithValue(inputs.map(i => i.contents)) : inputs.some(i => i.state === 'hasError') ? loadableWithError(Recoil_nullthrows(inputs.find(i => i.state === 'hasError'), 'Invalid loadable passed to loadableAll').contents) : loadableWithPromise(Promise.all(inputs.map(i => i.contents)).then(value => ({
-    __value: value
-  })));
-}
-
-var Recoil_Loadable = {
-  loadableWithValue,
-  loadableWithError,
-  loadableWithPromise,
-  loadableLoading,
-  loadableAll,
-  Canceled,
-  CANCELED
-};
-
-var _useMutableSource;
-
- // FIXME T2710559282599660
-
-
-const useMutableSource = // flowlint-line unclear-type:off
-(_useMutableSource = react__WEBPACK_IMPORTED_MODULE_0__.useMutableSource) !== null && _useMutableSource !== void 0 ? _useMutableSource : react__WEBPACK_IMPORTED_MODULE_0__.unstable_useMutableSource; // flowlint-line unclear-type:off
-
-function mutableSourceExists() {
-  return useMutableSource && !(typeof window !== 'undefined' && window.$disableRecoilValueMutableSource_TEMP_HACK_DO_NOT_USE);
-}
-
-var Recoil_mutableSource = {
-  mutableSourceExists,
-  useMutableSource
-};
-
-const {
-  mutableSourceExists: mutableSourceExists$1
-} = Recoil_mutableSource;
-
-const gks = new Map().set('recoil_hamt_2020', true).set('recoil_memory_managament_2020', true).set('recoil_suppress_rerender_in_callback', true);
-
-function Recoil_gkx(gk) {
-  var _gks$get;
-
-  if (gk === 'recoil_early_rendering_2021' && !mutableSourceExists$1()) {
-    return false;
-  }
-
-  return (_gks$get = gks.get(gk)) !== null && _gks$get !== void 0 ? _gks$get : false;
-}
-
-Recoil_gkx.setPass = gk => {
-  gks.set(gk, true);
-};
-
-Recoil_gkx.setFail = gk => {
-  gks.set(gk, false);
-};
-
-var Recoil_gkx_1 = Recoil_gkx; // @oss-only
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-function recoverableViolation(message, projectName, {
-  error
-} = {}) {
-  if (true) {
-    console.error(message, error);
-  }
-
-  return null;
-}
-
-var recoverableViolation_1 = recoverableViolation;
-
-// @oss-only
-
-
-var Recoil_recoverableViolation = recoverableViolation_1;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * Utilities for working with built-in Maps and Sets without mutating them.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-function setByAddingToSet(set, v) {
-  const next = new Set(set);
-  next.add(v);
-  return next;
-}
-
-function setByDeletingFromSet(set, v) {
-  const next = new Set(set);
-  next.delete(v);
-  return next;
-}
-
-function mapBySettingInMap(map, k, v) {
-  const next = new Map(map);
-  next.set(k, v);
-  return next;
-}
-
-function mapByUpdatingInMap(map, k, updater) {
-  const next = new Map(map);
-  next.set(k, updater(next.get(k)));
-  return next;
-}
-
-function mapByDeletingFromMap(map, k) {
-  const next = new Map(map);
-  next.delete(k);
-  return next;
-}
-
-function mapByDeletingMultipleFromMap(map, ks) {
-  const next = new Map(map);
-  ks.forEach(k => next.delete(k));
-  return next;
-}
-
-var Recoil_CopyOnWrite = {
-  setByAddingToSet,
-  setByDeletingFromSet,
-  mapBySettingInMap,
-  mapByUpdatingInMap,
-  mapByDeletingFromMap,
-  mapByDeletingMultipleFromMap
-};
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-/**
- * Creates a new iterable whose output is generated by passing the input
- * iterable's values through the filter function.
- */
-
-function* filterIterable(iterable, predicate) {
-  // Use generator to create iterable/iterator
-  let index = 0;
-
-  for (const value of iterable) {
-    if (predicate(value, index++)) {
-      yield value;
-    }
-  }
-}
-
-var Recoil_filterIterable = filterIterable;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-/**
- * Creates a new iterable whose output is generated by passing the input
- * iterable's values through the mapper function.
- */
-
-function mapIterable(iterable, callback) {
-  // Use generator to create iterable/iterator
-  return function* () {
-    let index = 0;
-
-    for (const value of iterable) {
-      yield callback(value, index++);
-    }
-  }();
-}
-
-var Recoil_mapIterable = mapIterable;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-function sprintf(format, ...args) {
-  let index = 0;
-  return format.replace(/%s/g, () => String(args[index++]));
-}
-
-var sprintf_1 = sprintf;
-
-function expectationViolation(format, ...args) {
-  if (true) {
-    const message = sprintf_1.call(null, format, ...args);
-    const error = new Error(message);
-    error.name = 'Expectation Violation';
-    console.error(error);
-  }
-}
-
-var expectationViolation_1 = expectationViolation;
-
-// @oss-only
-
-
-var Recoil_expectationViolation = expectationViolation_1;
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-// eslint-disable-next-line no-unused-vars
-class AbstractRecoilValue {
-  constructor(newKey) {
-    _defineProperty(this, "key", void 0);
-
-    this.key = newKey;
-  }
-
-}
-
-class RecoilState extends AbstractRecoilValue {}
-
-class RecoilValueReadOnly extends AbstractRecoilValue {}
-
-function isRecoilValue(x) {
-  return x instanceof RecoilState || x instanceof RecoilValueReadOnly;
-}
-
-var Recoil_RecoilValue = {
-  AbstractRecoilValue,
-  RecoilState,
-  RecoilValueReadOnly,
-  isRecoilValue
-};
-
-var Recoil_RecoilValue_1 = Recoil_RecoilValue.AbstractRecoilValue;
-var Recoil_RecoilValue_2 = Recoil_RecoilValue.RecoilState;
-var Recoil_RecoilValue_3 = Recoil_RecoilValue.RecoilValueReadOnly;
-var Recoil_RecoilValue_4 = Recoil_RecoilValue.isRecoilValue;
-
-var Recoil_RecoilValue$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  AbstractRecoilValue: Recoil_RecoilValue_1,
-  RecoilState: Recoil_RecoilValue_2,
-  RecoilValueReadOnly: Recoil_RecoilValue_3,
-  isRecoilValue: Recoil_RecoilValue_4
-});
-
-class DefaultValue {}
-
-const DEFAULT_VALUE = new DefaultValue();
-
-class RecoilValueNotReady extends Error {
-  constructor(key) {
-    super(`Tried to set the value of Recoil selector ${key} using an updater function, but it is an async selector in a pending or error state; this is not supported.`);
-  }
-
-}
-
-// flowlint-next-line unclear-type:off
-const nodes = new Map(); // flowlint-next-line unclear-type:off
-
-const recoilValues = new Map();
-/* eslint-disable no-redeclare */
-
-function recoilValuesForKeys(keys) {
-  return Recoil_mapIterable(keys, key => Recoil_nullthrows(recoilValues.get(key)));
-}
-
-function registerNode(node) {
-  if (nodes.has(node.key)) {
-    const message = `Duplicate atom key "${node.key}". This is a FATAL ERROR in
-      production. But it is safe to ignore this warning if it occurred because of
-      hot module replacement.`; // TODO Need to figure out if there is a standard/open-source equivalent to see if hot module replacement is happening:
-    // prettier-ignore
-    // @fb-only: if (__DEV__) {
-    // @fb-only: const isAcceptingUpdate = require('__debug').isAcceptingUpdate;
-    // prettier-ignore
-    // @fb-only: if (typeof isAcceptingUpdate !== 'function' || !isAcceptingUpdate()) {
-    // @fb-only: expectationViolation(message, 'recoil');
-    // @fb-only: }
-    // prettier-ignore
-    // @fb-only: } else {
-    // @fb-only: recoverableViolation(message, 'recoil');
-    // @fb-only: }
-
-    console.warn(message); // @oss-only
-  }
-
-  nodes.set(node.key, node);
-  const recoilValue = node.set == null ? new Recoil_RecoilValue$1.RecoilValueReadOnly(node.key) : new Recoil_RecoilValue$1.RecoilState(node.key);
-  recoilValues.set(node.key, recoilValue);
-  return recoilValue;
-}
-/* eslint-enable no-redeclare */
-
-
-class NodeMissingError extends Error {} // flowlint-next-line unclear-type:off
-
-
-function getNode(key) {
-  const node = nodes.get(key);
-
-  if (node == null) {
-    throw new NodeMissingError(`Missing definition for RecoilValue: "${key}""`);
-  }
-
-  return node;
-} // flowlint-next-line unclear-type:off
-
-
-function getNodeMaybe(key) {
-  return nodes.get(key);
-}
-
-const configDeletionHandlers = new Map();
-
-function deleteNodeConfigIfPossible(key) {
-  var _node$shouldDeleteCon;
-
-  if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-    return;
-  }
-
-  const node = nodes.get(key);
-
-  if (node === null || node === void 0 ? void 0 : (_node$shouldDeleteCon = node.shouldDeleteConfigOnRelease) === null || _node$shouldDeleteCon === void 0 ? void 0 : _node$shouldDeleteCon.call(node)) {
-    var _getConfigDeletionHan;
-
-    nodes.delete(key);
-    (_getConfigDeletionHan = getConfigDeletionHandler(key)) === null || _getConfigDeletionHan === void 0 ? void 0 : _getConfigDeletionHan();
-    configDeletionHandlers.delete(key);
-  }
-}
-
-function setConfigDeletionHandler(key, fn) {
-  if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-    return;
-  }
-
-  if (fn === undefined) {
-    configDeletionHandlers.delete(key);
-  } else {
-    configDeletionHandlers.set(key, fn);
-  }
-}
-
-function getConfigDeletionHandler(key) {
-  return configDeletionHandlers.get(key);
-}
-
-var Recoil_Node = {
-  nodes,
-  recoilValues,
-  registerNode,
-  getNode,
-  getNodeMaybe,
-  deleteNodeConfigIfPossible,
-  setConfigDeletionHandler,
-  getConfigDeletionHandler,
-  recoilValuesForKeys,
-  NodeMissingError,
-  DefaultValue,
-  DEFAULT_VALUE,
-  RecoilValueNotReady
-};
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-class RetentionZone {}
-
-function retentionZone() {
-  return new RetentionZone();
-}
-
-var Recoil_RetentionZone = {
-  RetentionZone,
-  retentionZone
-};
-
-const {
-  setByAddingToSet: setByAddingToSet$1
-} = Recoil_CopyOnWrite;
-
-
-
-
-
-
-
-const {
-  getNode: getNode$1,
-  getNodeMaybe: getNodeMaybe$1,
-  recoilValuesForKeys: recoilValuesForKeys$1
-} = Recoil_Node;
-
-const {
-  RetentionZone: RetentionZone$1
-} = Recoil_RetentionZone; // flowlint-next-line unclear-type:off
-
-
-const emptySet = Object.freeze(new Set());
-
-class ReadOnlyRecoilValueError extends Error {}
-
-function initializeRetentionForNode(store, nodeKey, retainedBy) {
-  if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-    return () => undefined;
-  }
-
-  const {
-    nodesRetainedByZone
-  } = store.getState().retention;
-
-  function addToZone(zone) {
-    let set = nodesRetainedByZone.get(zone);
-
-    if (!set) {
-      nodesRetainedByZone.set(zone, set = new Set());
-    }
-
-    set.add(nodeKey);
-  }
-
-  if (retainedBy instanceof RetentionZone$1) {
-    addToZone(retainedBy);
-  } else if (Array.isArray(retainedBy)) {
-    for (const zone of retainedBy) {
-      addToZone(zone);
-    }
-  }
-
-  return () => {
-    if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-      return;
-    }
-
-    const nodesRetainedByZone = store.getState().retention.nodesRetainedByZone;
-
-    function deleteFromZone(zone) {
-      const set = nodesRetainedByZone.get(zone);
-
-      if (set) {
-        set.delete(nodeKey);
-      }
-
-      if (set && set.size === 0) {
-        nodesRetainedByZone.delete(zone);
-      }
-    }
-
-    if (retainedBy instanceof RetentionZone$1) {
-      deleteFromZone(retainedBy);
-    } else if (Array.isArray(retainedBy)) {
-      for (const zone of retainedBy) {
-        deleteFromZone(zone);
-      }
-    }
-  };
-}
-
-function initializeNodeIfNewToStore(store, treeState, key, trigger) {
-  const storeState = store.getState();
-
-  if (storeState.nodeCleanupFunctions.has(key)) {
-    return;
-  }
-
-  const config = getNode$1(key);
-  const retentionCleanup = initializeRetentionForNode(store, key, config.retainedBy);
-  const nodeCleanup = config.init(store, treeState, trigger);
-  storeState.nodeCleanupFunctions.set(key, () => {
-    nodeCleanup();
-    retentionCleanup();
-  });
-}
-
-function cleanUpNode(store, key) {
-  var _state$nodeCleanupFun;
-
-  const state = store.getState();
-  (_state$nodeCleanupFun = state.nodeCleanupFunctions.get(key)) === null || _state$nodeCleanupFun === void 0 ? void 0 : _state$nodeCleanupFun();
-  state.nodeCleanupFunctions.delete(key);
-} // Get the current value loadable of a node and update the state.
-// Update dependencies and subscriptions for selectors.
-// Update saved value validation for atoms.
-
-
-function getNodeLoadable(store, state, key) {
-  initializeNodeIfNewToStore(store, state, key, 'get');
-  return getNode$1(key).get(store, state);
-} // Peek at the current value loadable for a node without any evaluation or state change
-
-
-function peekNodeLoadable(store, state, key) {
-  return getNode$1(key).peek(store, state);
-} // Write value directly to state bypassing the Node interface as the node
-// definitions may not have been loaded yet when processing the initial snapshot.
-
-
-function setUnvalidatedAtomValue_DEPRECATED(state, key, newValue) {
-  var _node$invalidate;
-
-  const node = getNodeMaybe$1(key);
-  node === null || node === void 0 ? void 0 : (_node$invalidate = node.invalidate) === null || _node$invalidate === void 0 ? void 0 : _node$invalidate.call(node, state);
-  return { ...state,
-    atomValues: state.atomValues.clone().delete(key),
-    nonvalidatedAtoms: state.nonvalidatedAtoms.clone().set(key, newValue),
-    dirtyAtoms: setByAddingToSet$1(state.dirtyAtoms, key)
-  };
-} // Return the discovered dependencies and values to be written by setting
-// a node value. (Multiple values may be written due to selectors getting to
-// set upstreams; deps may be discovered because of reads in updater functions.)
-
-
-function setNodeValue(store, state, key, newValue) {
-  const node = getNode$1(key);
-
-  if (node.set == null) {
-    throw new ReadOnlyRecoilValueError(`Attempt to set read-only RecoilValue: ${key}`);
-  }
-
-  const set = node.set; // so flow doesn't lose the above refinement.
-
-  initializeNodeIfNewToStore(store, state, key, 'set');
-  return set(store, state, newValue);
-}
-
-function peekNodeInfo(store, state, key) {
-  var _graph$nodeDeps$get, _storeState$nodeToCom, _storeState$nodeToCom2;
-
-  const storeState = store.getState();
-  const graph = store.getGraph(state.version);
-  const type = storeState.knownAtoms.has(key) ? 'atom' : storeState.knownSelectors.has(key) ? 'selector' : undefined;
-  const downstreamNodes = Recoil_filterIterable(getDownstreamNodes(store, state, new Set([key])), nodeKey => nodeKey !== key);
-  return {
-    loadable: peekNodeLoadable(store, state, key),
-    isActive: storeState.knownAtoms.has(key) || storeState.knownSelectors.has(key),
-    isSet: type === 'selector' ? false : state.atomValues.has(key),
-    isModified: state.dirtyAtoms.has(key),
-    type,
-    // Report current dependencies.  If the node hasn't been evaluated, then
-    // dependencies may be missing based on the current state.
-    deps: recoilValuesForKeys$1((_graph$nodeDeps$get = graph.nodeDeps.get(key)) !== null && _graph$nodeDeps$get !== void 0 ? _graph$nodeDeps$get : []),
-    // Reportsall "current" subscribers.  Evaluating other nodes or
-    // previous in-progress async evaluations may introduce new subscribers.
-    subscribers: {
-      nodes: recoilValuesForKeys$1(downstreamNodes),
-      components: Recoil_mapIterable((_storeState$nodeToCom = (_storeState$nodeToCom2 = storeState.nodeToComponentSubscriptions.get(key)) === null || _storeState$nodeToCom2 === void 0 ? void 0 : _storeState$nodeToCom2.values()) !== null && _storeState$nodeToCom !== void 0 ? _storeState$nodeToCom : [], ([name]) => ({
-        name
-      }))
-    }
-  };
-} // Find all of the recursively dependent nodes
-
-
-function getDownstreamNodes(store, state, keys) {
-  const visitedNodes = new Set();
-  const visitingNodes = Array.from(keys);
-  const graph = store.getGraph(state.version);
-
-  for (let key = visitingNodes.pop(); key; key = visitingNodes.pop()) {
-    var _graph$nodeToNodeSubs;
-
-    visitedNodes.add(key);
-    const subscribedNodes = (_graph$nodeToNodeSubs = graph.nodeToNodeSubscriptions.get(key)) !== null && _graph$nodeToNodeSubs !== void 0 ? _graph$nodeToNodeSubs : emptySet;
-
-    for (const downstreamNode of subscribedNodes) {
-      if (!visitedNodes.has(downstreamNode)) {
-        visitingNodes.push(downstreamNode);
-      }
-    }
-  }
-
-  return visitedNodes;
-}
-
-var Recoil_FunctionalCore = {
-  getNodeLoadable,
-  peekNodeLoadable,
-  setNodeValue,
-  cleanUpNode,
-  setUnvalidatedAtomValue_DEPRECATED,
-  peekNodeInfo,
-  getDownstreamNodes,
-  initializeNodeIfNewToStore
-};
-
-const {
-  CANCELED: CANCELED$1
-} = Recoil_Loadable;
-
-
-
-
-
-
-
-const {
-  getDownstreamNodes: getDownstreamNodes$1,
-  getNodeLoadable: getNodeLoadable$1,
-  setNodeValue: setNodeValue$1
-} = Recoil_FunctionalCore;
-
-const {
-  getNodeMaybe: getNodeMaybe$2
-} = Recoil_Node;
-
-const {
-  DefaultValue: DefaultValue$1,
-  RecoilValueNotReady: RecoilValueNotReady$1
-} = Recoil_Node;
-
-const {
-  AbstractRecoilValue: AbstractRecoilValue$1,
-  RecoilState: RecoilState$1,
-  RecoilValueReadOnly: RecoilValueReadOnly$1,
-  isRecoilValue: isRecoilValue$1
-} = Recoil_RecoilValue$1;
-
-function getRecoilValueAsLoadable(store, {
-  key
-}, treeState = store.getState().currentTree) {
-  var _storeState$nextTree, _storeState$previousT;
-
-  // Reading from an older tree can cause bugs because the dependencies that we
-  // discover during the read are lost.
-  const storeState = store.getState();
-
-  if (!(treeState.version === storeState.currentTree.version || treeState.version === ((_storeState$nextTree = storeState.nextTree) === null || _storeState$nextTree === void 0 ? void 0 : _storeState$nextTree.version) || treeState.version === ((_storeState$previousT = storeState.previousTree) === null || _storeState$previousT === void 0 ? void 0 : _storeState$previousT.version))) {
-    Recoil_recoverableViolation('Tried to read from a discarded tree');
-  }
-
-  const loadable = getNodeLoadable$1(store, treeState, key);
-
-  if (loadable.state === 'loading') {
-    loadable.contents.catch(() => {
-      /**
-       * HACK: intercept thrown error here to prevent an uncaught promise exception. Ideally this would happen closer to selector
-       * execution (perhaps introducing a new ERROR class to be resolved by async selectors that are in an error state)
-       */
-      return CANCELED$1;
-    });
-  }
-
-  return loadable;
-}
-
-function applyAtomValueWrites(atomValues, writes) {
-  const result = atomValues.clone();
-  writes.forEach((v, k) => {
-    if (v.state === 'hasValue' && v.contents instanceof DefaultValue$1) {
-      result.delete(k);
-    } else {
-      result.set(k, v);
-    }
-  });
-  return result;
-}
-
-function valueFromValueOrUpdater(store, state, {
-  key
-}, valueOrUpdater) {
-  if (typeof valueOrUpdater === 'function') {
-    // Updater form: pass in the current value. Throw if the current value
-    // is unavailable (namely when updating an async selector that's
-    // pending or errored):
-    const current = getNodeLoadable$1(store, state, key);
-
-    if (current.state === 'loading') {
-      throw new RecoilValueNotReady$1(key);
-    } else if (current.state === 'hasError') {
-      throw current.contents;
-    } // T itself may be a function, so our refinement is not sufficient:
-
-
-    return valueOrUpdater(current.contents); // flowlint-line unclear-type:off
-  } else {
-    return valueOrUpdater;
-  }
-}
-
-function applyAction(store, state, action) {
-  if (action.type === 'set') {
-    const {
-      recoilValue,
-      valueOrUpdater
-    } = action;
-    const newValue = valueFromValueOrUpdater(store, state, recoilValue, valueOrUpdater);
-    const writes = setNodeValue$1(store, state, recoilValue.key, newValue);
-
-    for (const [key, loadable] of writes.entries()) {
-      writeLoadableToTreeState(state, key, loadable);
-    }
-  } else if (action.type === 'setLoadable') {
-    const {
-      recoilValue: {
-        key
-      },
-      loadable
-    } = action;
-    writeLoadableToTreeState(state, key, loadable);
-  } else if (action.type === 'markModified') {
-    const {
-      recoilValue: {
-        key
-      }
-    } = action;
-    state.dirtyAtoms.add(key);
-  } else if (action.type === 'setUnvalidated') {
-    var _node$invalidate;
-
-    // Write value directly to state bypassing the Node interface as the node
-    // definitions may not have been loaded yet when processing the initial snapshot.
-    const {
-      recoilValue: {
-        key
-      },
-      unvalidatedValue
-    } = action;
-    const node = getNodeMaybe$2(key);
-    node === null || node === void 0 ? void 0 : (_node$invalidate = node.invalidate) === null || _node$invalidate === void 0 ? void 0 : _node$invalidate.call(node, state);
-    state.atomValues.delete(key);
-    state.nonvalidatedAtoms.set(key, unvalidatedValue);
-    state.dirtyAtoms.add(key);
-  } else {
-    Recoil_recoverableViolation(`Unknown action ${action.type}`);
-  }
-}
-
-function writeLoadableToTreeState(state, key, loadable) {
-  if (loadable.state === 'hasValue' && loadable.contents instanceof DefaultValue$1) {
-    state.atomValues.delete(key);
-  } else {
-    state.atomValues.set(key, loadable);
-  }
-
-  state.dirtyAtoms.add(key);
-  state.nonvalidatedAtoms.delete(key);
-}
-
-function applyActionsToStore(store, actions) {
-  store.replaceState(state => {
-    const newState = copyTreeState(state);
-
-    for (const action of actions) {
-      applyAction(store, newState, action);
-    }
-
-    invalidateDownstreams(store, newState);
-    return newState;
-  });
-}
-
-function queueOrPerformStateUpdate(store, action) {
-  if (batchStack.length) {
-    const actionsByStore = batchStack[batchStack.length - 1];
-    let actions = actionsByStore.get(store);
-
-    if (!actions) {
-      actionsByStore.set(store, actions = []);
-    }
-
-    actions.push(action);
-  } else {
-    applyActionsToStore(store, [action]);
-  }
-}
-
-const batchStack = [];
-
-function batchStart() {
-  const actionsByStore = new Map();
-  batchStack.push(actionsByStore);
-  return () => {
-    for (const [store, actions] of actionsByStore) {
-      applyActionsToStore(store, actions);
-    }
-
-    const popped = batchStack.pop();
-
-    if (popped !== actionsByStore) {
-      Recoil_recoverableViolation('Incorrect order of batch popping');
-    }
-  };
-}
-
-function copyTreeState(state) {
-  return { ...state,
-    atomValues: state.atomValues.clone(),
-    nonvalidatedAtoms: state.nonvalidatedAtoms.clone(),
-    dirtyAtoms: new Set(state.dirtyAtoms)
-  };
-}
-
-function invalidateDownstreams(store, state) {
-  // Inform any nodes that were changed or downstream of changes so that they
-  // can clear out any caches as needed due to the update:
-  const downstreams = getDownstreamNodes$1(store, state, state.dirtyAtoms);
-
-  for (const key of downstreams) {
-    var _getNodeMaybe, _getNodeMaybe$invalid;
-
-    (_getNodeMaybe = getNodeMaybe$2(key)) === null || _getNodeMaybe === void 0 ? void 0 : (_getNodeMaybe$invalid = _getNodeMaybe.invalidate) === null || _getNodeMaybe$invalid === void 0 ? void 0 : _getNodeMaybe$invalid.call(_getNodeMaybe, state);
-  }
-}
-
-function setRecoilValue(store, recoilValue, valueOrUpdater) {
-  queueOrPerformStateUpdate(store, {
-    type: 'set',
-    recoilValue,
-    valueOrUpdater
-  });
-}
-
-function setRecoilValueLoadable(store, recoilValue, loadable) {
-  if (loadable instanceof DefaultValue$1) {
-    return setRecoilValue(store, recoilValue, loadable);
-  }
-
-  queueOrPerformStateUpdate(store, {
-    type: 'setLoadable',
-    recoilValue,
-    loadable
-  });
-}
-
-function markRecoilValueModified(store, recoilValue) {
-  queueOrPerformStateUpdate(store, {
-    type: 'markModified',
-    recoilValue
-  });
-}
-
-function setUnvalidatedRecoilValue(store, recoilValue, unvalidatedValue) {
-  queueOrPerformStateUpdate(store, {
-    type: 'setUnvalidated',
-    recoilValue,
-    unvalidatedValue
-  });
-}
-
-let subscriptionID = 0;
-
-function subscribeToRecoilValue(store, {
-  key
-}, callback, componentDebugName = null) {
-  const subID = subscriptionID++;
-  const storeState = store.getState();
-
-  if (!storeState.nodeToComponentSubscriptions.has(key)) {
-    storeState.nodeToComponentSubscriptions.set(key, new Map());
-  }
-
-  Recoil_nullthrows(storeState.nodeToComponentSubscriptions.get(key)).set(subID, [componentDebugName !== null && componentDebugName !== void 0 ? componentDebugName : '<not captured>', callback]); // Handle the case that, during the same tick that we are subscribing, an atom
-  // has been updated by some effect handler. Otherwise we will miss the update.
-
-  if (Recoil_gkx_1('recoil_early_rendering_2021')) {
-    const nextTree = store.getState().nextTree;
-
-    if (nextTree && nextTree.dirtyAtoms.has(key)) {
-      callback(nextTree);
-    }
-  }
-
-  return {
-    release: () => {
-      const storeState = store.getState();
-      const subs = storeState.nodeToComponentSubscriptions.get(key);
-
-      if (subs === undefined || !subs.has(subID)) {
-        Recoil_recoverableViolation(`Subscription missing at release time for atom ${key}. This is a bug in Recoil.`);
-        return;
-      }
-
-      subs.delete(subID);
-
-      if (subs.size === 0) {
-        storeState.nodeToComponentSubscriptions.delete(key);
-      }
-    }
-  };
-}
-
-var Recoil_RecoilValueInterface = {
-  RecoilValueReadOnly: RecoilValueReadOnly$1,
-  AbstractRecoilValue: AbstractRecoilValue$1,
-  RecoilState: RecoilState$1,
-  getRecoilValueAsLoadable,
-  setRecoilValue,
-  setRecoilValueLoadable,
-  markRecoilValueModified,
-  setUnvalidatedRecoilValue,
-  subscribeToRecoilValue,
-  isRecoilValue: isRecoilValue$1,
-  applyAtomValueWrites,
-  // TODO Remove export when deprecating initialStoreState_DEPRECATED in RecoilRoot
-  batchStart,
-  writeLoadableToTreeState,
-  invalidateDownstreams,
-  copyTreeState,
-  invalidateDownstreams_FOR_TESTING: invalidateDownstreams
-};
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- *
- * This is to export esstiential functions from react-dom
- * for our web build
- */
-const {
-  unstable_batchedUpdates
-} = react_dom__WEBPACK_IMPORTED_MODULE_1__;
-
-var ReactBatchedUpdates = {
-  unstable_batchedUpdates
-};
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- *
- * This is to export esstiential functions from react-dom
- * for our web build
- */
-// @fb-only: const {unstable_batchedUpdates} = require('ReactDOMComet');
-const {
-  unstable_batchedUpdates: unstable_batchedUpdates$1
-} = ReactBatchedUpdates; // @oss-only
-
-
-var Recoil_ReactBatchedUpdates = {
-  unstable_batchedUpdates: unstable_batchedUpdates$1
-};
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-const {
-  batchStart: batchStart$1
-} = Recoil_RecoilValueInterface;
-
-const {
-  unstable_batchedUpdates: unstable_batchedUpdates$2
-} = Recoil_ReactBatchedUpdates;
-
-let batcher = unstable_batchedUpdates$2; // flowlint-next-line unclear-type:off
-
-/**
- * Sets the provided batcher function as the batcher function used by Recoil.
- *
- * Set the batcher to a custom batcher for your renderer,
- * if you use a renderer other than React DOM or React Native.
- */
-const setBatcher = newBatcher => {
-  batcher = newBatcher;
-};
-/**
- * Returns the current batcher function.
- */
-
-
-const getBatcher = () => batcher;
-/**
- * Calls the current batcher function and passes the
- * provided callback function.
- */
-
-
-const batchUpdates = callback => {
-  batcher(() => {
-    let batchEnd = () => undefined;
-
-    try {
-      batchEnd = batchStart$1();
-      callback();
-    } finally {
-      batchEnd();
-    }
-  });
-};
-
-var Recoil_Batching = {
-  getBatcher,
-  setBatcher,
-  batchUpdates
-};
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-function enqueueExecution(s, f) {
-  f();
-}
-
-var Recoil_Queue = {
-  enqueueExecution
-};
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-/**
- * Returns a set containing all of the values from the first set that are not
- * present in any of the subsequent sets.
- *
- * Note: this is written procedurally (i.e., without filterSet) for performant
- * use in tight loops.
- */
-
-function differenceSets(set, ...setsWithValuesToRemove) {
-  const ret = new Set();
-
-  FIRST: for (const value of set) {
-    for (const otherSet of setsWithValuesToRemove) {
-      if (otherSet.has(value)) {
-        continue FIRST;
-      }
-    }
-
-    ret.add(value);
-  }
-
-  return ret;
-}
-
-var Recoil_differenceSets = differenceSets;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-/**
- * Returns a new Map object with the same keys as the original, but with the
- * values replaced with the output of the given callback function.
- */
-
-function mapMap(map, callback) {
-  const result = new Map();
-  map.forEach((value, key) => {
-    result.set(key, callback(value, key));
-  });
-  return result;
-}
-
-var Recoil_mapMap = mapMap;
-
-function graph() {
-  return {
-    nodeDeps: new Map(),
-    nodeToNodeSubscriptions: new Map()
-  };
-}
-
-function cloneGraph(graph) {
-  return {
-    nodeDeps: Recoil_mapMap(graph.nodeDeps, s => new Set(s)),
-    nodeToNodeSubscriptions: Recoil_mapMap(graph.nodeToNodeSubscriptions, s => new Set(s))
-  };
-} // Note that this overwrites the deps of existing nodes, rather than unioning
-// the new deps with the old deps.
-
-
-function mergeDependencyMapIntoGraph(deps, graph, // If olderGraph is given then we will not overwrite changes made to the given
-// graph compared with olderGraph:
-olderGraph) {
-  const {
-    nodeDeps,
-    nodeToNodeSubscriptions
-  } = graph;
-  deps.forEach((upstreams, downstream) => {
-    const existingUpstreams = nodeDeps.get(downstream);
-
-    if (existingUpstreams && olderGraph && existingUpstreams !== olderGraph.nodeDeps.get(downstream)) {
-      return;
-    } // Update nodeDeps:
-
-
-    nodeDeps.set(downstream, new Set(upstreams)); // Add new deps to nodeToNodeSubscriptions:
-
-    const addedUpstreams = existingUpstreams == null ? upstreams : Recoil_differenceSets(upstreams, existingUpstreams);
-    addedUpstreams.forEach(upstream => {
-      if (!nodeToNodeSubscriptions.has(upstream)) {
-        nodeToNodeSubscriptions.set(upstream, new Set());
-      }
-
-      const existing = Recoil_nullthrows(nodeToNodeSubscriptions.get(upstream));
-      existing.add(downstream);
-    }); // Remove removed deps from nodeToNodeSubscriptions:
-
-    if (existingUpstreams) {
-      const removedUpstreams = Recoil_differenceSets(existingUpstreams, upstreams);
-      removedUpstreams.forEach(upstream => {
-        if (!nodeToNodeSubscriptions.has(upstream)) {
-          return;
-        }
-
-        const existing = Recoil_nullthrows(nodeToNodeSubscriptions.get(upstream));
-        existing.delete(downstream);
-
-        if (existing.size === 0) {
-          nodeToNodeSubscriptions.delete(upstream);
-        }
-      });
-    }
-  });
-}
-
-function saveDependencyMapToStore(dependencyMap, store, version) {
-  var _storeState$nextTree, _storeState$previousT, _storeState$previousT2, _storeState$previousT3;
-
-  const storeState = store.getState();
-
-  if (!(version === storeState.currentTree.version || version === ((_storeState$nextTree = storeState.nextTree) === null || _storeState$nextTree === void 0 ? void 0 : _storeState$nextTree.version) || version === ((_storeState$previousT = storeState.previousTree) === null || _storeState$previousT === void 0 ? void 0 : _storeState$previousT.version))) {
-    Recoil_recoverableViolation('Tried to save dependencies to a discarded tree');
-  } // Merge the dependencies discovered into the store's dependency map
-  // for the version that was read:
-
-
-  const graph = store.getGraph(version);
-  mergeDependencyMapIntoGraph(dependencyMap, graph); // If this version is not the latest version, also write these dependencies
-  // into later versions if they don't already have their own:
-
-  if (version === ((_storeState$previousT2 = storeState.previousTree) === null || _storeState$previousT2 === void 0 ? void 0 : _storeState$previousT2.version)) {
-    const currentGraph = store.getGraph(storeState.currentTree.version);
-    mergeDependencyMapIntoGraph(dependencyMap, currentGraph, graph);
-  }
-
-  if (version === ((_storeState$previousT3 = storeState.previousTree) === null || _storeState$previousT3 === void 0 ? void 0 : _storeState$previousT3.version) || version === storeState.currentTree.version) {
-    var _storeState$nextTree2;
-
-    const nextVersion = (_storeState$nextTree2 = storeState.nextTree) === null || _storeState$nextTree2 === void 0 ? void 0 : _storeState$nextTree2.version;
-
-    if (nextVersion !== undefined) {
-      const nextGraph = store.getGraph(nextVersion);
-      mergeDependencyMapIntoGraph(dependencyMap, nextGraph, graph);
-    }
-  }
-}
-
-function mergeDepsIntoDependencyMap(from, into) {
-  from.forEach((upstreamDeps, downstreamNode) => {
-    if (!into.has(downstreamNode)) {
-      into.set(downstreamNode, new Set());
-    }
-
-    const deps = Recoil_nullthrows(into.get(downstreamNode));
-    upstreamDeps.forEach(dep => deps.add(dep));
-  });
-}
-
-function addToDependencyMap(downstream, upstream, dependencyMap) {
-  if (!dependencyMap.has(downstream)) {
-    dependencyMap.set(downstream, new Set());
-  }
-
-  Recoil_nullthrows(dependencyMap.get(downstream)).add(upstream);
-}
-
-var Recoil_Graph = {
-  addToDependencyMap,
-  cloneGraph,
-  graph,
-  mergeDepsIntoDependencyMap,
-  saveDependencyMapToStore
-};
-
-function createCommonjsModule(fn, module) {
-	return module = { exports: {} }, fn(module, module.exports), module.exports;
-}
-
-var hamt_1 = createCommonjsModule(function (module) {
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-  return typeof obj;
-} : function (obj) {
-  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-};
-/**
-    @fileOverview Hash Array Mapped Trie.
-
-    Code based on: https://github.com/exclipy/pdata
-*/
-
-
-var hamt = {}; // export
-
-/* Configuration
- ******************************************************************************/
-
-var SIZE = 5;
-var BUCKET_SIZE = Math.pow(2, SIZE);
-var MASK = BUCKET_SIZE - 1;
-var MAX_INDEX_NODE = BUCKET_SIZE / 2;
-var MIN_ARRAY_NODE = BUCKET_SIZE / 4;
-/*
- ******************************************************************************/
-
-var nothing = {};
-
-var constant = function constant(x) {
-  return function () {
-    return x;
-  };
-};
-/**
-    Get 32 bit hash of string.
-
-    Based on:
-    http://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript-jquery
-*/
-
-
-var hash = hamt.hash = function (str) {
-  var type = typeof str === 'undefined' ? 'undefined' : _typeof(str);
-  if (type === 'number') return str;
-  if (type !== 'string') str += '';
-  var hash = 0;
-
-  for (var i = 0, len = str.length; i < len; ++i) {
-    var c = str.charCodeAt(i);
-    hash = (hash << 5) - hash + c | 0;
-  }
-
-  return hash;
-};
-/* Bit Ops
- ******************************************************************************/
-
-/**
-    Hamming weight.
-
-    Taken from: http://jsperf.com/hamming-weight
-*/
-
-
-var popcount = function popcount(x) {
-  x -= x >> 1 & 0x55555555;
-  x = (x & 0x33333333) + (x >> 2 & 0x33333333);
-  x = x + (x >> 4) & 0x0f0f0f0f;
-  x += x >> 8;
-  x += x >> 16;
-  return x & 0x7f;
-};
-
-var hashFragment = function hashFragment(shift, h) {
-  return h >>> shift & MASK;
-};
-
-var toBitmap = function toBitmap(x) {
-  return 1 << x;
-};
-
-var fromBitmap = function fromBitmap(bitmap, bit) {
-  return popcount(bitmap & bit - 1);
-};
-/* Array Ops
- ******************************************************************************/
-
-/**
-    Set a value in an array.
-
-    @param mutate Should the input array be mutated?
-    @param at Index to change.
-    @param v New value
-    @param arr Array.
-*/
-
-
-var arrayUpdate = function arrayUpdate(mutate, at, v, arr) {
-  var out = arr;
-
-  if (!mutate) {
-    var len = arr.length;
-    out = new Array(len);
-
-    for (var i = 0; i < len; ++i) {
-      out[i] = arr[i];
-    }
-  }
-
-  out[at] = v;
-  return out;
-};
-/**
-    Remove a value from an array.
-
-    @param mutate Should the input array be mutated?
-    @param at Index to remove.
-    @param arr Array.
-*/
-
-
-var arraySpliceOut = function arraySpliceOut(mutate, at, arr) {
-  var newLen = arr.length - 1;
-  var i = 0;
-  var g = 0;
-  var out = arr;
-
-  if (mutate) {
-    i = g = at;
-  } else {
-    out = new Array(newLen);
-
-    while (i < at) {
-      out[g++] = arr[i++];
-    }
-  }
-
-  ++i;
-
-  while (i <= newLen) {
-    out[g++] = arr[i++];
-  }
-
-  if (mutate) {
-    out.length = newLen;
-  }
-
-  return out;
-};
-/**
-    Insert a value into an array.
-
-    @param mutate Should the input array be mutated?
-    @param at Index to insert at.
-    @param v Value to insert,
-    @param arr Array.
-*/
-
-
-var arraySpliceIn = function arraySpliceIn(mutate, at, v, arr) {
-  var len = arr.length;
-
-  if (mutate) {
-    var _i = len;
-
-    while (_i >= at) {
-      arr[_i--] = arr[_i];
-    }
-
-    arr[at] = v;
-    return arr;
-  }
-
-  var i = 0,
-      g = 0;
-  var out = new Array(len + 1);
-
-  while (i < at) {
-    out[g++] = arr[i++];
-  }
-
-  out[at] = v;
-
-  while (i < len) {
-    out[++g] = arr[i++];
-  }
-
-  return out;
-};
-/* Node Structures
- ******************************************************************************/
-
-
-var LEAF = 1;
-var COLLISION = 2;
-var INDEX = 3;
-var ARRAY = 4;
-/**
-    Empty node.
-*/
-
-var empty = {
-  __hamt_isEmpty: true
-};
-
-var isEmptyNode = function isEmptyNode(x) {
-  return x === empty || x && x.__hamt_isEmpty;
-};
-/**
-    Leaf holding a value.
-
-    @member edit Edit of the node.
-    @member hash Hash of key.
-    @member key Key.
-    @member value Value stored.
-*/
-
-
-var Leaf = function Leaf(edit, hash, key, value) {
-  return {
-    type: LEAF,
-    edit: edit,
-    hash: hash,
-    key: key,
-    value: value,
-    _modify: Leaf__modify
-  };
-};
-/**
-    Leaf holding multiple values with the same hash but different keys.
-
-    @member edit Edit of the node.
-    @member hash Hash of key.
-    @member children Array of collision children node.
-*/
-
-
-var Collision = function Collision(edit, hash, children) {
-  return {
-    type: COLLISION,
-    edit: edit,
-    hash: hash,
-    children: children,
-    _modify: Collision__modify
-  };
-};
-/**
-    Internal node with a sparse set of children.
-
-    Uses a bitmap and array to pack children.
-
-  @member edit Edit of the node.
-    @member mask Bitmap that encode the positions of children in the array.
-    @member children Array of child nodes.
-*/
-
-
-var IndexedNode = function IndexedNode(edit, mask, children) {
-  return {
-    type: INDEX,
-    edit: edit,
-    mask: mask,
-    children: children,
-    _modify: IndexedNode__modify
-  };
-};
-/**
-    Internal node with many children.
-
-    @member edit Edit of the node.
-    @member size Number of children.
-    @member children Array of child nodes.
-*/
-
-
-var ArrayNode = function ArrayNode(edit, size, children) {
-  return {
-    type: ARRAY,
-    edit: edit,
-    size: size,
-    children: children,
-    _modify: ArrayNode__modify
-  };
-};
-/**
-    Is `node` a leaf node?
-*/
-
-
-var isLeaf = function isLeaf(node) {
-  return node === empty || node.type === LEAF || node.type === COLLISION;
-};
-/* Internal node operations.
- ******************************************************************************/
-
-/**
-    Expand an indexed node into an array node.
-
-  @param edit Current edit.
-    @param frag Index of added child.
-    @param child Added child.
-    @param mask Index node mask before child added.
-    @param subNodes Index node children before child added.
-*/
-
-
-var expand = function expand(edit, frag, child, bitmap, subNodes) {
-  var arr = [];
-  var bit = bitmap;
-  var count = 0;
-
-  for (var i = 0; bit; ++i) {
-    if (bit & 1) arr[i] = subNodes[count++];
-    bit >>>= 1;
-  }
-
-  arr[frag] = child;
-  return ArrayNode(edit, count + 1, arr);
-};
-/**
-    Collapse an array node into a indexed node.
-
-  @param edit Current edit.
-    @param count Number of elements in new array.
-    @param removed Index of removed element.
-    @param elements Array node children before remove.
-*/
-
-
-var pack = function pack(edit, count, removed, elements) {
-  var children = new Array(count - 1);
-  var g = 0;
-  var bitmap = 0;
-
-  for (var i = 0, len = elements.length; i < len; ++i) {
-    if (i !== removed) {
-      var elem = elements[i];
-
-      if (elem && !isEmptyNode(elem)) {
-        children[g++] = elem;
-        bitmap |= 1 << i;
-      }
-    }
-  }
-
-  return IndexedNode(edit, bitmap, children);
-};
-/**
-    Merge two leaf nodes.
-
-    @param shift Current shift.
-    @param h1 Node 1 hash.
-    @param n1 Node 1.
-    @param h2 Node 2 hash.
-    @param n2 Node 2.
-*/
-
-
-var mergeLeaves = function mergeLeaves(edit, shift, h1, n1, h2, n2) {
-  if (h1 === h2) return Collision(edit, h1, [n2, n1]);
-  var subH1 = hashFragment(shift, h1);
-  var subH2 = hashFragment(shift, h2);
-  return IndexedNode(edit, toBitmap(subH1) | toBitmap(subH2), subH1 === subH2 ? [mergeLeaves(edit, shift + SIZE, h1, n1, h2, n2)] : subH1 < subH2 ? [n1, n2] : [n2, n1]);
-};
-/**
-    Update an entry in a collision list.
-
-    @param mutate Should mutation be used?
-    @param edit Current edit.
-    @param keyEq Key compare function.
-    @param hash Hash of collision.
-    @param list Collision list.
-    @param f Update function.
-    @param k Key to update.
-    @param size Size ref.
-*/
-
-
-var updateCollisionList = function updateCollisionList(mutate, edit, keyEq, h, list, f, k, size) {
-  var len = list.length;
-
-  for (var i = 0; i < len; ++i) {
-    var child = list[i];
-
-    if (keyEq(k, child.key)) {
-      var value = child.value;
-
-      var _newValue = f(value);
-
-      if (_newValue === value) return list;
-
-      if (_newValue === nothing) {
-        --size.value;
-        return arraySpliceOut(mutate, i, list);
-      }
-
-      return arrayUpdate(mutate, i, Leaf(edit, h, k, _newValue), list);
-    }
-  }
-
-  var newValue = f();
-  if (newValue === nothing) return list;
-  ++size.value;
-  return arrayUpdate(mutate, len, Leaf(edit, h, k, newValue), list);
-};
-
-var canEditNode = function canEditNode(edit, node) {
-  return edit === node.edit;
-};
-/* Editing
- ******************************************************************************/
-
-
-var Leaf__modify = function Leaf__modify(edit, keyEq, shift, f, h, k, size) {
-  if (keyEq(k, this.key)) {
-    var _v = f(this.value);
-
-    if (_v === this.value) return this;else if (_v === nothing) {
-      --size.value;
-      return empty;
-    }
-
-    if (canEditNode(edit, this)) {
-      this.value = _v;
-      return this;
-    }
-
-    return Leaf(edit, h, k, _v);
-  }
-
-  var v = f();
-  if (v === nothing) return this;
-  ++size.value;
-  return mergeLeaves(edit, shift, this.hash, this, h, Leaf(edit, h, k, v));
-};
-
-var Collision__modify = function Collision__modify(edit, keyEq, shift, f, h, k, size) {
-  if (h === this.hash) {
-    var canEdit = canEditNode(edit, this);
-    var list = updateCollisionList(canEdit, edit, keyEq, this.hash, this.children, f, k, size);
-    if (list === this.children) return this;
-    return list.length > 1 ? Collision(edit, this.hash, list) : list[0]; // collapse single element collision list
-  }
-
-  var v = f();
-  if (v === nothing) return this;
-  ++size.value;
-  return mergeLeaves(edit, shift, this.hash, this, h, Leaf(edit, h, k, v));
-};
-
-var IndexedNode__modify = function IndexedNode__modify(edit, keyEq, shift, f, h, k, size) {
-  var mask = this.mask;
-  var children = this.children;
-  var frag = hashFragment(shift, h);
-  var bit = toBitmap(frag);
-  var indx = fromBitmap(mask, bit);
-  var exists = mask & bit;
-  var current = exists ? children[indx] : empty;
-
-  var child = current._modify(edit, keyEq, shift + SIZE, f, h, k, size);
-
-  if (current === child) return this;
-  var canEdit = canEditNode(edit, this);
-  var bitmap = mask;
-  var newChildren = void 0;
-
-  if (exists && isEmptyNode(child)) {
-    // remove
-    bitmap &= ~bit;
-    if (!bitmap) return empty;
-    if (children.length <= 2 && isLeaf(children[indx ^ 1])) return children[indx ^ 1]; // collapse
-
-    newChildren = arraySpliceOut(canEdit, indx, children);
-  } else if (!exists && !isEmptyNode(child)) {
-    // add
-    if (children.length >= MAX_INDEX_NODE) return expand(edit, frag, child, mask, children);
-    bitmap |= bit;
-    newChildren = arraySpliceIn(canEdit, indx, child, children);
-  } else {
-    // modify
-    newChildren = arrayUpdate(canEdit, indx, child, children);
-  }
-
-  if (canEdit) {
-    this.mask = bitmap;
-    this.children = newChildren;
-    return this;
-  }
-
-  return IndexedNode(edit, bitmap, newChildren);
-};
-
-var ArrayNode__modify = function ArrayNode__modify(edit, keyEq, shift, f, h, k, size) {
-  var count = this.size;
-  var children = this.children;
-  var frag = hashFragment(shift, h);
-  var child = children[frag];
-
-  var newChild = (child || empty)._modify(edit, keyEq, shift + SIZE, f, h, k, size);
-
-  if (child === newChild) return this;
-  var canEdit = canEditNode(edit, this);
-  var newChildren = void 0;
-
-  if (isEmptyNode(child) && !isEmptyNode(newChild)) {
-    // add
-    ++count;
-    newChildren = arrayUpdate(canEdit, frag, newChild, children);
-  } else if (!isEmptyNode(child) && isEmptyNode(newChild)) {
-    // remove
-    --count;
-    if (count <= MIN_ARRAY_NODE) return pack(edit, count, frag, children);
-    newChildren = arrayUpdate(canEdit, frag, empty, children);
-  } else {
-    // modify
-    newChildren = arrayUpdate(canEdit, frag, newChild, children);
-  }
-
-  if (canEdit) {
-    this.size = count;
-    this.children = newChildren;
-    return this;
-  }
-
-  return ArrayNode(edit, count, newChildren);
-};
-
-empty._modify = function (edit, keyEq, shift, f, h, k, size) {
-  var v = f();
-  if (v === nothing) return empty;
-  ++size.value;
-  return Leaf(edit, h, k, v);
-};
-/*
- ******************************************************************************/
-
-
-function Map(editable, edit, config, root, size) {
-  this._editable = editable;
-  this._edit = edit;
-  this._config = config;
-  this._root = root;
-  this._size = size;
-}
-
-Map.prototype.setTree = function (newRoot, newSize) {
-  if (this._editable) {
-    this._root = newRoot;
-    this._size = newSize;
-    return this;
-  }
-
-  return newRoot === this._root ? this : new Map(this._editable, this._edit, this._config, newRoot, newSize);
-};
-/* Queries
- ******************************************************************************/
-
-/**
-    Lookup the value for `key` in `map` using a custom `hash`.
-
-    Returns the value or `alt` if none.
-*/
-
-
-var tryGetHash = hamt.tryGetHash = function (alt, hash, key, map) {
-  var node = map._root;
-  var shift = 0;
-  var keyEq = map._config.keyEq;
-
-  while (true) {
-    switch (node.type) {
-      case LEAF:
-        {
-          return keyEq(key, node.key) ? node.value : alt;
-        }
-
-      case COLLISION:
-        {
-          if (hash === node.hash) {
-            var children = node.children;
-
-            for (var i = 0, len = children.length; i < len; ++i) {
-              var child = children[i];
-              if (keyEq(key, child.key)) return child.value;
-            }
-          }
-
-          return alt;
-        }
-
-      case INDEX:
-        {
-          var frag = hashFragment(shift, hash);
-          var bit = toBitmap(frag);
-
-          if (node.mask & bit) {
-            node = node.children[fromBitmap(node.mask, bit)];
-            shift += SIZE;
-            break;
-          }
-
-          return alt;
-        }
-
-      case ARRAY:
-        {
-          node = node.children[hashFragment(shift, hash)];
-
-          if (node) {
-            shift += SIZE;
-            break;
-          }
-
-          return alt;
-        }
-
-      default:
-        return alt;
-    }
-  }
-};
-
-Map.prototype.tryGetHash = function (alt, hash, key) {
-  return tryGetHash(alt, hash, key, this);
-};
-/**
-    Lookup the value for `key` in `map` using internal hash function.
-
-    @see `tryGetHash`
-*/
-
-
-var tryGet = hamt.tryGet = function (alt, key, map) {
-  return tryGetHash(alt, map._config.hash(key), key, map);
-};
-
-Map.prototype.tryGet = function (alt, key) {
-  return tryGet(alt, key, this);
-};
-/**
-    Lookup the value for `key` in `map` using a custom `hash`.
-
-    Returns the value or `undefined` if none.
-*/
-
-
-var getHash = hamt.getHash = function (hash, key, map) {
-  return tryGetHash(undefined, hash, key, map);
-};
-
-Map.prototype.getHash = function (hash, key) {
-  return getHash(hash, key, this);
-};
-/**
-    Lookup the value for `key` in `map` using internal hash function.
-
-    @see `get`
-*/
-
-
-var get = hamt.get = function (key, map) {
-  return tryGetHash(undefined, map._config.hash(key), key, map);
-};
-
-Map.prototype.get = function (key, alt) {
-  return tryGet(alt, key, this);
-};
-/**
-    Does an entry exist for `key` in `map`? Uses custom `hash`.
-*/
-
-
-var hasHash = hamt.has = function (hash, key, map) {
-  return tryGetHash(nothing, hash, key, map) !== nothing;
-};
-
-Map.prototype.hasHash = function (hash, key) {
-  return hasHash(hash, key, this);
-};
-/**
-    Does an entry exist for `key` in `map`? Uses internal hash function.
-*/
-
-
-var has = hamt.has = function (key, map) {
-  return hasHash(map._config.hash(key), key, map);
-};
-
-Map.prototype.has = function (key) {
-  return has(key, this);
-};
-
-var defKeyCompare = function defKeyCompare(x, y) {
-  return x === y;
-};
-/**
-    Create an empty map.
-
-    @param config Configuration.
-*/
-
-
-hamt.make = function (config) {
-  return new Map(0, 0, {
-    keyEq: config && config.keyEq || defKeyCompare,
-    hash: config && config.hash || hash
-  }, empty, 0);
-};
-/**
-    Empty map.
-*/
-
-
-hamt.empty = hamt.make();
-/**
-    Does `map` contain any elements?
-*/
-
-var isEmpty = hamt.isEmpty = function (map) {
-  return map && !!isEmptyNode(map._root);
-};
-
-Map.prototype.isEmpty = function () {
-  return isEmpty(this);
-};
-/* Updates
- ******************************************************************************/
-
-/**
-    Alter the value stored for `key` in `map` using function `f` using
-    custom hash.
-
-    `f` is invoked with the current value for `k` if it exists,
-    or no arguments if no such value exists. `modify` will always either
-    update or insert a value into the map.
-
-    Returns a map with the modified value. Does not alter `map`.
-*/
-
-
-var modifyHash = hamt.modifyHash = function (f, hash, key, map) {
-  var size = {
-    value: map._size
-  };
-
-  var newRoot = map._root._modify(map._editable ? map._edit : NaN, map._config.keyEq, 0, f, hash, key, size);
-
-  return map.setTree(newRoot, size.value);
-};
-
-Map.prototype.modifyHash = function (hash, key, f) {
-  return modifyHash(f, hash, key, this);
-};
-/**
-    Alter the value stored for `key` in `map` using function `f` using
-    internal hash function.
-
-    @see `modifyHash`
-*/
-
-
-var modify = hamt.modify = function (f, key, map) {
-  return modifyHash(f, map._config.hash(key), key, map);
-};
-
-Map.prototype.modify = function (key, f) {
-  return modify(f, key, this);
-};
-/**
-    Store `value` for `key` in `map` using custom `hash`.
-
-    Returns a map with the modified value. Does not alter `map`.
-*/
-
-
-var setHash = hamt.setHash = function (hash, key, value, map) {
-  return modifyHash(constant(value), hash, key, map);
-};
-
-Map.prototype.setHash = function (hash, key, value) {
-  return setHash(hash, key, value, this);
-};
-/**
-    Store `value` for `key` in `map` using internal hash function.
-
-    @see `setHash`
-*/
-
-
-var set = hamt.set = function (key, value, map) {
-  return setHash(map._config.hash(key), key, value, map);
-};
-
-Map.prototype.set = function (key, value) {
-  return set(key, value, this);
-};
-/**
-    Remove the entry for `key` in `map`.
-
-    Returns a map with the value removed. Does not alter `map`.
-*/
-
-
-var del = constant(nothing);
-
-var removeHash = hamt.removeHash = function (hash, key, map) {
-  return modifyHash(del, hash, key, map);
-};
-
-Map.prototype.removeHash = Map.prototype.deleteHash = function (hash, key) {
-  return removeHash(hash, key, this);
-};
-/**
-    Remove the entry for `key` in `map` using internal hash function.
-
-    @see `removeHash`
-*/
-
-
-var remove = hamt.remove = function (key, map) {
-  return removeHash(map._config.hash(key), key, map);
-};
-
-Map.prototype.remove = Map.prototype.delete = function (key) {
-  return remove(key, this);
-};
-/* Mutation
- ******************************************************************************/
-
-/**
-    Mark `map` as mutable.
- */
-
-
-var beginMutation = hamt.beginMutation = function (map) {
-  return new Map(map._editable + 1, map._edit + 1, map._config, map._root, map._size);
-};
-
-Map.prototype.beginMutation = function () {
-  return beginMutation(this);
-};
-/**
-    Mark `map` as immutable.
- */
-
-
-var endMutation = hamt.endMutation = function (map) {
-  map._editable = map._editable && map._editable - 1;
-  return map;
-};
-
-Map.prototype.endMutation = function () {
-  return endMutation(this);
-};
-/**
-    Mutate `map` within the context of `f`.
-    @param f
-    @param map HAMT
-*/
-
-
-var mutate = hamt.mutate = function (f, map) {
-  var transient = beginMutation(map);
-  f(transient);
-  return endMutation(transient);
-};
-
-Map.prototype.mutate = function (f) {
-  return mutate(f, this);
-};
-/* Traversal
- ******************************************************************************/
-
-/**
-    Apply a continuation.
-*/
-
-
-var appk = function appk(k) {
-  return k && lazyVisitChildren(k[0], k[1], k[2], k[3], k[4]);
-};
-/**
-    Recursively visit all values stored in an array of nodes lazily.
-*/
-
-
-var lazyVisitChildren = function lazyVisitChildren(len, children, i, f, k) {
-  while (i < len) {
-    var child = children[i++];
-    if (child && !isEmptyNode(child)) return lazyVisit(child, f, [len, children, i, f, k]);
-  }
-
-  return appk(k);
-};
-/**
-    Recursively visit all values stored in `node` lazily.
-*/
-
-
-var lazyVisit = function lazyVisit(node, f, k) {
-  switch (node.type) {
-    case LEAF:
-      return {
-        value: f(node),
-        rest: k
-      };
-
-    case COLLISION:
-    case ARRAY:
-    case INDEX:
-      var children = node.children;
-      return lazyVisitChildren(children.length, children, 0, f, k);
-
-    default:
-      return appk(k);
-  }
-};
-
-var DONE = {
-  done: true
-};
-/**
-    Javascript iterator over a map.
-*/
-
-function MapIterator(v) {
-  this.v = v;
-}
-
-MapIterator.prototype.next = function () {
-  if (!this.v) return DONE;
-  var v0 = this.v;
-  this.v = appk(v0.rest);
-  return v0;
-};
-
-MapIterator.prototype[Symbol.iterator] = function () {
-  return this;
-};
-/**
-    Lazily visit each value in map with function `f`.
-*/
-
-
-var visit = function visit(map, f) {
-  return new MapIterator(lazyVisit(map._root, f));
-};
-/**
-    Get a Javascsript iterator of `map`.
-
-    Iterates over `[key, value]` arrays.
-*/
-
-
-var buildPairs = function buildPairs(x) {
-  return [x.key, x.value];
-};
-
-var entries = hamt.entries = function (map) {
-  return visit(map, buildPairs);
-};
-
-Map.prototype.entries = Map.prototype[Symbol.iterator] = function () {
-  return entries(this);
-};
-/**
-    Get array of all keys in `map`.
-
-    Order is not guaranteed.
-*/
-
-
-var buildKeys = function buildKeys(x) {
-  return x.key;
-};
-
-var keys = hamt.keys = function (map) {
-  return visit(map, buildKeys);
-};
-
-Map.prototype.keys = function () {
-  return keys(this);
-};
-/**
-    Get array of all values in `map`.
-
-    Order is not guaranteed, duplicates are preserved.
-*/
-
-
-var buildValues = function buildValues(x) {
-  return x.value;
-};
-
-var values = hamt.values = Map.prototype.values = function (map) {
-  return visit(map, buildValues);
-};
-
-Map.prototype.values = function () {
-  return values(this);
-};
-/* Fold
- ******************************************************************************/
-
-/**
-    Visit every entry in the map, aggregating data.
-
-    Order of nodes is not guaranteed.
-
-    @param f Function mapping accumulated value, value, and key to new value.
-    @param z Starting value.
-    @param m HAMT
-*/
-
-
-var fold = hamt.fold = function (f, z, m) {
-  var root = m._root;
-  if (root.type === LEAF) return f(z, root.value, root.key);
-  var toVisit = [root.children];
-  var children = void 0;
-
-  while (children = toVisit.pop()) {
-    for (var i = 0, len = children.length; i < len;) {
-      var child = children[i++];
-
-      if (child && child.type) {
-        if (child.type === LEAF) z = f(z, child.value, child.key);else toVisit.push(child.children);
-      }
-    }
-  }
-
-  return z;
-};
-
-Map.prototype.fold = function (f, z) {
-  return fold(f, z, this);
-};
-/**
-    Visit every entry in the map, aggregating data.
-
-    Order of nodes is not guaranteed.
-
-    @param f Function invoked with value and key
-    @param map HAMT
-*/
-
-
-var forEach = hamt.forEach = function (f, map) {
-  return fold(function (_, value, key) {
-    return f(value, key, map);
-  }, null, map);
-};
-
-Map.prototype.forEach = function (f) {
-  return forEach(f, this);
-};
-/* Aggregate
- ******************************************************************************/
-
-/**
-    Get the number of entries in `map`.
-*/
-
-
-var count = hamt.count = function (map) {
-  return map._size;
-};
-
-Map.prototype.count = function () {
-  return count(this);
-};
-
-Object.defineProperty(Map.prototype, 'size', {
-  get: Map.prototype.count
-});
-/* Export
- ******************************************************************************/
-
-if ( module.exports) {
-  module.exports = hamt;
-} else {
-  undefined.hamt = hamt;
-}
-});
-
-class BuiltInMap {
-  constructor(existing) {
-    _defineProperty(this, "_map", void 0);
-
-    this._map = new Map(existing === null || existing === void 0 ? void 0 : existing.entries());
-  }
-
-  keys() {
-    return this._map.keys();
-  }
-
-  entries() {
-    return this._map.entries();
-  }
-
-  get(k) {
-    return this._map.get(k);
-  }
-
-  has(k) {
-    return this._map.has(k);
-  }
-
-  set(k, v) {
-    this._map.set(k, v);
-
-    return this;
-  }
-
-  delete(k) {
-    this._map.delete(k);
-
-    return this;
-  }
-
-  clone() {
-    return persistentMap(this);
-  }
-
-  toMap() {
-    return new Map(this._map);
-  }
-
-}
-
-class HashArrayMappedTrieMap {
-  // Because hamt.empty is not a function there is no way to introduce type
-  // parameters on it, so empty is typed as HAMTPlusMap<string, mixed>.
-  // flowlint-next-line unclear-type:off
-  constructor(existing) {
-    _defineProperty(this, "_hamt", hamt_1.empty.beginMutation());
-
-    if (existing instanceof HashArrayMappedTrieMap) {
-      const h = existing._hamt.endMutation();
-
-      existing._hamt = h.beginMutation();
-      this._hamt = h.beginMutation();
-    } else if (existing) {
-      for (const [k, v] of existing.entries()) {
-        this._hamt.set(k, v);
-      }
-    }
-  }
-
-  keys() {
-    return this._hamt.keys();
-  }
-
-  entries() {
-    return this._hamt.entries();
-  }
-
-  get(k) {
-    return this._hamt.get(k);
-  }
-
-  has(k) {
-    return this._hamt.has(k);
-  }
-
-  set(k, v) {
-    this._hamt.set(k, v);
-
-    return this;
-  }
-
-  delete(k) {
-    this._hamt.delete(k);
-
-    return this;
-  }
-
-  clone() {
-    return persistentMap(this);
-  }
-
-  toMap() {
-    return new Map(this._hamt);
-  }
-
-}
-
-function persistentMap(existing) {
-  if (Recoil_gkx_1('recoil_hamt_2020')) {
-    return new HashArrayMappedTrieMap(existing);
-  } else {
-    return new BuiltInMap(existing);
-  }
-}
-
-var Recoil_PersistentMap = {
-  persistentMap
-};
-
-var Recoil_PersistentMap_1 = Recoil_PersistentMap.persistentMap;
-
-var Recoil_PersistentMap$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  persistentMap: Recoil_PersistentMap_1
-});
-
-const {
-  graph: graph$1
-} = Recoil_Graph;
-
-const {
-  persistentMap: persistentMap$1
-} = Recoil_PersistentMap$1; // flowlint-next-line unclear-type:off
-
-
-let nextTreeStateVersion = 0;
-
-const getNextTreeStateVersion = () => nextTreeStateVersion++;
-
-function makeEmptyTreeState() {
-  const version = getNextTreeStateVersion();
-  return {
-    version,
-    stateID: version,
-    transactionMetadata: {},
-    dirtyAtoms: new Set(),
-    atomValues: persistentMap$1(),
-    nonvalidatedAtoms: persistentMap$1()
-  };
-}
-
-function makeEmptyStoreState() {
-  const currentTree = makeEmptyTreeState();
-  return {
-    currentTree,
-    nextTree: null,
-    previousTree: null,
-    commitDepth: 0,
-    knownAtoms: new Set(),
-    knownSelectors: new Set(),
-    transactionSubscriptions: new Map(),
-    nodeTransactionSubscriptions: new Map(),
-    nodeToComponentSubscriptions: new Map(),
-    queuedComponentCallbacks_DEPRECATED: [],
-    suspendedComponentResolvers: new Set(),
-    graphsByVersion: new Map().set(currentTree.version, graph$1()),
-    versionsUsedByComponent: new Map(),
-    retention: {
-      referenceCounts: new Map(),
-      nodesRetainedByZone: new Map(),
-      retainablesToCheckForRelease: new Set()
-    },
-    nodeCleanupFunctions: new Map()
-  };
-}
-
-var Recoil_State = {
-  makeEmptyTreeState,
-  makeEmptyStoreState,
-  getNextTreeStateVersion
-};
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-function unionSets(...sets) {
-  const result = new Set();
-
-  for (const set of sets) {
-    for (const value of set) {
-      result.add(value);
-    }
-  }
-
-  return result;
-}
-
-var Recoil_unionSets = unionSets;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-/**
- * The someSet() method tests whether some elements in the given Set pass the
- * test implemented by the provided function.
- */
-
-function someSet(set, callback, context) {
-  const iterator = set.entries();
-  let current = iterator.next();
-
-  while (!current.done) {
-    const entry = current.value;
-
-    if (callback.call(context, entry[1], entry[0], set)) {
-      return true;
-    }
-
-    current = iterator.next();
-  }
-
-  return false;
-}
-
-var Recoil_someSet = someSet;
-
-const {
-  cleanUpNode: cleanUpNode$1
-} = Recoil_FunctionalCore;
-
-const {
-  deleteNodeConfigIfPossible: deleteNodeConfigIfPossible$1,
-  getNode: getNode$2
-} = Recoil_Node;
-
-const {
-  RetentionZone: RetentionZone$2
-} = Recoil_RetentionZone;
-
-const emptySet$1 = new Set();
-
-function releaseRetainablesNowOnCurrentTree(store, retainables) {
-  const storeState = store.getState();
-  const treeState = storeState.currentTree;
-
-  if (storeState.nextTree) {
-    Recoil_recoverableViolation('releaseNodesNowOnCurrentTree should only be called at the end of a batch');
-    return; // leak memory rather than erase something that's about to be used.
-  }
-
-  const nodes = new Set();
-
-  for (const r of retainables) {
-    if (r instanceof RetentionZone$2) {
-      for (const n of nodesRetainedByZone(storeState, r)) {
-        nodes.add(n);
-      }
-    } else {
-      nodes.add(r);
-    }
-  }
-
-  const releasableNodes = findReleasableNodes(store, nodes);
-
-  for (const node of releasableNodes) {
-    releaseNode(store, treeState, node);
-  }
-}
-
-function findReleasableNodes(store, searchFromNodes) {
-  const storeState = store.getState();
-  const treeState = storeState.currentTree;
-  const graph = store.getGraph(treeState.version);
-  const releasableNodes = new Set(); // mutated to collect answer
-
-  const nonReleasableNodes = new Set();
-  findReleasableNodesInner(searchFromNodes);
-  return releasableNodes;
-
-  function findReleasableNodesInner(searchFromNodes) {
-    const releasableNodesFoundThisIteration = new Set();
-    const downstreams = getDownstreamNodesInTopologicalOrder(store, treeState, searchFromNodes, releasableNodes, // don't descend into these
-    nonReleasableNodes // don't descend into these
-    ); // Find which of the downstream nodes are releasable and which are not:
-
-    for (const node of downstreams) {
-      var _storeState$retention;
-
-      // Not releasable if configured to be retained forever:
-      if (getNode$2(node).retainedBy === 'recoilRoot') {
-        nonReleasableNodes.add(node);
-        continue;
-      } // Not releasable if retained directly by a component:
-
-
-      if (((_storeState$retention = storeState.retention.referenceCounts.get(node)) !== null && _storeState$retention !== void 0 ? _storeState$retention : 0) > 0) {
-        nonReleasableNodes.add(node);
-        continue;
-      } // Not releasable if retained by a zone:
-
-
-      if (zonesThatCouldRetainNode(node).some(z => storeState.retention.referenceCounts.get(z))) {
-        nonReleasableNodes.add(node);
-        continue;
-      } // Not releasable if it has a non-releasable child (which will already be in
-      // nonReleasableNodes because we are going in topological order):
-
-
-      const nodeChildren = graph.nodeToNodeSubscriptions.get(node);
-
-      if (nodeChildren && Recoil_someSet(nodeChildren, child => nonReleasableNodes.has(child))) {
-        nonReleasableNodes.add(node);
-        continue;
-      }
-
-      releasableNodes.add(node);
-      releasableNodesFoundThisIteration.add(node);
-    } // If we found any releasable nodes, we need to walk UP from those nodes to
-    // find whether their parents can now be released as well:
-
-
-    const parents = new Set();
-
-    for (const node of releasableNodesFoundThisIteration) {
-      for (const parent of (_graph$nodeDeps$get = graph.nodeDeps.get(node)) !== null && _graph$nodeDeps$get !== void 0 ? _graph$nodeDeps$get : emptySet$1) {
-        var _graph$nodeDeps$get;
-
-        if (!releasableNodes.has(parent)) {
-          parents.add(parent);
-        }
-      }
-    }
-
-    if (parents.size) {
-      findReleasableNodesInner(parents);
-    }
-  }
-} // Children before parents
-
-
-function getDownstreamNodesInTopologicalOrder(store, treeState, nodes, // Mutable set is destroyed in place
-doNotDescendInto1, doNotDescendInto2) {
-  const graph = store.getGraph(treeState.version);
-  const answer = [];
-  const visited = new Set();
-
-  while (nodes.size > 0) {
-    visit(Recoil_nullthrows(nodes.values().next().value));
-  }
-
-  return answer;
-
-  function visit(node) {
-    if (doNotDescendInto1.has(node) || doNotDescendInto2.has(node)) {
-      nodes.delete(node);
-      return;
-    }
-
-    if (visited.has(node)) {
-      return;
-    }
-
-    const children = graph.nodeToNodeSubscriptions.get(node);
-
-    if (children) {
-      for (const child of children) {
-        visit(child);
-      }
-    }
-
-    visited.add(node);
-    nodes.delete(node);
-    answer.push(node);
-  }
-}
-
-function releaseNode(store, treeState, node) {
-  if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-    return;
-  } // Atom effects, in-closure caches, etc.:
-
-
-  cleanUpNode$1(store, node); // Delete from store state:
-
-  const storeState = store.getState();
-  storeState.knownAtoms.delete(node);
-  storeState.knownSelectors.delete(node);
-  storeState.nodeTransactionSubscriptions.delete(node);
-  storeState.retention.referenceCounts.delete(node);
-  const zones = zonesThatCouldRetainNode(node);
-
-  for (const zone of zones) {
-    var _storeState$retention2;
-
-    (_storeState$retention2 = storeState.retention.nodesRetainedByZone.get(zone)) === null || _storeState$retention2 === void 0 ? void 0 : _storeState$retention2.delete(node);
-  } // Note that we DO NOT delete from nodeToComponentSubscriptions because this
-  // already happens when the last component that was retaining the node unmounts,
-  // and this could happen either before or after that.
-  // Delete from TreeState and dep graph:
-
-
-  treeState.atomValues.delete(node);
-  treeState.dirtyAtoms.delete(node);
-  treeState.nonvalidatedAtoms.delete(node);
-  const graph = storeState.graphsByVersion.get(treeState.version);
-
-  if (graph) {
-    const deps = graph.nodeDeps.get(node);
-
-    if (deps !== undefined) {
-      graph.nodeDeps.delete(node);
-
-      for (const dep of deps) {
-        var _graph$nodeToNodeSubs;
-
-        (_graph$nodeToNodeSubs = graph.nodeToNodeSubscriptions.get(dep)) === null || _graph$nodeToNodeSubs === void 0 ? void 0 : _graph$nodeToNodeSubs.delete(node);
-      }
-    } // No need to delete sub's deps as there should be no subs at this point.
-    // But an invariant would require deleting nodes in topological order.
-
-
-    graph.nodeToNodeSubscriptions.delete(node);
-  } // Node config (for family members only as their configs can be recreated, and
-  // only if they are not retained within any other Stores):
-
-
-  deleteNodeConfigIfPossible$1(node);
-}
-
-function nodesRetainedByZone(storeState, zone) {
-  var _storeState$retention3;
-
-  return (_storeState$retention3 = storeState.retention.nodesRetainedByZone.get(zone)) !== null && _storeState$retention3 !== void 0 ? _storeState$retention3 : emptySet$1;
-}
-
-function zonesThatCouldRetainNode(node) {
-  const retainedBy = getNode$2(node).retainedBy;
-
-  if (retainedBy === undefined || retainedBy === 'components' || retainedBy === 'recoilRoot') {
-    return [];
-  } else if (retainedBy instanceof RetentionZone$2) {
-    return [retainedBy];
-  } else {
-    return retainedBy; // it's an array of zones
-  }
-}
-
-function scheduleOrPerformPossibleReleaseOfRetainable(store, retainable) {
-  const state = store.getState();
-
-  if (state.nextTree) {
-    state.retention.retainablesToCheckForRelease.add(retainable);
-  } else {
-    releaseRetainablesNowOnCurrentTree(store, new Set([retainable]));
-  }
-}
-
-function updateRetainCount(store, retainable, delta) {
-  var _map$get;
-
-  if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-    return;
-  }
-
-  const map = store.getState().retention.referenceCounts;
-  const newCount = ((_map$get = map.get(retainable)) !== null && _map$get !== void 0 ? _map$get : 0) + delta;
-
-  if (newCount === 0) {
-    updateRetainCountToZero(store, retainable);
-  } else {
-    map.set(retainable, newCount);
-  }
-}
-
-function updateRetainCountToZero(store, retainable) {
-  if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-    return;
-  }
-
-  const map = store.getState().retention.referenceCounts;
-  map.delete(retainable);
-  scheduleOrPerformPossibleReleaseOfRetainable(store, retainable);
-}
-
-function releaseScheduledRetainablesNow(store) {
-  if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-    return;
-  }
-
-  const state = store.getState();
-  releaseRetainablesNowOnCurrentTree(store, state.retention.retainablesToCheckForRelease);
-  state.retention.retainablesToCheckForRelease.clear();
-}
-
-function retainedByOptionWithDefault(r) {
-  // The default will change from 'recoilRoot' to 'components' in the future.
-  return r === undefined ? 'recoilRoot' : r;
-}
-
-var Recoil_Retention = {
-  updateRetainCount,
-  updateRetainCountToZero,
-  releaseScheduledRetainablesNow,
-  retainedByOptionWithDefault
-};
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-/**
- * Combines multiple Iterables into a single Iterable.
- * Traverses the input Iterables in the order provided and maintains the order
- * of their elements.
- *
- * Example:
- * ```
- * const r = Array.from(concatIterables(['a', 'b'], ['c'], ['d', 'e', 'f']));
- * r == ['a', 'b', 'c', 'd', 'e', 'f'];
- * ```
- */
-
-function* concatIterables(iters) {
-  for (const iter of iters) {
-    for (const val of iter) {
-      yield val;
-    }
-  }
-}
-
-var Recoil_concatIterables = concatIterables;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-const isSSR = typeof window === 'undefined';
-const isReactNative = typeof navigator !== 'undefined' && navigator.product === 'ReactNative'; // eslint-disable-line fb-www/typeof-undefined
-
-var Recoil_Environment = {
-  isSSR,
-  isReactNative
-};
-
-const {
-  isSSR: isSSR$1
-} = Recoil_Environment;
-
-
-
-
-
-
-
-
-
-const {
-  batchUpdates: batchUpdates$1
-} = Recoil_Batching;
-
-const {
-  initializeNodeIfNewToStore: initializeNodeIfNewToStore$1,
-  peekNodeInfo: peekNodeInfo$1
-} = Recoil_FunctionalCore;
-
-const {
-  graph: graph$2
-} = Recoil_Graph;
-
-const {
-  DEFAULT_VALUE: DEFAULT_VALUE$1,
-  recoilValues: recoilValues$1,
-  recoilValuesForKeys: recoilValuesForKeys$2
-} = Recoil_Node;
-
-const {
-  AbstractRecoilValue: AbstractRecoilValue$2,
-  getRecoilValueAsLoadable: getRecoilValueAsLoadable$1,
-  setRecoilValue: setRecoilValue$1,
-  setUnvalidatedRecoilValue: setUnvalidatedRecoilValue$1
-} = Recoil_RecoilValueInterface;
-
-const {
-  updateRetainCount: updateRetainCount$1
-} = Recoil_Retention;
-
-const {
-  getNextTreeStateVersion: getNextTreeStateVersion$1,
-  makeEmptyStoreState: makeEmptyStoreState$1
-} = Recoil_State; // Opaque at this surface because it's part of the public API from here.
-
-
-const retainWarning = `
-Recoil Snapshots only last for the duration of the callback they are provided to. To keep a Snapshot longer, do this:
-
-  const release = snapshot.retain();
-  try {
-    await useTheSnapshotAsynchronously(snapshot);
-  } finally {
-    release();
-  }
-
-This is currently a DEV-only warning but will become a thrown exception in the next release of Recoil.
-`; // A "Snapshot" is "read-only" and captures a specific set of values of atoms.
-// However, the data-flow-graph and selector values may evolve as selector
-// evaluation functions are executed and async selectors resolve.
-
-class Snapshot {
-  constructor(storeState) {
-    _defineProperty(this, "_store", void 0);
-
-    _defineProperty(this, "_refCount", 0);
-
-    _defineProperty(this, "getLoadable", recoilValue => {
-      this.checkRefCount_INTERNAL();
-      return getRecoilValueAsLoadable$1(this._store, recoilValue);
-    });
-
-    _defineProperty(this, "getPromise", recoilValue => {
-      this.checkRefCount_INTERNAL();
-      return this.getLoadable(recoilValue).toPromise();
-    });
-
-    _defineProperty(this, "getNodes_UNSTABLE", opt => {
-      this.checkRefCount_INTERNAL(); // TODO Deal with modified selectors
-
-      if ((opt === null || opt === void 0 ? void 0 : opt.isModified) === true) {
-        if ((opt === null || opt === void 0 ? void 0 : opt.isInitialized) === false) {
-          return [];
-        }
-
-        const state = this._store.getState().currentTree;
-
-        return recoilValuesForKeys$2(state.dirtyAtoms);
-      }
-
-      const knownAtoms = this._store.getState().knownAtoms;
-
-      const knownSelectors = this._store.getState().knownSelectors;
-
-      return (opt === null || opt === void 0 ? void 0 : opt.isInitialized) == null ? recoilValues$1.values() : opt.isInitialized === true ? recoilValuesForKeys$2(Recoil_concatIterables([this._store.getState().knownAtoms, this._store.getState().knownSelectors])) : Recoil_filterIterable(recoilValues$1.values(), ({
-        key
-      }) => !knownAtoms.has(key) && !knownSelectors.has(key));
-    });
-
-    _defineProperty(this, "getInfo_UNSTABLE", ({
-      key
-    }) => {
-      this.checkRefCount_INTERNAL();
-      return peekNodeInfo$1(this._store, this._store.getState().currentTree, key);
-    });
-
-    _defineProperty(this, "map", mapper => {
-      this.checkRefCount_INTERNAL();
-      const mutableSnapshot = new MutableSnapshot(this, batchUpdates$1);
-      mapper(mutableSnapshot); // if removing batchUpdates from `set` add it here
-
-      return cloneSnapshot(mutableSnapshot.getStore_INTERNAL());
-    });
-
-    _defineProperty(this, "asyncMap", async mapper => {
-      this.checkRefCount_INTERNAL();
-      const mutableSnapshot = new MutableSnapshot(this, batchUpdates$1);
-      await mapper(mutableSnapshot);
-      return cloneSnapshot(mutableSnapshot.getStore_INTERNAL());
-    });
-
-    this._store = {
-      getState: () => storeState,
-      replaceState: replacer => {
-        storeState.currentTree = replacer(storeState.currentTree); // no batching so nextTree is never active
-      },
-      getGraph: version => {
-        const graphs = storeState.graphsByVersion;
-
-        if (graphs.has(version)) {
-          return Recoil_nullthrows(graphs.get(version));
-        }
-
-        const newGraph = graph$2();
-        graphs.set(version, newGraph);
-        return newGraph;
-      },
-      subscribeToTransactions: () => ({
-        release: () => {}
-      }),
-      addTransactionMetadata: () => {
-        throw new Error('Cannot subscribe to Snapshots');
-      }
-    }; // Initialize any nodes that are live in the parent store (primarily so that this
-    // snapshot gets counted towards the node's live stores count).
-
-    for (const nodeKey of this._store.getState().nodeCleanupFunctions.keys()) {
-      initializeNodeIfNewToStore$1(this._store, storeState.currentTree, nodeKey, 'get');
-      updateRetainCount$1(this._store, nodeKey, 1);
-    }
-
-    this.retain();
-    this.autorelease_INTERNAL();
-  }
-
-  retain() {
-    if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-      return () => undefined;
-    }
-
-    this._refCount++;
-    let released = false;
-    return () => {
-      if (!released) {
-        released = true;
-        this.release_INTERNAL();
-      }
-    };
-  }
-
-  autorelease_INTERNAL() {
-    if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-      return;
-    }
-
-    if (!isSSR$1) {
-      window.setTimeout(() => this.release_INTERNAL(), 0);
-    }
-  }
-
-  release_INTERNAL() {
-    if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-      return;
-    }
-
-    this._refCount--;
-
-    if (this._refCount === 0) ;
-  }
-
-  checkRefCount_INTERNAL() {
-    if (Recoil_gkx_1('recoil_memory_managament_2020') && this._refCount <= 0) {
-      if (true) {
-        Recoil_recoverableViolation(retainWarning);
-      } // What we will ship later:
-      // throw new Error(retainWarning);
-
-    }
-  }
-
-  getStore_INTERNAL() {
-    this.checkRefCount_INTERNAL();
-    return this._store;
-  }
-
-  getID() {
-    this.checkRefCount_INTERNAL();
-    return this.getID_INTERNAL();
-  }
-
-  getID_INTERNAL() {
-    this.checkRefCount_INTERNAL();
-    return this._store.getState().currentTree.stateID;
-  } // We want to allow the methods to be destructured and used as accessors
-  // eslint-disable-next-line fb-www/extra-arrow-initializer
-
-
-}
-
-function cloneStoreState(store, treeState, bumpVersion = false) {
-  const storeState = store.getState();
-  const version = bumpVersion ? getNextTreeStateVersion$1() : treeState.version;
-  return {
-    currentTree: bumpVersion ? {
-      // TODO snapshots shouldn't really have versions because a new version number
-      // is always assigned when the snapshot is gone to.
-      version,
-      stateID: version,
-      transactionMetadata: { ...treeState.transactionMetadata
-      },
-      dirtyAtoms: new Set(treeState.dirtyAtoms),
-      atomValues: treeState.atomValues.clone(),
-      nonvalidatedAtoms: treeState.nonvalidatedAtoms.clone()
-    } : treeState,
-    commitDepth: 0,
-    nextTree: null,
-    previousTree: null,
-    knownAtoms: new Set(storeState.knownAtoms),
-    // FIXME here's a copy
-    knownSelectors: new Set(storeState.knownSelectors),
-    // FIXME here's a copy
-    transactionSubscriptions: new Map(),
-    nodeTransactionSubscriptions: new Map(),
-    nodeToComponentSubscriptions: new Map(),
-    queuedComponentCallbacks_DEPRECATED: [],
-    suspendedComponentResolvers: new Set(),
-    graphsByVersion: new Map().set(version, store.getGraph(treeState.version)),
-    versionsUsedByComponent: new Map(),
-    retention: {
-      referenceCounts: new Map(),
-      nodesRetainedByZone: new Map(),
-      retainablesToCheckForRelease: new Set()
-    },
-    nodeCleanupFunctions: new Map()
-  };
-} // Factory to build a fresh snapshot
-
-
-function freshSnapshot(initializeState) {
-  const snapshot = new Snapshot(makeEmptyStoreState$1());
-  return initializeState != null ? snapshot.map(initializeState) : snapshot;
-} // Factory to clone a snapahot state
-
-
-function cloneSnapshot(store, version = 'current') {
-  const storeState = store.getState();
-  const treeState = version === 'current' ? storeState.currentTree : Recoil_nullthrows(storeState.previousTree);
-  return new Snapshot(cloneStoreState(store, treeState));
-}
-
-class MutableSnapshot extends Snapshot {
-  constructor(snapshot, batch) {
-    super(cloneStoreState(snapshot.getStore_INTERNAL(), snapshot.getStore_INTERNAL().getState().currentTree, true));
-
-    _defineProperty(this, "_batch", void 0);
-
-    _defineProperty(this, "set", (recoilState, newValueOrUpdater) => {
-      this.checkRefCount_INTERNAL();
-      const store = this.getStore_INTERNAL(); // This batchUpdates ensures this `set` is applied immediately and you can
-      // read the written value after calling `set`. I would like to remove this
-      // behavior and only batch in `Snapshot.map`, but this would be a breaking
-      // change potentially.
-
-      this._batch(() => {
-        updateRetainCount$1(store, recoilState.key, 1);
-        setRecoilValue$1(this.getStore_INTERNAL(), recoilState, newValueOrUpdater);
-      });
-    });
-
-    _defineProperty(this, "reset", recoilState => {
-      this.checkRefCount_INTERNAL();
-      const store = this.getStore_INTERNAL(); // See note at `set` about batched updates.
-
-      this._batch(() => {
-        updateRetainCount$1(store, recoilState.key, 1);
-        setRecoilValue$1(this.getStore_INTERNAL(), recoilState, DEFAULT_VALUE$1);
-      });
-    });
-
-    _defineProperty(this, "setUnvalidatedAtomValues_DEPRECATED", values => {
-      this.checkRefCount_INTERNAL();
-      const store = this.getStore_INTERNAL(); // See note at `set` about batched updates.
-
-      batchUpdates$1(() => {
-        for (const [k, v] of values.entries()) {
-          updateRetainCount$1(store, k, 1);
-          setUnvalidatedRecoilValue$1(store, new AbstractRecoilValue$2(k), v);
-        }
-      });
-    });
-
-    this._batch = batch;
-  } // We want to allow the methods to be destructured and used as accessors
-  // eslint-disable-next-line fb-www/extra-arrow-initializer
-
-
-}
-
-var Recoil_Snapshot = {
-  Snapshot,
-  MutableSnapshot,
-  freshSnapshot,
-  cloneSnapshot
-};
-
-var Recoil_Snapshot_1 = Recoil_Snapshot.Snapshot;
-var Recoil_Snapshot_2 = Recoil_Snapshot.MutableSnapshot;
-var Recoil_Snapshot_3 = Recoil_Snapshot.freshSnapshot;
-var Recoil_Snapshot_4 = Recoil_Snapshot.cloneSnapshot;
-
-var Recoil_Snapshot$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  Snapshot: Recoil_Snapshot_1,
-  MutableSnapshot: Recoil_Snapshot_2,
-  freshSnapshot: Recoil_Snapshot_3,
-  cloneSnapshot: Recoil_Snapshot_4
-});
-
-// @fb-only: const RecoilusagelogEvent = require('RecoilusagelogEvent');
-// @fb-only: const RecoilUsageLogFalcoEvent = require('RecoilUsageLogFalcoEvent');
-// @fb-only: const URI = require('URI');
-
-
-const {
-  getNextTreeStateVersion: getNextTreeStateVersion$2,
-  makeEmptyStoreState: makeEmptyStoreState$2
-} = Recoil_State;
-
-
-
-
-
-
-
-
-
-
-
-const {
-  cleanUpNode: cleanUpNode$2,
-  getDownstreamNodes: getDownstreamNodes$2,
-  setNodeValue: setNodeValue$2,
-  setUnvalidatedAtomValue_DEPRECATED: setUnvalidatedAtomValue_DEPRECATED$1
-} = Recoil_FunctionalCore;
-
-const {
-  graph: graph$3
-} = Recoil_Graph;
-
-const {
-  cloneGraph: cloneGraph$1
-} = Recoil_Graph;
-
-const {
-  applyAtomValueWrites: applyAtomValueWrites$1
-} = Recoil_RecoilValueInterface;
-
-const {
-  releaseScheduledRetainablesNow: releaseScheduledRetainablesNow$1
-} = Recoil_Retention;
-
-const {
-  freshSnapshot: freshSnapshot$1
-} = Recoil_Snapshot$1;
-
-
-
-const {
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState
-} = react__WEBPACK_IMPORTED_MODULE_0__;
-
-function notInAContext() {
-  throw new Error('This component must be used inside a <RecoilRoot> component.');
-}
-
-const defaultStore = Object.freeze({
-  getState: notInAContext,
-  replaceState: notInAContext,
-  getGraph: notInAContext,
-  subscribeToTransactions: notInAContext,
-  addTransactionMetadata: notInAContext
-});
-let stateReplacerIsBeingExecuted = false;
-
-function startNextTreeIfNeeded(store) {
-  if (stateReplacerIsBeingExecuted) {
-    throw new Error('An atom update was triggered within the execution of a state updater function. State updater functions provided to Recoil must be pure functions.');
-  }
-
-  const storeState = store.getState();
-
-  if (storeState.nextTree === null) {
-    if (Recoil_gkx_1('recoil_memory_managament_2020') && Recoil_gkx_1('recoil_release_on_cascading_update_killswitch_2021')) {
-      // If this is a cascading update (that is, rendering due to one state change
-      // invokes a second state change), we won't have cleaned up retainables yet
-      // because this normally happens after notifying components. Do it before
-      // proceeding with the cascading update so that it remains predictable:
-      if (storeState.commitDepth > 0) {
-        releaseScheduledRetainablesNow$1(store);
-      }
-    }
-
-    const version = storeState.currentTree.version;
-    const nextVersion = getNextTreeStateVersion$2();
-    storeState.nextTree = { ...storeState.currentTree,
-      version: nextVersion,
-      stateID: nextVersion,
-      dirtyAtoms: new Set(),
-      transactionMetadata: {}
-    };
-    storeState.graphsByVersion.set(nextVersion, cloneGraph$1(Recoil_nullthrows(storeState.graphsByVersion.get(version))));
-  }
-}
-
-const AppContext = react__WEBPACK_IMPORTED_MODULE_0__.createContext({
-  current: defaultStore
-});
-
-const useStoreRef = () => useContext(AppContext);
-
-const MutableSourceContext = react__WEBPACK_IMPORTED_MODULE_0__.createContext(null); // TODO T2710559282599660
-
-function useRecoilMutableSource() {
-  const mutableSource = useContext(MutableSourceContext);
-
-  if (mutableSource == null) {
-    Recoil_expectationViolation('Attempted to use a Recoil hook outside of a <RecoilRoot>. ' + '<RecoilRoot> must be an ancestor of any component that uses ' + 'Recoil hooks.');
-  }
-
-  return mutableSource;
-}
-
-function notifyComponents(store, storeState, treeState) {
-  const dependentNodes = getDownstreamNodes$2(store, treeState, treeState.dirtyAtoms);
-
-  for (const key of dependentNodes) {
-    const comps = storeState.nodeToComponentSubscriptions.get(key);
-
-    if (comps) {
-      for (const [_subID, [_debugName, callback]] of comps) {
-        callback(treeState);
-      }
-    }
-  }
-}
-
-function sendEndOfBatchNotifications(store) {
-  const storeState = store.getState();
-  const treeState = storeState.currentTree; // Inform transaction subscribers of the transaction:
-
-  const dirtyAtoms = treeState.dirtyAtoms;
-
-  if (dirtyAtoms.size) {
-    // Execute Node-specific subscribers before global subscribers
-    for (const [key, subscriptions] of storeState.nodeTransactionSubscriptions) {
-      if (dirtyAtoms.has(key)) {
-        for (const [_, subscription] of subscriptions) {
-          subscription(store);
-        }
-      }
-    }
-
-    for (const [_, subscription] of storeState.transactionSubscriptions) {
-      subscription(store);
-    }
-
-    if (!Recoil_gkx_1('recoil_early_rendering_2021') || storeState.suspendedComponentResolvers.size) {
-      // Notifying components is needed to wake from suspense, even when using
-      // early rendering.
-      notifyComponents(store, storeState, treeState); // Wake all suspended components so the right one(s) can try to re-render.
-      // We need to wake up components not just when some asynchronous selector
-      // resolved, but also when changing synchronous values because this may cause
-      // a selector to change from asynchronous to synchronous, in which case there
-      // would be no follow-up asynchronous resolution to wake us up.
-      // TODO OPTIMIZATION Only wake up related downstream components
-
-      storeState.suspendedComponentResolvers.forEach(cb => cb());
-      storeState.suspendedComponentResolvers.clear();
-    }
-  } // Special behavior ONLY invoked by useInterface.
-  // FIXME delete queuedComponentCallbacks_DEPRECATED when deleting useInterface.
-
-
-  storeState.queuedComponentCallbacks_DEPRECATED.forEach(cb => cb(treeState));
-  storeState.queuedComponentCallbacks_DEPRECATED.splice(0, storeState.queuedComponentCallbacks_DEPRECATED.length);
-}
-
-function endBatch(storeRef) {
-  const storeState = storeRef.current.getState();
-  storeState.commitDepth++;
-
-  try {
-    const {
-      nextTree
-    } = storeState; // Ignore commits that are not because of Recoil transactions -- namely,
-    // because something above RecoilRoot re-rendered:
-
-    if (nextTree === null) {
-      return;
-    } // nextTree is now committed -- note that copying and reset occurs when
-    // a transaction begins, in startNextTreeIfNeeded:
-
-
-    storeState.previousTree = storeState.currentTree;
-    storeState.currentTree = nextTree;
-    storeState.nextTree = null;
-    sendEndOfBatchNotifications(storeRef.current);
-
-    if (storeState.previousTree != null) {
-      storeState.graphsByVersion.delete(storeState.previousTree.version);
-    } else {
-      Recoil_recoverableViolation('Ended batch with no previous state, which is unexpected', 'recoil');
-    }
-
-    storeState.previousTree = null;
-
-    if (Recoil_gkx_1('recoil_memory_managament_2020')) {
-      releaseScheduledRetainablesNow$1(storeRef.current);
-    }
-  } finally {
-    storeState.commitDepth--;
-  }
-}
-/*
- * The purpose of the Batcher is to observe when React batches end so that
- * Recoil state changes can be batched. Whenever Recoil state changes, we call
- * setState on the batcher. Then we wait for that change to be committed, which
- * signifies the end of the batch. That's when we respond to the Recoil change.
- */
-
-
-function Batcher({
-  setNotifyBatcherOfChange
-}) {
-  const storeRef = useStoreRef();
-  const [_, setState] = useState([]);
-  setNotifyBatcherOfChange(() => setState({}));
-  useEffect(() => {
-    // enqueueExecution runs this function immediately; it is only used to
-    // manipulate the order of useEffects during tests, since React seems to
-    // call useEffect in an unpredictable order sometimes.
-    Recoil_Queue.enqueueExecution('Batcher', () => {
-      endBatch(storeRef);
-    });
-  }); // If an asynchronous selector resolves after the Batcher is unmounted,
-  // notifyBatcherOfChange will still be called. An error gets thrown whenever
-  // setState is called after a component is already unmounted, so this sets
-  // notifyBatcherOfChange to be a no-op.
-
-  useEffect(() => {
-    return () => {
-      setNotifyBatcherOfChange(() => {});
-    };
-  }, [setNotifyBatcherOfChange]);
-  return null;
-}
-
-if (true) {
-  if (typeof window !== 'undefined' && !window.$recoilDebugStates) {
-    window.$recoilDebugStates = [];
-  }
-} // When removing this deprecated function, remove stateBySettingRecoilValue
-// which will no longer be needed.
-
-
-function initialStoreState_DEPRECATED(store, initializeState) {
-  const initial = makeEmptyStoreState$2();
-  initializeState({
-    // $FlowFixMe[escaped-generic]
-    set: (atom, value) => {
-      const state = initial.currentTree;
-      const writes = setNodeValue$2(store, state, atom.key, value);
-      const writtenNodes = new Set(writes.keys());
-      const nonvalidatedAtoms = state.nonvalidatedAtoms.clone();
-
-      for (const n of writtenNodes) {
-        nonvalidatedAtoms.delete(n);
-      }
-
-      initial.currentTree = { ...state,
-        dirtyAtoms: Recoil_unionSets(state.dirtyAtoms, writtenNodes),
-        atomValues: applyAtomValueWrites$1(state.atomValues, writes),
-        // NB: PLEASE un-export applyAtomValueWrites when deleting this code
-        nonvalidatedAtoms
-      };
-    },
-    setUnvalidatedAtomValues: atomValues => {
-      // FIXME replace this with a mutative loop
-      atomValues.forEach((v, k) => {
-        initial.currentTree = setUnvalidatedAtomValue_DEPRECATED$1(initial.currentTree, k, v);
-      });
-    }
-  });
-  return initial;
-}
-
-function initialStoreState(initializeState) {
-  const snapshot = freshSnapshot$1().map(initializeState);
-  return snapshot.getStore_INTERNAL().getState();
-}
-
-let nextID = 0;
-
-function RecoilRoot_INTERNAL({
-  initializeState_DEPRECATED,
-  initializeState,
-  store_INTERNAL: storeProp,
-  // For use with React "context bridging"
-  children
-}) {
-  var _createMutableSource;
-
-  // prettier-ignore
-  // @fb-only: useEffect(() => {
-  // @fb-only: if (gkx('recoil_usage_logging')) {
-  // @fb-only: try {
-  // @fb-only: RecoilUsageLogFalcoEvent.log(() => ({
-  // @fb-only: type: RecoilusagelogEvent.RECOIL_ROOT_MOUNTED,
-  // @fb-only: path: URI.getRequestURI().getPath(),
-  // @fb-only: }));
-  // @fb-only: } catch {
-  // @fb-only: recoverableViolation(
-  // @fb-only: 'Error when logging Recoil Usage event',
-  // @fb-only: 'recoil',
-  // @fb-only: );
-  // @fb-only: }
-  // @fb-only: }
-  // @fb-only: }, []);
-  let storeState; // eslint-disable-line prefer-const
-
-  const getGraph = version => {
-    const graphs = storeState.current.graphsByVersion;
-
-    if (graphs.has(version)) {
-      return Recoil_nullthrows(graphs.get(version));
-    }
-
-    const newGraph = graph$3();
-    graphs.set(version, newGraph);
-    return newGraph;
-  };
-
-  const subscribeToTransactions = (callback, key) => {
-    if (key == null) {
-      // Global transaction subscriptions
-      const {
-        transactionSubscriptions
-      } = storeRef.current.getState();
-      const id = nextID++;
-      transactionSubscriptions.set(id, callback);
-      return {
-        release: () => {
-          transactionSubscriptions.delete(id);
-        }
-      };
-    } else {
-      // Node-specific transaction subscriptions:
-      const {
-        nodeTransactionSubscriptions
-      } = storeRef.current.getState();
-
-      if (!nodeTransactionSubscriptions.has(key)) {
-        nodeTransactionSubscriptions.set(key, new Map());
-      }
-
-      const id = nextID++;
-      Recoil_nullthrows(nodeTransactionSubscriptions.get(key)).set(id, callback);
-      return {
-        release: () => {
-          const subs = nodeTransactionSubscriptions.get(key);
-
-          if (subs) {
-            subs.delete(id);
-
-            if (subs.size === 0) {
-              nodeTransactionSubscriptions.delete(key);
-            }
-          }
-        }
-      };
-    }
-  };
-
-  const addTransactionMetadata = metadata => {
-    startNextTreeIfNeeded(storeRef.current);
-
-    for (const k of Object.keys(metadata)) {
-      Recoil_nullthrows(storeRef.current.getState().nextTree).transactionMetadata[k] = metadata[k];
-    }
-  };
-
-  const replaceState = replacer => {
-    const storeState = storeRef.current.getState();
-    startNextTreeIfNeeded(storeRef.current); // Use replacer to get the next state:
-
-    const nextTree = Recoil_nullthrows(storeState.nextTree);
-    let replaced;
-
-    try {
-      stateReplacerIsBeingExecuted = true;
-      replaced = replacer(nextTree);
-    } finally {
-      stateReplacerIsBeingExecuted = false;
-    }
-
-    if (replaced === nextTree) {
-      return;
-    }
-
-    if (true) {
-      if (typeof window !== 'undefined') {
-        window.$recoilDebugStates.push(replaced); // TODO this shouldn't happen here because it's not batched
-      }
-    } // Save changes to nextTree and schedule a React update:
-
-
-    storeState.nextTree = replaced;
-
-    if (Recoil_gkx_1('recoil_early_rendering_2021')) {
-      notifyComponents(store, storeState, replaced);
-    }
-
-    Recoil_nullthrows(notifyBatcherOfChange.current)();
-  };
-
-  const notifyBatcherOfChange = useRef(null);
-  const setNotifyBatcherOfChange = useCallback(x => {
-    notifyBatcherOfChange.current = x;
-  }, [notifyBatcherOfChange]); // FIXME T2710559282599660
-
-  const createMutableSource = (_createMutableSource = react__WEBPACK_IMPORTED_MODULE_0__.createMutableSource) !== null && _createMutableSource !== void 0 ? _createMutableSource : // flowlint-line unclear-type:off
-  react__WEBPACK_IMPORTED_MODULE_0__.unstable_createMutableSource; // flowlint-line unclear-type:off
-
-  const store = storeProp !== null && storeProp !== void 0 ? storeProp : {
-    getState: () => storeState.current,
-    replaceState,
-    getGraph,
-    subscribeToTransactions,
-    addTransactionMetadata
-  };
-  const storeRef = useRef(store);
-  storeState = useRef(initializeState_DEPRECATED != null ? initialStoreState_DEPRECATED(store, initializeState_DEPRECATED) : initializeState != null ? initialStoreState(initializeState) : makeEmptyStoreState$2());
-  const mutableSource = useMemo(() => createMutableSource ? createMutableSource(storeState, () => storeState.current.currentTree.version) : null, [createMutableSource, storeState]); // Cleanup when the <RecoilRoot> is unmounted
-
-  useEffect(() => () => {
-    for (const atomKey of storeRef.current.getState().knownAtoms) {
-      cleanUpNode$2(storeRef.current, atomKey);
-    }
-  }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AppContext.Provider, {
-    value: storeRef
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(MutableSourceContext.Provider, {
-    value: mutableSource
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Batcher, {
-    setNotifyBatcherOfChange: setNotifyBatcherOfChange
-  }), children));
-}
-
-function RecoilRoot(props) {
-  const {
-    override,
-    ...propsExceptOverride
-  } = props;
-  const ancestorStoreRef = useStoreRef();
-
-  if (override === false && ancestorStoreRef.current !== defaultStore) {
-    // If ancestorStoreRef.current !== defaultStore, it means that this
-    // RecoilRoot is not nested within another.
-    return props.children;
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RecoilRoot_INTERNAL, propsExceptOverride);
-}
-
-var Recoil_RecoilRoot_react = {
-  useStoreRef,
-  useRecoilMutableSource,
-  RecoilRoot,
-  notifyComponents_FOR_TESTING: notifyComponents,
-  sendEndOfBatchNotifications_FOR_TESTING: sendEndOfBatchNotifications
-};
-
-const {
-  loadableWithValue: loadableWithValue$1
-} = Recoil_Loadable;
-
-const {
-  DEFAULT_VALUE: DEFAULT_VALUE$2,
-  getNode: getNode$3
-} = Recoil_Node;
-
-const {
-  copyTreeState: copyTreeState$1,
-  getRecoilValueAsLoadable: getRecoilValueAsLoadable$2,
-  invalidateDownstreams: invalidateDownstreams$1,
-  writeLoadableToTreeState: writeLoadableToTreeState$1
-} = Recoil_RecoilValueInterface;
-
-function isAtom(recoilValue) {
-  return getNode$3(recoilValue.key).nodeType === 'atom';
-}
-
-class TransactionInterfaceImpl {
-  constructor(store, treeState) {
-    _defineProperty(this, "_store", void 0);
-
-    _defineProperty(this, "_treeState", void 0);
-
-    _defineProperty(this, "_changes", void 0);
-
-    _defineProperty(this, "get", recoilValue => {
-      if (this._changes.has(recoilValue.key)) {
-        // $FlowFixMe[incompatible-return]
-        return this._changes.get(recoilValue.key);
-      }
-
-      if (!isAtom(recoilValue)) {
-        throw new Error('Reading selectors within atomicUpdate is not supported');
-      }
-
-      const loadable = getRecoilValueAsLoadable$2(this._store, recoilValue, this._treeState);
-
-      if (loadable.state === 'hasValue') {
-        return loadable.contents;
-      } else if (loadable.state === 'hasError') {
-        throw loadable.contents;
-      } else {
-        throw new Error(`Expected Recoil atom ${recoilValue.key} to have a value, but it is in a loading state.`);
-      }
-    });
-
-    _defineProperty(this, "set", (recoilState, valueOrUpdater) => {
-      if (!isAtom(recoilState)) {
-        throw new Error('Setting selectors within atomicUpdate is not supported');
-      }
-
-      if (typeof valueOrUpdater === 'function') {
-        const current = this.get(recoilState);
-
-        this._changes.set(recoilState.key, valueOrUpdater(current)); // flowlint-line unclear-type:off
-
-      } else {
-        this._changes.set(recoilState.key, valueOrUpdater);
-      }
-    });
-
-    _defineProperty(this, "reset", recoilState => {
-      this.set(recoilState, DEFAULT_VALUE$2);
-    });
-
-    this._store = store;
-    this._treeState = treeState;
-    this._changes = new Map();
-  } // Allow destructing
-  // eslint-disable-next-line fb-www/extra-arrow-initializer
-
-
-  newTreeState_INTERNAL() {
-    if (this._changes.size === 0) {
-      return this._treeState;
-    }
-
-    const newState = copyTreeState$1(this._treeState);
-
-    for (const [k, v] of this._changes) {
-      writeLoadableToTreeState$1(newState, k, loadableWithValue$1(v));
-    }
-
-    invalidateDownstreams$1(this._store, newState);
-    return newState;
-  }
-
-}
-
-function atomicUpdater(store) {
-  return fn => {
-    store.replaceState(treeState => {
-      const changeset = new TransactionInterfaceImpl(store, treeState);
-      fn(changeset);
-      return changeset.newTreeState_INTERNAL();
-    });
-  };
-}
-
-var Recoil_AtomicUpdates = {
-  atomicUpdater
-};
-
-var Recoil_AtomicUpdates_1 = Recoil_AtomicUpdates.atomicUpdater;
-
-var Recoil_AtomicUpdates$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  atomicUpdater: Recoil_AtomicUpdates_1
-});
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-/**
- * Returns a map containing all of the keys + values from the original map where
- * the given callback returned true.
- */
-
-function filterMap(map, callback) {
-  const result = new Map();
-
-  for (const [key, value] of map) {
-    if (callback(value, key)) {
-      result.set(key, value);
-    }
-  }
-
-  return result;
-}
-
-var Recoil_filterMap = filterMap;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-/**
- * Returns a set containing all of the values from the original set where
- * the given callback returned true.
- */
-
-function filterSet(set, callback) {
-  const result = new Set();
-
-  for (const value of set) {
-    if (callback(value)) {
-      result.add(value);
-    }
-  }
-
-  return result;
-}
-
-var Recoil_filterSet = filterSet;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-function invariant(condition, message) {
-  if (!condition) {
-    throw new Error(message);
-  }
-}
-
-var invariant_1 = invariant;
-
-// @oss-only
-
-
-var Recoil_invariant = invariant_1;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-function mergeMaps(...maps) {
-  const result = new Map();
-
-  for (let i = 0; i < maps.length; i++) {
-    const iterator = maps[i].keys();
-    let nextKey;
-
-    while (!(nextKey = iterator.next()).done) {
-      // $FlowFixMe[incompatible-call] - map/iterator knows nothing about flow types
-      result.set(nextKey.value, maps[i].get(nextKey.value));
-    }
-  }
-  /* $FlowFixMe[incompatible-return] (>=0.66.0 site=www,mobile) This comment
-   * suppresses an error found when Flow v0.66 was deployed. To see the error
-   * delete this comment and run Flow. */
-
-
-  return result;
-}
-
-var Recoil_mergeMaps = mergeMaps;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-function shallowArrayEqual(a, b) {
-  if (a === b) {
-    return true;
-  }
-
-  if (a.length !== b.length) {
-    return false;
-  }
-
-  for (let i = 0, l = a.length; i < l; i++) {
-    if (a[i] !== b[i]) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-var Recoil_shallowArrayEqual = shallowArrayEqual;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * MIT License
- *
- * Copyright (c) 2014-2019 Georg Tavonius
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-const UNKNOWN_FUNCTION = '<unknown>';
-/**
- * This parses the different stack traces and puts them into one format
- * This borrows heavily from TraceKit (https://github.com/csnover/TraceKit)
- */
-
-function stackTraceParser(stackString) {
-  const lines = stackString.split('\n');
-  return lines.reduce((stack, line) => {
-    const parseResult = parseChrome(line) || parseWinjs(line) || parseGecko(line) || parseNode(line) || parseJSC(line);
-
-    if (parseResult) {
-      stack.push(parseResult);
-    }
-
-    return stack;
-  }, []);
-}
-
-const chromeRe = /^\s*at (.*?) ?\(((?:file|https?|blob|chrome-extension|native|eval|webpack|<anonymous>|\/|[a-z]:\\|\\\\).*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i;
-const chromeEvalRe = /\((\S*)(?::(\d+))(?::(\d+))\)/;
-
-function parseChrome(line) {
-  const parts = chromeRe.exec(line);
-
-  if (!parts) {
-    return null;
-  }
-
-  const isNative = parts[2] && parts[2].indexOf('native') === 0; // start of line
-
-  const isEval = parts[2] && parts[2].indexOf('eval') === 0; // start of line
-
-  const submatch = chromeEvalRe.exec(parts[2]);
-
-  if (isEval && submatch != null) {
-    // throw out eval line/column and use top-most line/column number
-    parts[2] = submatch[1]; // url
-
-    parts[3] = submatch[2]; // line
-
-    parts[4] = submatch[3]; // column
-  }
-
-  return {
-    file: !isNative ? parts[2] : null,
-    methodName: parts[1] || UNKNOWN_FUNCTION,
-    arguments: isNative ? [parts[2]] : [],
-    lineNumber: parts[3] ? +parts[3] : null,
-    column: parts[4] ? +parts[4] : null
-  };
-}
-
-const winjsRe = /^\s*at (?:((?:\[object object\])?.+) )?\(?((?:file|ms-appx|https?|webpack|blob):.*?):(\d+)(?::(\d+))?\)?\s*$/i;
-
-function parseWinjs(line) {
-  const parts = winjsRe.exec(line);
-
-  if (!parts) {
-    return null;
-  }
-
-  return {
-    file: parts[2],
-    methodName: parts[1] || UNKNOWN_FUNCTION,
-    arguments: [],
-    lineNumber: +parts[3],
-    column: parts[4] ? +parts[4] : null
-  };
-}
-
-const geckoRe = /^\s*(.*?)(?:\((.*?)\))?(?:^|@)((?:file|https?|blob|chrome|webpack|resource|\[native).*?|[^@]*bundle)(?::(\d+))?(?::(\d+))?\s*$/i;
-const geckoEvalRe = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i;
-
-function parseGecko(line) {
-  const parts = geckoRe.exec(line);
-
-  if (!parts) {
-    return null;
-  }
-
-  const isEval = parts[3] && parts[3].indexOf(' > eval') > -1;
-  const submatch = geckoEvalRe.exec(parts[3]);
-
-  if (isEval && submatch != null) {
-    // throw out eval line/column and use top-most line number
-    parts[3] = submatch[1];
-    parts[4] = submatch[2];
-    parts[5] = null; // no column when eval
-  }
-
-  return {
-    file: parts[3],
-    methodName: parts[1] || UNKNOWN_FUNCTION,
-    arguments: parts[2] ? parts[2].split(',') : [],
-    lineNumber: parts[4] ? +parts[4] : null,
-    column: parts[5] ? +parts[5] : null
-  };
-}
-
-const javaScriptCoreRe = /^\s*(?:([^@]*)(?:\((.*?)\))?@)?(\S.*?):(\d+)(?::(\d+))?\s*$/i;
-
-function parseJSC(line) {
-  const parts = javaScriptCoreRe.exec(line);
-
-  if (!parts) {
-    return null;
-  }
-
-  return {
-    file: parts[3],
-    methodName: parts[1] || UNKNOWN_FUNCTION,
-    arguments: [],
-    lineNumber: +parts[4],
-    column: parts[5] ? +parts[5] : null
-  };
-}
-
-const nodeRe = /^\s*at (?:((?:\[object object\])?[^\\/]+(?: \[as \S+\])?) )?\(?(.*?):(\d+)(?::(\d+))?\)?\s*$/i;
-
-function parseNode(line) {
-  const parts = nodeRe.exec(line);
-
-  if (!parts) {
-    return null;
-  }
-
-  return {
-    file: parts[2],
-    methodName: parts[1] || UNKNOWN_FUNCTION,
-    arguments: [],
-    lineNumber: +parts[3],
-    column: parts[4] ? +parts[4] : null
-  };
-}
-
-var Recoil_stackTraceParser = stackTraceParser;
-
-const {
-  useRef: useRef$1
-} = react__WEBPACK_IMPORTED_MODULE_0__;
-
-function useComponentName() {
-  const nameRef = useRef$1();
-
-  if (true) {
-    if (Recoil_gkx_1('recoil_infer_component_names')) {
-      var _nameRef$current;
-
-      if (nameRef.current === undefined) {
-        // There is no blessed way to determine the calling React component from
-        // within a hook. This hack uses the fact that hooks must start with 'use'
-        // and that hooks are either called by React Components or other hooks. It
-        // follows therefore, that to find the calling component, you simply need
-        // to look down the stack and find the first function which doesn't start
-        // with 'use'. We are only enabling this in dev for now, since once the
-        // codebase is minified, the naming assumptions no longer hold true.
-        const frames = Recoil_stackTraceParser(new Error().stack);
-
-        for (const {
-          methodName
-        } of frames) {
-          // I observed cases where the frame was of the form 'Object.useXXX'
-          // hence why I'm searching for hooks following a word boundary
-          if (!methodName.match(/\buse[^\b]+$/)) {
-            return nameRef.current = methodName;
-          }
-        }
-
-        nameRef.current = null;
-      }
-
-      return (_nameRef$current = nameRef.current) !== null && _nameRef$current !== void 0 ? _nameRef$current : '<unable to determine component name>';
-    }
-  } // @fb-only: return "<component name only available when both in dev mode and when passing GK 'recoil_infer_component_names'>";
-
-
-  return '<component name not available>'; // @oss-only
-}
-
-var Recoil_useComponentName = useComponentName;
-
-const {
-  atomicUpdater: atomicUpdater$1
-} = Recoil_AtomicUpdates$1;
-
-const {
-  batchUpdates: batchUpdates$2
-} = Recoil_Batching;
-
-const {
-  DEFAULT_VALUE: DEFAULT_VALUE$3,
-  getNode: getNode$4,
-  nodes: nodes$1
-} = Recoil_Node;
-
-const {
-  useRecoilMutableSource: useRecoilMutableSource$1,
-  useStoreRef: useStoreRef$1
-} = Recoil_RecoilRoot_react;
-
-const {
-  isRecoilValue: isRecoilValue$2
-} = Recoil_RecoilValue$1;
-
-const {
-  AbstractRecoilValue: AbstractRecoilValue$3,
-  getRecoilValueAsLoadable: getRecoilValueAsLoadable$3,
-  setRecoilValue: setRecoilValue$2,
-  setRecoilValueLoadable: setRecoilValueLoadable$1,
-  setUnvalidatedRecoilValue: setUnvalidatedRecoilValue$2,
-  subscribeToRecoilValue: subscribeToRecoilValue$1
-} = Recoil_RecoilValueInterface;
-
-const {
-  updateRetainCount: updateRetainCount$2
-} = Recoil_Retention;
-
-const {
-  RetentionZone: RetentionZone$3
-} = Recoil_RetentionZone;
-
-const {
-  Snapshot: Snapshot$1,
-  cloneSnapshot: cloneSnapshot$1
-} = Recoil_Snapshot$1;
-
-const {
-  setByAddingToSet: setByAddingToSet$2
-} = Recoil_CopyOnWrite;
-
-
-
-const {
-  isSSR: isSSR$2
-} = Recoil_Environment;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const {
-  mutableSourceExists: mutableSourceExists$2,
-  useMutableSource: useMutableSource$1
-} = Recoil_mutableSource;
-
-
-
-
-
-
-
-
-
-const {
-  useCallback: useCallback$1,
-  useEffect: useEffect$1,
-  useMemo: useMemo$1,
-  useRef: useRef$2,
-  useState: useState$1
-} = react__WEBPACK_IMPORTED_MODULE_0__; // Components that aren't mounted after suspending for this long will be assumed
-// to be discarded and their resources released.
-
-
-const SUSPENSE_TIMEOUT_MS = 120000;
-
-function handleLoadable(loadable, recoilValue, storeRef) {
-  // We can't just throw the promise we are waiting on to Suspense.  If the
-  // upstream dependencies change it may produce a state in which the component
-  // can render, but it would still be suspended on a Promise that may never resolve.
-  if (loadable.state === 'hasValue') {
-    return loadable.contents;
-  } else if (loadable.state === 'loading') {
-    const promise = new Promise(resolve => {
-      storeRef.current.getState().suspendedComponentResolvers.add(resolve);
-    }); // $FlowFixMe Flow(prop-missing) for integrating with tools that inspect thrown promises @fb-only
-    // @fb-only: promise.displayName = `Recoil State: ${recoilValue.key}`;
-
-    throw promise;
-  } else if (loadable.state === 'hasError') {
-    throw loadable.contents;
-  } else {
-    const err = new Error(`Invalid value of loadable atom "${recoilValue.key}"`);
-
-    throw err;
-  }
-}
-
-function validateRecoilValue(recoilValue, hookName) {
-  if (!isRecoilValue$2(recoilValue)) {
-    throw new Error(`Invalid argument to ${hookName}: expected an atom or selector but got ${String(recoilValue)}`);
-  }
-}
-
-/**
- * Various things are broken with useRecoilInterface, particularly concurrent mode
- * and memory management. They will not be fixed.
- * */
-function useRecoilInterface_DEPRECATED() {
-  const storeRef = useStoreRef$1();
-  const [_, forceUpdate] = useState$1([]);
-  const recoilValuesUsed = useRef$2(new Set());
-  recoilValuesUsed.current = new Set(); // Track the RecoilValues used just during this render
-
-  const previousSubscriptions = useRef$2(new Set());
-  const subscriptions = useRef$2(new Map());
-  const unsubscribeFrom = useCallback$1(key => {
-    const sub = subscriptions.current.get(key);
-
-    if (sub) {
-      sub.release();
-      subscriptions.current.delete(key);
-    }
-  }, [subscriptions]);
-  const componentName = Recoil_useComponentName();
-  useEffect$1(() => {
-    const store = storeRef.current;
-
-    function updateState(_state, key) {
-      if (!subscriptions.current.has(key)) {
-        return;
-      }
-
-      forceUpdate([]);
-    }
-
-    Recoil_differenceSets(recoilValuesUsed.current, previousSubscriptions.current).forEach(key => {
-      if (subscriptions.current.has(key)) {
-        Recoil_expectationViolation(`Double subscription to RecoilValue "${key}"`);
-        return;
-      }
-
-      const sub = subscribeToRecoilValue$1(store, new AbstractRecoilValue$3(key), state => {
-        updateState(state, key);
-      }, componentName);
-      subscriptions.current.set(key, sub);
-      /**
-       * Since we're subscribing in an effect we need to update to the latest
-       * value of the atom since it may have changed since we rendered. We can
-       * go ahead and do that now, unless we're in the middle of a batch --
-       * in which case we should do it at the end of the batch, due to the
-       * following edge case: Suppose an atom is updated in another useEffect
-       * of this same component. Then the following sequence of events occur:
-       * 1. Atom is updated and subs fired (but we may not be subscribed
-       *    yet depending on order of effects, so we miss this) Updated value
-       *    is now in nextTree, but not currentTree.
-       * 2. This effect happens. We subscribe and update.
-       * 3. From the update we re-render and read currentTree, with old value.
-       * 4. Batcher's effect sets currentTree to nextTree.
-       * In this sequence we miss the update. To avoid that, add the update
-       * to queuedComponentCallback if a batch is in progress.
-       */
-      // FIXME delete queuedComponentCallbacks_DEPRECATED when deleting useInterface.
-
-      const state = store.getState();
-
-      if (state.nextTree) {
-        store.getState().queuedComponentCallbacks_DEPRECATED.push(() => {
-          updateState(store.getState(), key);
-        });
-      } else {
-        updateState(store.getState(), key);
-      }
-    });
-    Recoil_differenceSets(previousSubscriptions.current, recoilValuesUsed.current).forEach(key => {
-      unsubscribeFrom(key);
-    });
-    previousSubscriptions.current = recoilValuesUsed.current;
-  });
-  useEffect$1(() => {
-    const subs = subscriptions.current;
-    return () => subs.forEach((_, key) => unsubscribeFrom(key));
-  }, [unsubscribeFrom]);
-  return useMemo$1(() => {
-    function useSetRecoilState(recoilState) {
-      if (true) {
-        // $FlowFixMe[escaped-generic]
-        validateRecoilValue(recoilState, 'useSetRecoilState');
-      }
-
-      return newValueOrUpdater => {
-        setRecoilValue$2(storeRef.current, recoilState, newValueOrUpdater);
-      };
-    }
-
-    function useResetRecoilState(recoilState) {
-      if (true) {
-        // $FlowFixMe[escaped-generic]
-        validateRecoilValue(recoilState, 'useResetRecoilState');
-      }
-
-      return () => setRecoilValue$2(storeRef.current, recoilState, DEFAULT_VALUE$3);
-    }
-
-    function useRecoilValueLoadable(recoilValue) {
-      var _storeState$nextTree;
-
-      if (true) {
-        // $FlowFixMe[escaped-generic]
-        validateRecoilValue(recoilValue, 'useRecoilValueLoadable');
-      }
-
-      if (!recoilValuesUsed.current.has(recoilValue.key)) {
-        recoilValuesUsed.current = setByAddingToSet$2(recoilValuesUsed.current, recoilValue.key);
-      } // TODO Restore optimization to memoize lookup
-
-
-      const storeState = storeRef.current.getState();
-      return getRecoilValueAsLoadable$3(storeRef.current, recoilValue, Recoil_gkx_1('recoil_early_rendering_2021') ? (_storeState$nextTree = storeState.nextTree) !== null && _storeState$nextTree !== void 0 ? _storeState$nextTree : storeState.currentTree : storeState.currentTree);
-    }
-
-    function useRecoilValue(recoilValue) {
-      if (true) {
-        // $FlowFixMe[escaped-generic]
-        validateRecoilValue(recoilValue, 'useRecoilValue');
-      }
-
-      const loadable = useRecoilValueLoadable(recoilValue);
-      return handleLoadable(loadable, recoilValue, storeRef);
-    }
-
-    function useRecoilState(recoilState) {
-      if (true) {
-        // $FlowFixMe[escaped-generic]
-        validateRecoilValue(recoilState, 'useRecoilState');
-      }
-
-      return [useRecoilValue(recoilState), useSetRecoilState(recoilState)];
-    }
-
-    function useRecoilStateLoadable(recoilState) {
-      if (true) {
-        // $FlowFixMe[escaped-generic]
-        validateRecoilValue(recoilState, 'useRecoilStateLoadable');
-      }
-
-      return [useRecoilValueLoadable(recoilState), useSetRecoilState(recoilState)];
-    }
-
-    return {
-      getRecoilValue: useRecoilValue,
-      getRecoilValueLoadable: useRecoilValueLoadable,
-      getRecoilState: useRecoilState,
-      getRecoilStateLoadable: useRecoilStateLoadable,
-      getSetRecoilState: useSetRecoilState,
-      getResetRecoilState: useResetRecoilState
-    };
-  }, [recoilValuesUsed, storeRef]);
-}
-
-const recoilComponentGetRecoilValueCount_FOR_TESTING = {
-  current: 0
-};
-
-function useRecoilValueLoadable_MUTABLESOURCE(recoilValue) {
-  if (true) {
-    // $FlowFixMe[escaped-generic]
-    validateRecoilValue(recoilValue, 'useRecoilValueLoadable');
-  }
-
-  const storeRef = useStoreRef$1();
-  const getLoadable = useCallback$1(() => {
-    var _storeState$nextTree2;
-
-    const store = storeRef.current;
-    const storeState = store.getState();
-    const treeState = Recoil_gkx_1('recoil_early_rendering_2021') ? (_storeState$nextTree2 = storeState.nextTree) !== null && _storeState$nextTree2 !== void 0 ? _storeState$nextTree2 : storeState.currentTree : storeState.currentTree;
-    return getRecoilValueAsLoadable$3(store, recoilValue, treeState);
-  }, [storeRef, recoilValue]);
-  const getLoadableWithTesting = useCallback$1(() => {
-    if (true) {
-      recoilComponentGetRecoilValueCount_FOR_TESTING.current++;
-    }
-
-    return getLoadable();
-  }, [getLoadable]);
-  const componentName = Recoil_useComponentName();
-  const subscribe = useCallback$1((_storeState, callback) => {
-    const store = storeRef.current;
-    const subscription = subscribeToRecoilValue$1(store, recoilValue, () => {
-      if (!Recoil_gkx_1('recoil_suppress_rerender_in_callback')) {
-        return callback();
-      } // Only re-render if the value has changed.
-      // This will evaluate the atom/selector now as well as when the
-      // component renders, but that may help with prefetching.
-
-
-      const newLoadable = getLoadable();
-
-      if (!prevLoadableRef.current.is(newLoadable)) {
-        callback();
-      } // If the component is suspended then the effect setting prevLoadableRef
-      // will not run.  So, set the previous value here when its subscription
-      // is fired to wake it up.  We can't just rely on this, though, because
-      // this only executes when an atom/selector is dirty and the atom/selector
-      // passed to the hook can dynamically change.
-
-
-      prevLoadableRef.current = newLoadable;
-    }, componentName);
-    return subscription.release;
-  }, [storeRef, recoilValue, componentName, getLoadable]);
-  const source = useRecoilMutableSource$1();
-  const loadable = useMutableSource$1(source, getLoadableWithTesting, subscribe);
-  const prevLoadableRef = useRef$2(loadable);
-  useEffect$1(() => {
-    prevLoadableRef.current = loadable;
-  });
-  return loadable;
-}
-
-function useRecoilValueLoadable_LEGACY(recoilValue) {
-  if (true) {
-    // $FlowFixMe[escaped-generic]
-    validateRecoilValue(recoilValue, 'useRecoilValueLoadable');
-  }
-
-  const storeRef = useStoreRef$1();
-  const [_, forceUpdate] = useState$1([]);
-  const componentName = Recoil_useComponentName();
-  useEffect$1(() => {
-    const store = storeRef.current;
-    const storeState = store.getState();
-    const subscription = subscribeToRecoilValue$1(store, recoilValue, _state => {
-      var _prevLoadableRef$curr;
-
-      if (!Recoil_gkx_1('recoil_suppress_rerender_in_callback')) {
-        return forceUpdate([]);
-      }
-
-      const newLoadable = getRecoilValueAsLoadable$3(store, recoilValue, store.getState().currentTree);
-
-      if (!((_prevLoadableRef$curr = prevLoadableRef.current) === null || _prevLoadableRef$curr === void 0 ? void 0 : _prevLoadableRef$curr.is(newLoadable))) {
-        forceUpdate(newLoadable);
-      }
-
-      prevLoadableRef.current = newLoadable;
-    }, componentName);
-    /**
-     * Since we're subscribing in an effect we need to update to the latest
-     * value of the atom since it may have changed since we rendered. We can
-     * go ahead and do that now, unless we're in the middle of a batch --
-     * in which case we should do it at the end of the batch, due to the
-     * following edge case: Suppose an atom is updated in another useEffect
-     * of this same component. Then the following sequence of events occur:
-     * 1. Atom is updated and subs fired (but we may not be subscribed
-     *    yet depending on order of effects, so we miss this) Updated value
-     *    is now in nextTree, but not currentTree.
-     * 2. This effect happens. We subscribe and update.
-     * 3. From the update we re-render and read currentTree, with old value.
-     * 4. Batcher's effect sets currentTree to nextTree.
-     * In this sequence we miss the update. To avoid that, add the update
-     * to queuedComponentCallback if a batch is in progress.
-     */
-
-    if (storeState.nextTree) {
-      store.getState().queuedComponentCallbacks_DEPRECATED.push(() => {
-        prevLoadableRef.current = null;
-        forceUpdate([]);
-      });
-    } else {
-      var _prevLoadableRef$curr2;
-
-      if (!Recoil_gkx_1('recoil_suppress_rerender_in_callback')) {
-        return forceUpdate([]);
-      }
-
-      const newLoadable = getRecoilValueAsLoadable$3(store, recoilValue, store.getState().currentTree);
-
-      if (!((_prevLoadableRef$curr2 = prevLoadableRef.current) === null || _prevLoadableRef$curr2 === void 0 ? void 0 : _prevLoadableRef$curr2.is(newLoadable))) {
-        forceUpdate(newLoadable);
-      }
-
-      prevLoadableRef.current = newLoadable;
-    }
-
-    return subscription.release;
-  }, [componentName, recoilValue, storeRef]);
-  const loadable = getRecoilValueAsLoadable$3(storeRef.current, recoilValue);
-  const prevLoadableRef = useRef$2(loadable);
-  useEffect$1(() => {
-    prevLoadableRef.current = loadable;
-  });
-  return loadable;
-}
-/**
-  Like useRecoilValue(), but either returns the value if available or
-  just undefined if not available for any reason, such as pending or error.
-*/
-
-
-function useRecoilValueLoadable(recoilValue) {
-  if (Recoil_gkx_1('recoil_memory_managament_2020')) {
-    // eslint-disable-next-line fb-www/react-hooks
-    useRetain(recoilValue);
-  }
-
-  if (mutableSourceExists$2()) {
-    // eslint-disable-next-line fb-www/react-hooks
-    return useRecoilValueLoadable_MUTABLESOURCE(recoilValue);
-  } else {
-    // eslint-disable-next-line fb-www/react-hooks
-    return useRecoilValueLoadable_LEGACY(recoilValue);
-  }
-}
-/**
-  Returns the value represented by the RecoilValue.
-  If the value is pending, it will throw a Promise to suspend the component,
-  if the value is an error it will throw it for the nearest React error boundary.
-  This will also subscribe the component for any updates in the value.
-  */
-
-
-function useRecoilValue(recoilValue) {
-  if (true) {
-    // $FlowFixMe[escaped-generic]
-    validateRecoilValue(recoilValue, 'useRecoilValue');
-  }
-
-  const storeRef = useStoreRef$1();
-  const loadable = useRecoilValueLoadable(recoilValue);
-  return handleLoadable(loadable, recoilValue, storeRef);
-}
-/**
-  Returns a function that allows the value of a RecoilState to be updated, but does
-  not subscribe the component to changes to that RecoilState.
-*/
-
-
-function useSetRecoilState(recoilState) {
-  if (true) {
-    // $FlowFixMe[escaped-generic]
-    validateRecoilValue(recoilState, 'useSetRecoilState');
-  }
-
-  const storeRef = useStoreRef$1();
-  return useCallback$1(newValueOrUpdater => {
-    setRecoilValue$2(storeRef.current, recoilState, newValueOrUpdater);
-  }, [storeRef, recoilState]);
-}
-/**
-  Returns a function that will reset the value of a RecoilState to its default
-*/
-
-
-function useResetRecoilState(recoilState) {
-  if (true) {
-    // $FlowFixMe[escaped-generic]
-    validateRecoilValue(recoilState, 'useResetRecoilState');
-  }
-
-  const storeRef = useStoreRef$1();
-  return useCallback$1(() => {
-    setRecoilValue$2(storeRef.current, recoilState, DEFAULT_VALUE$3);
-  }, [storeRef, recoilState]);
-}
-/**
-  Equivalent to useState(). Allows the value of the RecoilState to be read and written.
-  Subsequent updates to the RecoilState will cause the component to re-render. If the
-  RecoilState is pending, this will suspend the component and initiate the
-  retrieval of the value. If evaluating the RecoilState resulted in an error, this will
-  throw the error so that the nearest React error boundary can catch it.
-*/
-
-
-function useRecoilState(recoilState) {
-  if (true) {
-    // $FlowFixMe[escaped-generic]
-    validateRecoilValue(recoilState, 'useRecoilState');
-  }
-
-  return [useRecoilValue(recoilState), useSetRecoilState(recoilState)];
-}
-/**
-  Like useRecoilState(), but does not cause Suspense or React error handling. Returns
-  an object that indicates whether the RecoilState is available, pending, or
-  unavailable due to an error.
-*/
-
-
-function useRecoilStateLoadable(recoilState) {
-  if (true) {
-    // $FlowFixMe[escaped-generic]
-    validateRecoilValue(recoilState, 'useRecoilStateLoadable');
-  }
-
-  return [useRecoilValueLoadable(recoilState), useSetRecoilState(recoilState)];
-}
-
-function useTransactionSubscription(callback) {
-  const storeRef = useStoreRef$1();
-  useEffect$1(() => {
-    const sub = storeRef.current.subscribeToTransactions(callback);
-    return sub.release;
-  }, [callback, storeRef]);
-}
-
-function externallyVisibleAtomValuesInState(state) {
-  const atomValues = state.atomValues.toMap();
-  const persistedAtomContentsValues = Recoil_mapMap(Recoil_filterMap(atomValues, (v, k) => {
-    const node = getNode$4(k);
-    const persistence = node.persistence_UNSTABLE;
-    return persistence != null && persistence.type !== 'none' && v.state === 'hasValue';
-  }), v => v.contents); // Merge in nonvalidated atoms; we may not have defs for them but they will
-  // all have persistence on or they wouldn't be there in the first place.
-
-  return Recoil_mergeMaps(state.nonvalidatedAtoms.toMap(), persistedAtomContentsValues);
-}
-
-/**
-  Calls the given callback after any atoms have been modified and the consequent
-  component re-renders have been committed. This is intended for persisting
-  the values of the atoms to storage. The stored values can then be restored
-  using the useSetUnvalidatedAtomValues hook.
-
-  The callback receives the following info:
-
-  atomValues: The current value of every atom that is both persistable (persistence
-              type not set to 'none') and whose value is available (not in an
-              error or loading state).
-
-  previousAtomValues: The value of every persistable and available atom before
-               the transaction began.
-
-  atomInfo: A map containing the persistence settings for each atom. Every key
-            that exists in atomValues will also exist in atomInfo.
-
-  modifiedAtoms: The set of atoms that were written to during the transaction.
-
-  transactionMetadata: Arbitrary information that was added via the
-          useSetUnvalidatedAtomValues hook. Useful for ignoring the useSetUnvalidatedAtomValues
-          transaction, to avoid loops.
-*/
-function useTransactionObservation_DEPRECATED(callback) {
-  useTransactionSubscription(useCallback$1(store => {
-    let previousTree = store.getState().previousTree;
-    const currentTree = store.getState().currentTree;
-
-    if (!previousTree) {
-      Recoil_recoverableViolation('Transaction subscribers notified without a previous tree being present -- this is a bug in Recoil');
-      previousTree = store.getState().currentTree; // attempt to trundle on
-    }
-
-    const atomValues = externallyVisibleAtomValuesInState(currentTree);
-    const previousAtomValues = externallyVisibleAtomValuesInState(previousTree);
-    const atomInfo = Recoil_mapMap(nodes$1, node => {
-      var _node$persistence_UNS, _node$persistence_UNS2, _node$persistence_UNS3, _node$persistence_UNS4;
-
-      return {
-        persistence_UNSTABLE: {
-          type: (_node$persistence_UNS = (_node$persistence_UNS2 = node.persistence_UNSTABLE) === null || _node$persistence_UNS2 === void 0 ? void 0 : _node$persistence_UNS2.type) !== null && _node$persistence_UNS !== void 0 ? _node$persistence_UNS : 'none',
-          backButton: (_node$persistence_UNS3 = (_node$persistence_UNS4 = node.persistence_UNSTABLE) === null || _node$persistence_UNS4 === void 0 ? void 0 : _node$persistence_UNS4.backButton) !== null && _node$persistence_UNS3 !== void 0 ? _node$persistence_UNS3 : false
-        }
-      };
-    }); // Filter on existance in atomValues so that externally-visible rules
-    // are also applied to modified atoms (specifically exclude selectors):
-
-    const modifiedAtoms = Recoil_filterSet(currentTree.dirtyAtoms, k => atomValues.has(k) || previousAtomValues.has(k));
-    callback({
-      atomValues,
-      previousAtomValues,
-      atomInfo,
-      modifiedAtoms,
-      transactionMetadata: { ...currentTree.transactionMetadata
-      }
-    });
-  }, [callback]));
-}
-
-function useRecoilTransactionObserver(callback) {
-  useTransactionSubscription(useCallback$1(store => {
-    const snapshot = cloneSnapshot$1(store, 'current');
-    const previousSnapshot = cloneSnapshot$1(store, 'previous');
-    callback({
-      snapshot,
-      previousSnapshot
-    });
-  }, [callback]));
-}
-
-function usePrevious(value) {
-  const ref = useRef$2();
-  useEffect$1(() => {
-    ref.current = value;
-  });
-  return ref.current;
-} // Return a snapshot of the current state and subscribe to all state changes
-
-
-function useRecoilSnapshot() {
-  const storeRef = useStoreRef$1();
-  const [snapshot, setSnapshot] = useState$1(() => cloneSnapshot$1(storeRef.current));
-  const previousSnapshot = usePrevious(snapshot);
-  const timeoutID = useRef$2();
-  useEffect$1(() => {
-    if (timeoutID.current && !isSSR$2) {
-      window.clearTimeout(timeoutID.current);
-    }
-
-    return snapshot.retain();
-  }, [snapshot]);
-  useTransactionSubscription(useCallback$1(store => setSnapshot(cloneSnapshot$1(store)), []));
-
-  if (previousSnapshot !== snapshot && !isSSR$2) {
-    if (timeoutID.current) {
-      previousSnapshot === null || previousSnapshot === void 0 ? void 0 : previousSnapshot.release_INTERNAL();
-      window.clearTimeout(timeoutID.current);
-    }
-
-    snapshot.retain();
-    timeoutID.current = window.setTimeout(() => {
-      snapshot.release_INTERNAL();
-      timeoutID.current = null;
-    }, SUSPENSE_TIMEOUT_MS);
-  }
-
-  return snapshot;
-}
-
-function useGotoRecoilSnapshot() {
-  const storeRef = useStoreRef$1();
-  return useCallback$1(snapshot => {
-    var _storeState$nextTree3;
-
-    const storeState = storeRef.current.getState();
-    const prev = (_storeState$nextTree3 = storeState.nextTree) !== null && _storeState$nextTree3 !== void 0 ? _storeState$nextTree3 : storeState.currentTree;
-    const next = snapshot.getStore_INTERNAL().getState().currentTree;
-    batchUpdates$2(() => {
-      const keysToUpdate = new Set();
-
-      for (const keys of [prev.atomValues.keys(), next.atomValues.keys()]) {
-        for (const key of keys) {
-          var _prev$atomValues$get, _next$atomValues$get;
-
-          if (((_prev$atomValues$get = prev.atomValues.get(key)) === null || _prev$atomValues$get === void 0 ? void 0 : _prev$atomValues$get.contents) !== ((_next$atomValues$get = next.atomValues.get(key)) === null || _next$atomValues$get === void 0 ? void 0 : _next$atomValues$get.contents) && getNode$4(key).shouldRestoreFromSnapshots) {
-            keysToUpdate.add(key);
-          }
-        }
-      }
-
-      keysToUpdate.forEach(key => {
-        setRecoilValueLoadable$1(storeRef.current, new AbstractRecoilValue$3(key), next.atomValues.has(key) ? Recoil_nullthrows(next.atomValues.get(key)) : DEFAULT_VALUE$3);
-      });
-      storeRef.current.replaceState(state => {
-        return { ...state,
-          stateID: snapshot.getID_INTERNAL()
-        };
-      });
-    });
-  }, [storeRef]);
-}
-
-function useSetUnvalidatedAtomValues() {
-  const storeRef = useStoreRef$1();
-  return (values, transactionMetadata = {}) => {
-    batchUpdates$2(() => {
-      storeRef.current.addTransactionMetadata(transactionMetadata);
-      values.forEach((value, key) => setUnvalidatedRecoilValue$2(storeRef.current, new AbstractRecoilValue$3(key), value));
-    });
-  };
-}
-
-class Sentinel {}
-
-const SENTINEL = new Sentinel();
-
-function useRecoilCallback(fn, deps) {
-  const storeRef = useStoreRef$1();
-  const gotoSnapshot = useGotoRecoilSnapshot();
-  return useCallback$1((...args) => {
-    function set(recoilState, newValueOrUpdater) {
-      setRecoilValue$2(storeRef.current, recoilState, newValueOrUpdater);
-    }
-
-    function reset(recoilState) {
-      setRecoilValue$2(storeRef.current, recoilState, DEFAULT_VALUE$3);
-    } // Use currentTree for the snapshot to show the currently committed state
-
-
-    const snapshot = cloneSnapshot$1(storeRef.current); // FIXME massive gains from doing this lazily
-
-    const atomicUpdate = atomicUpdater$1(storeRef.current);
-    let ret = SENTINEL;
-    batchUpdates$2(() => {
-      const errMsg = 'useRecoilCallback expects a function that returns a function: ' + 'it accepts a function of the type (RecoilInterface) => T = R ' + 'and returns a callback function T => R, where RecoilInterface is an ' + 'object {snapshot, set, ...} and T and R are the argument and return ' + 'types of the callback you want to create.  Please see the docs ' + 'at recoiljs.org for details.';
-
-      if (typeof fn !== 'function') {
-        throw new Error(errMsg);
-      } // flowlint-next-line unclear-type:off
-
-
-      const cb = fn({
-        set,
-        reset,
-        snapshot,
-        gotoSnapshot,
-        transact_UNSTABLE: atomicUpdate
-      });
-
-      if (typeof cb !== 'function') {
-        throw new Error(errMsg);
-      }
-
-      ret = cb(...args);
-    });
-    !!(ret instanceof Sentinel) ?  true ? Recoil_invariant(false, 'batchUpdates should return immediately') : 0 : void 0;
-    return ret;
-  }, deps != null ? [...deps, storeRef] : undefined // eslint-disable-line fb-www/react-hooks-deps
-  );
-} // I don't see a way to avoid the any type here because we want to accept readable
-// and writable values with any type parameter, but normally with writable ones
-// RecoilState<SomeT> is not a subtype of RecoilState<mixed>.
-
-
-// flowlint-line unclear-type:off
-function useRetain(toRetain) {
-  if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-    return;
-  } // eslint-disable-next-line fb-www/react-hooks
-
-
-  return useRetain_ACTUAL(toRetain);
-}
-
-function useRetain_ACTUAL(toRetain) {
-  const array = Array.isArray(toRetain) ? toRetain : [toRetain];
-  const retainables = array.map(a => a instanceof RetentionZone$3 ? a : a.key);
-  const storeRef = useStoreRef$1();
-  useEffect$1(() => {
-    if (!Recoil_gkx_1('recoil_memory_managament_2020')) {
-      return;
-    }
-
-    const store = storeRef.current;
-
-    if (timeoutID.current && !isSSR$2) {
-      // Already performed a temporary retain on render, simply cancel the release
-      // of that temporary retain.
-      window.clearTimeout(timeoutID.current);
-      timeoutID.current = null;
-    } else {
-      for (const r of retainables) {
-        updateRetainCount$2(store, r, 1);
-      }
-    }
-
-    return () => {
-      for (const r of retainables) {
-        updateRetainCount$2(store, r, -1);
-      }
-    }; // eslint-disable-next-line fb-www/react-hooks-deps
-  }, [storeRef, ...retainables]); // We want to retain if the component suspends. This is terrible but the Suspense
-  // API affords us no better option. If we suspend and never commit after some
-  // seconds, then release. The 'actual' retain/release in the effect above
-  // cancels this.
-
-  const timeoutID = useRef$2();
-  const previousRetainables = usePrevious(retainables);
-
-  if (!isSSR$2 && (previousRetainables === undefined || !Recoil_shallowArrayEqual(previousRetainables, retainables))) {
-    const store = storeRef.current;
-
-    for (const r of retainables) {
-      updateRetainCount$2(store, r, 1);
-    }
-
-    if (previousRetainables) {
-      for (const r of previousRetainables) {
-        updateRetainCount$2(store, r, -1);
-      }
-    }
-
-    if (timeoutID.current) {
-      window.clearTimeout(timeoutID.current);
-    }
-
-    timeoutID.current = window.setTimeout(() => {
-      timeoutID.current = null;
-
-      for (const r of retainables) {
-        updateRetainCount$2(store, r, -1);
-      }
-    }, SUSPENSE_TIMEOUT_MS);
-  }
-}
-
-function useRecoilTransaction(fn, deps) {
-  const storeRef = useStoreRef$1();
-  return useMemo$1(() => (...args) => {
-    const atomicUpdate = atomicUpdater$1(storeRef.current);
-    atomicUpdate(transactionInterface => {
-      fn(transactionInterface)(...args);
-    });
-  }, deps != null ? [...deps, storeRef] : undefined // eslint-disable-line fb-www/react-hooks-deps
-  );
-}
-
-var Recoil_Hooks = {
-  recoilComponentGetRecoilValueCount_FOR_TESTING,
-  useGotoRecoilSnapshot,
-  useRecoilCallback,
-  useRecoilInterface: useRecoilInterface_DEPRECATED,
-  useRecoilSnapshot,
-  useRecoilState,
-  useRecoilStateLoadable,
-  useRecoilTransaction,
-  useRecoilTransactionObserver,
-  useRecoilValue,
-  useRecoilValueLoadable,
-  useRetain,
-  useResetRecoilState,
-  useSetRecoilState,
-  useSetUnvalidatedAtomValues,
-  useTransactionObservation_DEPRECATED,
-  useTransactionSubscription_DEPRECATED: useTransactionSubscription
-};
-
-const {
-  peekNodeInfo: peekNodeInfo$2
-} = Recoil_FunctionalCore;
-
-const {
-  useStoreRef: useStoreRef$2
-} = Recoil_RecoilRoot_react;
-
-function useGetRecoilValueInfo() {
-  const storeRef = useStoreRef$2();
-  return ({
-    key
-  }) => peekNodeInfo$2(storeRef.current, storeRef.current.getState().currentTree, key);
-}
-
-var Recoil_useGetRecoilValueInfo = useGetRecoilValueInfo;
-
-const {
-  RecoilRoot: RecoilRoot$1,
-  useStoreRef: useStoreRef$3
-} = Recoil_RecoilRoot_react;
-
-
-
-const {
-  useMemo: useMemo$2
-} = react__WEBPACK_IMPORTED_MODULE_0__;
-
-function useRecoilBridgeAcrossReactRoots() {
-  const store = useStoreRef$3().current;
-  return useMemo$2(() => {
-    function RecoilBridge({
-      children
-    }) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RecoilRoot$1, {
-        store_INTERNAL: store
-      }, children);
-    }
-
-    return RecoilBridge;
-  }, [store]);
-}
-
-var Recoil_useRecoilBridgeAcrossReactRoots = useRecoilBridgeAcrossReactRoots;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-function isNode(object) {
-  var _ownerDocument, _doc$defaultView;
-
-  if (typeof window === 'undefined') {
-    return false;
-  }
-
-  const doc = object != null ? (_ownerDocument = object.ownerDocument) !== null && _ownerDocument !== void 0 ? _ownerDocument : object : document;
-  const defaultView = (_doc$defaultView = doc.defaultView) !== null && _doc$defaultView !== void 0 ? _doc$defaultView : window;
-  return !!(object != null && (typeof defaultView.Node === 'function' ? object instanceof defaultView.Node : typeof object === 'object' && typeof object.nodeType === 'number' && typeof object.nodeName === 'string'));
-}
-
-var Recoil_isNode = isNode;
-
-const {
-  isReactNative: isReactNative$1,
-  isSSR: isSSR$3
-} = Recoil_Environment;
-
-
-
-
-
-function shouldNotBeFrozen(value) {
-  // Primitives and functions:
-  if (value === null || typeof value !== 'object') {
-    return true;
-  } // React elements:
-
-
-  switch (typeof value.$$typeof) {
-    case 'symbol':
-      return true;
-
-    case 'number':
-      return true;
-  } // Immutable structures:
-
-
-  if (value['@@__IMMUTABLE_ITERABLE__@@'] != null || value['@@__IMMUTABLE_KEYED__@@'] != null || value['@@__IMMUTABLE_INDEXED__@@'] != null || value['@@__IMMUTABLE_ORDERED__@@'] != null || value['@@__IMMUTABLE_RECORD__@@'] != null) {
-    return true;
-  } // DOM nodes:
-
-
-  if (Recoil_isNode(value)) {
-    return true;
-  }
-
-  if (Recoil_isPromise(value)) {
-    return true;
-  }
-
-  if (value instanceof Error) {
-    return true;
-  }
-
-  if (ArrayBuffer.isView(value)) {
-    return true;
-  } // Some environments, just as Jest, don't work with the instanceof check
-
-
-  if (!isSSR$3 && !isReactNative$1 && ( // $FlowFixMe(site=recoil) Window does not have a FlowType definition https://github.com/facebook/flow/issues/6709
-  value === window || value instanceof Window)) {
-    return true;
-  }
-
-  return false;
-} // Recursively freeze a value to enforce it is read-only.
-// This may also have minimal performance improvements for enumerating
-// objects (based on browser implementations, of course)
-
-
-function deepFreezeValue(value) {
-  if (typeof value !== 'object' || shouldNotBeFrozen(value)) {
-    return;
-  }
-
-  Object.freeze(value); // Make all properties read-only
-
-  for (const key in value) {
-    // $FlowFixMe[method-unbinding] added when improving typing for this parameters
-    if (Object.prototype.hasOwnProperty.call(value, key)) {
-      const prop = value[key]; // Prevent infinite recurssion for circular references.
-
-      if (typeof prop === 'object' && prop != null && !Object.isFrozen(prop)) {
-        deepFreezeValue(prop);
-      }
-    }
-  }
-
-  Object.seal(value); // This also makes existing properties non-configurable.
-}
-
-var Recoil_deepFreezeValue = deepFreezeValue;
-
-const TIME_WARNING_THRESHOLD_MS = 15;
-
-function stringify(x, opt, key) {
-  // A optimization to avoid the more expensive JSON.stringify() for simple strings
-  // This may lose protection for u2028 and u2029, though.
-  if (typeof x === 'string' && !x.includes('"') && !x.includes('\\')) {
-    return `"${x}"`;
-  } // Handle primitive types
-
-
-  switch (typeof x) {
-    case 'undefined':
-      return '';
-    // JSON.stringify(undefined) returns undefined, but we always want to return a string
-
-    case 'boolean':
-      return x ? 'true' : 'false';
-
-    case 'number':
-    case 'symbol':
-      // case 'bigint': // BigInt is not supported in www
-      return String(x);
-
-    case 'string':
-      // Add surrounding quotes and escape internal quotes
-      return JSON.stringify(x);
-
-    case 'function':
-      if ((opt === null || opt === void 0 ? void 0 : opt.allowFunctions) !== true) {
-        throw new Error('Attempt to serialize function in a Recoil cache key');
-      }
-
-      return `__FUNCTION(${x.name})__`;
-  }
-
-  if (x === null) {
-    return 'null';
-  } // Fallback case for unknown types
-
-
-  if (typeof x !== 'object') {
-    var _JSON$stringify;
-
-    return (_JSON$stringify = JSON.stringify(x)) !== null && _JSON$stringify !== void 0 ? _JSON$stringify : '';
-  } // Deal with all promises as equivalent for now.
-
-
-  if (Recoil_isPromise(x)) {
-    return '__PROMISE__';
-  } // Arrays handle recursive stringification
-
-
-  if (Array.isArray(x)) {
-    return `[${x.map((v, i) => stringify(v, opt, i.toString()))}]`;
-  } // If an object defines a toJSON() method, then use that to override the
-  // serialization.  This matches the behavior of JSON.stringify().
-  // Pass the key for compatibility.
-  // Immutable.js collections define this method to allow us to serialize them.
-
-
-  if (typeof x.toJSON === 'function') {
-    // flowlint-next-line unclear-type: off
-    return stringify(x.toJSON(key), opt, key);
-  } // For built-in Maps, sort the keys in a stable order instead of the
-  // default insertion order.  Support non-string keys.
-
-
-  if (x instanceof Map) {
-    const obj = {};
-
-    for (const [k, v] of x) {
-      // Stringify will escape any nested quotes
-      obj[typeof k === 'string' ? k : stringify(k, opt)] = v;
-    }
-
-    return stringify(obj, opt, key);
-  } // For built-in Sets, sort the keys in a stable order instead of the
-  // default insertion order.
-
-
-  if (x instanceof Set) {
-    return stringify(Array.from(x).sort((a, b) => stringify(a, opt).localeCompare(stringify(b, opt))), opt, key);
-  } // Anything else that is iterable serialize as an Array.
-
-
-  if (Symbol !== undefined && x[Symbol.iterator] != null && typeof x[Symbol.iterator] === 'function') {
-    // flowlint-next-line unclear-type: off
-    return stringify(Array.from(x), opt, key);
-  } // For all other Objects, sort the keys in a stable order.
-
-
-  return `{${Object.keys(x).filter(key => x[key] !== undefined).sort() // stringify the key to add quotes and escape any nested slashes or quotes.
-  .map(key => `${stringify(key, opt)}:${stringify(x[key], opt, key)}`).join(',')}}`;
-} // Utility similar to JSON.stringify() except:
-// * Serialize built-in Sets as an Array
-// * Serialize built-in Maps as an Object.  Supports non-string keys.
-// * Serialize other iterables as arrays
-// * Sort the keys of Objects and Maps to have a stable order based on string conversion.
-//    This overrides their default insertion order.
-// * Still uses toJSON() of any object to override serialization
-// * Support Symbols (though don't guarantee uniqueness)
-// * We could support BigInt, but Flow doesn't seem to like it.
-// See Recoil_stableStringify-test.js for examples
-
-
-function stableStringify(x, opt = {
-  allowFunctions: false
-}) {
-  if (true) {
-    if (typeof window !== 'undefined') {
-      const startTime = window.performance ? window.performance.now() : 0;
-      const str = stringify(x, opt);
-      const endTime = window.performance ? window.performance.now() : 0;
-
-      if (endTime - startTime > TIME_WARNING_THRESHOLD_MS) {
-        /* eslint-disable fb-www/no-console */
-        console.groupCollapsed(`Recoil: Spent ${endTime - startTime}ms computing a cache key`);
-        console.warn(x, str);
-        console.groupEnd();
-        /* eslint-enable fb-www/no-console */
-      }
-
-      return str;
-    }
-  }
-
-  return stringify(x, opt);
-}
-
-var Recoil_stableStringify = stableStringify;
-
-class TreeCache {
-  constructor(options) {
-    var _options$onHit, _options$onSet, _options$mapNodeValue;
-
-    _defineProperty(this, "_numLeafs", void 0);
-
-    _defineProperty(this, "_root", void 0);
-
-    _defineProperty(this, "_onHit", void 0);
-
-    _defineProperty(this, "_onSet", void 0);
-
-    _defineProperty(this, "_mapNodeValue", void 0);
-
-    this._numLeafs = 0;
-    this._root = null;
-    this._onHit = (_options$onHit = options === null || options === void 0 ? void 0 : options.onHit) !== null && _options$onHit !== void 0 ? _options$onHit : () => {};
-    this._onSet = (_options$onSet = options === null || options === void 0 ? void 0 : options.onSet) !== null && _options$onSet !== void 0 ? _options$onSet : () => {};
-    this._mapNodeValue = (_options$mapNodeValue = options === null || options === void 0 ? void 0 : options.mapNodeValue) !== null && _options$mapNodeValue !== void 0 ? _options$mapNodeValue : val => val;
-  }
-
-  size() {
-    return this._numLeafs;
-  } // TODO: nodeCount(): number
-
-
-  root() {
-    return this._root;
-  }
-
-  get(getNodeValue, handlers) {
-    var _this$getLeafNode;
-
-    return (_this$getLeafNode = this.getLeafNode(getNodeValue, handlers)) === null || _this$getLeafNode === void 0 ? void 0 : _this$getLeafNode.value;
-  }
-
-  getLeafNode(getNodeValue, handlers) {
-    return findLeaf(this.root(), nodeKey => this._mapNodeValue(getNodeValue(nodeKey)), {
-      onNodeVisit: node => {
-        handlers === null || handlers === void 0 ? void 0 : handlers.onNodeVisit(node);
-
-        if (node.type === 'leaf') {
-          this._onHit(node);
-        }
-      }
-    });
-  }
-
-  set(route, value, handlers) {
-    let leafNode;
-    const newRoot = addLeaf(this.root(), route.map(([nodeKey, nodeValue]) => [nodeKey, this._mapNodeValue(nodeValue)]), null, value, null, {
-      onNodeVisit: node => {
-        handlers === null || handlers === void 0 ? void 0 : handlers.onNodeVisit(node);
-
-        if (node.type === 'leaf') {
-          leafNode = node;
-        }
-      }
-    });
-
-    if (!this.root()) {
-      this._root = newRoot;
-    }
-
-    this._numLeafs++;
-
-    this._onSet(Recoil_nullthrows(leafNode));
-  }
-
-  delete(node) {
-    if (!this.root()) {
-      return false;
-    }
-
-    const root = Recoil_nullthrows(this.root());
-    const existsInTree = pruneNodeFromTree(root, node, node.parent);
-
-    if (!existsInTree) {
-      return false;
-    }
-
-    if (node === root || root.type === 'branch' && !root.branches.size) {
-      this._root = null;
-      this._numLeafs = 0;
-      return true;
-    }
-
-    this._numLeafs -= countDownstreamLeaves(node);
-    return true;
-  }
-
-  clear() {
-    this._numLeafs = 0;
-    this._root = null;
-  }
-
-}
-
-const findLeaf = (root, getNodeValue, handlers) => {
-  var _handlers$onNodeVisit;
-
-  if (root == null) {
-    return undefined;
-  }
-
-  handlers === null || handlers === void 0 ? void 0 : (_handlers$onNodeVisit = handlers.onNodeVisit) === null || _handlers$onNodeVisit === void 0 ? void 0 : _handlers$onNodeVisit.call(handlers, root);
-
-  if (root.type === 'leaf') {
-    return root;
-  }
-
-  const nodeValue = getNodeValue(root.nodeKey);
-  return findLeaf(root.branches.get(nodeValue), getNodeValue, handlers);
-};
-
-const addLeaf = (root, route, parent, value, branchKey, handlers) => {
-  var _handlers$onNodeVisit2;
-
-  let node;
-
-  if (root == null) {
-    if (route.length === 0) {
-      node = {
-        type: 'leaf',
-        value,
-        parent,
-        branchKey
-      };
-    } else {
-      const [path, ...rest] = route;
-      const [nodeKey, nodeValue] = path;
-      node = {
-        type: 'branch',
-        nodeKey,
-        parent,
-        branches: new Map(),
-        branchKey
-      };
-      node.branches.set(nodeValue, addLeaf(null, rest, node, value, nodeValue, handlers));
-    }
-  } else {
-    node = root;
-
-    if (route.length) {
-      const [path, ...rest] = route;
-      const [nodeKey, nodeValue] = path;
-      !(root.type === 'branch' && root.nodeKey === nodeKey) ?  true ? Recoil_invariant(false, 'Existing cache must have a branch midway through the route with matching node key') : 0 : void 0;
-      root.branches.set(nodeValue, addLeaf(root.branches.get(nodeValue), rest, root, value, nodeValue, handlers));
-    }
-  }
-
-  handlers === null || handlers === void 0 ? void 0 : (_handlers$onNodeVisit2 = handlers.onNodeVisit) === null || _handlers$onNodeVisit2 === void 0 ? void 0 : _handlers$onNodeVisit2.call(handlers, node);
-  return node;
-};
-
-const pruneNodeFromTree = (root, node, parent) => {
-  if (!parent) {
-    return root === node;
-  }
-
-  parent.branches.delete(node.branchKey);
-  return pruneUpstreamBranches(root, parent, parent.parent);
-};
-
-const pruneUpstreamBranches = (root, branchNode, parent) => {
-  if (!parent) {
-    return root === branchNode;
-  }
-
-  if (branchNode.branches.size === 0) {
-    parent.branches.delete(branchNode.branchKey);
-  }
-
-  return pruneUpstreamBranches(root, parent, parent.parent);
-};
-
-const countDownstreamLeaves = node => node.type === 'leaf' ? 1 : Array.from(node.branches.values()).reduce((sum, currNode) => sum + countDownstreamLeaves(currNode), 0);
-
-var Recoil_TreeCache = {
-  TreeCache
-};
-
-var Recoil_TreeCache_1 = Recoil_TreeCache.TreeCache;
-
-var Recoil_TreeCache$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  TreeCache: Recoil_TreeCache_1
-});
-
-class LRUCache {
-  constructor(options) {
-    var _options$mapKey;
-
-    _defineProperty(this, "_maxSize", void 0);
-
-    _defineProperty(this, "_size", void 0);
-
-    _defineProperty(this, "_head", void 0);
-
-    _defineProperty(this, "_tail", void 0);
-
-    _defineProperty(this, "_map", void 0);
-
-    _defineProperty(this, "_keyMapper", void 0);
-
-    this._maxSize = options.maxSize;
-    this._size = 0;
-    this._head = null;
-    this._tail = null;
-    this._map = new Map();
-    this._keyMapper = (_options$mapKey = options.mapKey) !== null && _options$mapKey !== void 0 ? _options$mapKey : v => v;
-  }
-
-  head() {
-    return this._head;
-  }
-
-  tail() {
-    return this._tail;
-  }
-
-  size() {
-    return this._size;
-  }
-
-  maxSize() {
-    return this._maxSize;
-  }
-
-  has(key) {
-    return this._map.has(this._keyMapper(key));
-  }
-
-  get(key) {
-    const mappedKey = this._keyMapper(key);
-
-    const node = this._map.get(mappedKey);
-
-    if (!node) {
-      return undefined;
-    }
-
-    this.set(key, node.value);
-    return node.value;
-  }
-
-  set(key, val) {
-    const mappedKey = this._keyMapper(key);
-
-    const existingNode = this._map.get(mappedKey);
-
-    if (existingNode) {
-      this.delete(key);
-    }
-
-    const head = this.head();
-    const node = {
-      key,
-      right: head,
-      left: null,
-      value: val
-    };
-
-    if (head) {
-      head.left = node;
-    } else {
-      this._tail = node;
-    }
-
-    this._map.set(mappedKey, node);
-
-    this._head = node;
-    this._size++;
-
-    this._maybeDeleteLRU();
-  }
-
-  _maybeDeleteLRU() {
-    if (this.size() > this.maxSize()) {
-      this.deleteLru();
-    }
-  }
-
-  deleteLru() {
-    const tail = this.tail();
-
-    if (tail) {
-      this.delete(tail.key);
-    }
-  }
-
-  delete(key) {
-    const mappedKey = this._keyMapper(key);
-
-    if (!this._size || !this._map.has(mappedKey)) {
-      return;
-    }
-
-    const node = Recoil_nullthrows(this._map.get(mappedKey));
-    const right = node.right;
-    const left = node.left;
-
-    if (right) {
-      right.left = node.left;
-    }
-
-    if (left) {
-      left.right = node.right;
-    }
-
-    if (node === this.head()) {
-      this._head = right;
-    }
-
-    if (node === this.tail()) {
-      this._tail = left;
-    }
-
-    this._map.delete(mappedKey);
-
-    this._size--;
-  }
-
-  clear() {
-    this._size = 0;
-    this._head = null;
-    this._tail = null;
-    this._map = new Map();
-  }
-
-}
-
-var Recoil_LRUCache = {
-  LRUCache
-};
-
-var Recoil_LRUCache_1 = Recoil_LRUCache.LRUCache;
-
-var Recoil_LRUCache$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  LRUCache: Recoil_LRUCache_1
-});
-
-const {
-  LRUCache: LRUCache$1
-} = Recoil_LRUCache$1;
-
-const {
-  TreeCache: TreeCache$1
-} = Recoil_TreeCache$1;
-
-function treeCacheLRU(maxSize, mapNodeValue = v => v) {
-  const lruCache = new LRUCache$1({
-    maxSize
-  });
-  const cache = new TreeCache$1({
-    mapNodeValue,
-    onHit: node => {
-      lruCache.set(node, true);
-    },
-    onSet: node => {
-      const lruNode = lruCache.tail();
-      lruCache.set(node, true);
-
-      if (lruNode && cache.size() > maxSize) {
-        cache.delete(lruNode.key);
-      }
-    }
-  }); // $FlowFixMe[method-unbinding]
-
-  return cache;
-}
-
-var Recoil_treeCacheLRU = treeCacheLRU;
-
-const {
-  TreeCache: TreeCache$2
-} = Recoil_TreeCache$1;
-
-
-
-const defaultPolicy = {
-  equality: 'reference',
-  eviction: 'keep-all',
-  maxSize: Infinity
-};
-
-function treeCacheFromPolicy({
-  equality = defaultPolicy.equality,
-  eviction = defaultPolicy.eviction,
-  maxSize = defaultPolicy.maxSize
-} = defaultPolicy) {
-  const valueMapper = getValueMapper(equality);
-  const treeCache = getTreeCache(eviction, maxSize, valueMapper);
-  return treeCache;
-}
-
-function getValueMapper(equality) {
-  switch (equality) {
-    case 'reference':
-      return val => val;
-
-    case 'value':
-      return val => Recoil_stableStringify(val);
-  }
-
-  throw new Error(`Unrecognized equality policy ${equality}`);
-}
-
-function getTreeCache(eviction, maxSize, mapNodeValue) {
-  switch (eviction) {
-    case 'keep-all':
-      // $FlowFixMe[method-unbinding]
-      return new TreeCache$2({
-        mapNodeValue
-      });
-
-    case 'lru':
-      return Recoil_treeCacheLRU(Recoil_nullthrows(maxSize), mapNodeValue);
-
-    case 'most-recent':
-      return Recoil_treeCacheLRU(1, mapNodeValue);
-  }
-
-  throw new Error(`Unrecognized eviction policy ${eviction}`);
-}
-
-var Recoil_treeCacheFromPolicy = treeCacheFromPolicy;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @emails oncall+recoil
- * 
- * @format
- *
- * This is a stub for some integration into FB internal stuff
- */
-function startPerfBlock(_id) {
-  return () => null;
-}
-
-var Recoil_PerformanceTimings = {
-  startPerfBlock
-};
-
-const {
-  CANCELED: CANCELED$2,
-  Canceled: Canceled$1,
-  loadableWithError: loadableWithError$1,
-  loadableWithPromise: loadableWithPromise$1,
-  loadableWithValue: loadableWithValue$2
-} = Recoil_Loadable;
-
-
-
-const {
-  getNodeLoadable: getNodeLoadable$2,
-  peekNodeLoadable: peekNodeLoadable$1,
-  setNodeValue: setNodeValue$3
-} = Recoil_FunctionalCore;
-
-const {
-  saveDependencyMapToStore: saveDependencyMapToStore$1
-} = Recoil_Graph;
-
-const {
-  DEFAULT_VALUE: DEFAULT_VALUE$4,
-  RecoilValueNotReady: RecoilValueNotReady$2,
-  getConfigDeletionHandler: getConfigDeletionHandler$1,
-  registerNode: registerNode$1
-} = Recoil_Node;
-
-const {
-  isRecoilValue: isRecoilValue$3
-} = Recoil_RecoilValue$1;
-
-const {
-  AbstractRecoilValue: AbstractRecoilValue$4
-} = Recoil_RecoilValue$1;
-
-const {
-  setRecoilValueLoadable: setRecoilValueLoadable$2
-} = Recoil_RecoilValueInterface;
-
-const {
-  retainedByOptionWithDefault: retainedByOptionWithDefault$1
-} = Recoil_Retention;
-
-const {
-  cloneSnapshot: cloneSnapshot$2
-} = Recoil_Snapshot$1;
-
-
-
-
-
-
-
-
-
-
-
-const {
-  startPerfBlock: startPerfBlock$1
-} = Recoil_PerformanceTimings;
-
-
-
-const dependencyStack = []; // for detecting circular dependencies.
-
-const waitingStores = new Map();
-/* eslint-disable no-redeclare */
-
-const getNewExecutionId = (() => {
-  let executionId = 0;
-  return () => executionId++;
-})();
-
-function getInitialExecutionInfo() {
-  return {
-    depValuesDiscoveredSoFarDuringAsyncWork: null,
-    latestLoadable: null,
-    latestExecutionId: null,
-    stateVersion: null
-  };
-}
-
-function selector(options) {
-  const {
-    key,
-    get,
-    cachePolicy_UNSTABLE: cachePolicy
-  } = options;
-  const set = options.set != null ? options.set : undefined; // flow
-
-  const cache = Recoil_treeCacheFromPolicy(cachePolicy !== null && cachePolicy !== void 0 ? cachePolicy : {
-    equality: 'reference',
-    eviction: 'keep-all'
-  });
-  const retainedBy = retainedByOptionWithDefault$1(options.retainedBy_UNSTABLE);
-  const executionInfoMap = new Map();
-  let liveStoresCount = 0;
-
-  function selectorIsLive() {
-    return !Recoil_gkx_1('recoil_memory_managament_2020') || liveStoresCount > 0;
-  }
-
-  function getExecutionInfo(store) {
-    if (!executionInfoMap.has(store)) {
-      executionInfoMap.set(store, getInitialExecutionInfo());
-    }
-
-    return Recoil_nullthrows(executionInfoMap.get(store));
-  }
-
-  function selectorInit(store) {
-    liveStoresCount++;
-    store.getState().knownSelectors.add(key); // FIXME remove knownSelectors?
-
-    return () => {
-      liveStoresCount--;
-      store.getState().knownSelectors.delete(key);
-      executionInfoMap.delete(store);
-    };
-  }
-
-  function selectorShouldDeleteConfigOnRelease() {
-    return getConfigDeletionHandler$1(key) !== undefined && !selectorIsLive();
-  }
-
-  function notifyStoreWhenAsyncSettles(store, loadable, executionId) {
-    if (loadable.state === 'loading') {
-      let stores = waitingStores.get(executionId);
-
-      if (stores == null) {
-        waitingStores.set(executionId, stores = new Set());
-      }
-
-      stores.add(store);
-    }
-  }
-
-  function notifyStoresOfSettledAsync(newLoadable, executionId) {
-    const stores = waitingStores.get(executionId);
-
-    if (stores !== undefined) {
-      for (const store of stores) {
-        setRecoilValueLoadable$2(store, new AbstractRecoilValue$4(key), newLoadable);
-      }
-
-      waitingStores.delete(executionId);
-    }
-  }
-
-  function getCachedNodeLoadable(store, state, key) {
-    const isKeyPointingToSelector = store.getState().knownSelectors.has(key);
-    /**
-     * It's important that we don't bypass calling getNodeLoadable for atoms
-     * as getNodeLoadable has side effects in state
-     */
-
-    if (isKeyPointingToSelector && state.atomValues.has(key)) {
-      return Recoil_nullthrows(state.atomValues.get(key));
-    }
-
-    const loadable = getNodeLoadable$2(store, state, key);
-
-    if (loadable.state !== 'loading' && isKeyPointingToSelector) {
-      state.atomValues.set(key, loadable);
-    }
-
-    return loadable;
-  }
-  /**
-   * This function attaches a then() and a catch() to a promise that was
-   * returned from a selector's get() (either explicitly or implicitly by
-   * running a function that uses the "async" keyword). If a selector's get()
-   * returns a promise, we have two possibilities:
-   *
-   * 1. The promise will resolve, in which case it will have completely finished
-   *    executing without any remaining pending dependencies. No more retries
-   *    are needed and we can proceed with updating the cache and notifying
-   *    subscribers (if it is the latest execution, otherwise only the cache
-   *    will be updated and subscriptions will not be fired). This is the case
-   *    handled by the attached then() handler.
-   *
-   * 2. The promise will throw because it either has an error or it came across
-   *    an async dependency that has not yet resolved, in which case we will
-   *    call wrapDepdencyPromise(), whose responsibility is to handle dependency
-   *    promises. This case is handled by the attached catch() handler.
-   *
-   * Both branches will eventually resolve to the final result of the selector
-   * (or an error if a real error occurred).
-   *
-   * The execution will run to completion even if it is stale, and its value
-   * will be cached. But stale executions will not update global state or update
-   * executionInfo as that is the responsibility of the 'latest' execution.
-   *
-   * Note this function should not be passed a promise that was thrown--AKA a
-   * dependency promise. Dependency promises should be passed to
-   * wrapPendingDependencyPromise()).
-   */
-
-
-  function wrapPendingPromise(store, promise, state, depValues, executionId) {
-    return promise.then(value => {
-      if (!selectorIsLive()) {
-        // The selector was released since the request began; ignore the response.
-        clearExecutionInfo(store, executionId);
-        return CANCELED$2;
-      }
-
-      const loadable = loadableWithValue$2(value);
-      maybeFreezeValue(value);
-      setCache(state, depValuesToDepRoute(depValues), loadable);
-      setDepsInStore(store, state, new Set(depValues.keys()), executionId);
-      setLoadableInStoreToNotifyDeps(store, loadable, executionId);
-      return {
-        __value: value,
-        __key: key
-      };
-    }).catch(errorOrPromise => {
-      if (!selectorIsLive()) {
-        // The selector was released since the request began; ignore the response.
-        clearExecutionInfo(store, executionId);
-        return CANCELED$2;
-      }
-
-      if (isLatestExecution(store, executionId)) {
-        updateExecutionInfoDepValues(depValues, store, executionId);
-      }
-
-      if (Recoil_isPromise(errorOrPromise)) {
-        return wrapPendingDependencyPromise(store, errorOrPromise, state, depValues, executionId);
-      }
-
-      const loadable = loadableWithError$1(errorOrPromise);
-      maybeFreezeValue(errorOrPromise);
-      setCache(state, depValuesToDepRoute(depValues), loadable);
-      setDepsInStore(store, state, new Set(depValues.keys()), executionId);
-      setLoadableInStoreToNotifyDeps(store, loadable, executionId);
-      throw errorOrPromise;
-    });
-  }
-  /**
-   * This function attaches a then() and a catch() to a promise that was
-   * thrown from a selector's get(). If a selector's get() throws a promise,
-   * we have two possibilities:
-   *
-   * 1. The promise will resolve, meaning one of our selector's dependencies is
-   *    now available and we should "retry" our get() by running it again. This
-   *    is the case handled by the attached then() handler.
-   *
-   * 2. The promise will throw because something went wrong with the dependency
-   *    promise (in other words a real error occurred). This case is handled by
-   *    the attached catch() handler. If the dependency promise throws, it is
-   *    _always_ a real error and not another dependency promise (any dependency
-   *    promises would have been handled upstream).
-   *
-   * The then() branch will eventually resolve to the final result of the
-   * selector (or an error if a real error occurs), and the catch() will always
-   * resolve to an error because the dependency promise is a promise that was
-   * wrapped upstream, meaning it will only resolve to its real value or to a
-   * real error.
-   *
-   * The execution will run to completion even if it is stale, and its value
-   * will be cached. But stale executions will not update global state or update
-   * executionInfo as that is the responsibility of the 'latest' execution.
-   *
-   * Note this function should not be passed a promise that was returned from
-   * get(). The intention is that this function is only passed promises that
-   * were thrown due to a pending dependency. Promises returned by get() should
-   * be passed to wrapPendingPromise() instead.
-   */
-
-
-  function wrapPendingDependencyPromise(store, promise, state, existingDeps, executionId) {
-    return promise.then(resolvedDep => {
-      if (!selectorIsLive()) {
-        // The selector was released since the request began; ignore the response.
-        clearExecutionInfo(store, executionId);
-        return CANCELED$2;
-      }
-
-      if (resolvedDep instanceof Canceled$1) {
-        Recoil_recoverableViolation('Selector was released while it had dependencies');
-        return CANCELED$2;
-      }
-
-      const {
-        __key: resolvedDepKey,
-        __value: depValue
-      } = resolvedDep !== null && resolvedDep !== void 0 ? resolvedDep : {};
-      /**
-       * We need to bypass the selector dep cache if the resolved dep was a
-       * user-thrown promise because the selector dep cache will contain the
-       * stale values of dependencies, causing an infinite evaluation loop.
-       */
-
-      let bypassSelectorDepCacheOnReevaluation = true;
-
-      if (resolvedDepKey != null) {
-        /**
-         * Note for async atoms, this means we are changing the atom's value
-         * in the store for the given version. This should be alright because
-         * the version of state is now stale and a new version will have
-         * already been triggered by the atom being resolved (see this logic
-         * in Recoil_atom.js)
-         */
-        state.atomValues.set(resolvedDepKey, loadableWithValue$2(depValue));
-        /**
-         * We've added the resolved dependency to the selector dep cache, so
-         * there's no need to bypass the cache
-         */
-
-        bypassSelectorDepCacheOnReevaluation = false;
-      }
-      /**
-       * Optimization: Now that the dependency has resolved, let's try hitting
-       * the cache in case the dep resolved to a value we have previously seen.
-       *
-       * TODO:
-       * Note this optimization is not perfect because it only prevents re-executions
-       * _after_ the point where an async dependency is found. Any code leading
-       * up to the async dependency may have run unnecessarily. The ideal case
-       * would be to wait for the async dependency to resolve first, check the
-       * cache, and prevent _any_ execution of the selector if the resulting
-       * value of the dependency leads to a path that is found in the cache.
-       * The ideal case is more difficult to implement as it would require that
-       * we capture and wait for the the async dependency right after checking
-       * the cache. The current approach takes advantage of the fact that running
-       * the selector already has a code path that lets use exit early when
-       * an async dep resolves.
-       */
-
-
-      const cachedLoadable = getValFromCacheAndUpdatedDownstreamDeps(store, state);
-
-      if (cachedLoadable && cachedLoadable.state === 'hasValue') {
-        setExecutionInfo(cachedLoadable, store);
-        return {
-          __value: cachedLoadable.contents,
-          __key: key
-        };
-      }
-      /**
-       * If this execution is stale, let's check to see if there is some in
-       * progress execution with a matching state. If we find a match, then
-       * we can take the value from that in-progress execution. Note this may
-       * sound like an edge case, but may be very common in cases where a
-       * loading dependency resolves from loading to having a value (thus
-       * possibly triggering a re-render), and React re-renders before the
-       * chained .then() functions run, thus starting a new execution as the
-       * dep has changed value. Without this check we will run the selector
-       * twice (once in the new execution and once again in this .then(), so
-       * this check is necessary to keep unnecessary re-executions to a
-       * minimum).
-       *
-       * Also note this code does not check across all executions that may be
-       * running. It only optimizes for the _latest_ execution per store as
-       * we currently do not maintain a list of all currently running executions.
-       * This means in some cases we may run selectors more than strictly
-       * necessary when there are multiple executions running for the same
-       * selector. This may be a valid tradeoff as checking for dep changes
-       * across all in-progress executions may take longer than just
-       * re-running the selector. This will be app-dependent, and maybe in the
-       * future we can make the behavior configurable. An ideal fix may be
-       * to extend the tree cache to support caching loading states.
-       */
-
-
-      if (!isLatestExecution(store, executionId)) {
-        var _executionInfo$latest;
-
-        const executionInfo = getExecutionInfoOfInProgressExecution(state);
-
-        if ((executionInfo === null || executionInfo === void 0 ? void 0 : (_executionInfo$latest = executionInfo.latestLoadable) === null || _executionInfo$latest === void 0 ? void 0 : _executionInfo$latest.state) === 'loading') {
-          /**
-           * Returning promise here without wrapping as the wrapper logic was
-           * already done upstream when this promise was generated.
-           */
-          return executionInfo.latestLoadable.contents;
-        }
-      }
-
-      const [loadable, depValues] = evaluateSelectorGetter(store, state, executionId, bypassSelectorDepCacheOnReevaluation);
-
-      if (isLatestExecution(store, executionId)) {
-        updateExecutionInfoDepValues(depValues, store, executionId);
-      }
-
-      maybeFreezeLoadableContents(loadable);
-
-      if (loadable.state !== 'loading') {
-        setCache(state, depValuesToDepRoute(depValues), loadable);
-        setDepsInStore(store, state, new Set(depValues.keys()), executionId);
-        setLoadableInStoreToNotifyDeps(store, loadable, executionId);
-      }
-
-      if (loadable.state === 'hasError') {
-        throw loadable.contents;
-      }
-
-      if (loadable.state === 'hasValue') {
-        return {
-          __value: loadable.contents,
-          __key: key
-        };
-      }
-      /**
-       * Returning promise here without wrapping as the wrapepr logic was
-       * already done when we called evaluateSelectorGetter() to get this
-       * loadable
-       */
-
-
-      return loadable.contents;
-    }).catch(error => {
-      if (!selectorIsLive()) {
-        // The selector was released since the request began; ignore the response.
-        clearExecutionInfo(store, executionId);
-        return CANCELED$2;
-      }
-
-      const loadable = loadableWithError$1(error);
-      maybeFreezeValue(error);
-      setCache(state, depValuesToDepRoute(existingDeps), loadableWithError$1(error));
-      setDepsInStore(store, state, new Set(existingDeps.keys()), executionId);
-      setLoadableInStoreToNotifyDeps(store, loadable, executionId);
-      throw error;
-    });
-  }
-
-  function setLoadableInStoreToNotifyDeps(store, loadable, executionId) {
-    if (isLatestExecution(store, executionId)) {
-      setExecutionInfo(loadable, store);
-      notifyStoresOfSettledAsync(loadable, executionId);
-    }
-  }
-
-  function setDepsInStore(store, state, deps, executionId) {
-    var _store$getState, _store$getState$curre, _store$getState2, _store$getState2$next;
-
-    if (isLatestExecution(store, executionId) || state.version === ((_store$getState = store.getState()) === null || _store$getState === void 0 ? void 0 : (_store$getState$curre = _store$getState.currentTree) === null || _store$getState$curre === void 0 ? void 0 : _store$getState$curre.version) || state.version === ((_store$getState2 = store.getState()) === null || _store$getState2 === void 0 ? void 0 : (_store$getState2$next = _store$getState2.nextTree) === null || _store$getState2$next === void 0 ? void 0 : _store$getState2$next.version)) {
-      var _store$getState$nextT, _store$getState3, _store$getState3$next;
-
-      saveDependencyMapToStore$1(new Map([[key, deps]]), store, (_store$getState$nextT = (_store$getState3 = store.getState()) === null || _store$getState3 === void 0 ? void 0 : (_store$getState3$next = _store$getState3.nextTree) === null || _store$getState3$next === void 0 ? void 0 : _store$getState3$next.version) !== null && _store$getState$nextT !== void 0 ? _store$getState$nextT : store.getState().currentTree.version);
-    }
-  }
-
-  function setNewDepInStore(store, state, deps, newDepKey, executionId) {
-    deps.add(newDepKey);
-    setDepsInStore(store, state, deps, executionId);
-  }
-
-  function evaluateSelectorGetter(store, state, executionId, bypassSelectorDepCache = false) {
-    const endPerfBlock = startPerfBlock$1(key); // TODO T63965866: use execution ID here
-
-    let result;
-    let resultIsError = false;
-    let loadable;
-    const depValues = new Map();
-    /**
-     * Starting a fresh set of deps that we'll be using to update state. We're
-     * starting a new set versus adding it in existing state deps because
-     * the version of state that we update deps for may be a more recent version
-     * than the version the selector was called with. This is because the latest
-     * execution will update the deps of the current/latest version of state (
-     * this is safe to do because the fact that the selector is the latest
-     * execution means the deps we discover below are our best guess at the
-     * deps for the current/latest state in the store)
-     */
-
-    const deps = new Set();
-    setDepsInStore(store, state, deps, executionId);
-
-    function getRecoilValue(recoilValue) {
-      const {
-        key: depKey
-      } = recoilValue;
-      setNewDepInStore(store, state, deps, depKey, executionId);
-      const depLoadable = bypassSelectorDepCache ? getNodeLoadable$2(store, state, depKey) : getCachedNodeLoadable(store, state, depKey);
-      maybeFreezeLoadableContents(depLoadable);
-      depValues.set(depKey, depLoadable);
-
-      if (depLoadable.state === 'hasValue') {
-        return depLoadable.contents;
-      }
-
-      throw depLoadable.contents;
-    }
-
-    let gateCallback = false;
-
-    const getCallback = fn => {
-      return (...args) => {
-        if (!gateCallback) {
-          throw new Error('getCallback() should only be called asynchronously after the selector is evalutated.  It can be used for selectors to return objects with callbacks that can obtain the current Recoil state without a subscription.');
-        }
-
-        const snapshot = cloneSnapshot$2(store);
-        const cb = fn({
-          snapshot
-        });
-
-        if (typeof cb !== 'function') {
-          throw new Error('getCallback() expects a function that returns a function.');
-        }
-
-        return cb(...args);
+        return next(action);
       };
     };
-
-    try {
-      result = get({
-        get: getRecoilValue,
-        getCallback
-      });
-      result = isRecoilValue$3(result) ? getRecoilValue(result) : result;
-      gateCallback = true;
-
-      if (Recoil_isPromise(result)) {
-        result = wrapPendingPromise(store, result, state, depValues, executionId).finally(endPerfBlock);
-      } else {
-        endPerfBlock();
-      }
-    } catch (errorOrDepPromise) {
-      result = errorOrDepPromise;
-
-      if (Recoil_isPromise(result)) {
-        result = wrapPendingDependencyPromise(store, result, state, depValues, executionId).finally(endPerfBlock);
-      } else {
-        resultIsError = true;
-        endPerfBlock();
-      }
-    }
-
-    if (resultIsError) {
-      loadable = loadableWithError$1(result);
-    } else if (Recoil_isPromise(result)) {
-      loadable = loadableWithPromise$1(result);
-    } else {
-      loadable = loadableWithValue$2(result);
-    }
-
-    maybeFreezeLoadableContents(loadable);
-    return [loadable, depValues];
-  }
-
-  function getValFromCacheAndUpdatedDownstreamDeps(store, state) {
-    const depsAfterCacheDone = new Set();
-    const executionInfo = getExecutionInfo(store);
-    const cachedVal = cache.get(nodeKey => {
-      !(typeof nodeKey === 'string') ?  true ? Recoil_invariant(false, 'Cache nodeKey is type string') : 0 : void 0;
-      const loadable = getCachedNodeLoadable(store, state, nodeKey);
-      return loadable.contents;
-    }, {
-      onNodeVisit: node => {
-        if (node.type === 'branch' && node.nodeKey !== key && typeof node.nodeKey === 'string') {
-          depsAfterCacheDone.add(node.nodeKey);
-        }
-      }
-    });
-    /**
-     * Ensure store contains correct dependencies if we hit the cache so that
-     * the store deps and cache are in sync for a given state. This is important
-     * because store deps are normally updated when new executions are created,
-     * but cache hits don't trigger new executions but they still _may_ signifiy
-     * a change in deps in the store if the store deps for this state are empty
-     * or stale.
-     */
-
-    if (cachedVal) {
-      setDepsInStore(store, state, depsAfterCacheDone, executionInfo.latestExecutionId);
-    }
-
-    return cachedVal;
-  }
-  /**
-   * FIXME: dep keys should take into account the state of the loadable to
-   * prevent the edge case where a loadable with an error and a loadable with
-   * an error as a value are treated as the same thing incorrectly. For example
-   * these two should be treated differently:
-   *
-   * selector({key: '', get: () => new Error('hi')});
-   * selector({key: '', get () => {throw new Error('hi')}});
-   *
-   * With current implementation they are treated the same
-   */
-
-
-  function depValuesToDepRoute(depValues) {
-    return Array.from(depValues.entries()).map(([key, valLoadable]) => [key, valLoadable.contents]);
-  }
-
-  function getValFromRunningNewExecutionAndUpdatedDeps(store, state) {
-    const newExecutionId = getNewExecutionId();
-    const [loadable, newDepValues] = evaluateSelectorGetter(store, state, newExecutionId);
-    setExecutionInfo(loadable, store, newDepValues, newExecutionId, state);
-    maybeSetCacheWithLoadable(state, depValuesToDepRoute(newDepValues), loadable);
-    notifyStoreWhenAsyncSettles(store, loadable, newExecutionId);
-    return loadable;
-  }
-  /**
-   * Given a tree state, this function returns the "selector result", which is
-   * defined as a size-2 tuple of [DependencyMap, Loadable<T>].
-   *
-   * The selector's get() function will only be re-evaluated if _both_ of the
-   * following statements are true:
-   *
-   * 1. The current dep values from the given state produced a cache key that
-   *    was not found in the cache.
-   * 2. There is no currently running async execution OR there is an
-   *    async execution that is running, but after comparing the dep values in
-   *    the given state with the dep values that the execution has discovered so
-   *    far we find that at least one dep value has changed, in which case we
-   *    start a new execution (the previously running execution will continue to
-   *    run to completion, but only the new execution will be deemed the
-   *    'latest' execution, meaning it will be the only execution that will
-   *    update global state when it is finished. Any non-latest executions will
-   *    run to completion and update the selector cache but not global state).
-   */
-
-
-  function getSelectorValAndUpdatedDeps(store, state) {
-    const cachedVal = getValFromCacheAndUpdatedDownstreamDeps(store, state);
-
-    if (cachedVal != null) {
-      setExecutionInfo(cachedVal, store);
-      return cachedVal;
-    }
-
-    const inProgressExecutionInfo = getExecutionInfoOfInProgressExecution(state); // FIXME: this won't work with custom caching b/c it uses separate cache
-
-    if (inProgressExecutionInfo) {
-      const executionInfo = inProgressExecutionInfo;
-      notifyStoreWhenAsyncSettles(store, Recoil_nullthrows(executionInfo.latestLoadable), Recoil_nullthrows(executionInfo.latestExecutionId)); // FIXME: check after the fact to see if we made the right choice by waiting
-
-      return Recoil_nullthrows(executionInfo.latestLoadable);
-    }
-
-    return getValFromRunningNewExecutionAndUpdatedDeps(store, state);
-  }
-  /**
-   * Searches execution info across all stores to see if there is an in-progress
-   * execution whose dependency values match the values of the requesting store.
-   */
-
-
-  function getExecutionInfoOfInProgressExecution(state) {
-    var _Array$from$find;
-
-    const [, executionInfo] = (_Array$from$find = Array.from(executionInfoMap.entries()).find(([store, executionInfo]) => {
-      return executionInfo.latestLoadable != null && executionInfo.latestExecutionId != null && !haveAsyncDepsChanged(store, state);
-    })) !== null && _Array$from$find !== void 0 ? _Array$from$find : [];
-    return executionInfo;
-  }
-
-  const mapOfCheckedVersions = new Map();
-
-  function haveAsyncDepsChanged(store, state) {
-    var _executionInfo$depVal, _mapOfCheckedVersions;
-
-    const executionInfo = getExecutionInfo(store);
-    const oldDepValues = (_executionInfo$depVal = executionInfo.depValuesDiscoveredSoFarDuringAsyncWork) !== null && _executionInfo$depVal !== void 0 ? _executionInfo$depVal : new Map();
-    const cachedDepValuesCheckedForThisVersion = Array(((_mapOfCheckedVersions = mapOfCheckedVersions.get(state.version)) !== null && _mapOfCheckedVersions !== void 0 ? _mapOfCheckedVersions : new Map()).entries());
-    const isCachedVersionSame = mapOfCheckedVersions.has(state.version) && cachedDepValuesCheckedForThisVersion.length === oldDepValues.size && cachedDepValuesCheckedForThisVersion.every(([nodeKey, nodeVal]) => {
-      return oldDepValues.get(nodeKey) === nodeVal;
-    });
-
-    if (oldDepValues == null || state.version === executionInfo.stateVersion || isCachedVersionSame) {
-      return false;
-    }
-
-    mapOfCheckedVersions.set(state.version, new Map(oldDepValues));
-    return Array.from(oldDepValues).some(([nodeKey, oldVal]) => {
-      const loadable = getCachedNodeLoadable(store, state, nodeKey);
-      return loadable.contents !== oldVal.contents;
-    });
-  }
-  /**
-   * This function will update the selector's execution info when the selector
-   * has either finished running an execution or has started a new execution. If
-   * the given loadable is in a 'loading' state, the intention is that a new
-   * execution has started. Otherwise, the intention is that an execution has
-   * just finished.
-   */
-
-
-  function setExecutionInfo(loadable, store, depValues, newExecutionId, state) {
-    const executionInfo = getExecutionInfo(store);
-
-    if (loadable.state === 'loading') {
-      executionInfo.depValuesDiscoveredSoFarDuringAsyncWork = depValues;
-      executionInfo.latestExecutionId = newExecutionId;
-      executionInfo.latestLoadable = loadable;
-      executionInfo.stateVersion = state === null || state === void 0 ? void 0 : state.version;
-    } else {
-      executionInfo.depValuesDiscoveredSoFarDuringAsyncWork = null;
-      executionInfo.latestExecutionId = null;
-      executionInfo.latestLoadable = null;
-      executionInfo.stateVersion = null;
-    }
-  }
-  /**
-   * Conditionally updates the cache with a given loadable.
-   *
-   * We only cache loadables that are not loading because our cache keys are
-   * based on dep values, which are in an unfinished state for loadables that
-   * have a 'loading' state (new deps may be discovered while the selector
-   * runs its async code). We never want to cache partial dependencies b/c it
-   * could lead to errors, such as prematurely returning the result based on a
-   * partial list of deps-- we need the full list of deps to ensure that we
-   * are returning the correct result from cache.
-   */
-
-
-  function maybeSetCacheWithLoadable(state, depRoute, loadable) {
-    if (loadable.state !== 'loading') {
-      setCache(state, depRoute, loadable);
-    }
-  }
-
-  function updateExecutionInfoDepValues(depValues, store, executionId) {
-    const executionInfo = getExecutionInfo(store);
-
-    if (isLatestExecution(store, executionId)) {
-      executionInfo.depValuesDiscoveredSoFarDuringAsyncWork = depValues;
-    }
-  }
-
-  function clearExecutionInfo(store, executionId) {
-    if (isLatestExecution(store, executionId)) {
-      executionInfoMap.delete(store);
-    }
-  }
-
-  function isLatestExecution(store, executionId) {
-    const executionInfo = getExecutionInfo(store);
-    return executionId === executionInfo.latestExecutionId;
-  }
-
-  function maybeFreezeLoadableContents(loadable) {
-    if (loadable.state !== 'loading') {
-      maybeFreezeValue(loadable.contents);
-    }
-  }
-
-  function maybeFreezeValue(val) {
-    if (true) {
-      if (Boolean(options.dangerouslyAllowMutability) === false) {
-        Recoil_deepFreezeValue(val);
-      }
-    }
-  }
-
-  function setCache(state, cacheRoute, loadable) {
-    state.atomValues.set(key, loadable);
-    cache.set(cacheRoute, loadable);
-  }
-
-  function detectCircularDependencies(fn) {
-    if (dependencyStack.includes(key)) {
-      const message = `Recoil selector has circular dependencies: ${dependencyStack.slice(dependencyStack.indexOf(key)).join(' \u2192 ')}`;
-      return loadableWithError$1(new Error(message));
-    }
-
-    dependencyStack.push(key);
-
-    try {
-      return fn();
-    } finally {
-      dependencyStack.pop();
-    }
-  }
-
-  function selectorPeek(store, state) {
-    const cacheVal = cache.get(nodeKey => {
-      !(typeof nodeKey === 'string') ?  true ? Recoil_invariant(false, 'Cache nodeKey is type string') : 0 : void 0;
-      const peek = peekNodeLoadable$1(store, state, nodeKey);
-      return peek === null || peek === void 0 ? void 0 : peek.contents;
-    });
-    return cacheVal;
-  }
-
-  function selectorGet(store, state) {
-    return detectCircularDependencies(() => getSelectorValAndUpdatedDeps(store, state));
-  }
-
-  function invalidateSelector(state) {
-    state.atomValues.delete(key);
-  }
-
-  if (set != null) {
-    /**
-     * ES5 strict mode prohibits defining non-top-level function declarations,
-     * so don't use function declaration syntax here
-     */
-    const selectorSet = (store, state, newValue) => {
-      let syncSelectorSetFinished = false;
-      const writes = new Map();
-
-      function getRecoilValue({
-        key
-      }) {
-        if (syncSelectorSetFinished) {
-          throw new Error('Recoil: Async selector sets are not currently supported.');
-        }
-
-        const loadable = getCachedNodeLoadable(store, state, key);
-        maybeFreezeLoadableContents(loadable);
-
-        if (loadable.state === 'hasValue') {
-          return loadable.contents;
-        } else if (loadable.state === 'loading') {
-          throw new RecoilValueNotReady$2(key);
-        } else {
-          throw loadable.contents;
-        }
-      }
-
-      function setRecoilState(recoilState, valueOrUpdater) {
-        if (syncSelectorSetFinished) {
-          throw new Error('Recoil: Async selector sets are not currently supported.');
-        }
-
-        const newValue = typeof valueOrUpdater === 'function' ? // cast to any because we can't restrict type S from being a function itself without losing support for opaque types
-        // flowlint-next-line unclear-type:off
-        valueOrUpdater(getRecoilValue(recoilState)) : valueOrUpdater;
-        const upstreamWrites = setNodeValue$3(store, state, recoilState.key, newValue);
-        upstreamWrites.forEach((v, k) => writes.set(k, v));
-      }
-
-      function resetRecoilState(recoilState) {
-        setRecoilState(recoilState, DEFAULT_VALUE$4);
-      }
-
-      const ret = set({
-        set: setRecoilState,
-        get: getRecoilValue,
-        reset: resetRecoilState
-      }, newValue); // set should be a void method, but if the user makes it `async`, then it
-      // will return a Promise, which we don't currently support.
-
-      if (ret !== undefined) {
-        throw Recoil_isPromise(ret) ? new Error('Recoil: Async selector sets are not currently supported.') : new Error('Recoil: selector set should be a void function.');
-      }
-
-      syncSelectorSetFinished = true;
-      return writes;
-    };
-
-    return registerNode$1({
-      key,
-      nodeType: 'selector',
-      peek: selectorPeek,
-      get: selectorGet,
-      set: selectorSet,
-      init: selectorInit,
-      invalidate: invalidateSelector,
-      shouldDeleteConfigOnRelease: selectorShouldDeleteConfigOnRelease,
-      dangerouslyAllowMutability: options.dangerouslyAllowMutability,
-      shouldRestoreFromSnapshots: false,
-      retainedBy
-    });
-  } else {
-    return registerNode$1({
-      key,
-      nodeType: 'selector',
-      peek: selectorPeek,
-      get: selectorGet,
-      init: selectorInit,
-      invalidate: invalidateSelector,
-      shouldDeleteConfigOnRelease: selectorShouldDeleteConfigOnRelease,
-      dangerouslyAllowMutability: options.dangerouslyAllowMutability,
-      shouldRestoreFromSnapshots: false,
-      retainedBy
-    });
-  }
-}
-/* eslint-enable no-redeclare */
-
-
-var Recoil_selector = selector;
-
-// @fb-only: const {scopedAtom} = require('Recoil_ScopedAtom');
-const {
-  loadableWithError: loadableWithError$2,
-  loadableWithPromise: loadableWithPromise$2,
-  loadableWithValue: loadableWithValue$3
-} = Recoil_Loadable;
-
-const {
-  DEFAULT_VALUE: DEFAULT_VALUE$5,
-  DefaultValue: DefaultValue$2,
-  getConfigDeletionHandler: getConfigDeletionHandler$2,
-  registerNode: registerNode$2,
-  setConfigDeletionHandler: setConfigDeletionHandler$1
-} = Recoil_Node;
-
-const {
-  isRecoilValue: isRecoilValue$4
-} = Recoil_RecoilValue$1;
-
-const {
-  markRecoilValueModified: markRecoilValueModified$1,
-  setRecoilValue: setRecoilValue$3,
-  setRecoilValueLoadable: setRecoilValueLoadable$3
-} = Recoil_RecoilValueInterface;
-
-const {
-  retainedByOptionWithDefault: retainedByOptionWithDefault$2
-} = Recoil_Retention;
-
-
-
-
-
-
-
-
-
-
-
-
-
-function baseAtom(options) {
-  const {
-    key,
-    persistence_UNSTABLE: persistence
-  } = options;
-  const retainedBy = retainedByOptionWithDefault$2(options.retainedBy_UNSTABLE);
-  let liveStoresCount = 0;
-  let defaultLoadable = Recoil_isPromise(options.default) ? loadableWithPromise$2(options.default.then(value => {
-    defaultLoadable = loadableWithValue$3(value); // TODO Temporary disable Flow due to pending selector_NEW refactor
-
-    const promiseInfo = {
-      __key: key,
-      __value: value
-    };
-    return promiseInfo;
-  }).catch(error => {
-    defaultLoadable = loadableWithError$2(error);
-    throw error;
-  })) : loadableWithValue$3(options.default);
-  let cachedAnswerForUnvalidatedValue = undefined; // Cleanup handlers for this atom
-  // Rely on stable reference equality of the store to use it as a key per <RecoilRoot>
-
-  const cleanupEffectsByStore = new Map();
-
-  function wrapPendingPromise(store, promise) {
-    const wrappedPromise = promise.then(value => {
-      var _store$getState$nextT, _state$atomValues$get;
-
-      const state = (_store$getState$nextT = store.getState().nextTree) !== null && _store$getState$nextT !== void 0 ? _store$getState$nextT : store.getState().currentTree;
-
-      if (((_state$atomValues$get = state.atomValues.get(key)) === null || _state$atomValues$get === void 0 ? void 0 : _state$atomValues$get.contents) === wrappedPromise) {
-        setRecoilValue$3(store, node, value);
-      }
-
-      return {
-        __key: key,
-        __value: value
-      };
-    }).catch(error => {
-      var _store$getState$nextT2, _state$atomValues$get2;
-
-      const state = (_store$getState$nextT2 = store.getState().nextTree) !== null && _store$getState$nextT2 !== void 0 ? _store$getState$nextT2 : store.getState().currentTree;
-
-      if (((_state$atomValues$get2 = state.atomValues.get(key)) === null || _state$atomValues$get2 === void 0 ? void 0 : _state$atomValues$get2.contents) === wrappedPromise) {
-        setRecoilValueLoadable$3(store, node, loadableWithError$2(error));
-      }
-
-      throw error;
-    });
-    return wrappedPromise;
-  }
-
-  function initAtom(store, initState, trigger) {
-    liveStoresCount++;
-    const alreadyKnown = store.getState().knownAtoms.has(key);
-    store.getState().knownAtoms.add(key); // Setup async defaults to notify subscribers when they resolve
-
-    if (defaultLoadable.state === 'loading') {
-      const notifyDefaultSubscribers = () => {
-        var _store$getState$nextT3;
-
-        const state = (_store$getState$nextT3 = store.getState().nextTree) !== null && _store$getState$nextT3 !== void 0 ? _store$getState$nextT3 : store.getState().currentTree;
-
-        if (!state.atomValues.has(key)) {
-          markRecoilValueModified$1(store, node);
-        }
-      };
-
-      defaultLoadable.contents.then(notifyDefaultSubscribers).catch(notifyDefaultSubscribers);
-    } // Run Atom Effects
-    // This state is scoped by Store, since this is in the initAtom() closure
-
-
-    let initValue = DEFAULT_VALUE$5;
-    let pendingSetSelf = null;
-
-    if (options.effects_UNSTABLE != null && !alreadyKnown) {
-      let duringInit = true;
-
-      const setSelf = effect => valueOrUpdater => {
-        if (duringInit) {
-          const currentValue = initValue instanceof DefaultValue$2 || Recoil_isPromise(initValue) ? defaultLoadable.state === 'hasValue' ? defaultLoadable.contents : DEFAULT_VALUE$5 : initValue;
-          initValue = typeof valueOrUpdater === 'function' ? // cast to any because we can't restrict T from being a function without losing support for opaque types
-          valueOrUpdater(currentValue) // flowlint-line unclear-type:off
-          : valueOrUpdater; // Avoid calling onSet() when setSelf() initializes with a Promise
-
-          if (Recoil_isPromise(initValue)) {
-            initValue = initValue.then(value => {
-              pendingSetSelf = {
-                effect,
-                value
-              };
-              return value;
-            });
-          }
-        } else {
-          if (Recoil_isPromise(valueOrUpdater)) {
-            throw new Error('Setting atoms to async values is not implemented.');
-          }
-
-          if (typeof valueOrUpdater !== 'function') {
-            pendingSetSelf = {
-              effect,
-              value: valueOrUpdater
-            };
-          }
-
-          setRecoilValue$3(store, node, typeof valueOrUpdater === 'function' ? currentValue => {
-            const newValue = // cast to any because we can't restrict T from being a function without losing support for opaque types
-            valueOrUpdater(currentValue); // flowlint-line unclear-type:off
-
-            pendingSetSelf = {
-              effect,
-              value: newValue
-            };
-            return newValue;
-          } : valueOrUpdater);
-        }
-      };
-
-      const resetSelf = effect => () => setSelf(effect)(DEFAULT_VALUE$5);
-
-      const onSet = effect => handler => {
-        store.subscribeToTransactions(currentStore => {
-          var _currentTree$atomValu;
-
-          // eslint-disable-next-line prefer-const
-          let {
-            currentTree,
-            previousTree
-          } = currentStore.getState();
-
-          if (!previousTree) {
-            Recoil_recoverableViolation('Transaction subscribers notified without a next tree being present -- this is a bug in Recoil');
-            previousTree = currentTree; // attempt to trundle on
-          }
-
-          const newLoadable = (_currentTree$atomValu = currentTree.atomValues.get(key)) !== null && _currentTree$atomValu !== void 0 ? _currentTree$atomValu : defaultLoadable;
-
-          if (newLoadable.state === 'hasValue') {
-            var _previousTree$atomVal, _pendingSetSelf, _pendingSetSelf2, _pendingSetSelf3;
-
-            const newValue = newLoadable.contents;
-            const oldLoadable = (_previousTree$atomVal = previousTree.atomValues.get(key)) !== null && _previousTree$atomVal !== void 0 ? _previousTree$atomVal : defaultLoadable;
-            const oldValue = oldLoadable.state === 'hasValue' ? oldLoadable.contents : DEFAULT_VALUE$5; // TODO This isn't actually valid, use as a placeholder for now.
-            // Ignore atom value changes that were set via setSelf() in the same effect.
-            // We will still properly call the handler if there was a subsequent
-            // set from something other than an atom effect which was batched
-            // with the `setSelf()` call.  However, we may incorrectly ignore
-            // the handler if the subsequent batched call happens to set the
-            // atom to the exact same value as the `setSelf()`.   But, in that
-            // case, it was kind of a noop, so the semantics are debatable..
-
-            if (((_pendingSetSelf = pendingSetSelf) === null || _pendingSetSelf === void 0 ? void 0 : _pendingSetSelf.effect) !== effect || ((_pendingSetSelf2 = pendingSetSelf) === null || _pendingSetSelf2 === void 0 ? void 0 : _pendingSetSelf2.value) !== newValue) {
-              handler(newValue, oldValue);
-            } else if (((_pendingSetSelf3 = pendingSetSelf) === null || _pendingSetSelf3 === void 0 ? void 0 : _pendingSetSelf3.effect) === effect) {
-              pendingSetSelf = null;
-            }
-          }
-        }, key);
-      };
-
-      for (const effect of (_options$effects_UNST = options.effects_UNSTABLE) !== null && _options$effects_UNST !== void 0 ? _options$effects_UNST : []) {
-        var _options$effects_UNST;
-
-        const cleanup = effect({
-          node,
-          trigger,
-          setSelf: setSelf(effect),
-          resetSelf: resetSelf(effect),
-          onSet: onSet(effect)
-        });
-
-        if (cleanup != null) {
-          var _cleanupEffectsByStor;
-
-          cleanupEffectsByStore.set(store, [...((_cleanupEffectsByStor = cleanupEffectsByStore.get(store)) !== null && _cleanupEffectsByStor !== void 0 ? _cleanupEffectsByStor : []), cleanup]);
-        }
-      }
-
-      duringInit = false;
-    } // Mutate initial state in place since we know there are no other subscribers
-    // since we are the ones initializing on first use.
-
-
-    if (!(initValue instanceof DefaultValue$2)) {
-      var _store$getState$nextT4;
-
-      const initLoadable = Recoil_isPromise(initValue) ? loadableWithPromise$2(wrapPendingPromise(store, initValue)) : loadableWithValue$3(initValue);
-      initState.atomValues.set(key, initLoadable); // If there is a pending transaction, then also mutate the next state tree.
-      // This could happen if the atom was first initialized in an action that
-      // also updated some other atom's state.
-
-      (_store$getState$nextT4 = store.getState().nextTree) === null || _store$getState$nextT4 === void 0 ? void 0 : _store$getState$nextT4.atomValues.set(key, initLoadable);
-    }
-
-    return () => {
-      var _cleanupEffectsByStor2;
-
-      liveStoresCount--;
-      (_cleanupEffectsByStor2 = cleanupEffectsByStore.get(store)) === null || _cleanupEffectsByStor2 === void 0 ? void 0 : _cleanupEffectsByStor2.forEach(cleanup => cleanup());
-      cleanupEffectsByStore.delete(store);
-      store.getState().knownAtoms.delete(key); // FIXME remove knownAtoms?
-    };
-  }
-
-  function peekAtom(_store, state) {
-    var _ref, _state$atomValues$get3, _cachedAnswerForUnval;
-
-    return (_ref = (_state$atomValues$get3 = state.atomValues.get(key)) !== null && _state$atomValues$get3 !== void 0 ? _state$atomValues$get3 : (_cachedAnswerForUnval = cachedAnswerForUnvalidatedValue) === null || _cachedAnswerForUnval === void 0 ? void 0 : _cachedAnswerForUnval[1]) !== null && _ref !== void 0 ? _ref : defaultLoadable;
-  }
-
-  function getAtom(_store, state) {
-    if (state.atomValues.has(key)) {
-      // Atom value is stored in state:
-      return Recoil_nullthrows(state.atomValues.get(key));
-    } else if (state.nonvalidatedAtoms.has(key)) {
-      // Atom value is stored but needs validation before use.
-      // We might have already validated it and have a cached validated value:
-      if (cachedAnswerForUnvalidatedValue != null) {
-        return cachedAnswerForUnvalidatedValue;
-      }
-
-      if (persistence == null) {
-        Recoil_expectationViolation(`Tried to restore a persisted value for atom ${key} but it has no persistence settings.`);
-        return defaultLoadable;
-      }
-
-      const nonvalidatedValue = state.nonvalidatedAtoms.get(key);
-      const validatorResult = persistence.validator(nonvalidatedValue, DEFAULT_VALUE$5);
-      const validatedValueLoadable = validatorResult instanceof DefaultValue$2 ? defaultLoadable : loadableWithValue$3(validatorResult);
-      cachedAnswerForUnvalidatedValue = validatedValueLoadable;
-      return cachedAnswerForUnvalidatedValue;
-    } else {
-      return defaultLoadable;
-    }
-  }
-
-  function invalidateAtom() {
-    cachedAnswerForUnvalidatedValue = undefined;
-  }
-
-  function setAtom(_store, state, newValue) {
-    // Bail out if we're being set to the existing value, or if we're being
-    // reset but have no stored value (validated or unvalidated) to reset from:
-    if (state.atomValues.has(key)) {
-      const existing = Recoil_nullthrows(state.atomValues.get(key));
-
-      if (existing.state === 'hasValue' && newValue === existing.contents) {
-        return new Map();
-      }
-    } else if (!state.nonvalidatedAtoms.has(key) && newValue instanceof DefaultValue$2) {
-      return new Map();
-    }
-
-    if (true) {
-      if (options.dangerouslyAllowMutability !== true) {
-        Recoil_deepFreezeValue(newValue);
-      }
-    }
-
-    cachedAnswerForUnvalidatedValue = undefined; // can be released now if it was previously in use
-
-    return new Map().set(key, loadableWithValue$3(newValue));
-  }
-
-  function shouldDeleteConfigOnReleaseAtom() {
-    return getConfigDeletionHandler$2(key) !== undefined && liveStoresCount <= 0;
-  }
-
-  const node = registerNode$2({
-    key,
-    nodeType: 'atom',
-    peek: peekAtom,
-    get: getAtom,
-    set: setAtom,
-    init: initAtom,
-    invalidate: invalidateAtom,
-    shouldDeleteConfigOnRelease: shouldDeleteConfigOnReleaseAtom,
-    dangerouslyAllowMutability: options.dangerouslyAllowMutability,
-    persistence_UNSTABLE: options.persistence_UNSTABLE ? {
-      type: options.persistence_UNSTABLE.type,
-      backButton: options.persistence_UNSTABLE.backButton
-    } : undefined,
-    shouldRestoreFromSnapshots: true,
-    retainedBy
-  });
-  return node;
-} // prettier-ignore
-
-
-function atom(options) {
-  const {
-    default: optionsDefault,
-    // @fb-only: scopeRules_APPEND_ONLY_READ_THE_DOCS,
-    ...restOptions
-  } = options;
-
-  if (isRecoilValue$4(optionsDefault) // Continue to use atomWithFallback for promise defaults for scoped atoms
-  // for now, since scoped atoms don't support async defaults
-  // @fb-only: || (isPromise(optionsDefault) && scopeRules_APPEND_ONLY_READ_THE_DOCS)
-  ) {
-      return atomWithFallback({ ...restOptions,
-        default: optionsDefault // @fb-only: scopeRules_APPEND_ONLY_READ_THE_DOCS,
-
-      }); // @fb-only: } else if (scopeRules_APPEND_ONLY_READ_THE_DOCS && !isPromise(optionsDefault)) {
-      // @fb-only: return scopedAtom<T>({
-      // @fb-only: ...restOptions,
-      // @fb-only: default: optionsDefault,
-      // @fb-only: scopeRules_APPEND_ONLY_READ_THE_DOCS,
-      // @fb-only: });
-    } else {
-    return baseAtom({ ...restOptions,
-      default: optionsDefault
-    });
-  }
-}
-
-function atomWithFallback(options) {
-  const base = atom({ ...options,
-    default: DEFAULT_VALUE$5,
-    persistence_UNSTABLE: options.persistence_UNSTABLE === undefined ? undefined : { ...options.persistence_UNSTABLE,
-      validator: storedValue => storedValue instanceof DefaultValue$2 ? storedValue : Recoil_nullthrows(options.persistence_UNSTABLE).validator(storedValue, DEFAULT_VALUE$5)
-    },
-    // TODO Hack for now.
-    // flowlint-next-line unclear-type: off
-    effects_UNSTABLE: options.effects_UNSTABLE
-  });
-  const sel = Recoil_selector({
-    key: `${options.key}__withFallback`,
-    get: ({
-      get
-    }) => {
-      const baseValue = get(base);
-      return baseValue instanceof DefaultValue$2 ? options.default : baseValue;
-    },
-    set: ({
-      set
-    }, newValue) => set(base, newValue),
-    dangerouslyAllowMutability: options.dangerouslyAllowMutability
-  });
-  setConfigDeletionHandler$1(sel.key, getConfigDeletionHandler$2(options.key));
-  return sel;
-}
-
-var Recoil_atom = atom;
-
-/**
- * (c) Facebook, Inc. and its affiliates. Confidential and proprietary.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-class MapCache {
-  constructor(options) {
-    var _options$mapKey;
-
-    _defineProperty(this, "_map", void 0);
-
-    _defineProperty(this, "_keyMapper", void 0);
-
-    this._map = new Map();
-    this._keyMapper = (_options$mapKey = options === null || options === void 0 ? void 0 : options.mapKey) !== null && _options$mapKey !== void 0 ? _options$mapKey : v => v;
-  }
-
-  size() {
-    return this._map.size;
-  }
-
-  has(key) {
-    return this._map.has(this._keyMapper(key));
-  }
-
-  get(key) {
-    return this._map.get(this._keyMapper(key));
-  }
-
-  set(key, val) {
-    this._map.set(this._keyMapper(key), val);
-  }
-
-  delete(key) {
-    this._map.delete(this._keyMapper(key));
-  }
-
-  clear() {
-    this._map.clear();
-  }
-
-}
-
-var Recoil_MapCache = {
-  MapCache
-};
-
-var Recoil_MapCache_1 = Recoil_MapCache.MapCache;
-
-var Recoil_MapCache$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  MapCache: Recoil_MapCache_1
-});
-
-const {
-  LRUCache: LRUCache$2
-} = Recoil_LRUCache$1;
-
-const {
-  MapCache: MapCache$1
-} = Recoil_MapCache$1;
-
-const defaultPolicy$1 = {
-  equality: 'reference',
-  eviction: 'none',
-  maxSize: Infinity
-};
-
-function cacheFromPolicy({
-  equality = defaultPolicy$1.equality,
-  eviction = defaultPolicy$1.eviction,
-  maxSize = defaultPolicy$1.maxSize
-} = defaultPolicy$1) {
-  const valueMapper = getValueMapper$1(equality);
-  const cache = getCache(eviction, maxSize, valueMapper);
-  return cache;
-}
-
-function getValueMapper$1(equality) {
-  switch (equality) {
-    case 'reference':
-      return val => val;
-
-    case 'value':
-      return val => Recoil_stableStringify(val);
-  }
-
-  throw new Error(`Unrecognized equality policy ${equality}`);
-}
-
-function getCache(eviction, maxSize, mapKey) {
-  switch (eviction) {
-    case 'keep-all':
-      // $FlowFixMe[method-unbinding]
-      return new MapCache$1({
-        mapKey
-      });
-
-    case 'lru':
-      // $FlowFixMe[method-unbinding]
-      return new LRUCache$2({
-        mapKey,
-        maxSize: Recoil_nullthrows(maxSize)
-      });
-
-    case 'most-recent':
-      // $FlowFixMe[method-unbinding]
-      return new LRUCache$2({
-        mapKey,
-        maxSize: 1
-      });
-  }
-
-  throw new Error(`Unrecognized eviction policy ${eviction}`);
-}
-
-var Recoil_cacheFromPolicy = cacheFromPolicy;
-
-const {
-  setConfigDeletionHandler: setConfigDeletionHandler$2
-} = Recoil_Node;
-/*
-A function which returns an atom based on the input parameter.
-
-Each unique parameter returns a unique atom. E.g.,
-
-  const f = atomFamily(...);
-  f({a: 1}) => an atom
-  f({a: 2}) => a different atom
-
-This allows components to persist local, private state using atoms.  Each
-instance of the component may have a different key, which it uses as the
-parameter for a family of atoms; in this way, each component will have
-its own atom not shared by other instances.  These state keys may be composed
-into children's state keys as well.
-*/
-
-
-function atomFamily(options) {
-  var _options$cachePolicyF, _options$cachePolicyF2;
-
-  const atomCache = Recoil_cacheFromPolicy({
-    equality: (_options$cachePolicyF = (_options$cachePolicyF2 = options.cachePolicyForParams_UNSTABLE) === null || _options$cachePolicyF2 === void 0 ? void 0 : _options$cachePolicyF2.equality) !== null && _options$cachePolicyF !== void 0 ? _options$cachePolicyF : 'value',
-    eviction: 'keep-all'
-  }); // Simple atomFamily implementation to cache individual atoms based
-  // on the parameter value equality.
-
-  return params => {
-    var _stableStringify;
-
-    const cachedAtom = atomCache.get(params);
-
-    if (cachedAtom != null) {
-      return cachedAtom;
-    }
-
-    const {
-      cachePolicyForParams_UNSTABLE,
-      ...atomOptions
-    } = options;
-    const newAtom = Recoil_atom({ ...atomOptions,
-      key: `${options.key}__${(_stableStringify = Recoil_stableStringify(params)) !== null && _stableStringify !== void 0 ? _stableStringify : 'void'}`,
-      default: typeof options.default === 'function' ? // The default was parameterized
-      // Flow doesn't know that T isn't a function, so we need to case to any
-      options.default(params) // flowlint-line unclear-type:off
-      : // Default may be a static value, promise, or RecoilValue
-      options.default,
-      retainedBy_UNSTABLE: typeof options.retainedBy_UNSTABLE === 'function' ? options.retainedBy_UNSTABLE(params) : options.retainedBy_UNSTABLE,
-      effects_UNSTABLE: typeof options.effects_UNSTABLE === 'function' ? options.effects_UNSTABLE(params) : options.effects_UNSTABLE // prettier-ignore
-      // @fb-only: scopeRules_APPEND_ONLY_READ_THE_DOCS: mapScopeRules(
-      // @fb-only: options.scopeRules_APPEND_ONLY_READ_THE_DOCS,
-      // @fb-only: params,
-      // @fb-only: ),
-
-    });
-    atomCache.set(params, newAtom);
-    setConfigDeletionHandler$2(newAtom.key, () => {
-      atomCache.delete(params);
-    });
-    return newAtom;
   };
 }
 
-var Recoil_atomFamily = atomFamily;
+var thunk = createThunkMiddleware();
+thunk.withExtraArgument = createThunkMiddleware;
 
-const {
-  setConfigDeletionHandler: setConfigDeletionHandler$3
-} = Recoil_Node;
-
-
-
- // Keep in mind the parameter needs to be serializable as a cahche key
-// using Recoil_stableStringify
-
-
-// Add a unique index to each selector in case the cache implementation allows
-// duplicate keys based on equivalent stringified parameters
-let nextIndex = 0;
-/* eslint-disable no-redeclare */
-
-// Return a function that returns members of a family of selectors of the same type
-// E.g.,
-//
-// const s = selectorFamily(...);
-// s({a: 1}) => a selector
-// s({a: 2}) => a different selector
-//
-// By default, the selectors are distinguished by distinct values of the
-// parameter based on value equality, not reference equality.  This allows using
-// object literals or other equivalent objects at callsites to not create
-// duplicate cache entries.  This behavior may be overridden with the
-// cacheImplementationForParams option.
-function selectorFamily(options) {
-  var _options$cachePolicyF, _options$cachePolicyF2;
-
-  const selectorCache = Recoil_cacheFromPolicy({
-    equality: (_options$cachePolicyF = (_options$cachePolicyF2 = options.cachePolicyForParams_UNSTABLE) === null || _options$cachePolicyF2 === void 0 ? void 0 : _options$cachePolicyF2.equality) !== null && _options$cachePolicyF !== void 0 ? _options$cachePolicyF : 'value',
-    eviction: 'keep-all'
-  });
-  return params => {
-    var _stableStringify;
-
-    const cachedSelector = selectorCache.get(params);
-
-    if (cachedSelector != null) {
-      return cachedSelector;
-    }
-
-    const myKey = `${options.key}__selectorFamily/${(_stableStringify = Recoil_stableStringify(params, {
-      // It is possible to use functions in parameters if the user uses
-      // a cache with reference equality thanks to the incrementing index.
-      allowFunctions: true
-    })) !== null && _stableStringify !== void 0 ? _stableStringify : 'void'}/${nextIndex++}`; // Append index in case values serialize to the same key string
-
-    const myGet = callbacks => options.get(params)(callbacks);
-
-    const myCachePolicy = options.cachePolicy_UNSTABLE;
-    const retainedBy = typeof options.retainedBy_UNSTABLE === 'function' ? options.retainedBy_UNSTABLE(params) : options.retainedBy_UNSTABLE;
-    let newSelector;
-
-    if (options.set != null) {
-      const set = options.set;
-
-      const mySet = (callbacks, newValue) => set(params)(callbacks, newValue);
-
-      newSelector = Recoil_selector({
-        key: myKey,
-        get: myGet,
-        set: mySet,
-        cachePolicy_UNSTABLE: myCachePolicy,
-        dangerouslyAllowMutability: options.dangerouslyAllowMutability,
-        retainedBy_UNSTABLE: retainedBy
-      });
-    } else {
-      newSelector = Recoil_selector({
-        key: myKey,
-        get: myGet,
-        cachePolicy_UNSTABLE: myCachePolicy,
-        dangerouslyAllowMutability: options.dangerouslyAllowMutability,
-        retainedBy_UNSTABLE: retainedBy
-      });
-    }
-
-    selectorCache.set(params, newSelector);
-    setConfigDeletionHandler$3(newSelector.key, () => {
-      selectorCache.delete(params);
-    });
-    return newSelector;
-  };
-}
-/* eslint-enable no-redeclare */
-
-
-var Recoil_selectorFamily = selectorFamily;
-
-// flowlint-next-line unclear-type:off
-
-
-const constantSelector = Recoil_selectorFamily({
-  key: '__constant',
-  get: constant => () => constant,
-  cachePolicyForParams_UNSTABLE: {
-    equality: 'reference'
-  }
-}); // Function that returns a selector which always produces the
-// same constant value.  It may be called multiple times with the
-// same value, based on reference equality, and will provide the
-// same selector.
-
-function constSelector(constant) {
-  return constantSelector(constant);
-}
-
-var Recoil_constSelector = constSelector;
-
-// flowlint-next-line unclear-type:off
-
-
-const throwingSelector = Recoil_selectorFamily({
-  key: '__error',
-  get: message => () => {
-    throw new Error(message);
-  },
-  cachePolicyForParams_UNSTABLE: {
-    equality: 'reference'
-  }
-}); // Function that returns a selector which always throws an error
-// with the provided message.
-
-function errorSelector(message) {
-  return throwingSelector(message);
-}
-
-var Recoil_errorSelector = errorSelector;
-
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * Wraps another recoil value and prevents writing to it.
- *
- * @emails oncall+recoil
- * 
- * @format
- */
-
-function readOnlySelector(atom) {
-  // flowlint-next-line unclear-type: off
-  return atom;
-}
-
-var Recoil_readOnlySelector = readOnlySelector;
-
-const {
-  loadableWithError: loadableWithError$3,
-  loadableWithPromise: loadableWithPromise$3,
-  loadableWithValue: loadableWithValue$4
-} = Recoil_Loadable;
-
-
-
- /////////////////
-//  TRUTH TABLE
-/////////////////
-// Dependencies        waitForNone         waitForAny        waitForAll       waitForAllSettled
-//  [loading, loading]  [Promise, Promise]  Promise           Promise         Promise
-//  [value, loading]    [value, Promise]    [value, Promise]  Promise         Promise
-//  [value, value]      [value, value]      [value, value]    [value, value]  [value, value]
-//
-//  [error, loading]    [Error, Promise]    [Error, Promise]  Error           Promise
-//  [error, error]      [Error, Error]      [Error, Error]    Error           [error, error]
-//  [value, error]      [value, Error]      [value, Error]    Error           [value, error]
-// Issue parallel requests for all dependencies and return the current
-// status if they have results, have some error, or are still pending.
-
-
-function concurrentRequests(getRecoilValue, deps) {
-  const results = Array(deps.length).fill(undefined);
-  const exceptions = Array(deps.length).fill(undefined);
-
-  for (const [i, dep] of deps.entries()) {
-    try {
-      results[i] = getRecoilValue(dep);
-    } catch (e) {
-      // exceptions can either be Promises of pending results or real errors
-      exceptions[i] = e;
-    }
-  }
-
-  return [results, exceptions];
-}
-
-function isError(exp) {
-  return exp != null && !Recoil_isPromise(exp);
-}
-
-function unwrapDependencies(dependencies) {
-  return Array.isArray(dependencies) ? dependencies : Object.getOwnPropertyNames(dependencies).map(key => dependencies[key]);
-}
-
-function getValueFromLoadablePromiseResult(result) {
-  if (result != null && typeof result === 'object' && result.hasOwnProperty('__value')) {
-    return result.__value;
-  }
-
-  return result;
-}
-
-function wrapResults(dependencies, results) {
-  return Array.isArray(dependencies) ? results : // Object.getOwnPropertyNames() has consistent key ordering with ES6
-  Object.getOwnPropertyNames(dependencies).reduce((out, key, idx) => ({ ...out,
-    [key]: results[idx]
-  }), {});
-}
-
-function wrapLoadables(dependencies, results, exceptions) {
-  const output = exceptions.map((exception, idx) => exception == null ? loadableWithValue$4(results[idx]) : Recoil_isPromise(exception) ? loadableWithPromise$3(exception) : loadableWithError$3(exception));
-  return wrapResults(dependencies, output);
-}
-
-function combineAsyncResultsWithSyncResults(syncResults, asyncResults) {
-  return asyncResults.map((result, idx) =>
-  /**
-   * it's important we use === undefined as opposed to == null, because the
-   * resolved value of the async promise could be `null`, in which case we
-   * don't want to use syncResults[idx], which would be undefined. If async
-   * promise resolves to `undefined`, that's ok because `syncResults[idx]`
-   * will also be `undefined`. That's a little hacky, but it works.
-   */
-  result === undefined ? syncResults[idx] : result);
-} // Selector that requests all dependencies in parallel and immediately returns
-// current results without waiting.
-
-
-const waitForNone = Recoil_selectorFamily({
-  key: '__waitForNone',
-  get: dependencies => ({
-    get
-  }) => {
-    // Issue requests for all dependencies in parallel.
-    const deps = unwrapDependencies(dependencies);
-    const [results, exceptions] = concurrentRequests(get, deps); // Always return the current status of the results; never block.
-
-    return wrapLoadables(dependencies, results, exceptions);
-  },
-  dangerouslyAllowMutability: true
-}); // Selector that requests all dependencies in parallel and waits for at least
-// one to be available before returning results.  It will only error if all
-// dependencies have errors.
-
-const waitForAny = Recoil_selectorFamily({
-  key: '__waitForAny',
-  get: dependencies => ({
-    get
-  }) => {
-    // Issue requests for all dependencies in parallel.
-    // Exceptions can either be Promises of pending results or real errors
-    const deps = unwrapDependencies(dependencies);
-    const [results, exceptions] = concurrentRequests(get, deps); // If any results are available, value or error, return the current status
-
-    if (exceptions.some(exp => !Recoil_isPromise(exp))) {
-      return wrapLoadables(dependencies, results, exceptions);
-    } // Otherwise, return a promise that will resolve when the next result is
-    // available, whichever one happens to be next.  But, if all pending
-    // dependencies end up with errors, then reject the promise.
-
-
-    return new Promise(resolve => {
-      for (const [i, exp] of exceptions.entries()) {
-        if (Recoil_isPromise(exp)) {
-          exp.then(result => {
-            results[i] = getValueFromLoadablePromiseResult(result);
-            exceptions[i] = undefined;
-            resolve(wrapLoadables(dependencies, results, exceptions));
-          }).catch(error => {
-            exceptions[i] = error;
-            resolve(wrapLoadables(dependencies, results, exceptions));
-          });
-        }
-      }
-    });
-  },
-  dangerouslyAllowMutability: true
-}); // Selector that requests all dependencies in parallel and waits for all to be
-// available before returning a value.  It will error if any dependencies error.
-
-const waitForAll = Recoil_selectorFamily({
-  key: '__waitForAll',
-  get: dependencies => ({
-    get
-  }) => {
-    // Issue requests for all dependencies in parallel.
-    // Exceptions can either be Promises of pending results or real errors
-    const deps = unwrapDependencies(dependencies);
-    const [results, exceptions] = concurrentRequests(get, deps); // If all results are available, return the results
-
-    if (exceptions.every(exp => exp == null)) {
-      return wrapResults(dependencies, results);
-    } // If we have any errors, throw the first error
-
-
-    const error = exceptions.find(isError);
-
-    if (error != null) {
-      throw error;
-    } // Otherwise, return a promise that will resolve when all results are available
-
-
-    return Promise.all(exceptions).then(exceptionResults => wrapResults(dependencies, combineAsyncResultsWithSyncResults(results, exceptionResults).map(getValueFromLoadablePromiseResult)));
-  },
-  dangerouslyAllowMutability: true
-});
-const waitForAllSettled = Recoil_selectorFamily({
-  key: '__waitForAllSettled',
-  get: dependencies => ({
-    get
-  }) => {
-    // Issue requests for all dependencies in parallel.
-    // Exceptions can either be Promises of pending results or real errors
-    const deps = unwrapDependencies(dependencies);
-    const [results, exceptions] = concurrentRequests(get, deps); // If all results are available, return the results
-
-    if (exceptions.every(exp => !Recoil_isPromise(exp))) {
-      return wrapLoadables(dependencies, results, exceptions);
-    } // Wait for all results to settle
-
-
-    return Promise.all(exceptions.map((exp, i) => Recoil_isPromise(exp) ? exp.then(result => {
-      results[i] = getValueFromLoadablePromiseResult(result);
-      exceptions[i] = undefined;
-    }).catch(error => {
-      results[i] = undefined;
-      exceptions[i] = error;
-    }) : null)) // Then wrap them as loadables
-    .then(() => wrapLoadables(dependencies, results, exceptions));
-  },
-  dangerouslyAllowMutability: true
-});
-const noWait = Recoil_selectorFamily({
-  key: '__noWait',
-  get: dependency => ({
-    get
-  }) => {
-    try {
-      return loadableWithValue$4(get(dependency));
-    } catch (exception) {
-      return Recoil_isPromise(exception) ? loadableWithPromise$3(exception) : loadableWithError$3(exception);
-    }
-  },
-  dangerouslyAllowMutability: true
-});
-var Recoil_WaitFor = {
-  waitForNone,
-  waitForAny,
-  waitForAll,
-  waitForAllSettled,
-  noWait
-};
-
-const {
-  batchUpdates: batchUpdates$3,
-  setBatcher: setBatcher$1
-} = Recoil_Batching;
-
-const {
-  DefaultValue: DefaultValue$3
-} = Recoil_Node;
-
-const {
-  RecoilRoot: RecoilRoot$2
-} = Recoil_RecoilRoot_react;
-
-const {
-  isRecoilValue: isRecoilValue$5
-} = Recoil_RecoilValue$1;
-
-const {
-  retentionZone: retentionZone$1
-} = Recoil_RetentionZone;
-
-const {
-  freshSnapshot: freshSnapshot$2
-} = Recoil_Snapshot$1;
-
-const {
-  useGotoRecoilSnapshot: useGotoRecoilSnapshot$1,
-  useRecoilCallback: useRecoilCallback$1,
-  useRecoilSnapshot: useRecoilSnapshot$1,
-  useRecoilState: useRecoilState$1,
-  useRecoilStateLoadable: useRecoilStateLoadable$1,
-  useRecoilTransaction: useRecoilTransaction$1,
-  useRecoilTransactionObserver: useRecoilTransactionObserver$1,
-  useRecoilValue: useRecoilValue$1,
-  useRecoilValueLoadable: useRecoilValueLoadable$1,
-  useResetRecoilState: useResetRecoilState$1,
-  useRetain: useRetain$1,
-  useSetRecoilState: useSetRecoilState$1,
-  useSetUnvalidatedAtomValues: useSetUnvalidatedAtomValues$1,
-  useTransactionObservation_DEPRECATED: useTransactionObservation_DEPRECATED$1
-} = Recoil_Hooks;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const {
-  noWait: noWait$1,
-  waitForAll: waitForAll$1,
-  waitForAllSettled: waitForAllSettled$1,
-  waitForAny: waitForAny$1,
-  waitForNone: waitForNone$1
-} = Recoil_WaitFor;
-
-var Recoil_index = {
-  // Types
-  DefaultValue: DefaultValue$3,
-  // Components
-  RecoilRoot: RecoilRoot$2,
-  useRecoilBridgeAcrossReactRoots_UNSTABLE: Recoil_useRecoilBridgeAcrossReactRoots,
-  // RecoilValues
-  atom: Recoil_atom,
-  selector: Recoil_selector,
-  // Other factories
-  retentionZone: retentionZone$1,
-  // Convenience RecoilValues
-  atomFamily: Recoil_atomFamily,
-  selectorFamily: Recoil_selectorFamily,
-  constSelector: Recoil_constSelector,
-  errorSelector: Recoil_errorSelector,
-  readOnlySelector: Recoil_readOnlySelector,
-  // Hooks that accept RecoilValues
-  useRecoilValue: useRecoilValue$1,
-  useRecoilValueLoadable: useRecoilValueLoadable$1,
-  useRecoilState: useRecoilState$1,
-  useRecoilStateLoadable: useRecoilStateLoadable$1,
-  useSetRecoilState: useSetRecoilState$1,
-  useResetRecoilState: useResetRecoilState$1,
-  useGetRecoilValueInfo_UNSTABLE: Recoil_useGetRecoilValueInfo,
-  useRetain: useRetain$1,
-  // Hooks for complex operations with RecoilValues
-  useRecoilCallback: useRecoilCallback$1,
-  useRecoilTransaction_UNSTABLE: useRecoilTransaction$1,
-  // Hooks for Snapshots
-  useGotoRecoilSnapshot: useGotoRecoilSnapshot$1,
-  useRecoilSnapshot: useRecoilSnapshot$1,
-  useRecoilTransactionObserver_UNSTABLE: useRecoilTransactionObserver$1,
-  useTransactionObservation_UNSTABLE: useTransactionObservation_DEPRECATED$1,
-  useSetUnvalidatedAtomValues_UNSTABLE: useSetUnvalidatedAtomValues$1,
-  // Concurrency Helpers
-  noWait: noWait$1,
-  waitForNone: waitForNone$1,
-  waitForAny: waitForAny$1,
-  waitForAll: waitForAll$1,
-  waitForAllSettled: waitForAllSettled$1,
-  // Other functions
-  isRecoilValue: isRecoilValue$5,
-  // Batching
-  batchUpdates: batchUpdates$3,
-  setBatcher: setBatcher$1,
-  // Snapshot Utils
-  snapshot_UNSTABLE: freshSnapshot$2
-};
-var Recoil_index_1 = Recoil_index.DefaultValue;
-var Recoil_index_2 = Recoil_index.RecoilRoot;
-var Recoil_index_3 = Recoil_index.useRecoilBridgeAcrossReactRoots_UNSTABLE;
-var Recoil_index_4 = Recoil_index.atom;
-var Recoil_index_5 = Recoil_index.selector;
-var Recoil_index_6 = Recoil_index.retentionZone;
-var Recoil_index_7 = Recoil_index.atomFamily;
-var Recoil_index_8 = Recoil_index.selectorFamily;
-var Recoil_index_9 = Recoil_index.constSelector;
-var Recoil_index_10 = Recoil_index.errorSelector;
-var Recoil_index_11 = Recoil_index.readOnlySelector;
-var Recoil_index_12 = Recoil_index.useRecoilValue;
-var Recoil_index_13 = Recoil_index.useRecoilValueLoadable;
-var Recoil_index_14 = Recoil_index.useRecoilState;
-var Recoil_index_15 = Recoil_index.useRecoilStateLoadable;
-var Recoil_index_16 = Recoil_index.useSetRecoilState;
-var Recoil_index_17 = Recoil_index.useResetRecoilState;
-var Recoil_index_18 = Recoil_index.useGetRecoilValueInfo_UNSTABLE;
-var Recoil_index_19 = Recoil_index.useRetain;
-var Recoil_index_20 = Recoil_index.useRecoilCallback;
-var Recoil_index_21 = Recoil_index.useRecoilTransaction_UNSTABLE;
-var Recoil_index_22 = Recoil_index.useGotoRecoilSnapshot;
-var Recoil_index_23 = Recoil_index.useRecoilSnapshot;
-var Recoil_index_24 = Recoil_index.useRecoilTransactionObserver_UNSTABLE;
-var Recoil_index_25 = Recoil_index.useTransactionObservation_UNSTABLE;
-var Recoil_index_26 = Recoil_index.useSetUnvalidatedAtomValues_UNSTABLE;
-var Recoil_index_27 = Recoil_index.noWait;
-var Recoil_index_28 = Recoil_index.waitForNone;
-var Recoil_index_29 = Recoil_index.waitForAny;
-var Recoil_index_30 = Recoil_index.waitForAll;
-var Recoil_index_31 = Recoil_index.waitForAllSettled;
-var Recoil_index_32 = Recoil_index.isRecoilValue;
-var Recoil_index_33 = Recoil_index.batchUpdates;
-var Recoil_index_34 = Recoil_index.setBatcher;
-var Recoil_index_35 = Recoil_index.snapshot_UNSTABLE;
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Recoil_index);
-
-
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (thunk);
 
 /***/ }),
 
@@ -46101,6 +43748,143 @@ try {
 
 /***/ }),
 
+/***/ "./node_modules/reselect/es/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/reselect/es/index.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "defaultMemoize": () => (/* binding */ defaultMemoize),
+/* harmony export */   "createSelectorCreator": () => (/* binding */ createSelectorCreator),
+/* harmony export */   "createSelector": () => (/* binding */ createSelector),
+/* harmony export */   "createStructuredSelector": () => (/* binding */ createStructuredSelector)
+/* harmony export */ });
+function defaultEqualityCheck(a, b) {
+  return a === b;
+}
+
+function areArgumentsShallowlyEqual(equalityCheck, prev, next) {
+  if (prev === null || next === null || prev.length !== next.length) {
+    return false;
+  }
+
+  // Do this in a for loop (and not a `forEach` or an `every`) so we can determine equality as fast as possible.
+  var length = prev.length;
+  for (var i = 0; i < length; i++) {
+    if (!equalityCheck(prev[i], next[i])) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function defaultMemoize(func) {
+  var equalityCheck = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultEqualityCheck;
+
+  var lastArgs = null;
+  var lastResult = null;
+  // we reference arguments instead of spreading them for performance reasons
+  return function () {
+    if (!areArgumentsShallowlyEqual(equalityCheck, lastArgs, arguments)) {
+      // apply arguments instead of spreading for performance.
+      lastResult = func.apply(null, arguments);
+    }
+
+    lastArgs = arguments;
+    return lastResult;
+  };
+}
+
+function getDependencies(funcs) {
+  var dependencies = Array.isArray(funcs[0]) ? funcs[0] : funcs;
+
+  if (!dependencies.every(function (dep) {
+    return typeof dep === 'function';
+  })) {
+    var dependencyTypes = dependencies.map(function (dep) {
+      return typeof dep;
+    }).join(', ');
+    throw new Error('Selector creators expect all input-selectors to be functions, ' + ('instead received the following types: [' + dependencyTypes + ']'));
+  }
+
+  return dependencies;
+}
+
+function createSelectorCreator(memoize) {
+  for (var _len = arguments.length, memoizeOptions = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    memoizeOptions[_key - 1] = arguments[_key];
+  }
+
+  return function () {
+    for (var _len2 = arguments.length, funcs = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      funcs[_key2] = arguments[_key2];
+    }
+
+    var recomputations = 0;
+    var resultFunc = funcs.pop();
+    var dependencies = getDependencies(funcs);
+
+    var memoizedResultFunc = memoize.apply(undefined, [function () {
+      recomputations++;
+      // apply arguments instead of spreading for performance.
+      return resultFunc.apply(null, arguments);
+    }].concat(memoizeOptions));
+
+    // If a selector is called with the exact same arguments we don't need to traverse our dependencies again.
+    var selector = memoize(function () {
+      var params = [];
+      var length = dependencies.length;
+
+      for (var i = 0; i < length; i++) {
+        // apply arguments instead of spreading and mutate a local list of params for performance.
+        params.push(dependencies[i].apply(null, arguments));
+      }
+
+      // apply arguments instead of spreading for performance.
+      return memoizedResultFunc.apply(null, params);
+    });
+
+    selector.resultFunc = resultFunc;
+    selector.dependencies = dependencies;
+    selector.recomputations = function () {
+      return recomputations;
+    };
+    selector.resetRecomputations = function () {
+      return recomputations = 0;
+    };
+    return selector;
+  };
+}
+
+var createSelector = createSelectorCreator(defaultMemoize);
+
+function createStructuredSelector(selectors) {
+  var selectorCreator = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : createSelector;
+
+  if (typeof selectors !== 'object') {
+    throw new Error('createStructuredSelector expects first argument to be an object ' + ('where each property is a selector, instead received a ' + typeof selectors));
+  }
+  var objectKeys = Object.keys(selectors);
+  return selectorCreator(objectKeys.map(function (key) {
+    return selectors[key];
+  }), function () {
+    for (var _len3 = arguments.length, values = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+      values[_key3] = arguments[_key3];
+    }
+
+    return values.reduce(function (composition, value, index) {
+      composition[objectKeys[index]] = value;
+      return composition;
+    }, {});
+  });
+}
+
+/***/ }),
+
 /***/ "./node_modules/resolve-pathname/esm/resolve-pathname.js":
 /*!***************************************************************!*\
   !*** ./node_modules/resolve-pathname/esm/resolve-pathname.js ***!
@@ -47301,1727 +45085,6 @@ function warning(condition, message) {
 
 /***/ }),
 
-/***/ "./node_modules/urs/dist/useRefState.js":
-/*!**********************************************!*\
-  !*** ./node_modules/urs/dist/useRefState.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/**
- * Determines if the given param is an object. {}
- * @param obj
- */
-exports.isObject = function (obj) { return Object.prototype.toString.call(obj) === '[object Object]'; }; // eslint-disable-line
-var useMounted = function () {
-    var mounted = react_1.useRef(false);
-    react_1.useEffect(function () {
-        mounted.current = true;
-        return function () {
-            mounted.current = false;
-        };
-    }, []);
-    return mounted;
-};
-function useRefState(initialState, blockIfUnmounted) {
-    if (blockIfUnmounted === void 0) { blockIfUnmounted = true; }
-    var mounted = useMounted();
-    var _a = react_1.useState(initialState), reactState = _a[0], setReactState = _a[1];
-    var state = react_1.useRef(reactState);
-    var setState = react_1.useCallback(function (arg) {
-        if (!mounted.current && blockIfUnmounted)
-            return;
-        state.current = (typeof arg === 'function') ? arg(state.current) : arg;
-        setReactState(state.current);
-    }, []);
-    return [state, setState];
-}
-exports.useRefState = useRefState;
-exports["default"] = useRefState;
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/FetchContext.js":
-/*!********************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/FetchContext.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FetchContext": () => (/* binding */ FetchContext),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var FetchContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)({
-    url: '',
-    options: {},
-    graphql: false // TODO: this will make it so useFetch(QUERY || MUTATION) will work
-});
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FetchContext);
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/Provider.js":
-/*!****************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/Provider.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Provider": () => (/* binding */ Provider)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var use_ssr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! use-ssr */ "./node_modules/use-ssr/dist/useSSR.js");
-/* harmony import */ var use_ssr__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(use_ssr__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _FetchContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FetchContext */ "./node_modules/use-http/dist/esm/FetchContext.js");
-
-
-
-var Provider = function (_a) {
-    var url = _a.url, options = _a.options, _b = _a.graphql, graphql = _b === void 0 ? false : _b, children = _a.children;
-    var isBrowser = use_ssr__WEBPACK_IMPORTED_MODULE_1___default()().isBrowser;
-    var defaults = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () { return ({
-        url: url || (isBrowser ? window.location.origin : ''),
-        options: options || {},
-        graphql: graphql // TODO: this will make it so useFetch(QUERY || MUTATION) will work
-    }); }, [options, graphql, isBrowser, url]);
-    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_FetchContext__WEBPACK_IMPORTED_MODULE_2__["default"].Provider, { value: defaults }, children));
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/defaults.js":
-/*!****************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/defaults.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useFetchArgsDefaults": () => (/* binding */ useFetchArgsDefaults),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types */ "./node_modules/use-http/dist/esm/types.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./node_modules/use-http/dist/esm/utils.js");
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-
-
-var useFetchArgsDefaults = {
-    host: '',
-    path: undefined,
-    customOptions: {
-        cacheLife: 0,
-        cachePolicy: _types__WEBPACK_IMPORTED_MODULE_0__.CachePolicies.CACHE_FIRST,
-        interceptors: {},
-        onAbort: function () { },
-        onError: function () { },
-        onNewData: function (currData, newData) { return newData; },
-        onTimeout: function () { },
-        perPage: 0,
-        persist: false,
-        responseType: ['json', 'text', 'blob', 'arrayBuffer'],
-        retries: 0,
-        retryDelay: 1000,
-        retryOn: [],
-        suspense: false,
-        timeout: 0,
-        // defaults
-        data: undefined,
-        loading: false
-    },
-    requestInit: {
-        headers: {
-            Accept: 'application/json, text/plain, */*'
-        }
-    },
-    dependencies: undefined
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Object.entries(useFetchArgsDefaults).reduce(function (acc, _a) {
-    var _b;
-    var key = _a[0], value = _a[1];
-    if ((0,_utils__WEBPACK_IMPORTED_MODULE_1__.isObject)(value))
-        return __assign(__assign({}, acc), value);
-    return __assign(__assign({}, acc), (_b = {}, _b[key] = value, _b));
-}, {}));
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/doFetchArgs.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/doFetchArgs.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ doFetchArgs)
-/* harmony export */ });
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types */ "./node_modules/use-http/dist/esm/types.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./node_modules/use-http/dist/esm/utils.js");
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-var GET = _types__WEBPACK_IMPORTED_MODULE_0__.HTTPMethod.GET;
-function doFetchArgs(initialOptions, method, controller, cacheLife, cache, host, path, routeOrBody, bodyAs2ndParam, requestInterceptor) {
-    return __awaiter(this, void 0, void 0, function () {
-        var route, url, body, headers, options, responseID, _a, _b;
-        var _this = this;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.invariant)(!((0,_utils__WEBPACK_IMPORTED_MODULE_1__.isBodyObject)(routeOrBody) && (0,_utils__WEBPACK_IMPORTED_MODULE_1__.isBodyObject)(bodyAs2ndParam)), "If first argument of " + method.toLowerCase() + "() is an object, you cannot have a 2nd argument. \uD83D\uDE1C");
-                    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.invariant)(!(method === GET && (0,_utils__WEBPACK_IMPORTED_MODULE_1__.isBodyObject)(routeOrBody)), 'You can only have query params as 1st argument of request.get()');
-                    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.invariant)(!(method === GET && bodyAs2ndParam !== undefined), 'You can only have query params as 1st argument of request.get()');
-                    route = (function () {
-                        if (!_utils__WEBPACK_IMPORTED_MODULE_1__.isServer && routeOrBody instanceof URLSearchParams)
-                            return "?" + routeOrBody;
-                        if ((0,_utils__WEBPACK_IMPORTED_MODULE_1__.isString)(routeOrBody))
-                            return routeOrBody;
-                        return '';
-                    })();
-                    url = "" + host + (0,_utils__WEBPACK_IMPORTED_MODULE_1__.addSlash)(path, host) + (0,_utils__WEBPACK_IMPORTED_MODULE_1__.addSlash)(route);
-                    body = (function () {
-                        // FormData instanceof check should go first, because React Native's FormData implementation
-                        // is indistinguishable from plain object when using isBodyObject check
-                        if (routeOrBody instanceof FormData)
-                            return routeOrBody;
-                        if ((0,_utils__WEBPACK_IMPORTED_MODULE_1__.isBodyObject)(routeOrBody))
-                            return JSON.stringify(routeOrBody);
-                        if (!_utils__WEBPACK_IMPORTED_MODULE_1__.isServer &&
-                            (bodyAs2ndParam instanceof FormData ||
-                                bodyAs2ndParam instanceof URLSearchParams))
-                            return bodyAs2ndParam;
-                        if ((0,_utils__WEBPACK_IMPORTED_MODULE_1__.isBodyObject)(bodyAs2ndParam) || (0,_utils__WEBPACK_IMPORTED_MODULE_1__.isString)(bodyAs2ndParam))
-                            return JSON.stringify(bodyAs2ndParam);
-                        if ((0,_utils__WEBPACK_IMPORTED_MODULE_1__.isBodyObject)(initialOptions.body) || (0,_utils__WEBPACK_IMPORTED_MODULE_1__.isString)(bodyAs2ndParam))
-                            return JSON.stringify(initialOptions.body);
-                        return null;
-                    })();
-                    headers = (function () {
-                        var contentType = (initialOptions.headers || {})['Content-Type'];
-                        var shouldAddContentType = !!contentType || [_types__WEBPACK_IMPORTED_MODULE_0__.HTTPMethod.POST, _types__WEBPACK_IMPORTED_MODULE_0__.HTTPMethod.PUT, _types__WEBPACK_IMPORTED_MODULE_0__.HTTPMethod.PATCH].includes(method) && !(body instanceof FormData);
-                        var headers = __assign({}, initialOptions.headers);
-                        if (shouldAddContentType) {
-                            // default content types http://bit.ly/2N2ovOZ
-                            // Accept: 'application/json',
-                            // roughly, should only add for POST and PUT http://bit.ly/2NJNt3N
-                            // unless specified by the user
-                            headers['Content-Type'] = contentType || 'application/json';
-                        }
-                        else if (Object.keys(headers).length === 0) {
-                            return null;
-                        }
-                        return headers;
-                    })();
-                    return [4 /*yield*/, (function () { return __awaiter(_this, void 0, void 0, function () {
-                            var opts, interceptor;
-                            return __generator(this, function (_a) {
-                                switch (_a.label) {
-                                    case 0:
-                                        opts = __assign(__assign({}, initialOptions), { method: method, signal: controller.signal });
-                                        if (headers !== null) {
-                                            opts.headers = headers;
-                                        }
-                                        else {
-                                            delete opts.headers;
-                                        }
-                                        if (body !== null)
-                                            opts.body = body;
-                                        if (!requestInterceptor) return [3 /*break*/, 2];
-                                        return [4 /*yield*/, requestInterceptor({ options: opts, url: host, path: path, route: route })];
-                                    case 1:
-                                        interceptor = _a.sent();
-                                        return [2 /*return*/, interceptor];
-                                    case 2: return [2 /*return*/, opts];
-                                }
-                            });
-                        }); })()
-                        // TODO: if the body is a file, and this is a large file, it might exceed the size
-                        // limit of the key size. Potential solution: base64 the body
-                        // used to tell if a request has already been made
-                    ];
-                case 1:
-                    options = _c.sent();
-                    responseID = Object.entries({ url: url, method: method, body: options.body || '' })
-                        .map(function (_a) {
-                        var key = _a[0], value = _a[1];
-                        return key + ":" + value;
-                    }).join('||');
-                    _a = {
-                        url: url,
-                        options: options
-                    };
-                    _b = {};
-                    return [4 /*yield*/, cache.has(responseID)];
-                case 2:
-                    _b.isCached = _c.sent(),
-                        _b.id = responseID;
-                    return [4 /*yield*/, cache.get(responseID)];
-                case 3: return [2 /*return*/, (_a.response = (_b.cached = (_c.sent()),
-                        _b),
-                        _a)];
-            }
-        });
-    });
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/index.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _useFetch__WEBPACK_IMPORTED_MODULE_0__["default"]),
-/* harmony export */   "useFetch": () => (/* reexport safe */ _useFetch__WEBPACK_IMPORTED_MODULE_0__.useFetch),
-/* harmony export */   "useMutation": () => (/* reexport safe */ _useMutation__WEBPACK_IMPORTED_MODULE_1__.useMutation),
-/* harmony export */   "useQuery": () => (/* reexport safe */ _useQuery__WEBPACK_IMPORTED_MODULE_2__.useQuery),
-/* harmony export */   "Provider": () => (/* reexport safe */ _Provider__WEBPACK_IMPORTED_MODULE_3__.Provider),
-/* harmony export */   "FetchContext": () => (/* reexport safe */ _FetchContext__WEBPACK_IMPORTED_MODULE_4__.FetchContext),
-/* harmony export */   "CachePolicies": () => (/* reexport safe */ _types__WEBPACK_IMPORTED_MODULE_5__.CachePolicies),
-/* harmony export */   "HTTPMethod": () => (/* reexport safe */ _types__WEBPACK_IMPORTED_MODULE_5__.HTTPMethod)
-/* harmony export */ });
-/* harmony import */ var _useFetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./useFetch */ "./node_modules/use-http/dist/esm/useFetch.js");
-/* harmony import */ var _useMutation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useMutation */ "./node_modules/use-http/dist/esm/useMutation.js");
-/* harmony import */ var _useQuery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useQuery */ "./node_modules/use-http/dist/esm/useQuery.js");
-/* harmony import */ var _Provider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Provider */ "./node_modules/use-http/dist/esm/Provider.js");
-/* harmony import */ var _FetchContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FetchContext */ "./node_modules/use-http/dist/esm/FetchContext.js");
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./types */ "./node_modules/use-http/dist/esm/types.js");
-
-
-
-
-
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/storage/localStorage.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/storage/localStorage.js ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./node_modules/use-http/dist/esm/utils.js");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-var cacheName = 'useHTTPcache';
-var getCache = function () {
-    try {
-        return JSON.parse(localStorage.getItem(cacheName) || '{}');
-    }
-    catch (err) {
-        localStorage.removeItem(cacheName);
-        return {};
-    }
-};
-var getLocalStorage = function (_a) {
-    var cacheLife = _a.cacheLife;
-    var remove = function () {
-        var responseIDs = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            responseIDs[_i] = arguments[_i];
-        }
-        return __awaiter(void 0, void 0, void 0, function () {
-            var cache;
-            return __generator(this, function (_a) {
-                cache = getCache();
-                responseIDs.forEach(function (id) { return delete cache[id]; });
-                localStorage.setItem(cacheName, JSON.stringify(cache));
-                return [2 /*return*/];
-            });
-        });
-    };
-    var isExpired = function (responseID) {
-        var cache = getCache();
-        var _a = (cache[responseID] || {}), expiration = _a.expiration, response = _a.response;
-        var expired = expiration > 0 && expiration < Date.now();
-        if (expired)
-            remove(responseID);
-        return expired || !response;
-    };
-    var has = function (responseID) { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
-        return [2 /*return*/, !isExpired(responseID)];
-    }); }); };
-    var get = function (responseID) { return __awaiter(void 0, void 0, void 0, function () {
-        var cache, _a, body, headers, status, statusText;
-        return __generator(this, function (_b) {
-            if (isExpired(responseID))
-                return [2 /*return*/];
-            cache = getCache();
-            _a = cache[responseID].response, body = _a.body, headers = _a.headers, status = _a.status, statusText = _a.statusText;
-            return [2 /*return*/, new Response(body, {
-                    status: status,
-                    statusText: statusText,
-                    headers: new Headers(headers || {})
-                })];
-        });
-    }); };
-    var set = function (responseID, response) { return __awaiter(void 0, void 0, void 0, function () {
-        var cache, _a, _b, _c;
-        return __generator(this, function (_d) {
-            switch (_d.label) {
-                case 0:
-                    cache = getCache();
-                    _a = cache;
-                    _b = responseID;
-                    _c = {};
-                    return [4 /*yield*/, (0,_utils__WEBPACK_IMPORTED_MODULE_0__.serializeResponse)(response)];
-                case 1:
-                    _a[_b] = (_c.response = _d.sent(),
-                        _c.expiration = Date.now() + cacheLife,
-                        _c);
-                    localStorage.setItem(cacheName, JSON.stringify(cache));
-                    return [2 /*return*/];
-            }
-        });
-    }); };
-    var clear = function () { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            localStorage.setItem(cacheName, JSON.stringify({}));
-            return [2 /*return*/];
-        });
-    }); };
-    return Object.defineProperties(getCache(), {
-        get: { value: get, writable: false },
-        set: { value: set, writable: false },
-        has: { value: has, writable: false },
-        delete: { value: remove, writable: false },
-        clear: { value: clear, writable: false }
-    });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getLocalStorage);
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/storage/memoryStorage.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/storage/memoryStorage.js ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-var inMemoryStorage = {};
-var getMemoryStorage = function (_a) {
-    var cacheLife = _a.cacheLife;
-    var remove = function () {
-        var responseIDs = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            responseIDs[_i] = arguments[_i];
-        }
-        return __awaiter(void 0, void 0, void 0, function () {
-            var _a, responseIDs_1, responseID;
-            return __generator(this, function (_b) {
-                for (_a = 0, responseIDs_1 = responseIDs; _a < responseIDs_1.length; _a++) {
-                    responseID = responseIDs_1[_a];
-                    delete inMemoryStorage[responseID];
-                    delete inMemoryStorage[responseID + ":ts"];
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    var isExpired = function (responseID) {
-        var expiration = inMemoryStorage[responseID + ":ts"];
-        var expired = expiration > 0 && expiration < Date.now();
-        if (expired)
-            remove(responseID);
-        return expired || !inMemoryStorage[responseID];
-    };
-    var get = function (responseID) { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            if (isExpired(responseID))
-                return [2 /*return*/];
-            return [2 /*return*/, inMemoryStorage[responseID]];
-        });
-    }); };
-    var set = function (responseID, res) { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            inMemoryStorage[responseID] = res;
-            inMemoryStorage[responseID + ":ts"] = cacheLife > 0 ? Date.now() + cacheLife : 0;
-            return [2 /*return*/];
-        });
-    }); };
-    var has = function (responseID) { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
-        return [2 /*return*/, !isExpired(responseID)];
-    }); }); };
-    var clear = function () { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            inMemoryStorage = {};
-            return [2 /*return*/];
-        });
-    }); };
-    return Object.defineProperties(inMemoryStorage, {
-        get: { value: get, writable: false, configurable: true },
-        set: { value: set, writable: false, configurable: true },
-        has: { value: has, writable: false, configurable: true },
-        delete: { value: remove, writable: false, configurable: true },
-        clear: { value: clear, writable: false, configurable: true }
-    });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getMemoryStorage);
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/types.js":
-/*!*************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/types.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "HTTPMethod": () => (/* binding */ HTTPMethod),
-/* harmony export */   "CachePolicies": () => (/* binding */ CachePolicies)
-/* harmony export */ });
-var HTTPMethod;
-(function (HTTPMethod) {
-    HTTPMethod["DELETE"] = "DELETE";
-    HTTPMethod["GET"] = "GET";
-    HTTPMethod["HEAD"] = "HEAD";
-    HTTPMethod["OPTIONS"] = "OPTIONS";
-    HTTPMethod["PATCH"] = "PATCH";
-    HTTPMethod["POST"] = "POST";
-    HTTPMethod["PUT"] = "PUT";
-    HTTPMethod["CONNECT"] = "CONNECT";
-    HTTPMethod["TRACE"] = "TRACE";
-})(HTTPMethod || (HTTPMethod = {}));
-// https://www.apollographql.com/docs/react/api/react/hoc/#optionsfetchpolicy
-var CachePolicies;
-(function (CachePolicies) {
-    /**
-     * This is the default value where we always try reading data
-     * from your cache first. If all the data needed to fulfill
-     * your query is in the cache then that data will be returned.
-     * useFetch will only fetch from the network if a cached result
-     * is not available. This fetch policy aims to minimize the number
-     * of network requests sent when rendering your component.
-     */
-    CachePolicies["CACHE_FIRST"] = "cache-first";
-    /**
-     * This fetch policy will have useFetch first trying to read data
-     * from your cache. If all the data needed to fulfill your query
-     * is in the cache then that data will be returned. However,
-     * regardless of whether or not the full data is in your cache
-     * this fetchPolicy will always execute query with the network
-     * interface unlike cache-first which will only execute your query
-     * if the query data is not in your cache. This fetch policy optimizes
-     * for users getting a quick response while also trying to keep
-     * cached data consistent with your server data at the cost of extra
-     * network requests.
-     */
-    CachePolicies["CACHE_AND_NETWORK"] = "cache-and-network";
-    /**
-     * This fetch policy will never return your initial data from the
-     * cache. Instead it will always make a request using your network
-     * interface to the server. This fetch policy optimizes for data
-     * consistency with the server, but at the cost of an instant response
-     * to the user when one is available.
-     */
-    CachePolicies["NETWORK_ONLY"] = "network-only";
-    /**
-     * This fetch policy will never execute a query using your network
-     * interface. Instead it will always try reading from the cache. If the
-     * data for your query does not exist in the cache then an error will be
-     * thrown. This fetch policy allows you to only interact with data in
-     * your local client cache without making any network requests which
-     * keeps your component fast, but means your local data might not be
-     * consistent with what is on the server.
-     */
-    CachePolicies["CACHE_ONLY"] = "cache-only";
-    /**
-     * This fetch policy will never return your initial data from the cache.
-     * Instead it will always make a request using your network interface to
-     * the server. Unlike the network-only policy, it also will not write
-     * any data to the cache after the query completes.
-     */
-    CachePolicies["NO_CACHE"] = "no-cache";
-    CachePolicies["EXACT_CACHE_AND_NETWORK"] = "exact-cache-and-network";
-})(CachePolicies || (CachePolicies = {}));
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/useCache.js":
-/*!****************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/useCache.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var use_ssr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! use-ssr */ "./node_modules/use-ssr/dist/useSSR.js");
-/* harmony import */ var use_ssr__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(use_ssr__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./node_modules/use-http/dist/esm/utils.js");
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./types */ "./node_modules/use-http/dist/esm/types.js");
-/* harmony import */ var _storage_localStorage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./storage/localStorage */ "./node_modules/use-http/dist/esm/storage/localStorage.js");
-/* harmony import */ var _storage_memoryStorage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./storage/memoryStorage */ "./node_modules/use-http/dist/esm/storage/memoryStorage.js");
-
-
-
-
-
-var NETWORK_ONLY = _types__WEBPACK_IMPORTED_MODULE_2__.CachePolicies.NETWORK_ONLY, NO_CACHE = _types__WEBPACK_IMPORTED_MODULE_2__.CachePolicies.NO_CACHE;
-var useCache = function (_a) {
-    var persist = _a.persist, cacheLife = _a.cacheLife, cachePolicy = _a.cachePolicy;
-    var _b = use_ssr__WEBPACK_IMPORTED_MODULE_0___default()(), isNative = _b.isNative, isServer = _b.isServer;
-    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.invariant)(!(isServer && persist), 'There is no persistent storage on the Server currently! 🙅‍♂️');
-    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.invariant)(!(isNative && persist), 'React Native support for persistent cache is not yet implemented. 🙅‍♂️');
-    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.invariant)(!(persist && [NO_CACHE, NETWORK_ONLY].includes(cachePolicy)), "You cannot use option 'persist' with cachePolicy: " + cachePolicy + " \uD83D\uDE45\u200D\u2642\uFE0F");
-    // right now we're not worrying about react-native
-    if (persist)
-        return (0,_storage_localStorage__WEBPACK_IMPORTED_MODULE_3__["default"])({ cacheLife: cacheLife || (24 * 3600000) });
-    return (0,_storage_memoryStorage__WEBPACK_IMPORTED_MODULE_4__["default"])({ cacheLife: cacheLife });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useCache);
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/useFetch.js":
-/*!****************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/useFetch.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useFetch": () => (/* binding */ useFetch),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var use_ssr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! use-ssr */ "./node_modules/use-ssr/dist/useSSR.js");
-/* harmony import */ var use_ssr__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(use_ssr__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var urs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! urs */ "./node_modules/urs/dist/useRefState.js");
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./types */ "./node_modules/use-http/dist/esm/types.js");
-/* harmony import */ var _useFetchArgs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./useFetchArgs */ "./node_modules/use-http/dist/esm/useFetchArgs.js");
-/* harmony import */ var _doFetchArgs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./doFetchArgs */ "./node_modules/use-http/dist/esm/doFetchArgs.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils */ "./node_modules/use-http/dist/esm/utils.js");
-/* harmony import */ var _useCache__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./useCache */ "./node_modules/use-http/dist/esm/useCache.js");
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-var __rest = (undefined && undefined.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-
-
-
-
-
-
-
-
-var CACHE_FIRST = _types__WEBPACK_IMPORTED_MODULE_3__.CachePolicies.CACHE_FIRST;
-function useFetch() {
-    var _this = this;
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-    }
-    var _a = _useFetchArgs__WEBPACK_IMPORTED_MODULE_4__["default"].apply(void 0, args), host = _a.host, path = _a.path, customOptions = _a.customOptions, requestInit = _a.requestInit, dependencies = _a.dependencies;
-    var cacheLife = customOptions.cacheLife, cachePolicy = customOptions.cachePolicy, // 'cache-first' by default
-    interceptors = customOptions.interceptors, onAbort = customOptions.onAbort, onError = customOptions.onError, onNewData = customOptions.onNewData, onTimeout = customOptions.onTimeout, perPage = customOptions.perPage, persist = customOptions.persist, responseType = customOptions.responseType, retries = customOptions.retries, retryDelay = customOptions.retryDelay, retryOn = customOptions.retryOn, suspense = customOptions.suspense, timeout = customOptions.timeout, defaults = __rest(customOptions, ["cacheLife", "cachePolicy", "interceptors", "onAbort", "onError", "onNewData", "onTimeout", "perPage", "persist", "responseType", "retries", "retryDelay", "retryOn", "suspense", "timeout"]);
-    var cache = (0,_useCache__WEBPACK_IMPORTED_MODULE_7__["default"])({ persist: persist, cacheLife: cacheLife, cachePolicy: cachePolicy });
-    var isServer = use_ssr__WEBPACK_IMPORTED_MODULE_1___default()().isServer;
-    var controller = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-    var res = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)({});
-    var data = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(defaults.data);
-    var timedout = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(false);
-    var attempt = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0);
-    var error = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-    var hasMore = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(true);
-    var suspenseStatus = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)('pending');
-    var suspender = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-    var mounted = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(false);
-    var _b = (0,urs__WEBPACK_IMPORTED_MODULE_2__["default"])(defaults.loading), loading = _b[0], setLoading = _b[1];
-    var forceUpdate = (0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(function () { return ({}); }, [])[1];
-    var makeFetch = (0,_utils__WEBPACK_IMPORTED_MODULE_6__.useDeepCallback)(function (method) {
-        var doFetch = function (routeOrBody, body) { return __awaiter(_this, void 0, void 0, function () {
-            var theController, _a, url, options, response, timer, newData, newRes, _b, _c, opts, shouldRetry, _d, _e, theData, err_1, opts, shouldRetry, _f, _g, theData;
-            return __generator(this, function (_h) {
-                switch (_h.label) {
-                    case 0:
-                        if (isServer)
-                            return [2 /*return*/]; // for now, we don't do anything on the server
-                        controller.current = new AbortController();
-                        controller.current.signal.onabort = onAbort;
-                        theController = controller.current;
-                        return [4 /*yield*/, (0,_doFetchArgs__WEBPACK_IMPORTED_MODULE_5__["default"])(requestInit, method, theController, cacheLife, cache, host, path, routeOrBody, body, interceptors.request)];
-                    case 1:
-                        _a = _h.sent(), url = _a.url, options = _a.options, response = _a.response;
-                        error.current = undefined;
-                        // don't perform the request if there is no more data to fetch (pagination)
-                        if (perPage > 0 && !hasMore.current && !error.current)
-                            return [2 /*return*/, data.current];
-                        if (!suspense)
-                            setLoading(true);
-                        timer = timeout && setTimeout(function () {
-                            timedout.current = true;
-                            theController.abort();
-                            if (onTimeout)
-                                onTimeout();
-                        }, timeout);
-                        _h.label = 2;
-                    case 2:
-                        _h.trys.push([2, 17, 23, 24]);
-                        if (!(response.isCached && cachePolicy === CACHE_FIRST)) return [3 /*break*/, 3];
-                        newRes = response.cached;
-                        return [3 /*break*/, 5];
-                    case 3: return [4 /*yield*/, fetch(url, options)];
-                    case 4:
-                        newRes = (_h.sent()).clone();
-                        _h.label = 5;
-                    case 5:
-                        res.current = newRes.clone();
-                        return [4 /*yield*/, (0,_utils__WEBPACK_IMPORTED_MODULE_6__.tryGetData)(newRes, defaults.data, responseType)];
-                    case 6:
-                        newData = _h.sent();
-                        res.current.data = onNewData(data.current, newData);
-                        _b = res;
-                        if (!interceptors.response) return [3 /*break*/, 8];
-                        return [4 /*yield*/, interceptors.response({ response: res.current, request: requestInit })];
-                    case 7:
-                        _c = _h.sent();
-                        return [3 /*break*/, 9];
-                    case 8:
-                        _c = res.current;
-                        _h.label = 9;
-                    case 9:
-                        _b.current = _c;
-                        (0,_utils__WEBPACK_IMPORTED_MODULE_6__.invariant)('data' in res.current, 'You must have `data` field on the Response returned from your `interceptors.response`');
-                        data.current = res.current.data;
-                        opts = { attempt: attempt.current, response: newRes };
-                        // if we just have `retries` set with NO `retryOn` then
-                        // automatically retry on fail until attempts run out
-                        _d = !(0,_utils__WEBPACK_IMPORTED_MODULE_6__.isFunction)(retryOn) && Array.isArray(retryOn) && retryOn.length < 1 && (newRes === null || newRes === void 0 ? void 0 : newRes.ok) === false
-                            // otherwise only retry when is specified
-                            || Array.isArray(retryOn) && retryOn.includes(newRes.status);
-                        if (_d) 
-                        // if we just have `retries` set with NO `retryOn` then
-                        // automatically retry on fail until attempts run out
-                        return [3 /*break*/, 12];
-                        _e = (0,_utils__WEBPACK_IMPORTED_MODULE_6__.isFunction)(retryOn);
-                        if (!_e) return [3 /*break*/, 11];
-                        return [4 /*yield*/, retryOn(opts)];
-                    case 10:
-                        _e = (_h.sent());
-                        _h.label = 11;
-                    case 11:
-                        _d = _e;
-                        _h.label = 12;
-                    case 12:
-                        shouldRetry = (_d) && retries > 0 && retries > attempt.current;
-                        if (!shouldRetry) return [3 /*break*/, 14];
-                        return [4 /*yield*/, retry(opts, routeOrBody, body)];
-                    case 13:
-                        theData = _h.sent();
-                        return [2 /*return*/, theData];
-                    case 14:
-                        if (!(cachePolicy === CACHE_FIRST && !response.isCached)) return [3 /*break*/, 16];
-                        return [4 /*yield*/, cache.set(response.id, newRes.clone())];
-                    case 15:
-                        _h.sent();
-                        _h.label = 16;
-                    case 16:
-                        if (Array.isArray(data.current) && !!(data.current.length % perPage))
-                            hasMore.current = false;
-                        return [3 /*break*/, 24];
-                    case 17:
-                        err_1 = _h.sent();
-                        if (attempt.current >= retries && timedout.current)
-                            error.current = (0,_utils__WEBPACK_IMPORTED_MODULE_6__.makeError)('AbortError', 'Timeout Error');
-                        opts = { attempt: attempt.current, error: err_1 };
-                        // if we just have `retries` set with NO `retryOn` then
-                        // automatically retry on fail until attempts run out
-                        _f = !(0,_utils__WEBPACK_IMPORTED_MODULE_6__.isFunction)(retryOn) && Array.isArray(retryOn) && retryOn.length < 1;
-                        if (_f) 
-                        // if we just have `retries` set with NO `retryOn` then
-                        // automatically retry on fail until attempts run out
-                        return [3 /*break*/, 20];
-                        _g = (0,_utils__WEBPACK_IMPORTED_MODULE_6__.isFunction)(retryOn);
-                        if (!_g) return [3 /*break*/, 19];
-                        return [4 /*yield*/, retryOn(opts)];
-                    case 18:
-                        _g = (_h.sent());
-                        _h.label = 19;
-                    case 19:
-                        _f = _g;
-                        _h.label = 20;
-                    case 20:
-                        shouldRetry = (_f) && retries > 0 && retries > attempt.current;
-                        if (!shouldRetry) return [3 /*break*/, 22];
-                        return [4 /*yield*/, retry(opts, routeOrBody, body)];
-                    case 21:
-                        theData = _h.sent();
-                        return [2 /*return*/, theData];
-                    case 22:
-                        if (err_1.name !== 'AbortError') {
-                            error.current = err_1;
-                        }
-                        return [3 /*break*/, 24];
-                    case 23:
-                        timedout.current = false;
-                        if (timer)
-                            clearTimeout(timer);
-                        controller.current = undefined;
-                        return [7 /*endfinally*/];
-                    case 24:
-                        if (newRes && !newRes.ok && !error.current)
-                            error.current = (0,_utils__WEBPACK_IMPORTED_MODULE_6__.makeError)(newRes.status, newRes.statusText);
-                        if (!suspense)
-                            setLoading(false);
-                        if (attempt.current === retries)
-                            attempt.current = 0;
-                        if (error.current)
-                            onError({ error: error.current });
-                        return [2 /*return*/, data.current];
-                }
-            });
-        }); }; // end of doFetch()
-        var retry = function (opts, routeOrBody, body) { return __awaiter(_this, void 0, void 0, function () {
-            var delay, d;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        delay = ((0,_utils__WEBPACK_IMPORTED_MODULE_6__.isFunction)(retryDelay) ? retryDelay(opts) : retryDelay);
-                        if (!(Number.isInteger(delay) && delay >= 0)) {
-                            console.error('retryDelay must be a number >= 0! If you\'re using it as a function, it must also return a number >= 0.');
-                        }
-                        attempt.current++;
-                        if (!delay) return [3 /*break*/, 2];
-                        return [4 /*yield*/, (0,_utils__WEBPACK_IMPORTED_MODULE_6__.sleep)(delay)];
-                    case 1:
-                        _a.sent();
-                        _a.label = 2;
-                    case 2: return [4 /*yield*/, doFetch(routeOrBody, body)];
-                    case 3:
-                        d = _a.sent();
-                        return [2 /*return*/, d];
-                }
-            });
-        }); };
-        if (suspense) {
-            return function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return __awaiter(_this, void 0, void 0, function () {
-                    var newData;
-                    return __generator(this, function (_a) {
-                        switch (_a.label) {
-                            case 0:
-                                suspender.current = doFetch.apply(void 0, args).then(function (newData) {
-                                    suspenseStatus.current = 'success';
-                                    return newData;
-                                }, function () {
-                                    suspenseStatus.current = 'error';
-                                });
-                                forceUpdate();
-                                return [4 /*yield*/, suspender.current];
-                            case 1:
-                                newData = _a.sent();
-                                return [2 /*return*/, newData];
-                        }
-                    });
-                });
-            };
-        }
-        return doFetch;
-    }, [isServer, onAbort, requestInit, host, path, interceptors, cachePolicy, perPage, timeout, persist, cacheLife, onTimeout, defaults.data, onNewData, forceUpdate, suspense]);
-    var post = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(makeFetch(_types__WEBPACK_IMPORTED_MODULE_3__.HTTPMethod.POST), [makeFetch]);
-    var del = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(makeFetch(_types__WEBPACK_IMPORTED_MODULE_3__.HTTPMethod.DELETE), [makeFetch]);
-    var request = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () { return Object.defineProperties({
-        get: makeFetch(_types__WEBPACK_IMPORTED_MODULE_3__.HTTPMethod.GET),
-        post: post,
-        patch: makeFetch(_types__WEBPACK_IMPORTED_MODULE_3__.HTTPMethod.PATCH),
-        put: makeFetch(_types__WEBPACK_IMPORTED_MODULE_3__.HTTPMethod.PUT),
-        options: makeFetch(_types__WEBPACK_IMPORTED_MODULE_3__.HTTPMethod.OPTIONS),
-        head: makeFetch(_types__WEBPACK_IMPORTED_MODULE_3__.HTTPMethod.HEAD),
-        connect: makeFetch(_types__WEBPACK_IMPORTED_MODULE_3__.HTTPMethod.CONNECT),
-        trace: makeFetch(_types__WEBPACK_IMPORTED_MODULE_3__.HTTPMethod.TRACE),
-        del: del,
-        delete: del,
-        abort: function () { return controller.current && controller.current.abort(); },
-        query: function (query, variables) { return post({ query: query, variables: variables }); },
-        mutate: function (mutation, variables) { return post({ mutation: mutation, variables: variables }); },
-        cache: cache
-    }, {
-        loading: { get: function () { return loading.current; } },
-        error: { get: function () { return error.current; } },
-        data: { get: function () { return data.current; } },
-    }); }, [makeFetch]);
-    var response = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () { return (0,_utils__WEBPACK_IMPORTED_MODULE_6__.toResponseObject)(res, data); }, []);
-    // onMount/onUpdate
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-        mounted.current = true;
-        if (Array.isArray(dependencies)) {
-            var methodName = requestInit.method || _types__WEBPACK_IMPORTED_MODULE_3__.HTTPMethod.GET;
-            var methodLower = methodName.toLowerCase();
-            var req = request[methodLower];
-            req();
-        }
-        return function () { return mounted.current = false; };
-    }, dependencies);
-    // Cancel any running request when unmounting to avoid updating state after component has unmounted
-    // This can happen if a request's promise resolves after component unmounts
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () { return request.abort; }, []);
-    if (suspense && suspender.current) {
-        if (isServer)
-            throw new Error('Suspense on server side is not yet supported! 🙅‍♂️');
-        switch (suspenseStatus.current) {
-            case 'pending':
-                throw suspender.current;
-            case 'error':
-                throw error.current;
-        }
-    }
-    return Object.assign([request, response, loading.current, error.current], __assign(__assign({ request: request, response: response }, request), { loading: loading.current, data: data.current, error: error.current }));
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useFetch);
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/useFetchArgs.js":
-/*!********************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/useFetchArgs.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ useFetchArgs)
-/* harmony export */ });
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./node_modules/use-http/dist/esm/utils.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _FetchContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FetchContext */ "./node_modules/use-http/dist/esm/FetchContext.js");
-/* harmony import */ var _defaults__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./defaults */ "./node_modules/use-http/dist/esm/defaults.js");
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-
-
-
-
-function useFetchArgs(urlOrPathOrOptionsOrOverwriteGlobalOptions, optionsOrOverwriteGlobalOrDeps, deps) {
-    (0,_utils__WEBPACK_IMPORTED_MODULE_0__.invariant)(!((0,_utils__WEBPACK_IMPORTED_MODULE_0__.isObject)(urlOrPathOrOptionsOrOverwriteGlobalOptions) && (0,_utils__WEBPACK_IMPORTED_MODULE_0__.isObject)(optionsOrOverwriteGlobalOrDeps)), 'You cannot have a 2nd parameter of useFetch as object when your first argument is an object.');
-    var context = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_FetchContext__WEBPACK_IMPORTED_MODULE_2__["default"]);
-    var host = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(function () {
-        var maybeHost = urlOrPathOrOptionsOrOverwriteGlobalOptions;
-        if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.isString)(maybeHost) && maybeHost.includes('://'))
-            return maybeHost;
-        if (context.url)
-            return context.url;
-        return _defaults__WEBPACK_IMPORTED_MODULE_3__["default"].host;
-    }, [context.url, urlOrPathOrOptionsOrOverwriteGlobalOptions]);
-    var path = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(function () {
-        var maybePath = urlOrPathOrOptionsOrOverwriteGlobalOptions;
-        if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.isString)(maybePath) && !maybePath.includes('://'))
-            return maybePath;
-    }, [urlOrPathOrOptionsOrOverwriteGlobalOptions]);
-    var overwriteGlobalOptions = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(function () {
-        if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.isFunction)(urlOrPathOrOptionsOrOverwriteGlobalOptions))
-            return urlOrPathOrOptionsOrOverwriteGlobalOptions;
-        if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.isFunction)(optionsOrOverwriteGlobalOrDeps))
-            return optionsOrOverwriteGlobalOrDeps;
-    }, []);
-    var options = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(function () {
-        var localOptions = { headers: {} };
-        if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.isObject)(urlOrPathOrOptionsOrOverwriteGlobalOptions)) {
-            localOptions = urlOrPathOrOptionsOrOverwriteGlobalOptions;
-        }
-        else if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.isObject)(optionsOrOverwriteGlobalOrDeps)) {
-            localOptions = optionsOrOverwriteGlobalOrDeps;
-        }
-        var globalOptions = context.options;
-        var finalOptions = __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_3__["default"]), globalOptions), localOptions), { headers: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_3__["default"].headers), globalOptions.headers), localOptions.headers), interceptors: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_3__["default"].interceptors), globalOptions.interceptors), localOptions.interceptors) });
-        if (overwriteGlobalOptions)
-            return overwriteGlobalOptions(finalOptions);
-        return finalOptions;
-    }, [urlOrPathOrOptionsOrOverwriteGlobalOptions, overwriteGlobalOptions, context.options]);
-    var requestInit = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(function () { return (0,_utils__WEBPACK_IMPORTED_MODULE_0__.pullOutRequestInit)(options); }, [options]);
-    var dependencies = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(function () {
-        if (Array.isArray(optionsOrOverwriteGlobalOrDeps))
-            return optionsOrOverwriteGlobalOrDeps;
-        if (Array.isArray(deps))
-            return deps;
-        return _defaults__WEBPACK_IMPORTED_MODULE_3__["default"].dependencies;
-    }, [optionsOrOverwriteGlobalOrDeps, deps]);
-    var cacheLife = options.cacheLife, retries = options.retries, retryDelay = options.retryDelay, retryOn = options.retryOn;
-    (0,_utils__WEBPACK_IMPORTED_MODULE_0__.invariant)(Number.isInteger(cacheLife) && cacheLife >= 0, '`cacheLife` must be a number >= 0');
-    (0,_utils__WEBPACK_IMPORTED_MODULE_0__.invariant)(Number.isInteger(retries) && retries >= 0, '`retries` must be a number >= 0');
-    (0,_utils__WEBPACK_IMPORTED_MODULE_0__.invariant)((0,_utils__WEBPACK_IMPORTED_MODULE_0__.isFunction)(retryDelay) || Number.isInteger(retryDelay) && retryDelay >= 0, '`retryDelay` must be a positive number or a function returning a positive number.');
-    var isValidRetryOn = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.isFunction)(retryOn) || (Array.isArray(retryOn) && retryOn.every(_utils__WEBPACK_IMPORTED_MODULE_0__.isPositiveNumber));
-    (0,_utils__WEBPACK_IMPORTED_MODULE_0__.invariant)(isValidRetryOn, '`retryOn` must be an array of positive numbers or a function returning a boolean.');
-    var loading = options.loading || Array.isArray(dependencies);
-    var interceptors = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(function () {
-        var final = {};
-        if ('request' in options.interceptors)
-            final.request = options.interceptors.request;
-        if ('response' in options.interceptors)
-            final.response = options.interceptors.response;
-        return final;
-    }, [options]);
-    var customOptions = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(function () {
-        var customOptionKeys = Object.keys(_defaults__WEBPACK_IMPORTED_MODULE_3__.useFetchArgsDefaults.customOptions); // Array<keyof CustomOptions>
-        var customOptions = customOptionKeys.reduce(function (opts, key) {
-            opts[key] = options[key];
-            return opts;
-        }, {});
-        return __assign(__assign({}, customOptions), { interceptors: interceptors, loading: loading });
-    }, [interceptors, loading]);
-    return {
-        host: host,
-        path: path,
-        customOptions: customOptions,
-        requestInit: requestInit,
-        dependencies: dependencies
-    };
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/useMutation.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/useMutation.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useMutation": () => (/* binding */ useMutation)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _useFetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useFetch */ "./node_modules/use-http/dist/esm/useFetch.js");
-/* harmony import */ var _FetchContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FetchContext */ "./node_modules/use-http/dist/esm/FetchContext.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils */ "./node_modules/use-http/dist/esm/utils.js");
-var __rest = (undefined && undefined.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-
-
-
-
-var useMutation = function (urlOrMutation, mutationArg) {
-    var context = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_FetchContext__WEBPACK_IMPORTED_MODULE_2__.FetchContext);
-    (0,_utils__WEBPACK_IMPORTED_MODULE_3__.useURLRequiredInvariant)(!!context.url && Array.isArray(urlOrMutation), 'useMutation');
-    (0,_utils__WEBPACK_IMPORTED_MODULE_3__.useURLRequiredInvariant)(!!context.url || ((0,_utils__WEBPACK_IMPORTED_MODULE_3__.isString)(urlOrMutation) && !mutationArg), 'useMutation', 'OR you need to do useMutation("https://example.com", `your graphql mutation`)');
-    // regular no context: useMutation('https://example.com', `graphql MUTATION`)
-    var url = urlOrMutation;
-    var MUTATION = mutationArg;
-    // tagged template literal with context: useMutation`graphql MUTATION`
-    if (Array.isArray(urlOrMutation) && context.url) {
-        (0,_utils__WEBPACK_IMPORTED_MODULE_3__.invariant)(!mutationArg, 'You cannot have a 2nd argument when using tagged template literal syntax with useMutation.');
-        url = context.url;
-        MUTATION = urlOrMutation[0];
-        // regular with context: useMutation(`graphql MUTATION`)
-    }
-    else if (urlOrMutation && !mutationArg && context.url) {
-        url = context.url;
-        MUTATION = urlOrMutation;
-    }
-    var _a = (0,_useFetch__WEBPACK_IMPORTED_MODULE_1__["default"])(url), loading = _a.loading, error = _a.error, cache = _a.cache, request = __rest(_a, ["loading", "error", "cache"]);
-    var mutate = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (inputs) { return request.mutate(MUTATION, inputs); }, [MUTATION, request]);
-    var data = (request.data || { data: undefined }).data;
-    return Object.assign([data, loading, error, mutate], { data: data, loading: loading, error: error, mutate: mutate, cache: cache });
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/useQuery.js":
-/*!****************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/useQuery.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useQuery": () => (/* binding */ useQuery)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _useFetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useFetch */ "./node_modules/use-http/dist/esm/useFetch.js");
-/* harmony import */ var _FetchContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FetchContext */ "./node_modules/use-http/dist/esm/FetchContext.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils */ "./node_modules/use-http/dist/esm/utils.js");
-var __rest = (undefined && undefined.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-
-
-
-
-var useQuery = function (urlOrQuery, queryArg) {
-    var context = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_FetchContext__WEBPACK_IMPORTED_MODULE_2__.FetchContext);
-    (0,_utils__WEBPACK_IMPORTED_MODULE_3__.useURLRequiredInvariant)(!!context.url && Array.isArray(urlOrQuery), 'useQuery');
-    (0,_utils__WEBPACK_IMPORTED_MODULE_3__.useURLRequiredInvariant)(!!context.url || ((0,_utils__WEBPACK_IMPORTED_MODULE_3__.isString)(urlOrQuery) && !queryArg), 'useQuery', 'OR you need to do useQuery("https://example.com", `your graphql query`)');
-    // regular no context: useQuery('https://example.com', `graphql QUERY`)
-    var url = urlOrQuery;
-    var QUERY = queryArg;
-    // tagged template literal with context: useQuery`graphql QUERY`
-    if (Array.isArray(urlOrQuery) && context.url) {
-        (0,_utils__WEBPACK_IMPORTED_MODULE_3__.invariant)(!queryArg, 'You cannot have a 2nd argument when using tagged template literal syntax with useQuery.');
-        url = context.url;
-        QUERY = urlOrQuery[0];
-        // regular with context: useQuery(`graphql QUERY`)
-    }
-    else if (urlOrQuery && !queryArg && context.url) {
-        url = context.url;
-        QUERY = urlOrQuery;
-    }
-    var _a = (0,_useFetch__WEBPACK_IMPORTED_MODULE_1__["default"])(url), loading = _a.loading, error = _a.error, cache = _a.cache, request = __rest(_a, ["loading", "error", "cache"]);
-    var query = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (variables) { return request.query(QUERY, variables); }, [QUERY, request]);
-    var data = (request.data || { data: undefined }).data;
-    return Object.assign([data, loading, error, query], { data: data, loading: loading, error: error, query: query, cache: cache });
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/use-http/dist/esm/utils.js":
-/*!*************************************************!*\
-  !*** ./node_modules/use-http/dist/esm/utils.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "invariant": () => (/* binding */ invariant),
-/* harmony export */   "useExampleURL": () => (/* binding */ useExampleURL),
-/* harmony export */   "useURLRequiredInvariant": () => (/* binding */ useURLRequiredInvariant),
-/* harmony export */   "isString": () => (/* binding */ isString),
-/* harmony export */   "isObject": () => (/* binding */ isObject),
-/* harmony export */   "isBodyObject": () => (/* binding */ isBodyObject),
-/* harmony export */   "isFunction": () => (/* binding */ isFunction),
-/* harmony export */   "isNumber": () => (/* binding */ isNumber),
-/* harmony export */   "pullOutRequestInit": () => (/* binding */ pullOutRequestInit),
-/* harmony export */   "isEmpty": () => (/* binding */ isEmpty),
-/* harmony export */   "Device": () => (/* binding */ Device),
-/* harmony export */   "isBrowser": () => (/* binding */ isBrowser),
-/* harmony export */   "isServer": () => (/* binding */ isServer),
-/* harmony export */   "isNative": () => (/* binding */ isNative),
-/* harmony export */   "tryGetData": () => (/* binding */ tryGetData),
-/* harmony export */   "responseFields": () => (/* binding */ responseFields),
-/* harmony export */   "responseMethods": () => (/* binding */ responseMethods),
-/* harmony export */   "responseKeys": () => (/* binding */ responseKeys),
-/* harmony export */   "toResponseObject": () => (/* binding */ toResponseObject),
-/* harmony export */   "emptyCustomResponse": () => (/* binding */ emptyCustomResponse),
-/* harmony export */   "serializeResponse": () => (/* binding */ serializeResponse),
-/* harmony export */   "useDeepCallback": () => (/* binding */ useDeepCallback),
-/* harmony export */   "sleep": () => (/* binding */ sleep),
-/* harmony export */   "isPositiveNumber": () => (/* binding */ isPositiveNumber),
-/* harmony export */   "makeError": () => (/* binding */ makeError),
-/* harmony export */   "addSlash": () => (/* binding */ addSlash)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var use_ssr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! use-ssr */ "./node_modules/use-ssr/dist/useSSR.js");
-/* harmony import */ var use_ssr__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(use_ssr__WEBPACK_IMPORTED_MODULE_1__);
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
-};
-
-
-/**
- * Used for error checking. If the condition is false, throw an error
- */
-function invariant(condition, format, a, b, c, d, e, f) {
-    if (a === void 0) { a = ''; }
-    if (b === void 0) { b = ''; }
-    if (c === void 0) { c = ''; }
-    if (d === void 0) { d = ''; }
-    if (e === void 0) { e = ''; }
-    if (f === void 0) { f = ''; }
-    if (true) {
-        if (format === undefined) {
-            throw new Error('invariant requires an error message argument');
-        }
-    }
-    if (!condition) {
-        var error = void 0;
-        if (format === undefined) {
-            error = new Error('Minified exception occurred; use the non-minified dev environment ' +
-                'for the full error message and additional helpful warnings.');
-        }
-        else {
-            var args_1 = [a, b, c, d, e, f];
-            var argIndex_1 = 0;
-            error = new Error(format.replace(/%s/g, function () { return args_1[argIndex_1++]; }));
-            error.name = 'Invariant Violation';
-        }
-        throw error;
-    }
-}
-var useExampleURL = function () {
-    var isBrowser = use_ssr__WEBPACK_IMPORTED_MODULE_1___default()().isBrowser;
-    return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
-        return isBrowser ? window.location.origin : 'https://example.com';
-    }, [isBrowser]);
-};
-function useURLRequiredInvariant(condition, method, optionalMessage) {
-    var exampleURL = useExampleURL();
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-        invariant(condition, method + " requires a URL to be set as the 1st argument,\n\n      unless you wrap your app like:\n\n      <Provider url=\"" + exampleURL + "\"><App /></Provider>\n\n      " + optionalMessage);
-    }, [condition, exampleURL, method, optionalMessage]);
-}
-var isString = function (x) { return typeof x === 'string'; }; // eslint-disable-line
-/**
- * Determines if the given param is an object. {}
- * @param obj
- */
-var isObject = function (obj) { return Object.prototype.toString.call(obj) === '[object Object]'; }; // eslint-disable-line
-/**
- * Determines if the given param is an object that can be used as a request body.
- * Returns true for native objects or arrays.
- * @param obj
- */
-var isBodyObject = function (obj) { return isObject(obj) || Array.isArray(obj); };
-var isFunction = function (v) { return typeof v === 'function'; };
-var isNumber = function (v) { return Object.prototype.toString.call(v) === '[object Number]'; };
-// const requestFields = Object.getOwnPropertyNames(Object.getPrototypeOf(new Request('')))
-// const responseFields = Object.getOwnPropertyNames(Object.getPrototypeOf(new Response()))
-// export const customResponseFields = [...responseFields, 'data']
-// TODO: come back and fix the "anys" in this http://bit.ly/2Lm3OLi
-/**
- * Makes an object that will match the standards of a normal fetch's options
- * aka: pulls out all useFetch's special options like "onMount"
- */
-var pullOutRequestInit = function (options) {
-    if (!options)
-        return {};
-    var requestInitFields = [
-        'body',
-        'cache',
-        'credentials',
-        'headers',
-        'integrity',
-        'keepalive',
-        'method',
-        'mode',
-        'redirect',
-        'referrer',
-        'referrerPolicy',
-        'signal',
-        'window'
-    ];
-    return requestInitFields.reduce(function (acc, key) {
-        if (key in options)
-            acc[key] = options[key];
-        return acc;
-    }, {});
-};
-var isEmpty = function (x) { return x === undefined || x === null; };
-var Device;
-(function (Device) {
-    Device["Browser"] = "browser";
-    Device["Server"] = "server";
-    Device["Native"] = "native";
-})(Device || (Device = {}));
-var Browser = Device.Browser, Server = Device.Server, Native = Device.Native;
-var canUseDOM = !!(typeof window !== 'undefined' &&
-    window.document &&
-    window.document.createElement);
-var canUseNative = typeof navigator !== 'undefined' && navigator.product === 'ReactNative';
-var device = canUseNative ? Native : canUseDOM ? Browser : Server;
-var isBrowser = device === Browser;
-var isServer = device === Server;
-var isNative = device === Native;
-var tryGetData = function (res, defaultData, responseType) { return __awaiter(void 0, void 0, void 0, function () {
-    var types, data;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                if (typeof res === 'undefined')
-                    throw Error('Response cannot be undefined... 😵');
-                if (typeof responseType === 'undefined')
-                    throw Error('responseType cannot be undefined... 😵');
-                types = (Array.isArray(responseType) ? responseType : [responseType]);
-                if (types[0] == null)
-                    throw Error('could not parse data from response 😵');
-                return [4 /*yield*/, tryRetry(res, types)];
-            case 1:
-                data = _a.sent();
-                return [2 /*return*/, !isEmpty(defaultData) && isEmpty(data) ? defaultData : data];
-        }
-    });
-}); };
-var tryRetry = function (res, types, i) {
-    if (i === void 0) { i = 0; }
-    return __awaiter(void 0, void 0, void 0, function () {
-        var error_1;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    _a.trys.push([0, 2, , 3]);
-                    return [4 /*yield*/, res.clone()[types[i]]()];
-                case 1: return [2 /*return*/, _a.sent()];
-                case 2:
-                    error_1 = _a.sent();
-                    if (types.length - 1 === i)
-                        throw error_1;
-                    return [2 /*return*/, tryRetry(res.clone(), types, ++i)];
-                case 3: return [2 /*return*/];
-            }
-        });
-    });
-};
-var responseFields = ['headers', 'ok', 'redirected', 'trailer', 'status', 'statusText', 'type', 'url', 'body', 'bodyUsed', 'data'];
-var responseMethods = ['clone', 'arrayBuffer', 'blob', 'formData', 'json', 'text'];
-var responseKeys = __spreadArrays(responseFields, responseMethods);
-var toResponseObject = function (res, data) { return Object.defineProperties({}, responseKeys.reduce(function (acc, field) {
-    if (responseFields.includes(field)) {
-        acc[field] = {
-            get: function () {
-                var response = res instanceof Response ? res : res && res.current;
-                if (!response)
-                    return;
-                if (field === 'data')
-                    return data.current;
-                var clonedResponse = ('clone' in response ? response.clone() : {});
-                return clonedResponse[field];
-            },
-            enumerable: true
-        };
-    }
-    else if (responseMethods.includes(field)) {
-        acc[field] = {
-            value: function () {
-                var response = res instanceof Response ? res : res && res.current;
-                if (!response)
-                    return;
-                var clonedResponse = ('clone' in response ? response.clone() : {});
-                return clonedResponse[field]();
-            },
-            enumerable: true
-        };
-    }
-    return acc;
-}, {})); };
-var emptyCustomResponse = toResponseObject();
-// TODO: switch this to .reduce()
-var headersAsObject = function (headers) {
-    var obj = {};
-    headers.forEach(function (value, key) {
-        obj[key] = value;
-    });
-    return obj;
-};
-var serializeResponse = function (response) { return __awaiter(void 0, void 0, void 0, function () {
-    var body, status, statusText, headers;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, response.text()];
-            case 1:
-                body = _a.sent();
-                status = response.status, statusText = response.statusText;
-                headers = headersAsObject(response.headers);
-                return [2 /*return*/, {
-                        body: body,
-                        status: status,
-                        statusText: statusText,
-                        headers: headers
-                    }];
-        }
-    });
-}); };
-function useDeepCompareMemoize(value) {
-    var ref = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-    if (JSON.stringify(value) !== JSON.stringify(ref.current))
-        ref.current = value;
-    return ref.current;
-}
-var useDeepCallback = function (cb, deps) { return (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(cb, useDeepCompareMemoize(deps)); };
-var sleep = function (ms) { return new Promise(function (resolve) { return setTimeout(resolve, ms); }); };
-var isPositiveNumber = function (n) { return Number.isInteger(n) && n > 0; };
-var makeError = function (name, message) {
-    var error = new Error(message);
-    error.name = name + '';
-    return error;
-};
-/**
- * Determines if we need to add a slash to front
- * of a path, and adds it if we do.
- * Cases:
- * (path = '', url = '' || null | undefined) => ''
- * (path = '?foo=bar', url = 'a.com')        => '?foo=bar'
- * (path = '?foo=bar', url = 'a.com/')       => '?foo=bar'
- * (path = 'bar', url = 'a.com/?foo=')       => 'bar'
- * (path = 'foo', url = 'a.com')             => '/foo'
- * (path = 'foo', url = 'a.com/')            => 'foo'
- * (path = '/foo', url = 'a.com')            => '/foo'
- * (path = '/foo', url = 'a.com/')           => 'foo'
- * (path = '?foo=bar')                       => '?foo=bar'
- * (path = 'foo')                            => '/foo'
- * (path = '/foo')                           => '/foo'
- * (path = '&foo=bar', url = 'a.com?b=k')    => '&foo=bar'
- * (path = '&foo=bar')                       => '&foo=bar'
- */
-var addSlash = function (input, url) {
-    if (!input)
-        return '';
-    if (!url) {
-        if (input.startsWith('?') || input.startsWith('&') || input.startsWith('/'))
-            return input;
-        return "/" + input;
-    }
-    if (url.endsWith('/') && input.startsWith('/'))
-        return input.substr(1);
-    if (!url.endsWith('/') && !input.startsWith('/') && !input.startsWith('?') && !input.startsWith('&') && !url.includes('?'))
-        return "/" + input;
-    return input;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/use-ssr/dist/useSSR.js":
-/*!*********************************************!*\
-  !*** ./node_modules/use-ssr/dist/useSSR.js ***!
-  \*********************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var Device;
-(function (Device) {
-    Device["Browser"] = "browser";
-    Device["Server"] = "server";
-    Device["Native"] = "native";
-})(Device = exports.Device || (exports.Device = {}));
-var Browser = Device.Browser, Server = Device.Server, Native = Device.Native;
-var canUseDOM = !!(typeof window !== 'undefined' &&
-    window.document &&
-    window.document.createElement);
-var canUseNative = typeof navigator != 'undefined' && navigator.product == 'ReactNative';
-var device = canUseNative ? Native : canUseDOM ? Browser : Server;
-var SSRObject = {
-    isBrowser: device === Browser,
-    isServer: device === Server,
-    isNative: device === Native,
-    device: device,
-    canUseWorkers: typeof Worker !== 'undefined',
-    canUseEventListeners: device === Browser && !!window.addEventListener,
-    canUseViewport: device === Browser && !!window.screen,
-};
-// TODO: instead of this, do a polyfill for `Object.assign` https://www.npmjs.com/package/es6-object-assign
-var assign = function () {
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-    }
-    return args.reduce(function (acc, obj) { return (__assign(__assign({}, acc), obj)); }, {});
-};
-var values = function (obj) { return Object.keys(obj).map(function (key) { return obj[key]; }); };
-var toArrayObject = function () { return assign((values(SSRObject), SSRObject)); };
-var useSSRObject = toArrayObject();
-exports.weAreServer = function () {
-    SSRObject.isServer = true;
-    useSSRObject = toArrayObject();
-};
-exports.useSSR = function () { return useSSRObject; };
-exports["default"] = exports.useSSR;
-
-
-/***/ }),
-
 /***/ "./node_modules/value-equal/esm/value-equal.js":
 /*!*****************************************************!*\
   !*** ./node_modules/value-equal/esm/value-equal.js ***!
@@ -49277,7 +45340,7 @@ function _setPrototypeOf(o, p) {
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;

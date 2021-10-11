@@ -1,36 +1,29 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
-import useFetch from 'use-http';
 import { useHistory } from 'react-router';
 
-import { authRedirect, apiUrl } from '../../utilities/http';
-import { useSetRecoilState } from 'recoil';
-import { authState } from '../../store/auth/authState';
+import { authRedirect } from '../../utilities/http';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchLogin } from '../../store/authSlice';
 
 export default function Login() {
-    const history = useHistory();
+    const history = useHistory()
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { post, response } = useFetch(apiUrl)
-    const setAuth = useSetRecoilState(authState)
+    const { errorMessage, isLoading } = useSelector(state => state.auth)
+    const dispatch = useDispatch()
 
     const onSubmit = async data => {
-        const result = await post('login', data)
-        
-        if (response.ok) {
-            window.localStorage.setItem('ACCESS_TOKEN', result.access_token)
-            setAuth(result)
+        await dispatch(fetchLogin(data)).unwrap()
+        history.push(authRedirect)
+    }
 
-            history.push(authRedirect)
-        } else {
-            alert("invalid credentials")
-        }
-    };
-  
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <p>Login</p>
+                <p>{isLoading&&'Loading....'}</p>
+                {errorMessage?<p>{errorMessage}</p>:""}
                 <p>
                     <input placeholder="Email" type="email" {...register("email", { required: true })} />
                     {errors.email && <div>This field is required</div>}

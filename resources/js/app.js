@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { RecoilRoot } from 'recoil';
+import store from './store';
+import { Provider } from 'react-redux'
 
 import RouteItems from './components/RouteItems'
-import { RecoilDebugObserver } from './utilities/state';
 
 const App = () => (
-    <RecoilRoot>
-        {/* <RecoilDebugObserver /> */}
+    <Provider store={store}>
         <RouteItems />
-    </RecoilRoot>
+    </Provider>
 )
 
 export default App;

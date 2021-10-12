@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { apiHttp, httpDefaults, setToken } from '../utilities/http';
+import { apiHttp, setToken, getToken } from '../utilities/http';
 
 export const fetchLogin = createAsyncThunk('auth/fetchLogin',
     async (data, { rejectWithValue  }) => {
@@ -62,7 +62,7 @@ export const authSlice = createSlice({
     name: 'auth',
     initialState: {
         user: null,
-        accessToken: null,
+        accessToken: getToken(),
         errorMessage: '',
         isLoading: false,
     },

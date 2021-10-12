@@ -4,7 +4,8 @@ import {
     Switch,
     Route,
     Link
-  } from "react-router-dom";
+} from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 import Home from '../pages/Home';
 
@@ -15,8 +16,11 @@ import ResetPassword from '../pages/auth/ResetPassword';
 import VerifyEmail from '../pages/auth/VerifyEmail';
 
 import Dashboard from '../pages/dashboard/Dashboard';
+import ProtectedRoute from './ProtectedRoute';
+
 
 export default function RouteItems() {
+    
     return (
         <Router>
             <div>
@@ -28,7 +32,7 @@ export default function RouteItems() {
                     <Route path="/reset-password" component={ResetPassword} />
                     <Route path="/verify-email" component={VerifyEmail} />
 
-                    <Route path="/dashboard" component={Dashboard} />
+                    <ProtectedRoute path="/dashboard" component={Dashboard} />
                 </Switch>
             </div>
         </Router>

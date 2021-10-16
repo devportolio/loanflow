@@ -19,8 +19,8 @@ class LoanController extends Controller
         return $this->success($this->service->all());  
     }
 
-    public function store()
+    public function store(LoanRequest $loan)
     {
-        return $this->success($this->service->store());
+        return $this->success($this->service->store($loan));
     }
 }

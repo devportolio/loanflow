@@ -21,6 +21,11 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
     Route::apiResource('payment-methods', 'Payment\PaymentMethodController', ['except' => ['update']]);
     Route::post('payment-methods/{id}', 'Payment\PaymentMethodController@update');
 
-    // Loan routes
-    Route::apiResource('loans', 'Loan\LoanController', ['only' =>['index', 'store']]);
+    Route::group(['namespace' => 'Loan'], function() {
+        // Loan routes
+        Route::apiResource('loans', 'LoanController', ['only' =>['index', 'store']]);
+
+        // Loan payments
+        Route::apiResource('loan-payments', 'LoanPaymentController', ['except' =>['update', 'destroy']]);
+    });
 });

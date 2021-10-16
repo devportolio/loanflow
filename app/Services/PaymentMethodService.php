@@ -46,9 +46,7 @@ class PaymentMethodService extends BaseService
         $data = request()->all();
 
         unset($data[self::FILE_KEY]);
-        $existing_method = PaymentMethod::find($id);
-
-        $this->itemFoundCheck($existing_method, 'Payment method');
+        $existing_method = PaymentMethod::findOrFail($id);
 
         if (!!$existing_method && request()->hasFile(self::FILE_KEY)) {
             $data[self::FILE_KEY] = $this->upload(request(), $existing_method->id, self::FILE_KEY, self::FILE_PATH);
@@ -64,21 +62,5 @@ class PaymentMethodService extends BaseService
         $existing_method->update($data);
 
         return $existing_method->fresh();
-    }
-
-    public function delete($id)
-    {
-        $payment_method = PaymentMethod::find($id);
-
-        if (!$payment_method) {
-            return false;
-        }
-
-        $file_path = $payment_method[self::FILE_KEY];
-        if (!!$file_path && $this->hasFile($file_path)) {
-            $this->removeFile($file_path);
-        }
-
-        return $payment_method->delete();
     }
 }

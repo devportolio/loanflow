@@ -8,20 +8,10 @@ use App\Models\Loan;
 class LoanService
 {
 
-    public function store()
+    public function store($loan)
     {
-        $data = request()->except('status', 'running_interest');
-
-        // Check if loan doesn't have an interest
-        if (!$data['has_interest']) {
-            $data = request()->only('user_id', 'lender_id', 'amount');
-            request()->only('user_id', 'lender_id', 'amount')->validate();
-        } else {
-            request()->validate();
-        }
-
-
-        return Loan::create($data);
+        $loan_created = Loan::create($loan->validated());
+        return new LoanResource($loan_created);
     }
 
     public function all()

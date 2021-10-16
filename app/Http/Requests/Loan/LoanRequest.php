@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Loan;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Arr;
 
 class LoanRequest extends FormRequest
 {
@@ -23,7 +24,7 @@ class LoanRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        $base_rules = [
             'user_id' => 'required',
             'lender_id' => 'required',
             'amount' => 'required|integer',
@@ -31,5 +32,12 @@ class LoanRequest extends FormRequest
             'rate' => 'required|integer',
             'has_interest' => 'required|boolean'
         ];
+
+        if (request()->get('has_interest') != 1) {
+            $base_rules = Arr::only($base_rules, ['user_id', 'lender_id', 'amount']);
+        }
+
+        return $base_rules;
+    
     }
 }

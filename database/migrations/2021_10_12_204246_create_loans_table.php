@@ -18,11 +18,13 @@ class CreateLoansTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('lender_id');
             $table->float('amount');
-            $table->enum('frequency', ['daily', 'weekly', 'monthly'])->nullable();
+            $table->enum('type', ['fixed', 'flexible'])->nullable();
+            $table->enum('frequency', ['daily', 'weekly', 'monthly', 'yearly'])->nullable();
             $table->unsignedInteger('duration')->nullable();
             $table->float('rate')->nullable();
             $table->boolean('has_interest')->default(0);
-            $table->float('running_interest')->default(0);
+            $table->float('total_interest')->default(0);
+            $table->unsignedInteger('no_of_payment')->default(0);
             $table->date('date_started')->nullable();
             $table->enum('status', ['in-progress', 'pending', 'cancelled', 'completed'])->default('pending');
             $table->timestamps();

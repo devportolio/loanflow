@@ -38,7 +38,14 @@ class Handler extends ExceptionHandler
         $this->renderable(function (NotFoundHttpException $e, $request) {
 
             if($request->wantsJson()) {
-                return response()->json(['message' => 'Object not found'], 404);
+                $error_message = $e->getMessage();
+                
+                if (explode(" [", $error_message)[0] == 'No query results for model') {
+                    $error_message = 'Object not found';
+                }
+
+                return response()->json(['message' => $error_message], 404);
+
             }
         });
     }

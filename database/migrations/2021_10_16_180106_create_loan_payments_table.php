@@ -20,7 +20,7 @@ class CreateLoanPaymentsTable extends Migration
             $table->date('date_paid');
             $table->string('screenshot')->nullable();
             $table->string('notes')->nullable();
-            $table->enum('status', ['in-progress', 'pending', 'cancelled', 'completed'])->default('pending');
+            $table->enum('status', ['pending', 'cancelled', 'confirmed'])->default('pending');
             $table->timestamps();
         });
     }

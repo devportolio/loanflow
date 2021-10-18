@@ -24,6 +24,7 @@ class CreateLoansTable extends Migration
             $table->float('rate')->nullable();
             $table->boolean('has_interest')->default(0);
             $table->float('total_interest')->default(0);
+            $table->float('total_paid')->default(0);
             $table->unsignedInteger('no_of_payment')->default(0);
             $table->date('date_started')->nullable();
             $table->enum('status', ['in-progress', 'pending', 'cancelled', 'completed'])->default('pending');

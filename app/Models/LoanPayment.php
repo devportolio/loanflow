@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\UpdateLoan;
 
 class LoanPayment extends Model
 {
-    use HasFactory;
+    use HasFactory, UpdateLoan;
 
     protected $fillable = [
         'loan_id',
@@ -17,4 +18,10 @@ class LoanPayment extends Model
         'notes',
         'status'
     ];
+
+    public function loan()
+    {
+        return $this->belongsTo(Loan::class);
+    }
+
 }

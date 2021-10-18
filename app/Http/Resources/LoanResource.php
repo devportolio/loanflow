@@ -29,6 +29,8 @@ class LoanResource extends JsonResource
             'type' => $this->type,
             'amount_to_pay' => $this->getAmountToPay(),
             'no_of_payment' => $this->no_of_payment,
+            'total_paid' => $this->total_paid,
+            'balance' => $this->getLoanBalance()
         ];
 
         if ($this->has_interest != 1) {

@@ -2,11 +2,14 @@
 
 namespace App\Services;
 
-use App\Models\LoanPayment;
+use App\Models\{LoanPayment, Loan};
 use App\Http\Resources\LoanPaymentResource;
 use App\Traits\FileUpload;
+use App\Enums\Payment;
 
-class LoanPaymentService
+use DB;
+
+class LoanPaymentService extends BaseService
 {
     use FileUpload;
 
@@ -33,14 +36,30 @@ class LoanPaymentService
 
     public function store($request)
     {
-      $data = $request->except(self::FILE_KEY);
+        $data = $request->except([self::FILE_KEY]);
 
-      $new_payment = LoanPayment::create($data);
+        $loan = Loan::find($request->loan_id);
+        $this->itemFoundCheck($loan, 'Loan');
 
-      if ($new_payment && $request->hasFile(self::FILE_KEY)) {
-        $new_payment = $this->getUpdatedPath($new_payment, self::FILE_KEY, self::FILE_PATH);
-      }
+        DB::beginTransaction();
+        $new_payment = $loan->loanPayments()->create($data);
 
-      return new LoanPaymentResource($new_payment);
+        if ($new_payment && $request->hasFile(self::FILE_KEY)) {
+            $new_payment = $this->getUpdatedPath($new_payment, self::FILE_KEY, self::FILE_PATH);
+        }
+
+        DB::commit();
+        return new LoanPaymentResource($new_payment);
+    }
+
+    public function confirmStatus($loan_payment)
+    {
+        if (request()->status == Payment::CONFIRMED && $loan_payment->status == Payment::PENDING) {
+            $loan_payment->status = Payment::CONFIRMED;
+            $loan_payment->save();
+            return true;
+        }
+
+        return false;
     }
 }

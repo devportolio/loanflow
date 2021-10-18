@@ -26,6 +26,6 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
         Route::apiResource('loans', 'LoanController', ['only' =>['index', 'store']]);
 
         // Loan payments
-        Route::apiResource('loan-payments', 'LoanPaymentController', ['except' =>['update', 'destroy']]);
+        Route::apiResource('loan-payments', 'LoanPaymentController', ['except' =>['destroy']]);
     });
 });

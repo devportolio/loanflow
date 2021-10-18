@@ -28,4 +28,9 @@ class LoanPaymentController extends Controller
     {
         return $this->success($this->service->store($request));
     }
+
+    public function update(LoanPayment $loan_payment)
+    {
+        return $this->success($this->service->confirmStatus($loan_payment));
+    }
 }

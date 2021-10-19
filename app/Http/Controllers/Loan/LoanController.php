@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Loan;
 use App\Http\Controllers\Controller;
 use App\Services\LoanService;
 use App\Http\Requests\Loan\LoanRequest;
+use App\Models\Loan;
 
 class LoanController extends Controller
 {
@@ -19,8 +20,19 @@ class LoanController extends Controller
         return $this->success($this->service->all());  
     }
 
+    public function show(Loan $loan)
+    { 
+        return $this->success($this->service->getOne($loan));  
+    }
+
     public function store(LoanRequest $loan)
     {
         return $this->success($this->service->store($loan));
+    }
+
+    public function startLoan($id)
+    {
+        $loan = Loan::findOrFail($id);
+        return $this->success($this->service->startLoan($loan));
     }
 }

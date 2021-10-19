@@ -4,18 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Traits\{LoanInterest, LoanBalance, UpdateLoan};
 use App\Enums\Payment;
+
+use App\Traits\{
+    LoanInterest,
+    LoanBalance,
+    UpdateTotalPaid
+};
 
 class Loan extends Model
 {
     use HasFactory, LoanInterest, LoanBalance;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    const PENDING = 'pending';
+    const IN_PROGRESS = 'in-progress';
+    const COMPLETED = 'completed';
+    const CANCELLED = 'cancelled';
+
     protected $fillable = [
         'user_id',
         'lender_id',
@@ -43,5 +48,15 @@ class Loan extends Model
             ->where('status', Payment::CONFIRMED)
             ->sum('amount');
         $this->update(['total_paid' => $total_paid]);
+    }
+
+    public function setFinalTotalInterest()
+    {
+        $this->update(['total_interest' => $this->getTotalInterest()]);
+    }
+
+    public function setStatusAsCompleted()
+    {
+        $this->update(['status' => self::COMPLETED]);
     }
 }

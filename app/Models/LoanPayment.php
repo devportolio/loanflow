@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Traits\UpdateLoan;
+use App\Traits\UpdateLoanInterest;
 
 class LoanPayment extends Model
 {
-    use HasFactory, UpdateLoan;
+    use HasFactory, UpdateLoanInterest;
 
     protected $fillable = [
         'loan_id',

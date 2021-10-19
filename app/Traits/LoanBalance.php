@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Traits;
+use App\Enums\Payment;
 
 trait LoanBalance
 {
@@ -14,8 +15,15 @@ trait LoanBalance
                     ? $this->getTotalInterest()
                     : 0;
 
-        return $this->amount + $total_interest - $this->total_paid;
+        return $this->amount + $total_interest - $this->getTotalPaid();
     }
 
-
+    public function getTotalPaid()
+    {
+        return $this->status == self::COMPLETED
+            ? $this->total_paid
+            : $this->loanPayments()
+                ->where('status', Payment::CONFIRMED)
+                ->sum('amount');
+    }
 }

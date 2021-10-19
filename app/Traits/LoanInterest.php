@@ -10,10 +10,13 @@ trait LoanInterest
     
     public function getTotalInterest()
     {
-        if ($this->date_started == null) {
+        if (in_array($this->status, [self::CANCELLED, self::PENDING])) {
             return 0;
         }
 
+        if ($this->status == self::COMPLETED) {
+            return $this->total_interest;
+        }
 
         /**
          * Formula: A = P (1 + rt)
@@ -27,8 +30,6 @@ trait LoanInterest
          $principal_amount = $this->amount;
          $rate = $this->rate / 100;
          $time = $this->getTotalTime();
-
-         logger("time: ". $time);
 
          $final_amount = $principal_amount * (1 + ($rate * $time));
 

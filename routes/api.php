@@ -15,7 +15,17 @@ Route::group(['namespace' => 'User'], function() {
 });
 
 Route::group(['middleware' => ['auth:sanctum']], function() {
-    Route::get('me', 'User\UserController@show')->name('user');
+
+    Route::group(['namespace' => 'User'], function() {
+        Route::get('me', 'User\UserController@show')->name('user');
+
+        // User Friends
+        Route::get('user-friends', 'UserFriendController@index');
+        Route::get('user-friends/{email}/search', 'UserFriendController@search');
+        Route::post('user-friends', 'UserFriendController@addFriend');
+        Route::get('user-friends/{id}/accept', 'UserFriendController@accept');
+        Route::get('user-friends/{id}/decline', 'UserFriendController@decline');
+    });
     
     // Payment method routes
     Route::apiResource('payment-methods', 'Payment\PaymentMethodController', ['except' => ['update']]);
@@ -26,9 +36,9 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
         
         Route::apiResource('loans', 'LoanController', ['only' =>['index', 'store', 'show']]);
         Route::get('loans/{id}/start', 'LoanController@startLoan');
-        
 
         // Loan payments
         Route::apiResource('loan-payments', 'LoanPaymentController', ['except' =>['destroy']]);
+
     });
 });

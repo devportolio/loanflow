@@ -9,7 +9,6 @@ use App\Enums\Payment;
 use App\Traits\{
     LoanInterest,
     LoanBalance,
-    UpdateTotalPaid
 };
 
 class Loan extends Model

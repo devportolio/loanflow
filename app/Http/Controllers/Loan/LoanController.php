@@ -12,7 +12,6 @@ class LoanController extends Controller
     public function __construct(LoanService $service)
     {
         $this->service = $service;
-        $this->middleware('user.append_id');
     }
 
     public function index()

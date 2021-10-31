@@ -15,8 +15,10 @@ import ForgotPassword from '../pages/auth/ForgotPassword';
 import ResetPassword from '../pages/auth/ResetPassword';
 import VerifyEmail from '../pages/auth/VerifyEmail';
 
-import Dashboard from '../pages/dashboard/Dashboard';
 import ProtectedRoute from './ProtectedRoute';
+
+import Dashboard from '../pages/dashboard/Dashboard';
+import FriendList from '../pages/friend/FriendList';
 
 
 export default function RouteItems() {
@@ -33,6 +35,7 @@ export default function RouteItems() {
                     <Route path="/verify-email" component={VerifyEmail} />
 
                     <ProtectedRoute path="/dashboard" component={Dashboard} />
+                    <ProtectedRoute path="/friends" component={FriendList} />
                 </Switch>
             </div>
         </Router>

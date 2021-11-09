@@ -17,7 +17,7 @@ class LoanService
 
     public function all()
     {
-        $loans = Loan::where('user_id', request()->user_id)->get();
+        $loans = auth()->user()->loans;
         return LoanResource::collection($loans);
     }
 

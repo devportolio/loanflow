@@ -3576,8 +3576,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _store_authSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/authSlice */ "./resources/js/store/authSlice.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["component"];
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
@@ -3594,16 +3595,33 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
+
+
 function ProtectedRoute(_ref) {
   var Component = _ref.component,
       restOfProps = _objectWithoutProperties(_ref, _excluded);
 
-  var isAuthenticated = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
-    return state.auth.accessToken;
-  });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Route, _objectSpread(_objectSpread({}, restOfProps), {}, {
+  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_4__.useHistory)();
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+
+  var _useSelector = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
+    return state.auth;
+  }),
+      user = _useSelector.user,
+      accessToken = _useSelector.accessToken;
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (accessToken && !user) {
+      dispatch((0,_store_authSlice__WEBPACK_IMPORTED_MODULE_2__.fetchUser)());
+    }
+
+    if (!accessToken) {
+      history.push('/login');
+    }
+  }, [accessToken]);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_4__.Route, _objectSpread(_objectSpread({}, restOfProps), {}, {
     render: function render(props) {
-      return !!isAuthenticated ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Component, _objectSpread({}, props)) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Redirect, {
+      return accessToken ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Component, _objectSpread({}, props)) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_4__.Redirect, {
         to: "/login"
       });
     }
@@ -3624,19 +3642,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ RouteItems)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pages/Home */ "./resources/js/pages/Home.js");
-/* harmony import */ var _pages_auth_Register__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/auth/Register */ "./resources/js/pages/auth/Register.js");
-/* harmony import */ var _pages_auth_Login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/auth/Login */ "./resources/js/pages/auth/Login.js");
-/* harmony import */ var _pages_auth_ForgotPassword__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/auth/ForgotPassword */ "./resources/js/pages/auth/ForgotPassword.js");
-/* harmony import */ var _pages_auth_ResetPassword__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/auth/ResetPassword */ "./resources/js/pages/auth/ResetPassword.js");
-/* harmony import */ var _pages_auth_VerifyEmail__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/auth/VerifyEmail */ "./resources/js/pages/auth/VerifyEmail.js");
-/* harmony import */ var _ProtectedRoute__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ProtectedRoute */ "./resources/js/components/ProtectedRoute.js");
-/* harmony import */ var _pages_dashboard_Dashboard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../pages/dashboard/Dashboard */ "./resources/js/pages/dashboard/Dashboard.js");
-/* harmony import */ var _pages_friend_FriendList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../pages/friend/FriendList */ "./resources/js/pages/friend/FriendList.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _store_authSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/authSlice */ "./resources/js/store/authSlice.js");
+/* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/Home */ "./resources/js/pages/Home.js");
+/* harmony import */ var _pages_auth_Register__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/auth/Register */ "./resources/js/pages/auth/Register.js");
+/* harmony import */ var _pages_auth_Login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/auth/Login */ "./resources/js/pages/auth/Login.js");
+/* harmony import */ var _pages_auth_ForgotPassword__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/auth/ForgotPassword */ "./resources/js/pages/auth/ForgotPassword.js");
+/* harmony import */ var _pages_auth_ResetPassword__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/auth/ResetPassword */ "./resources/js/pages/auth/ResetPassword.js");
+/* harmony import */ var _pages_auth_VerifyEmail__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pages/auth/VerifyEmail */ "./resources/js/pages/auth/VerifyEmail.js");
+/* harmony import */ var _ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ProtectedRoute */ "./resources/js/components/ProtectedRoute.js");
+/* harmony import */ var _pages_dashboard_Dashboard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../pages/dashboard/Dashboard */ "./resources/js/pages/dashboard/Dashboard.js");
+/* harmony import */ var _pages_friend_FriendList__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../pages/friend/FriendList */ "./resources/js/pages/friend/FriendList.js");
+/* harmony import */ var _pages_lend_LendForm__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../pages/lend/LendForm */ "./resources/js/pages/lend/LendForm.js");
+/* harmony import */ var _pages_loan_LoanList__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../pages/loan/LoanList */ "./resources/js/pages/loan/LoanList.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
 
 
 
@@ -3652,36 +3676,54 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function RouteItems() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.BrowserRouter, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Switch, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+
+  var _useSelector = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
+    return state.auth;
+  }),
+      accessToken = _useSelector.accessToken;
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.BrowserRouter, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
+      children: [accessToken && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("button", {
+        onClick: function onClick() {
+          return dispatch((0,_store_authSlice__WEBPACK_IMPORTED_MODULE_2__.logout)());
+        },
+        children: "Logout"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Switch, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
           path: "/",
-          component: _pages_Home__WEBPACK_IMPORTED_MODULE_2__["default"],
+          component: _pages_Home__WEBPACK_IMPORTED_MODULE_3__["default"],
           exact: true
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
           path: "/login",
-          component: _pages_auth_Login__WEBPACK_IMPORTED_MODULE_4__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+          component: _pages_auth_Login__WEBPACK_IMPORTED_MODULE_5__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
           path: "/forgot-password",
-          component: _pages_auth_ForgotPassword__WEBPACK_IMPORTED_MODULE_5__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+          component: _pages_auth_ForgotPassword__WEBPACK_IMPORTED_MODULE_6__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
           path: "/register",
-          component: _pages_auth_Register__WEBPACK_IMPORTED_MODULE_3__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+          component: _pages_auth_Register__WEBPACK_IMPORTED_MODULE_4__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
           path: "/reset-password",
-          component: _pages_auth_ResetPassword__WEBPACK_IMPORTED_MODULE_6__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+          component: _pages_auth_ResetPassword__WEBPACK_IMPORTED_MODULE_7__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
           path: "/verify-email",
-          component: _pages_auth_VerifyEmail__WEBPACK_IMPORTED_MODULE_7__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          component: _pages_auth_VerifyEmail__WEBPACK_IMPORTED_MODULE_8__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
           path: "/dashboard",
-          component: _pages_dashboard_Dashboard__WEBPACK_IMPORTED_MODULE_9__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          component: _pages_dashboard_Dashboard__WEBPACK_IMPORTED_MODULE_10__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
           path: "/friends",
-          component: _pages_friend_FriendList__WEBPACK_IMPORTED_MODULE_10__["default"]
+          component: _pages_friend_FriendList__WEBPACK_IMPORTED_MODULE_11__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          path: "/lend",
+          component: _pages_lend_LendForm__WEBPACK_IMPORTED_MODULE_12__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          path: "/loans",
+          component: _pages_loan_LoanList__WEBPACK_IMPORTED_MODULE_13__["default"]
         })]
-      })
+      })]
     })
   });
 }
@@ -4313,14 +4355,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Dashboard)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
+
+
 function Dashboard() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useHistory)();
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
       children: "Dashboard"
-    })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+      onClick: function onClick() {
+        return history.push('/friends');
+      },
+      children: "Lend"
+    })]
   });
 }
 
@@ -4339,25 +4390,296 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _store_friendSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../store/friendSlice */ "./resources/js/store/friendSlice.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
 
 
 
 
 
 function FriendList() {
-  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(); // useEffect(() => {
-  //     dispatch(fetchFriendList())
-  // }, [])
+  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_4__.useHistory)();
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState2 = _slicedToArray(_useState, 2),
+      email = _useState2[0],
+      setEmail = _useState2[1];
+
+  var _useSelector = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
+    return state.friend;
+  }),
+      list = _useSelector.list,
+      friend = _useSelector.friend;
+
+  var _useSelector2 = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
+    return state.auth;
+  }),
+      user = _useSelector2.user;
+
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    dispatch((0,_store_friendSlice__WEBPACK_IMPORTED_MODULE_2__.fetchFriendList)());
+  }, []);
+
+  var lend = function lend(friend) {
+    // set current friend
+    dispatch((0,_store_friendSlice__WEBPACK_IMPORTED_MODULE_2__.setFriend)(friend)); // navigate to lend form
+
+    history.push('/lend');
+  };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h5", {
+      children: user && user.name
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
       children: "Friends lists"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+        placeholder: "search email",
+        onChange: function onChange(e) {
+          return setEmail(e.target.value);
+        },
+        value: email
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+        onClick: function onClick() {
+          return dispatch((0,_store_friendSlice__WEBPACK_IMPORTED_MODULE_2__.searchFriend)(email));
+        },
+        children: "Search"
+      })]
+    }), friend && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+      children: [friend.name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+        onClick: function onClick() {
+          return dispatch((0,_store_friendSlice__WEBPACK_IMPORTED_MODULE_2__.addFriend)(friend.id));
+        },
+        children: "Add Friend"
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("ul", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-        children: "hello"
-      })
+      children: list.length > 0 ? list.map(function (item) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
+          children: [item.friend.name, item.is_accepted ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+              onClick: function onClick() {
+                return dispatch((0,_store_friendSlice__WEBPACK_IMPORTED_MODULE_2__.declineFriend)(item.id));
+              },
+              children: "Unfriend"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+              onClick: function onClick() {
+                return lend(item.friend);
+              },
+              children: "Lend"
+            })]
+          }) : item.is_added ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+            onClick: function onClick() {
+              return dispatch((0,_store_friendSlice__WEBPACK_IMPORTED_MODULE_2__.declineFriend)(item.id));
+            },
+            children: "Cancel"
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+              onClick: function onClick() {
+                return dispatch((0,_store_friendSlice__WEBPACK_IMPORTED_MODULE_2__.acceptFriend)(item.id));
+              },
+              children: "Accept"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+              onClick: function onClick() {
+                return dispatch((0,_store_friendSlice__WEBPACK_IMPORTED_MODULE_2__.declineFriend)(item.id));
+              },
+              children: "Decline"
+            })]
+          })]
+        }, item.id);
+      }) : 'No friends'
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/pages/lend/LendForm.js":
+/*!*********************************************!*\
+  !*** ./resources/js/pages/lend/LendForm.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ LendForm)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_loanSlice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store/loanSlice */ "./resources/js/store/loanSlice.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+function LendForm() {
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
+  var loan = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
+    return state.loan;
+  });
+  var auth = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
+    return state.auth;
+  });
+
+  var _useSelector = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
+    return state.friend;
+  }),
+      friend = _useSelector.friend;
+
+  var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_1__.useForm)(),
+      register = _useForm.register,
+      handleSubmit = _useForm.handleSubmit,
+      watch = _useForm.watch,
+      errors = _useForm.formState.errors;
+
+  var watchHasInterest = watch("has_interest", false);
+
+  var onSubmit = function onSubmit(data) {
+    dispatch((0,_store_loanSlice__WEBPACK_IMPORTED_MODULE_3__.createNewLoan)(data));
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    children: [loan.list.length && JSON.stringify(loan.list), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("h1", {
+      children: ["Lend to ", friend && friend.name]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
+      onSubmit: handleSubmit(onSubmit),
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+        type: "hidden",
+        defaultValue: auth.user && auth.user.id
+      }, register("lender_id"))), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+        type: "hidden",
+        defaultValue: "2"
+      }, register("user_id"))), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+        children: ["Amount:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+          type: "number"
+        }, register("amount", {
+          required: true
+        })))]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+        children: ["Has interest:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+          type: "checkbox"
+        }, register("has_interest")))]
+      }), watchHasInterest && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+          children: ["Type:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", _objectSpread(_objectSpread({}, register("type", {
+            required: watchHasInterest
+          })), {}, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+              value: "fixed",
+              children: "Fixed"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+              value: "flexible",
+              children: "Flexible"
+            })]
+          }))]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+          children: ["Duration:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+            type: "number"
+          }, register("duration", {
+            required: watchHasInterest
+          })))]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+          children: ["Frequency:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", _objectSpread(_objectSpread({}, register("frequency", {
+            required: watchHasInterest
+          })), {}, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+              value: "daily",
+              children: "Daily"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+              value: "weekly",
+              children: "Weekly"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+              value: "monthly",
+              children: "Monthly"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+              value: "yearly",
+              children: "Yearly"
+            })]
+          }))]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+          children: ["Rate:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+            type: "number"
+          }, register("rate", {
+            required: watchHasInterest
+          })))]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+          children: ["No of payment:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+            type: "number"
+          }, register("no_of_payment", {
+            required: watchHasInterest
+          })))]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+        type: "submit",
+        children: "Submit"
+      })]
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/pages/loan/LoanList.js":
+/*!*********************************************!*\
+  !*** ./resources/js/pages/loan/LoanList.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ LoanList)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_loanSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../store/loanSlice */ "./resources/js/store/loanSlice.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function LoanList() {
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+  var loan = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
+    return state.loan;
+  });
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    dispatch((0,_store_loanSlice__WEBPACK_IMPORTED_MODULE_2__.fetchLoans)());
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+      children: "Loan list"
+    }), loan.list.length && loan.list.map(function (i) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("pre", {
+        children: JSON.stringify(i)
+      }, i.id);
     })]
   });
 }
@@ -4374,11 +4696,14 @@ function FriendList() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "fetchLogin": () => (/* binding */ fetchLogin),
+/* harmony export */   "logout": () => (/* binding */ logout),
+/* harmony export */   "fetchUser": () => (/* binding */ fetchUser),
 /* harmony export */   "fetchRegister": () => (/* binding */ fetchRegister),
 /* harmony export */   "fetchVerifyEmail": () => (/* binding */ fetchVerifyEmail),
 /* harmony export */   "fetchForgotPassword": () => (/* binding */ fetchForgotPassword),
 /* harmony export */   "fetchResetPassword": () => (/* binding */ fetchResetPassword),
 /* harmony export */   "authSlice": () => (/* binding */ authSlice),
+/* harmony export */   "reset": () => (/* binding */ reset),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
@@ -4386,8 +4711,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
 /* harmony import */ var _utilities_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/http */ "./resources/js/utilities/http.js");
 var _extraReducers;
-
-function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -4409,7 +4732,7 @@ var fetchLogin = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThu
             rejectWithValue = _ref.rejectWithValue;
             _context.prev = 1;
             _context.next = 4;
-            return (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp)().post('login', data);
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.post('login', data);
 
           case 4:
             response = _context.sent;
@@ -4432,8 +4755,8 @@ var fetchLogin = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThu
     return _ref2.apply(this, arguments);
   };
 }());
-var fetchRegister = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchRegister', /*#__PURE__*/function () {
-  var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(data, _ref3) {
+var logout = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/logout', /*#__PURE__*/function () {
+  var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(_, _ref3) {
     var rejectWithValue, response;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
       while (1) {
@@ -4442,7 +4765,7 @@ var fetchRegister = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsync
             rejectWithValue = _ref3.rejectWithValue;
             _context2.prev = 1;
             _context2.next = 4;
-            return (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp)().post('register', data);
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.post('logout');
 
           case 4:
             response = _context2.sent;
@@ -4465,8 +4788,8 @@ var fetchRegister = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsync
     return _ref4.apply(this, arguments);
   };
 }());
-var fetchVerifyEmail = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchVerifyEmail', /*#__PURE__*/function () {
-  var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(fetchUrl, _ref5) {
+var fetchUser = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchUser', /*#__PURE__*/function () {
+  var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(_, _ref5) {
     var rejectWithValue, response;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
       while (1) {
@@ -4475,7 +4798,7 @@ var fetchVerifyEmail = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAs
             rejectWithValue = _ref5.rejectWithValue;
             _context3.prev = 1;
             _context3.next = 4;
-            return (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp)().get(fetchUrl);
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.get('me');
 
           case 4:
             response = _context3.sent;
@@ -4499,7 +4822,7 @@ var fetchVerifyEmail = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAs
     return _ref6.apply(this, arguments);
   };
 }());
-var fetchForgotPassword = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchForgotPassword', /*#__PURE__*/function () {
+var fetchRegister = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchRegister', /*#__PURE__*/function () {
   var _ref8 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(data, _ref7) {
     var rejectWithValue, response;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
@@ -4509,7 +4832,7 @@ var fetchForgotPassword = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.creat
             rejectWithValue = _ref7.rejectWithValue;
             _context4.prev = 1;
             _context4.next = 4;
-            return (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp)().post('forgot-password', data);
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.post('register', data);
 
           case 4:
             response = _context4.sent;
@@ -4518,10 +4841,9 @@ var fetchForgotPassword = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.creat
           case 8:
             _context4.prev = 8;
             _context4.t0 = _context4["catch"](1);
-            console.log(_context4.t0);
             return _context4.abrupt("return", rejectWithValue(_context4.t0.response.data));
 
-          case 12:
+          case 11:
           case "end":
             return _context4.stop();
         }
@@ -4533,8 +4855,8 @@ var fetchForgotPassword = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.creat
     return _ref8.apply(this, arguments);
   };
 }());
-var fetchResetPassword = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchResetPassword', /*#__PURE__*/function () {
-  var _ref10 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(data, _ref9) {
+var fetchVerifyEmail = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchVerifyEmail', /*#__PURE__*/function () {
+  var _ref10 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(fetchUrl, _ref9) {
     var rejectWithValue, response;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
       while (1) {
@@ -4543,18 +4865,19 @@ var fetchResetPassword = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.create
             rejectWithValue = _ref9.rejectWithValue;
             _context5.prev = 1;
             _context5.next = 4;
-            return (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp)().post('reset-password', data);
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.get(fetchUrl);
 
           case 4:
             response = _context5.sent;
-            return _context5.abrupt("return", response.data);
+            return _context5.abrupt("return", response ? response.data : null);
 
           case 8:
             _context5.prev = 8;
             _context5.t0 = _context5["catch"](1);
+            console.log(_context5.t0);
             return _context5.abrupt("return", rejectWithValue(_context5.t0.response.data));
 
-          case 11:
+          case 12:
           case "end":
             return _context5.stop();
         }
@@ -4566,18 +4889,91 @@ var fetchResetPassword = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.create
     return _ref10.apply(this, arguments);
   };
 }());
+var fetchForgotPassword = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchForgotPassword', /*#__PURE__*/function () {
+  var _ref12 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6(data, _ref11) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            rejectWithValue = _ref11.rejectWithValue;
+            _context6.prev = 1;
+            _context6.next = 4;
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.post('forgot-password', data);
+
+          case 4:
+            response = _context6.sent;
+            return _context6.abrupt("return", response.data);
+
+          case 8:
+            _context6.prev = 8;
+            _context6.t0 = _context6["catch"](1);
+            console.log(_context6.t0);
+            return _context6.abrupt("return", rejectWithValue(_context6.t0.response.data));
+
+          case 12:
+          case "end":
+            return _context6.stop();
+        }
+      }
+    }, _callee6, null, [[1, 8]]);
+  }));
+
+  return function (_x11, _x12) {
+    return _ref12.apply(this, arguments);
+  };
+}());
+var fetchResetPassword = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('auth/fetchResetPassword', /*#__PURE__*/function () {
+  var _ref14 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee7(data, _ref13) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee7$(_context7) {
+      while (1) {
+        switch (_context7.prev = _context7.next) {
+          case 0:
+            rejectWithValue = _ref13.rejectWithValue;
+            _context7.prev = 1;
+            _context7.next = 4;
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.post('reset-password', data);
+
+          case 4:
+            response = _context7.sent;
+            return _context7.abrupt("return", response.data);
+
+          case 8:
+            _context7.prev = 8;
+            _context7.t0 = _context7["catch"](1);
+            return _context7.abrupt("return", rejectWithValue(_context7.t0.response.data));
+
+          case 11:
+          case "end":
+            return _context7.stop();
+        }
+      }
+    }, _callee7, null, [[1, 8]]);
+  }));
+
+  return function (_x13, _x14) {
+    return _ref14.apply(this, arguments);
+  };
+}());
+var initialState = {
+  user: null,
+  accessToken: (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.getToken)(),
+  errorMessage: '',
+  isLoading: false
+};
 var authSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createSlice)({
   name: 'auth',
-  initialState: {
-    user: null,
-    accessToken: (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.getToken)(),
-    errorMessage: '',
-    isLoading: false
+  initialState: initialState,
+  reducers: {
+    reset: function reset(state) {
+      state = initialState;
+    }
   },
   extraReducers: (_extraReducers = {}, _defineProperty(_extraReducers, fetchLogin.pending, function (state, action) {
     state.isLoading = true;
-  }), _defineProperty(_extraReducers, fetchLogin.fulfilled, function (state, _ref11) {
-    var payload = _ref11.payload;
+  }), _defineProperty(_extraReducers, fetchLogin.fulfilled, function (state, _ref15) {
+    var payload = _ref15.payload;
     var user = payload.user,
         accessToken = payload.access_token;
     state.user = user;
@@ -4585,13 +4981,21 @@ var authSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createSlice)({
     state.errorMessage = '';
     state.isLoading = false;
     (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.setToken)(accessToken);
+  }), _defineProperty(_extraReducers, logout.fulfilled, function (state, action) {
+    state.accessToken = ''; // to trigger the callback effect
+
+    (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.setToken)('');
+    state = initialState;
+  }), _defineProperty(_extraReducers, fetchUser.fulfilled, function (state, _ref16) {
+    var payload = _ref16.payload;
+    state.user = payload;
   }), _defineProperty(_extraReducers, fetchLogin.rejected, function (state, action) {
     state.errorMessage = action.payload ? action.payload.message : 'Error';
     state.isLoading = false;
   }), _defineProperty(_extraReducers, fetchRegister.pending, function (state, action) {
     state.isLoading = true;
-  }), _defineProperty(_extraReducers, fetchRegister.fulfilled, function (state, _ref12) {
-    var payload = _ref12.payload;
+  }), _defineProperty(_extraReducers, fetchRegister.fulfilled, function (state, _ref17) {
+    var payload = _ref17.payload;
     var user = payload.user,
         accessToken = payload.access_token;
     state.user = user;
@@ -4604,9 +5008,7 @@ var authSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createSlice)({
     state.isLoading = false;
   }), _extraReducers)
 });
-
-_objectDestructuringEmpty(authSlice.actions);
-
+var reset = authSlice.actions.reset;
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (authSlice.reducer);
 
@@ -4622,16 +5024,33 @@ _objectDestructuringEmpty(authSlice.actions);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "fetchFriendList": () => (/* binding */ fetchFriendList),
+/* harmony export */   "acceptFriend": () => (/* binding */ acceptFriend),
+/* harmony export */   "declineFriend": () => (/* binding */ declineFriend),
+/* harmony export */   "searchFriend": () => (/* binding */ searchFriend),
+/* harmony export */   "addFriend": () => (/* binding */ addFriend),
 /* harmony export */   "friendSlice": () => (/* binding */ friendSlice),
+/* harmony export */   "setFriend": () => (/* binding */ setFriend),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
 /* harmony import */ var _utilities_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/http */ "./resources/js/utilities/http.js");
-function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
+var _extraReducers;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 
 
@@ -4642,7 +5061,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 var fetchFriendList = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('friend/fetchFriendList', /*#__PURE__*/function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(data, _ref) {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(_, _ref) {
     var rejectWithValue, response;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
       while (1) {
@@ -4651,7 +5070,7 @@ var fetchFriendList = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsy
             rejectWithValue = _ref.rejectWithValue;
             _context.prev = 1;
             _context.next = 4;
-            return (0,_utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp)().get('user-friends');
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.get('user-friends');
 
           case 4:
             response = _context.sent;
@@ -4674,19 +5093,189 @@ var fetchFriendList = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsy
     return _ref2.apply(this, arguments);
   };
 }());
+var acceptFriend = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('friend/acceptFriend', /*#__PURE__*/function () {
+  var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(id, _ref3) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            rejectWithValue = _ref3.rejectWithValue;
+            _context2.prev = 1;
+            _context2.next = 4;
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.get("user-friends/".concat(id, "/accept"));
+
+          case 4:
+            response = _context2.sent;
+            return _context2.abrupt("return", id);
+
+          case 8:
+            _context2.prev = 8;
+            _context2.t0 = _context2["catch"](1);
+            return _context2.abrupt("return", rejectWithValue(_context2.t0.response.data));
+
+          case 11:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2, null, [[1, 8]]);
+  }));
+
+  return function (_x3, _x4) {
+    return _ref4.apply(this, arguments);
+  };
+}());
+var declineFriend = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('friend/declineFriend', /*#__PURE__*/function () {
+  var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(id, _ref5) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            rejectWithValue = _ref5.rejectWithValue;
+            _context3.prev = 1;
+            _context3.next = 4;
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.get("user-friends/".concat(id, "/decline"));
+
+          case 4:
+            response = _context3.sent;
+            return _context3.abrupt("return", id);
+
+          case 8:
+            _context3.prev = 8;
+            _context3.t0 = _context3["catch"](1);
+            return _context3.abrupt("return", rejectWithValue(_context3.t0.response.data));
+
+          case 11:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3, null, [[1, 8]]);
+  }));
+
+  return function (_x5, _x6) {
+    return _ref6.apply(this, arguments);
+  };
+}());
+var searchFriend = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('friend/searchFriend', /*#__PURE__*/function () {
+  var _ref8 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(email, _ref7) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            rejectWithValue = _ref7.rejectWithValue;
+            _context4.prev = 1;
+            _context4.next = 4;
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.get("user-friends/".concat(email, "/search"));
+
+          case 4:
+            response = _context4.sent;
+            return _context4.abrupt("return", response.data);
+
+          case 8:
+            _context4.prev = 8;
+            _context4.t0 = _context4["catch"](1);
+            return _context4.abrupt("return", rejectWithValue(_context4.t0.response.data));
+
+          case 11:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4, null, [[1, 8]]);
+  }));
+
+  return function (_x7, _x8) {
+    return _ref8.apply(this, arguments);
+  };
+}());
+var addFriend = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('friend/addFriend', /*#__PURE__*/function () {
+  var _ref10 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(friend_id, _ref9) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            rejectWithValue = _ref9.rejectWithValue;
+            _context5.prev = 1;
+            _context5.next = 4;
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.post("user-friends", {
+              friend_id: friend_id
+            });
+
+          case 4:
+            response = _context5.sent;
+            return _context5.abrupt("return", response.data);
+
+          case 8:
+            _context5.prev = 8;
+            _context5.t0 = _context5["catch"](1);
+            return _context5.abrupt("return", rejectWithValue(_context5.t0.response.data));
+
+          case 11:
+          case "end":
+            return _context5.stop();
+        }
+      }
+    }, _callee5, null, [[1, 8]]);
+  }));
+
+  return function (_x9, _x10) {
+    return _ref10.apply(this, arguments);
+  };
+}());
+var initialState = {
+  list: [],
+  friend: null
+};
 var friendSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createSlice)({
   name: 'friend',
-  initialState: {
-    list: []
+  initialState: initialState,
+  reducers: {
+    reset: function reset(state) {
+      state = initialState;
+    },
+    setFriend: function setFriend(state, _ref11) {
+      var payload = _ref11.payload;
+      state.friend = payload;
+    }
   },
-  extraReducers: _defineProperty({}, fetchFriendList.fulfilled, function (state, _ref3) {
-    var payload = _ref3.payload;
+  extraReducers: (_extraReducers = {}, _defineProperty(_extraReducers, fetchFriendList.fulfilled, function (state, _ref12) {
+    var payload = _ref12.payload;
     state.list = payload;
-  })
+  }), _defineProperty(_extraReducers, acceptFriend.fulfilled, function (state, _ref13) {
+    var id = _ref13.payload;
+    var index = state.list.findIndex(function (l) {
+      return l.id == id;
+    });
+
+    if (index > -1) {
+      state.list[index].is_accepted = 1;
+    }
+  }), _defineProperty(_extraReducers, declineFriend.fulfilled, function (state, _ref14) {
+    var id = _ref14.payload;
+    state.list = _toConsumableArray(state.list).filter(function (l) {
+      return l.id != id;
+    });
+  }), _defineProperty(_extraReducers, searchFriend.fulfilled, function (state, _ref15) {
+    var payload = _ref15.payload;
+    state.friend = payload;
+  }), _defineProperty(_extraReducers, addFriend.fulfilled, function (state, _ref16) {
+    var payload = _ref16.payload;
+
+    if (!state.list.find(function (l) {
+      return l.user_id == payload.user_id;
+    })) {
+      state.list = [].concat(_toConsumableArray(state.list), [payload]);
+    }
+
+    state.friend = null;
+  }), _extraReducers)
 });
-
-_objectDestructuringEmpty(friendSlice.actions);
-
+var setFriend = friendSlice.actions.setFriend;
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (friendSlice.reducer);
 
@@ -4703,18 +5292,153 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
 /* harmony import */ var _store_authSlice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/authSlice */ "./resources/js/store/authSlice.js");
 /* harmony import */ var _store_friendSlice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/friendSlice */ "./resources/js/store/friendSlice.js");
+/* harmony import */ var _store_loanSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/loanSlice */ "./resources/js/store/loanSlice.js");
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.configureStore)({
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_3__.configureStore)({
   reducer: {
     auth: _store_authSlice__WEBPACK_IMPORTED_MODULE_0__["default"],
-    friend: _store_friendSlice__WEBPACK_IMPORTED_MODULE_1__["default"]
+    friend: _store_friendSlice__WEBPACK_IMPORTED_MODULE_1__["default"],
+    loan: _store_loanSlice__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 }));
+
+/***/ }),
+
+/***/ "./resources/js/store/loanSlice.js":
+/*!*****************************************!*\
+  !*** ./resources/js/store/loanSlice.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fetchLoans": () => (/* binding */ fetchLoans),
+/* harmony export */   "createNewLoan": () => (/* binding */ createNewLoan),
+/* harmony export */   "loanSlice": () => (/* binding */ loanSlice),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
+/* harmony import */ var _utilities_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/http */ "./resources/js/utilities/http.js");
+var _extraReducers;
+
+function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+var fetchLoans = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('loan/fetchLoans', /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(_, _ref) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            rejectWithValue = _ref.rejectWithValue;
+            _context.prev = 1;
+            _context.next = 4;
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.get("loans");
+
+          case 4:
+            response = _context.sent;
+            return _context.abrupt("return", response.data);
+
+          case 8:
+            _context.prev = 8;
+            _context.t0 = _context["catch"](1);
+            return _context.abrupt("return", rejectWithValue(_context.t0.response.data));
+
+          case 11:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[1, 8]]);
+  }));
+
+  return function (_x, _x2) {
+    return _ref2.apply(this, arguments);
+  };
+}());
+var createNewLoan = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('loan/createNewLoan', /*#__PURE__*/function () {
+  var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(data, _ref3) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            rejectWithValue = _ref3.rejectWithValue;
+            _context2.prev = 1;
+            _context2.next = 4;
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.post("loans", data);
+
+          case 4:
+            response = _context2.sent;
+            return _context2.abrupt("return", response.data);
+
+          case 8:
+            _context2.prev = 8;
+            _context2.t0 = _context2["catch"](1);
+            return _context2.abrupt("return", rejectWithValue(_context2.t0.response.data));
+
+          case 11:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2, null, [[1, 8]]);
+  }));
+
+  return function (_x3, _x4) {
+    return _ref4.apply(this, arguments);
+  };
+}());
+var loanSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createSlice)({
+  name: 'loan',
+  initialState: {
+    list: []
+  },
+  reducers: {},
+  extraReducers: (_extraReducers = {}, _defineProperty(_extraReducers, createNewLoan.fulfilled, function (state, _ref5) {
+    var payload = _ref5.payload;
+    state.list = [].concat(_toConsumableArray(state.list), [payload]);
+  }), _defineProperty(_extraReducers, fetchLoans.fulfilled, function (state, _ref6) {
+    var payload = _ref6.payload;
+    state.list = payload;
+  }), _extraReducers)
+});
+
+_objectDestructuringEmpty(loanSlice.actions);
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loanSlice.reducer);
 
 /***/ }),
 
@@ -4748,15 +5472,13 @@ var setToken = function setToken(token) {
 var getToken = function getToken() {
   return window.localStorage.getItem('ACCESS_TOKEN');
 };
-var apiHttp = function apiHttp() {
-  var instance = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
-    baseURL: 'api'
-  });
-  instance.defaults.headers.common['Authorization'] = "Bearer ".concat(window.localStorage.getItem('ACCESS_TOKEN'));
-  instance.defaults.headers.common['Content-Type'] = 'application/json';
-  instance.defaults.headers.common['Accept'] = 'application/json';
-  return instance;
-};
+var apiHttp = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
+  baseURL: 'api'
+});
+apiHttp.defaults.headers.common['Authorization'] = "Bearer ".concat(window.localStorage.getItem('ACCESS_TOKEN'));
+apiHttp.defaults.headers.common['Content-Type'] = 'application/json';
+apiHttp.defaults.headers.common['Accept'] = 'application/json';
+
 
 /***/ }),
 
@@ -33561,35 +34283,39 @@ var shouldRenderFormState = (formStateData, _proxyFormState, isRoot) => {
             (!isRoot || VALIDATION_MODE.all)));
 };
 
-var convertToArrayPayload = (value) => Array.isArray(value) ? value : [value];
+var convertToArrayPayload = (value) => (Array.isArray(value) ? value : [value]);
 
-const tearDown = (_unsubscribe) => {
-    if (_unsubscribe.current) {
-        _unsubscribe.current.unsubscribe();
-        _unsubscribe.current = undefined;
+var shouldSubscribeByName = (name, signalName) => !name ||
+    !signalName ||
+    name === signalName ||
+    convertToArrayPayload(name).some((currentName) => currentName &&
+        (currentName.startsWith(signalName) ||
+            signalName.startsWith(currentName)));
+
+const tearDown = (_subscription) => {
+    if (_subscription.current) {
+        _subscription.current.unsubscribe();
+        _subscription.current = undefined;
     }
 };
-const updateSubscriptionProps = ({ _unsubscribe, props }) => () => {
+const updateSubscriptionProps = ({ _subscription, props }) => {
     if (props.disabled) {
-        tearDown(_unsubscribe);
+        tearDown(_subscription);
     }
-    else if (!_unsubscribe.current) {
-        _unsubscribe.current = props.subject.subscribe({
+    else if (!_subscription.current) {
+        _subscription.current = props.subject.subscribe({
             next: props.callback,
         });
     }
 };
 function useSubscribe(props) {
-    const _unsubscribe = react__WEBPACK_IMPORTED_MODULE_0__.useRef();
-    const _updateSubscription = react__WEBPACK_IMPORTED_MODULE_0__.useRef(() => { });
-    _updateSubscription.current = updateSubscriptionProps({
-        _unsubscribe,
+    const _subscription = react__WEBPACK_IMPORTED_MODULE_0__.useRef();
+    updateSubscriptionProps({
+        _subscription,
         props,
     });
-    !props.skipEarlySubscription && _updateSubscription.current();
     react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
-        _updateSubscription.current();
-        return () => tearDown(_unsubscribe);
+        return () => tearDown(_subscription);
     }, []);
 }
 
@@ -33609,9 +34335,7 @@ function useFormState(props) {
     _name.current = name;
     useSubscribe({
         disabled,
-        callback: (formState) => (!_name.current ||
-            !formState.name ||
-            convertToArrayPayload(_name.current).includes(formState.name)) &&
+        callback: (formState) => shouldSubscribeByName(_name.current, formState.name) &&
             shouldRenderFormState(formState, _localProxyFormState.current) &&
             updateFormState(Object.assign(Object.assign({}, control._formState), formState)),
         subject: control._subjects.state,
@@ -33619,29 +34343,100 @@ function useFormState(props) {
     return getProxyFormState(formState, control._proxyFormState, _localProxyFormState.current, false);
 }
 
+var isString = (value) => typeof value === 'string';
+
+function generateWatchOutput(names, _names, formValues, isGlobal) {
+    const isArray = Array.isArray(names);
+    if (isString(names)) {
+        isGlobal && _names.watch.add(names);
+        return get(formValues, names);
+    }
+    if (isArray) {
+        return names.map((fieldName) => (isGlobal && _names.watch.add(fieldName),
+            get(formValues, fieldName)));
+    }
+    isGlobal && (_names.watchAll = true);
+    return formValues;
+}
+
+var isKey = (value) => /^\w*$/.test(value);
+
+var stringToPath = (input) => compact(input.replace(/["|']|\]/g, '').split(/\.|\[/));
+
+function set(object, path, value) {
+    let index = -1;
+    const tempPath = isKey(path) ? [path] : stringToPath(path);
+    const length = tempPath.length;
+    const lastIndex = length - 1;
+    while (++index < length) {
+        const key = tempPath[index];
+        let newValue = value;
+        if (index !== lastIndex) {
+            const objValue = object[key];
+            newValue =
+                isObject(objValue) || Array.isArray(objValue)
+                    ? objValue
+                    : !isNaN(+tempPath[index + 1])
+                        ? []
+                        : {};
+        }
+        object[key] = newValue;
+        object = object[key];
+    }
+    return object;
+}
+
+function useWatch(props) {
+    const methods = useFormContext();
+    const { control = methods.control, name, defaultValue, disabled, } = props || {};
+    const _name = react__WEBPACK_IMPORTED_MODULE_0__.useRef(name);
+    _name.current = name;
+    useSubscribe({
+        disabled,
+        subject: control._subjects.watch,
+        callback: (formState) => {
+            if (shouldSubscribeByName(_name.current, formState.name)) {
+                const fieldValues = generateWatchOutput(_name.current, control._names, control._formValues);
+                updateValue(isObject(fieldValues) &&
+                    !(isString(_name.current) &&
+                        get(control._fields, _name.current, {})._f)
+                    ? Object.assign({}, fieldValues) : Array.isArray(fieldValues)
+                    ? [...fieldValues]
+                    : fieldValues);
+            }
+        },
+    });
+    const [value, updateValue] = react__WEBPACK_IMPORTED_MODULE_0__.useState(isUndefined(defaultValue)
+        ? control._getWatch(name)
+        : defaultValue);
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
+        control._removeUnmounted();
+    });
+    return value;
+}
+
 function useController(props) {
     const methods = useFormContext();
     const { name, control = methods.control, shouldUnregister } = props;
-    const [value, setInputStateValue] = react__WEBPACK_IMPORTED_MODULE_0__.useState(get(control._formValues, name, get(control._defaultValues, name, props.defaultValue)));
+    const value = useWatch({
+        control,
+        name,
+        defaultValue: get(control._formValues, name, get(control._defaultValues, name, props.defaultValue)),
+    });
     const formState = useFormState({
-        control: control || methods.control,
+        control,
         name,
     });
     const _name = react__WEBPACK_IMPORTED_MODULE_0__.useRef(name);
     _name.current = name;
-    useSubscribe({
-        subject: control._subjects.control,
-        callback: (data) => (!data.name || _name.current === data.name) &&
-            setInputStateValue(get(data.values, _name.current)),
-    });
     const registerProps = control.register(name, Object.assign(Object.assign({}, props.rules), { value }));
-    const updateMounted = react__WEBPACK_IMPORTED_MODULE_0__.useCallback((name, value) => {
-        const field = get(control._fields, name);
-        if (field) {
-            field._f.mount = value;
-        }
-    }, [control]);
     react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
+        const updateMounted = (name, value) => {
+            const field = get(control._fields, name);
+            if (field) {
+                field._f.mount = value;
+            }
+        };
         updateMounted(name, true);
         return () => {
             const _shouldUnregisterField = control._options.shouldUnregister || shouldUnregister;
@@ -33654,15 +34449,13 @@ function useController(props) {
                 updateMounted(name, false);
             }
         };
-    }, [name, control, shouldUnregister, updateMounted]);
+    }, [name, control, shouldUnregister]);
     return {
         field: {
             onChange: (event) => {
-                const value = getControllerValue(event);
-                setInputStateValue(value);
                 registerProps.onChange({
                     target: {
-                        value,
+                        value: getControllerValue(event),
                         name: name,
                     },
                     type: EVENTS.CHANGE,
@@ -33704,33 +34497,6 @@ const Controller = (props) => props.render(useController(props));
 
 var appendErrors = (name, validateAllFieldCriteria, errors, type, message) => validateAllFieldCriteria
     ? Object.assign(Object.assign({}, errors[name]), { types: Object.assign(Object.assign({}, (errors[name] && errors[name].types ? errors[name].types : {})), { [type]: message || true }) }) : {};
-
-var isKey = (value) => /^\w*$/.test(value);
-
-var stringToPath = (input) => compact(input.replace(/["|']|\]/g, '').split(/\.|\[/));
-
-function set(object, path, value) {
-    let index = -1;
-    const tempPath = isKey(path) ? [path] : stringToPath(path);
-    const length = tempPath.length;
-    const lastIndex = length - 1;
-    while (++index < length) {
-        const key = tempPath[index];
-        let newValue = value;
-        if (index !== lastIndex) {
-            const objValue = object[key];
-            newValue =
-                isObject(objValue) || Array.isArray(objValue)
-                    ? objValue
-                    : !isNaN(+tempPath[index + 1])
-                        ? []
-                        : {};
-        }
-        object[key] = newValue;
-        object = object[key];
-    }
-    return object;
-}
 
 const focusFieldBy = (fields, callback, fieldsNames) => {
     for (const key of fieldsNames || Object.keys(fields)) {
@@ -33833,6 +34599,7 @@ const useFieldArray = (props) => {
     const [fields, setFields] = react__WEBPACK_IMPORTED_MODULE_0__.useState(mapIds(control._getFieldArray(name), keyName));
     const _fieldIds = react__WEBPACK_IMPORTED_MODULE_0__.useRef(fields);
     const _name = react__WEBPACK_IMPORTED_MODULE_0__.useRef(name);
+    const _actioned = react__WEBPACK_IMPORTED_MODULE_0__.useRef(false);
     _name.current = name;
     _fieldIds.current = fields;
     control._names.array.add(name);
@@ -33843,10 +34610,10 @@ const useFieldArray = (props) => {
             }
         },
         subject: control._subjects.array,
-        skipEarlySubscription: true,
     });
     const updateValues = react__WEBPACK_IMPORTED_MODULE_0__.useCallback((updatedFieldArrayValuesWithKey) => {
         const updatedFieldArrayValues = omitKeys(updatedFieldArrayValuesWithKey, keyName);
+        _actioned.current = true;
         set(control._formValues, name, updatedFieldArrayValues);
         setFields(updatedFieldArrayValuesWithKey);
         return updatedFieldArrayValues;
@@ -33922,6 +34689,17 @@ const useFieldArray = (props) => {
                 }
             }
         }
+        if (_actioned.current) {
+            control._executeSchema([name]).then((result) => {
+                const error = get(result.errors, name);
+                if (error && error.type && !get(control._formState.errors, name)) {
+                    set(control._formState.errors, name, error);
+                    control._subjects.state.next({
+                        errors: control._formState.errors,
+                    });
+                }
+            });
+        }
         control._subjects.watch.next({
             name,
             values: control._formValues,
@@ -33979,6 +34757,34 @@ function cloneObject(data) {
     return copy;
 }
 
+function createSubject() {
+    let _observers = [];
+    const next = (value) => {
+        for (const observer of _observers) {
+            observer.next(value);
+        }
+    };
+    const subscribe = (observer) => {
+        _observers.push(observer);
+        return {
+            unsubscribe: () => {
+                _observers = _observers.filter((o) => o !== observer);
+            },
+        };
+    };
+    const unsubscribe = () => {
+        _observers = [];
+    };
+    return {
+        get observers() {
+            return _observers;
+        },
+        next,
+        subscribe,
+        unsubscribe,
+    };
+}
+
 var isPrimitive = (value) => isNullOrUndefined(value) || !isObjectType(value);
 
 function deepEqual(object1, object2) {
@@ -34022,6 +34828,8 @@ var getValidationModes = (mode) => ({
 
 var isBoolean = (value) => typeof value === 'boolean';
 
+var isFileInput = (element) => element.type === 'file';
+
 var isHTMLElement = (value) => value instanceof HTMLElement;
 
 var isMultipleSelect = (element) => element.type === `select-multiple`;
@@ -34030,59 +34838,11 @@ var isRadioInput = (element) => element.type === 'radio';
 
 var isRadioOrCheckboxFunction = (ref) => isRadioInput(ref) || isCheckBoxInput(ref);
 
-var isString = (value) => typeof value === 'string';
-
 var isWeb = typeof window !== 'undefined' &&
     typeof window.HTMLElement !== 'undefined' &&
     typeof document !== 'undefined';
 
-var live = (ref) => !isHTMLElement(ref) || !document.contains(ref);
-
-class Subscription {
-    constructor() {
-        this.tearDowns = [];
-    }
-    add(tearDown) {
-        this.tearDowns.push(tearDown);
-    }
-    unsubscribe() {
-        for (const teardown of this.tearDowns) {
-            teardown();
-        }
-        this.tearDowns = [];
-    }
-}
-class Subscriber {
-    constructor(observer, subscription) {
-        this.observer = observer;
-        this.closed = false;
-        subscription.add(() => (this.closed = true));
-    }
-    next(value) {
-        if (!this.closed) {
-            this.observer.next(value);
-        }
-    }
-}
-class Subject {
-    constructor() {
-        this.observers = [];
-    }
-    next(value) {
-        for (const observer of this.observers) {
-            observer.next(value);
-        }
-    }
-    subscribe(observer) {
-        const subscription = new Subscription();
-        const subscriber = new Subscriber(observer, subscription);
-        this.observers.push(subscriber);
-        return subscription;
-    }
-    unsubscribe() {
-        this.observers = [];
-    }
-}
+var live = (ref) => isHTMLElement(ref) && document.contains(ref);
 
 function baseGet(object, updatePath) {
     const length = updatePath.slice(0, -1).length;
@@ -34122,8 +34882,6 @@ function unset(object, path) {
     }
     return object;
 }
-
-var isFileInput = (element) => element.type === 'file';
 
 const defaultResult = {
     value: false,
@@ -34217,6 +34975,35 @@ var hasValidation = (options) => options.mount &&
         options.minLength ||
         options.pattern ||
         options.validate);
+
+function schemaErrorLookup(errors, _fields, name) {
+    const error = get(errors, name);
+    if (error || isKey(name)) {
+        return {
+            error,
+            name,
+        };
+    }
+    const names = name.split('.');
+    while (names.length) {
+        const fieldName = names.join('.');
+        const field = get(_fields, fieldName);
+        const foundError = get(errors, fieldName);
+        if (field && !Array.isArray(field) && name !== fieldName) {
+            return { name };
+        }
+        if (foundError && foundError.type) {
+            return {
+                name: fieldName,
+                error: foundError,
+            };
+        }
+        names.pop();
+    }
+    return {
+        name,
+    };
+}
 
 function deepMerge(target, source) {
     if (isPrimitive(target) || isPrimitive(source)) {
@@ -34487,10 +35274,9 @@ function createFormControl(props = {}) {
         errors: false,
     };
     const _subjects = {
-        watch: new Subject(),
-        control: new Subject(),
-        array: new Subject(),
-        state: new Subject(),
+        watch: createSubject(),
+        array: createSubject(),
+        state: createSubject(),
     };
     const validationModeBeforeSubmit = getValidationModes(_options.mode);
     const validationModeAfterSubmit = getValidationModes(_options.reValidateMode);
@@ -34507,7 +35293,7 @@ function createFormControl(props = {}) {
         let isValid = false;
         if (_proxyFormState.isValid) {
             isValid = _options.resolver
-                ? isEmptyObject((await executeResolver()).errors)
+                ? isEmptyObject((await _executeSchema()).errors)
                 : await executeBuildInValidation(_fields, true);
             if (!shouldSkipRender && isValid !== _formState.isValid) {
                 _formState.isValid = isValid;
@@ -34626,11 +35412,11 @@ function createFormControl(props = {}) {
             validateFields = {};
         }
     };
-    const executeResolver = async (name) => _options.resolver
+    const _executeSchema = async (name) => _options.resolver
         ? await _options.resolver(Object.assign({}, _formValues), _options.context, getResolverOptions(name || _names.mount, _fields, _options.criteriaMode, _options.shouldUseNativeValidation))
         : {};
-    const executeResolverValidation = async (names) => {
-        const { errors } = await executeResolver();
+    const executeSchemaAndUpdateState = async (names) => {
+        const { errors } = await _executeSchema();
         if (names) {
             for (const name of names) {
                 const error = get(errors, name);
@@ -34676,7 +35462,9 @@ function createFormControl(props = {}) {
         for (const name of _names.unMount) {
             const field = get(_fields, name);
             field &&
-                (field._f.refs ? field._f.refs.every(live) : live(field._f.ref)) &&
+                (field._f.refs
+                    ? field._f.refs.every((ref) => !live(ref))
+                    : !live(field._f.ref)) &&
                 unregister(name);
         }
         _names.unMount = new Set();
@@ -34691,16 +35479,10 @@ function createFormControl(props = {}) {
                 : isString(names)
                     ? { [names]: defaultValue }
                     : defaultValue));
-        if (names) {
-            const result = convertToArrayPayload(names).map((fieldName) => (isGlobal && _names.watch.add(fieldName),
-                get(fieldValues, fieldName)));
-            return Array.isArray(names) ? result : result[0];
-        }
-        isGlobal && (_names.watchAll = true);
-        return fieldValues;
+        return generateWatchOutput(names, _names, fieldValues, isGlobal);
     };
-    const _getFieldArray = (name) => get(_stateFlags.mount ? _formValues : _defaultValues, name, []);
-    const setFieldValue = (name, value, options = {}, shouldRender) => {
+    const _getFieldArray = (name) => get(_stateFlags.mount ? _formValues : _defaultValues, name, props.shouldUnregister ? get(_defaultValues, name, []) : []);
+    const setFieldValue = (name, value, options = {}) => {
         const field = get(_fields, name);
         let fieldValue = value;
         if (field) {
@@ -34711,7 +35493,10 @@ function createFormControl(props = {}) {
                     isWeb && isHTMLElement(fieldReference.ref) && isNullOrUndefined(value)
                         ? ''
                         : value;
-                if (isMultipleSelect(fieldReference.ref)) {
+                if (isFileInput(fieldReference.ref) && !isString(fieldValue)) {
+                    fieldReference.ref.files = fieldValue;
+                }
+                else if (isMultipleSelect(fieldReference.ref)) {
                     [...fieldReference.ref.options].forEach((selectRef) => (selectRef.selected = fieldValue.includes(selectRef.value)));
                 }
                 else if (fieldReference.refs) {
@@ -34729,11 +35514,6 @@ function createFormControl(props = {}) {
                 else {
                     fieldReference.ref.value = fieldValue;
                 }
-                shouldRender &&
-                    _subjects.control.next({
-                        values: _formValues,
-                        name,
-                    });
             }
         }
         (options.shouldDirty || options.shouldTouch) &&
@@ -34750,7 +35530,7 @@ function createFormControl(props = {}) {
                 (field && !field._f)) &&
                 !isDateObject(fieldValue)
                 ? setValues(fieldName, fieldValue, options)
-                : setFieldValue(fieldName, fieldValue, options, true);
+                : setFieldValue(fieldName, fieldValue, options);
         }
     };
     const setValue = (name, value, options = {}) => {
@@ -34775,7 +35555,7 @@ function createFormControl(props = {}) {
         else {
             field && !field._f && !isNullOrUndefined(value)
                 ? setValues(name, value, options)
-                : setFieldValue(name, value, options, true);
+                : setFieldValue(name, value, options);
         }
         isFieldWatched(name) && _subjects.state.next({});
         _subjects.watch.next({
@@ -34822,18 +35602,11 @@ function createFormControl(props = {}) {
                     isValidating: true,
                 });
             if (_options.resolver) {
-                const { errors } = await executeResolver([name]);
-                error = get(errors, name);
-                if (isCheckBoxInput(target) && !error) {
-                    const parentNodeName = getNodeParentName(name);
-                    const parentField = get(_fields, parentNodeName);
-                    if (Array.isArray(parentField) &&
-                        parentField.every((field) => field._f && isCheckBoxInput(field._f.ref))) {
-                        const parentError = get(errors, parentNodeName, {});
-                        parentError.type && (error = parentError);
-                        name = parentNodeName;
-                    }
-                }
+                const { errors } = await _executeSchema([name]);
+                const previousErrorLookupResult = schemaErrorLookup(_formState.errors, _fields, name);
+                const errorLookupResult = schemaErrorLookup(errors, _fields, previousErrorLookupResult.name || name);
+                error = errorLookupResult.error;
+                name = errorLookupResult.name;
                 isValid = isEmptyObject(errors);
             }
             else {
@@ -34852,7 +35625,7 @@ function createFormControl(props = {}) {
             isValidating: true,
         });
         if (_options.resolver) {
-            const errors = await executeResolverValidation(isUndefined(name) ? name : fieldNames);
+            const errors = await executeSchemaAndUpdateState(isUndefined(name) ? name : fieldNames);
             isValid = isEmptyObject(errors);
             validationResult = name
                 ? !fieldNames.some((name) => get(errors, name))
@@ -34863,12 +35636,15 @@ function createFormControl(props = {}) {
                 const field = get(_fields, fieldName);
                 return await executeBuildInValidation(field && field._f ? { [fieldName]: field } : field);
             }))).every(Boolean);
-            _updateValid();
+            !(!validationResult && !_formState.isValid) && _updateValid();
         }
         else {
             validationResult = isValid = await executeBuildInValidation(_fields);
         }
-        _subjects.state.next(Object.assign(Object.assign({}, (!isString(name) || isValid !== _formState.isValid ? {} : { name })), { errors: _formState.errors, isValid, isValidating: false }));
+        _subjects.state.next(Object.assign(Object.assign(Object.assign({}, (!isString(name) ||
+            (_proxyFormState.isValid && isValid !== _formState.isValid)
+            ? {}
+            : { name })), (_options.resolver ? { isValid } : {})), { errors: _formState.errors, isValidating: false }));
         options.shouldFocus &&
             !validationResult &&
             focusFieldBy(_fields, (key) => get(_formState.errors, key), name ? fieldNames : _names.mount);
@@ -34888,6 +35664,7 @@ function createFormControl(props = {}) {
             : (_formState.errors = {});
         _subjects.state.next({
             errors: _formState.errors,
+            isValid: true,
         });
     };
     const setError = (name, error, options) => {
@@ -34932,7 +35709,9 @@ function createFormControl(props = {}) {
             _f: Object.assign(Object.assign(Object.assign({}, (field && field._f ? field._f : { ref: { name } })), { name, mount: true }), options),
         });
         _names.mount.add(name);
-        !isUndefined(options.value) && set(_formValues, name, options.value);
+        !isUndefined(options.value) &&
+            !options.disabled &&
+            set(_formValues, name, get(_formValues, name, options.value));
         field
             ? isBoolean(options.disabled) &&
                 set(_formValues, name, options.disabled
@@ -34962,7 +35741,7 @@ function createFormControl(props = {}) {
                         field = {
                             _f: isRadioOrCheckbox
                                 ? Object.assign(Object.assign({}, field._f), { refs: [
-                                        ...compact(field._f.refs || []).filter((ref) => isHTMLElement(ref) && document.contains(ref)),
+                                        ...compact(field._f.refs || []).filter(live),
                                         fieldRef,
                                     ], ref: { type: fieldRef.type, name } }) : Object.assign(Object.assign({}, field._f), { ref: fieldRef }),
                         };
@@ -34994,7 +35773,7 @@ function createFormControl(props = {}) {
         });
         try {
             if (_options.resolver) {
-                const { errors, values } = await executeResolver();
+                const { errors, values } = await _executeSchema();
                 _formState.errors = errors;
                 fieldValues = values;
             }
@@ -35030,10 +35809,35 @@ function createFormControl(props = {}) {
             });
         }
     };
+    const resetField = (name, options = {}) => {
+        if (isUndefined(options.defaultValue)) {
+            setValue(name, get(_defaultValues, name));
+        }
+        else {
+            setValue(name, options.defaultValue);
+            set(_defaultValues, name, options.defaultValue);
+        }
+        if (!options.keepTouched) {
+            unset(_formState.touchedFields, name);
+        }
+        if (!options.keepDirty) {
+            unset(_formState.dirtyFields, name);
+            _formState.isDirty = options.defaultValue
+                ? _getDirty(name, get(_defaultValues, name))
+                : _getDirty();
+        }
+        if (!options.keepError) {
+            unset(_formState.errors, name);
+            _proxyFormState.isValid && _updateValid();
+        }
+        _subjects.state.next(Object.assign({}, _formState));
+    };
     const reset = (formValues, keepStateOptions = {}) => {
-        const hasUpdatedFormValues = !isEmptyObject(formValues);
         const updatedValues = formValues || _defaultValues;
         const cloneUpdatedValues = cloneObject(updatedValues);
+        const values = !isEmptyObject(formValues)
+            ? cloneUpdatedValues
+            : _defaultValues;
         if (!keepStateOptions.keepDefaultValues) {
             _defaultValues = updatedValues;
         }
@@ -35054,14 +35858,17 @@ function createFormControl(props = {}) {
                     }
                 }
             }
-            _formValues = props.shouldUnregister ? {} : cloneUpdatedValues;
+            _formValues = props.shouldUnregister
+                ? keepStateOptions.keepDefaultValues
+                    ? cloneObject(_defaultValues)
+                    : {}
+                : cloneUpdatedValues;
             _fields = {};
-            _subjects.control.next({
-                values: hasUpdatedFormValues ? cloneUpdatedValues : _defaultValues,
+            _subjects.watch.next({
+                values,
             });
-            _subjects.watch.next({});
             _subjects.array.next({
-                values: cloneUpdatedValues,
+                values,
             });
         }
         _names = {
@@ -35079,14 +35886,16 @@ function createFormControl(props = {}) {
             isDirty: keepStateOptions.keepDirty
                 ? _formState.isDirty
                 : keepStateOptions.keepDefaultValues
-                    ? deepEqual(formValues, _defaultValues)
+                    ? !deepEqual(formValues, _defaultValues)
                     : false,
             isSubmitted: keepStateOptions.keepIsSubmitted
                 ? _formState.isSubmitted
                 : false,
             dirtyFields: keepStateOptions.keepDirty
                 ? _formState.dirtyFields
-                : {},
+                : (keepStateOptions.keepDefaultValues && formValues
+                    ? Object.entries(formValues).reduce((previous, [key, value]) => (Object.assign(Object.assign({}, previous), { [key]: value !== get(_defaultValues, key) })), {})
+                    : {}),
             touchedFields: keepStateOptions.keepTouched
                 ? _formState.touchedFields
                 : {},
@@ -35100,11 +35909,15 @@ function createFormControl(props = {}) {
             !_proxyFormState.isValid || !!keepStateOptions.keepIsValid;
         _stateFlags.watch = !!props.shouldUnregister;
     };
-    const setFocus = (name) => get(_fields, name)._f.ref.focus();
+    const setFocus = (name) => {
+        const field = get(_fields, name)._f;
+        (field.ref.focus ? field.ref : field.refs[0]).focus();
+    };
     return {
         control: {
             register,
             unregister,
+            _executeSchema,
             _getWatch,
             _getDirty,
             _updateValid,
@@ -35163,6 +35976,7 @@ function createFormControl(props = {}) {
         setValue,
         getValues,
         reset,
+        resetField,
         clearErrors,
         unregister,
         setError,
@@ -35211,41 +36025,9 @@ function useForm(props = {}) {
         }
         control._removeUnmounted();
     });
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => () => Object.values(control._subjects).forEach((subject) => subject.unsubscribe()), [control]);
     _formControl.current.formState = getProxyFormState(formState, control._proxyFormState);
     return _formControl.current;
-}
-
-function useWatch(props) {
-    const methods = useFormContext();
-    const { control = methods.control, name, defaultValue, disabled, } = props || {};
-    const _name = react__WEBPACK_IMPORTED_MODULE_0__.useRef(name);
-    _name.current = name;
-    useSubscribe({
-        disabled,
-        subject: control._subjects.watch,
-        callback: ({ name }) => {
-            if (!_name.current ||
-                !name ||
-                convertToArrayPayload(_name.current).some((currentName) => name &&
-                    currentName &&
-                    (name.startsWith(currentName) ||
-                        currentName.startsWith(name)))) {
-                control._stateFlags.mount = true;
-                const fieldValues = control._getWatch(_name.current, defaultValue);
-                updateValue(isObject(fieldValues)
-                    ? Object.assign({}, fieldValues) : Array.isArray(fieldValues)
-                    ? [...fieldValues]
-                    : fieldValues);
-            }
-        },
-    });
-    const [value, updateValue] = react__WEBPACK_IMPORTED_MODULE_0__.useState(isUndefined(defaultValue)
-        ? control._getWatch(name)
-        : defaultValue);
-    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
-        control._removeUnmounted();
-    });
-    return value;
 }
 
 

@@ -13,14 +13,10 @@ export const setToken = (token) => {
 
 export const getToken = () => window.localStorage.getItem('ACCESS_TOKEN')
 
-export const apiHttp = () => {
+const apiHttp = axios.create({ baseURL: 'api'})
+apiHttp.defaults.headers.common['Authorization'] = `Bearer ${window.localStorage.getItem('ACCESS_TOKEN')}`
+apiHttp.defaults.headers.common['Content-Type'] = 'application/json';
+apiHttp.defaults.headers.common['Accept'] = 'application/json';
 
-    const instance = axios.create({ baseURL: 'api'})
-
-    instance.defaults.headers.common['Authorization'] = `Bearer ${window.localStorage.getItem('ACCESS_TOKEN')}`
-    instance.defaults.headers.common['Content-Type'] = 'application/json';
-    instance.defaults.headers.common['Accept'] = 'application/json';
-
-    return instance
-}
+export { apiHttp }
 

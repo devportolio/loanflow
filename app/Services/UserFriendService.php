@@ -9,14 +9,21 @@ use App\Http\Resources\UserResource;
 class UserFriendService extends BaseService
 {
     public function getUserFriends()
-    {
-        $friends = auth()->user()->friends()->with('user')->get();
-        // return $friends;
+    {   
+        $id = auth()->user()->id;
+        $friends = UserFriend::with('friend', 'user')
+            ->whereRaw("$id in (user_id, friend_id)")
+            ->get();
+
         return UserFriendResource::collection($friends);
     }
 
     public function searchUser($email)
     {
+        if (auth()->user()->email == $email) {
+            abort(422, 'Cannot search own email');
+        }
+
         // Search if the email is associated to a registered user
         $friend = User::where('email', $email)->first();
         $this->itemFoundCheck($friend, 'User');   
@@ -28,14 +35,16 @@ class UserFriendService extends BaseService
     {
         $friend = UserFriend::firstOrCreate($request->all());
 
-        return !!$friend;
+        return new UserFriendResource($friend);
     }
 
     public function acceptFriend($id)
     {
         $friend = UserFriend::findOrFail($id);
 
-        $friend->update(['is_accepted' => true]);
+        if (!$friend->is_accepted) {
+            $friend->update(['is_accepted' => true]);
+        }
 
         return $friend->wasChanged();
     }
@@ -44,12 +53,7 @@ class UserFriendService extends BaseService
     {
         $friend = UserFriend::findOrFail($id);
 
-        if (!$friend->is_accepted) {
-
-            return $friend->delete();
-        }
-
-        return false;
+        return $friend->delete();
 
     }
 }

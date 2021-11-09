@@ -6,22 +6,24 @@ use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\UserResource;
 
 class UserFriendResource extends JsonResource
-{
-    /**
-     * Transform the resource into an array.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
-     */
+{  
     public function toArray($request)
     {
+        $friend = $is_added = null;
+
+        if (auth()->user()->id == $this->user_id) {
+            $friend = new UserResource($this->friend);
+            $is_added = true;
+        } else {
+            $friend = new UserResource($this->friend);
+            $is_added = false;
+        }
+
         return [
             'id' => $this->id,
-            'user_id' => $this->user->id,
-            'name' => $this->user->name,
-            'email' => $this->user->email,
-            'photo_path' => $this->photo_path,
-            'is_accepted' => $this->is_accepted,
+            'friend' => $friend,
+            'is_accepted' => !!$this->is_accepted,
+            'is_added' => $is_added,
         ];
     }
 }

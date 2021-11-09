@@ -17,7 +17,7 @@ Route::group(['namespace' => 'User'], function() {
 Route::group(['middleware' => ['auth:sanctum']], function() {
 
     Route::group(['namespace' => 'User'], function() {
-        Route::get('me', 'User\UserController@show')->name('user');
+        Route::get('me', 'UserController@show')->name('user');
 
         // User Friends
         Route::get('user-friends', 'UserFriendController@index');

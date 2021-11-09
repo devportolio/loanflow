@@ -4,9 +4,32 @@ import { apiHttp, setToken, getToken } from '../utilities/http';
 export const fetchLogin = createAsyncThunk('auth/fetchLogin',
     async (data, { rejectWithValue  }) => {
         try {
-            const response = await apiHttp().post('login', data)
+            const response = await apiHttp.post('login', data)
             return response.data
         } catch(err) {
+            return rejectWithValue(err.response.data)
+        }
+    }
+)
+
+export const logout = createAsyncThunk('auth/logout',
+    async (_, { rejectWithValue  }) => {
+        try {
+            const response = await apiHttp.post('logout')
+            return response.data
+        } catch(err) {
+            return rejectWithValue(err.response.data)
+        }
+    }
+)
+
+export const fetchUser = createAsyncThunk('auth/fetchUser',
+    async (_, { rejectWithValue  }) => {
+        try {
+            const response = await apiHttp.get('me')
+            return response? response.data: null;
+        } catch(err) {
+            console.log(err)
             return rejectWithValue(err.response.data)
         }
     }
@@ -15,7 +38,7 @@ export const fetchLogin = createAsyncThunk('auth/fetchLogin',
 export const fetchRegister = createAsyncThunk('auth/fetchRegister',
     async (data, { rejectWithValue  }) => {
         try {
-            const response = await apiHttp().post('register', data)
+            const response = await apiHttp.post('register', data)
             return response.data
         } catch(err) {
             return rejectWithValue(err.response.data)
@@ -26,7 +49,7 @@ export const fetchRegister = createAsyncThunk('auth/fetchRegister',
 export const fetchVerifyEmail = createAsyncThunk('auth/fetchVerifyEmail',
     async (fetchUrl, { rejectWithValue  }) => {
         try {
-            const response = await apiHttp().get(fetchUrl)
+            const response = await apiHttp.get(fetchUrl)
             return response? response.data: null;
         } catch(err) {
             console.log(err)
@@ -38,7 +61,7 @@ export const fetchVerifyEmail = createAsyncThunk('auth/fetchVerifyEmail',
 export const fetchForgotPassword = createAsyncThunk('auth/fetchForgotPassword',
     async (data, { rejectWithValue  }) => {
         try {
-            const response = await apiHttp().post('forgot-password', data)
+            const response = await apiHttp.post('forgot-password', data)
             return response.data
         } catch(err) {
             console.log(err)
@@ -50,7 +73,7 @@ export const fetchForgotPassword = createAsyncThunk('auth/fetchForgotPassword',
 export const fetchResetPassword = createAsyncThunk('auth/fetchResetPassword',
     async (data, { rejectWithValue  }) => {
         try {
-            const response = await apiHttp().post('reset-password', data)
+            const response = await apiHttp.post('reset-password', data)
             return response.data
         } catch(err) {
             return rejectWithValue(err.response.data)
@@ -58,15 +81,23 @@ export const fetchResetPassword = createAsyncThunk('auth/fetchResetPassword',
     }
 )
 
+const initialState = {
+    user: null,
+    accessToken: getToken(),
+    errorMessage: '',
+    isLoading: false,
+}
+
 export const authSlice = createSlice({
     name: 'auth',
-    initialState: {
-        user: null,
-        accessToken: getToken(),
-        errorMessage: '',
-        isLoading: false,
-    },
+    initialState,
 
+    reducers: {
+        reset: (state) => {
+            state = initialState
+        }
+    },
+    
     extraReducers: {
         [fetchLogin.pending]: (state, action) => {
             state.isLoading = true
@@ -79,6 +110,14 @@ export const authSlice = createSlice({
             state.isLoading = false
 
             setToken(accessToken)
+        },
+        [logout.fulfilled]: (state, action) => {
+            state.accessToken = '' // to trigger the callback effect
+            setToken('')
+            state = initialState 
+        },
+        [fetchUser.fulfilled]: (state, { payload }) => {
+            state.user = payload
         },
         [fetchLogin.rejected]: (state, action) => {
             state.errorMessage = action.payload? action.payload.message: 'Error'
@@ -103,6 +142,6 @@ export const authSlice = createSlice({
     }
 })
 
-export const {  } = authSlice.actions
+export const { reset } = authSlice.actions
 
 export default authSlice.reducer

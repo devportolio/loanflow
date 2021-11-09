@@ -2,10 +2,11 @@ import React from 'react'
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { logout } from '../store/authSlice';
 
 import Home from '../pages/Home';
 
@@ -19,13 +20,18 @@ import ProtectedRoute from './ProtectedRoute';
 
 import Dashboard from '../pages/dashboard/Dashboard';
 import FriendList from '../pages/friend/FriendList';
+import LendForm from '../pages/lend/LendForm';
+import LoanList from '../pages/loan/LoanList';
 
 
-export default function RouteItems() {
-    
+export default function RouteItems() {   
+    const dispatch = useDispatch()
+    const { accessToken } = useSelector(state => state.auth)
+
     return (
         <Router>
             <div>
+                { accessToken && <button onClick={()=>dispatch(logout())}>Logout</button>}
                 <Switch>
                     <Route path="/" component={Home} exact />
                     <Route path="/login" component={Login} />
@@ -36,6 +42,8 @@ export default function RouteItems() {
 
                     <ProtectedRoute path="/dashboard" component={Dashboard} />
                     <ProtectedRoute path="/friends" component={FriendList} />
+                    <ProtectedRoute path="/lend" component={LendForm} />
+                    <ProtectedRoute path="/loans" component={LoanList} />
                 </Switch>
             </div>
         </Router>

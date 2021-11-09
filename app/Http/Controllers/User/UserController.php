@@ -17,6 +17,6 @@ class UserController extends Controller
 
     public function show()
     {
-        return $this->jsonResponse($this->userService->getAuthUser());
+        return $this->success($this->userService->getAuthUser());
     }
 }

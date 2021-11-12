@@ -11,6 +11,8 @@ export default function Dashboard() {
             </h1>
         
             <button onClick={()=>history.push('/friends')}>Lend</button>
+            <button onClick={()=>history.push('/lending')}>Lend List</button>
+            <button onClick={()=>history.push('/loans')}>Loan List</button>
         </div>
     )
 }

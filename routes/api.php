@@ -36,6 +36,7 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
         
         Route::apiResource('loans', 'LoanController', ['only' =>['index', 'store', 'show']]);
         Route::get('loans/{id}/start', 'LoanController@startLoan');
+        Route::get('lending', 'LoanController@lending');
 
         // Loan payments
         Route::apiResource('loan-payments', 'LoanPaymentController', ['except' =>['destroy']]);

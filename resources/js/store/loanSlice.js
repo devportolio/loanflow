@@ -12,6 +12,17 @@ export const fetchLoans = createAsyncThunk('loan/fetchLoans',
     }
 )
 
+export const fetchLending = createAsyncThunk('loan/fetchLending',
+    async (_, { rejectWithValue  }) => {
+        try {
+            const response = await apiHttp.get(`lending`)
+            return response.data
+        } catch(err) {
+            return rejectWithValue(err.response.data)
+        }
+    }
+)
+
 export const createNewLoan = createAsyncThunk('loan/createNewLoan',
     async (data, { rejectWithValue  }) => {
         try {
@@ -23,10 +34,34 @@ export const createNewLoan = createAsyncThunk('loan/createNewLoan',
     }
 )
 
+export const createNewLoanPayment = createAsyncThunk('loan/createNewLoanPayment',
+    async (data, { rejectWithValue  }) => {
+        try {
+            const form = new FormData()
+
+            for(const key in data) {
+                if (key != 'screenshot') {
+                    form.append(key, data[key])
+                } else {
+                    form.append(key, data[key][0])
+
+                }
+            }
+
+            const response = await apiHttp.post(`loan-payments`, form)
+            return response.data
+        } catch(err) {
+            return rejectWithValue(err.response.data)
+        }
+    }
+)
+
 export const loanSlice = createSlice({
     name: 'loan',
     initialState: {
-        list: []
+        list: [],
+        lendingList: [],
+        loanPayments: []
     },
 
     reducers: {},
@@ -38,6 +73,14 @@ export const loanSlice = createSlice({
 
         [fetchLoans.fulfilled]: (state, { payload }) => {
             state.list = payload
+        },  
+
+        [fetchLending.fulfilled]: (state, { payload }) => {
+            state.lendingList = payload
+        },  
+
+        [createNewLoanPayment.fulfilled]: (state, { payload }) => {
+            state.loanPayments = [...state.loanPayments, payload]
         },  
     }
 })

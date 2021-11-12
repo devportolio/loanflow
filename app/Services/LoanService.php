@@ -15,10 +15,16 @@ class LoanService
         return new LoanResource($loan_created);
     }
 
-    public function all()
+    public function allLoans()
     {
         $loans = auth()->user()->loans;
         return LoanResource::collection($loans);
+    }
+
+    public function allLending()
+    {
+        $lending = auth()->user()->lending;
+        return LoanResource::collection($lending);
     }
 
     public function getOne($loan)

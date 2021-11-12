@@ -22,6 +22,8 @@ import Dashboard from '../pages/dashboard/Dashboard';
 import FriendList from '../pages/friend/FriendList';
 import LendForm from '../pages/lend/LendForm';
 import LoanList from '../pages/loan/LoanList';
+import LendList from '../pages/lend/LendList';
+import LoanPaymentForm from '../pages/loan/LoanPaymentForm';
 
 
 export default function RouteItems() {   
@@ -44,6 +46,8 @@ export default function RouteItems() {
                     <ProtectedRoute path="/friends" component={FriendList} />
                     <ProtectedRoute path="/lend" component={LendForm} />
                     <ProtectedRoute path="/loans" component={LoanList} />
+                    <ProtectedRoute path="/loan-payments" component={LoanPaymentForm} />
+                    <ProtectedRoute path="/lending" component={LendList} />
                 </Switch>
             </div>
         </Router>

@@ -3642,8 +3642,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ RouteItems)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_authSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/authSlice */ "./resources/js/store/authSlice.js");
 /* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/Home */ "./resources/js/pages/Home.js");
@@ -3657,7 +3657,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_friend_FriendList__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../pages/friend/FriendList */ "./resources/js/pages/friend/FriendList.js");
 /* harmony import */ var _pages_lend_LendForm__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../pages/lend/LendForm */ "./resources/js/pages/lend/LendForm.js");
 /* harmony import */ var _pages_loan_LoanList__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../pages/loan/LoanList */ "./resources/js/pages/loan/LoanList.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _pages_lend_LendList__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../pages/lend/LendList */ "./resources/js/pages/lend/LendList.js");
+/* harmony import */ var _pages_loan_LoanPaymentForm__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../pages/loan/LoanPaymentForm */ "./resources/js/pages/loan/LoanPaymentForm.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
@@ -3683,45 +3687,51 @@ function RouteItems() {
   }),
       accessToken = _useSelector.accessToken;
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.BrowserRouter, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
-      children: [accessToken && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("button", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.BrowserRouter, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("div", {
+      children: [accessToken && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("button", {
         onClick: function onClick() {
           return dispatch((0,_store_authSlice__WEBPACK_IMPORTED_MODULE_2__.logout)());
         },
         children: "Logout"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Switch, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Switch, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
           path: "/",
           component: _pages_Home__WEBPACK_IMPORTED_MODULE_3__["default"],
           exact: true
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
           path: "/login",
           component: _pages_auth_Login__WEBPACK_IMPORTED_MODULE_5__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
           path: "/forgot-password",
           component: _pages_auth_ForgotPassword__WEBPACK_IMPORTED_MODULE_6__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
           path: "/register",
           component: _pages_auth_Register__WEBPACK_IMPORTED_MODULE_4__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
           path: "/reset-password",
           component: _pages_auth_ResetPassword__WEBPACK_IMPORTED_MODULE_7__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
           path: "/verify-email",
           component: _pages_auth_VerifyEmail__WEBPACK_IMPORTED_MODULE_8__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
           path: "/dashboard",
           component: _pages_dashboard_Dashboard__WEBPACK_IMPORTED_MODULE_10__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
           path: "/friends",
           component: _pages_friend_FriendList__WEBPACK_IMPORTED_MODULE_11__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
           path: "/lend",
           component: _pages_lend_LendForm__WEBPACK_IMPORTED_MODULE_12__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
           path: "/loans",
           component: _pages_loan_LoanList__WEBPACK_IMPORTED_MODULE_13__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          path: "/loan-payments",
+          component: _pages_loan_LoanPaymentForm__WEBPACK_IMPORTED_MODULE_15__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_ProtectedRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          path: "/lending",
+          component: _pages_lend_LendList__WEBPACK_IMPORTED_MODULE_14__["default"]
         })]
       })]
     })
@@ -4371,6 +4381,16 @@ function Dashboard() {
         return history.push('/friends');
       },
       children: "Lend"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+      onClick: function onClick() {
+        return history.push('/lending');
+      },
+      children: "Lend List"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+      onClick: function onClick() {
+        return history.push('/loans');
+      },
+      children: "Loan List"
     })]
   });
 }
@@ -4645,6 +4665,60 @@ function LendForm() {
 
 /***/ }),
 
+/***/ "./resources/js/pages/lend/LendList.js":
+/*!*********************************************!*\
+  !*** ./resources/js/pages/lend/LendList.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ LendList)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _store_loanSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../store/loanSlice */ "./resources/js/store/loanSlice.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+function LendList() {
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_4__.useHistory)();
+  var loan = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
+    return state.loan;
+  });
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    dispatch((0,_store_loanSlice__WEBPACK_IMPORTED_MODULE_2__.fetchLending)());
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+      children: "Lending list"
+    }), loan.lendingList.length && loan.lendingList.map(function (i) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+          onClick: function onClick() {
+            return history.push('/loan-payments', {
+              loanId: i.id
+            });
+          },
+          children: "Pay"
+        }, i.id), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("pre", {
+          children: JSON.stringify(i)
+        }, i.id)]
+      });
+    })]
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/pages/loan/LoanList.js":
 /*!*********************************************!*\
   !*** ./resources/js/pages/loan/LoanList.js ***!
@@ -4680,6 +4754,87 @@ function LoanList() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("pre", {
         children: JSON.stringify(i)
       }, i.id);
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/pages/loan/LoanPaymentForm.js":
+/*!****************************************************!*\
+  !*** ./resources/js/pages/loan/LoanPaymentForm.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ LoanPaymentForm)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_loanSlice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store/loanSlice */ "./resources/js/store/loanSlice.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+function LoanPaymentForm() {
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
+
+  var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_1__.useForm)(),
+      register = _useForm.register,
+      handleSubmit = _useForm.handleSubmit,
+      watch = _useForm.watch,
+      errors = _useForm.formState.errors;
+
+  var loanId = '4';
+
+  var onSubmit = function onSubmit(data) {
+    dispatch((0,_store_loanSlice__WEBPACK_IMPORTED_MODULE_3__.createNewLoanPayment)(data)); // console.log(data)
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
+      children: "Loan Payment"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
+      onSubmit: handleSubmit(onSubmit),
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+        type: "hidden",
+        defaultValue: loanId
+      }, register("loan_id"))), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+        children: ["Amount:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+          type: "number"
+        }, register("amount", {
+          required: true
+        })))]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+        children: ["Date paid", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+          type: "date"
+        }, register("date_paid", {
+          required: true
+        })))]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+        children: ["screenshot:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+          type: "file"
+        }, register("screenshot")))]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+        children: ["Notes:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", _objectSpread({
+          type: "text"
+        }, register("notes")))]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+        type: "submit",
+        children: "Submit"
+      })]
     })]
   });
 }
@@ -5320,7 +5475,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "fetchLoans": () => (/* binding */ fetchLoans),
+/* harmony export */   "fetchLending": () => (/* binding */ fetchLending),
 /* harmony export */   "createNewLoan": () => (/* binding */ createNewLoan),
+/* harmony export */   "createNewLoanPayment": () => (/* binding */ createNewLoanPayment),
 /* harmony export */   "loanSlice": () => (/* binding */ loanSlice),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -5387,8 +5544,8 @@ var fetchLoans = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThu
     return _ref2.apply(this, arguments);
   };
 }());
-var createNewLoan = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('loan/createNewLoan', /*#__PURE__*/function () {
-  var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(data, _ref3) {
+var fetchLending = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('loan/fetchLending', /*#__PURE__*/function () {
+  var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(_, _ref3) {
     var rejectWithValue, response;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
       while (1) {
@@ -5397,7 +5554,7 @@ var createNewLoan = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsync
             rejectWithValue = _ref3.rejectWithValue;
             _context2.prev = 1;
             _context2.next = 4;
-            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.post("loans", data);
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.get("lending");
 
           case 4:
             response = _context2.sent;
@@ -5420,18 +5577,102 @@ var createNewLoan = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsync
     return _ref4.apply(this, arguments);
   };
 }());
+var createNewLoan = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('loan/createNewLoan', /*#__PURE__*/function () {
+  var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(data, _ref5) {
+    var rejectWithValue, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            rejectWithValue = _ref5.rejectWithValue;
+            _context3.prev = 1;
+            _context3.next = 4;
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.post("loans", data);
+
+          case 4:
+            response = _context3.sent;
+            return _context3.abrupt("return", response.data);
+
+          case 8:
+            _context3.prev = 8;
+            _context3.t0 = _context3["catch"](1);
+            return _context3.abrupt("return", rejectWithValue(_context3.t0.response.data));
+
+          case 11:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3, null, [[1, 8]]);
+  }));
+
+  return function (_x5, _x6) {
+    return _ref6.apply(this, arguments);
+  };
+}());
+var createNewLoanPayment = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createAsyncThunk)('loan/createNewLoanPayment', /*#__PURE__*/function () {
+  var _ref8 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(data, _ref7) {
+    var rejectWithValue, form, key, response;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            rejectWithValue = _ref7.rejectWithValue;
+            _context4.prev = 1;
+            form = new FormData();
+
+            for (key in data) {
+              if (key != 'screenshot') {
+                form.append(key, data[key]);
+              } else {
+                form.append(key, data[key][0]);
+              }
+            }
+
+            _context4.next = 6;
+            return _utilities_http__WEBPACK_IMPORTED_MODULE_1__.apiHttp.post("loan-payments", form);
+
+          case 6:
+            response = _context4.sent;
+            return _context4.abrupt("return", response.data);
+
+          case 10:
+            _context4.prev = 10;
+            _context4.t0 = _context4["catch"](1);
+            return _context4.abrupt("return", rejectWithValue(_context4.t0.response.data));
+
+          case 13:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4, null, [[1, 10]]);
+  }));
+
+  return function (_x7, _x8) {
+    return _ref8.apply(this, arguments);
+  };
+}());
 var loanSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.createSlice)({
   name: 'loan',
   initialState: {
-    list: []
+    list: [],
+    lendingList: [],
+    loanPayments: []
   },
   reducers: {},
-  extraReducers: (_extraReducers = {}, _defineProperty(_extraReducers, createNewLoan.fulfilled, function (state, _ref5) {
-    var payload = _ref5.payload;
+  extraReducers: (_extraReducers = {}, _defineProperty(_extraReducers, createNewLoan.fulfilled, function (state, _ref9) {
+    var payload = _ref9.payload;
     state.list = [].concat(_toConsumableArray(state.list), [payload]);
-  }), _defineProperty(_extraReducers, fetchLoans.fulfilled, function (state, _ref6) {
-    var payload = _ref6.payload;
+  }), _defineProperty(_extraReducers, fetchLoans.fulfilled, function (state, _ref10) {
+    var payload = _ref10.payload;
     state.list = payload;
+  }), _defineProperty(_extraReducers, fetchLending.fulfilled, function (state, _ref11) {
+    var payload = _ref11.payload;
+    state.lendingList = payload;
+  }), _defineProperty(_extraReducers, createNewLoanPayment.fulfilled, function (state, _ref12) {
+    var payload = _ref12.payload;
+    state.loanPayments = [].concat(_toConsumableArray(state.loanPayments), [payload]);
   }), _extraReducers)
 });
 

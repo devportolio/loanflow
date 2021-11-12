@@ -16,6 +16,7 @@ class LoanPaymentResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'loan_id' => $this->loan_id,
             'amount' => $this->amount,
             'date_paid' => $this->date_paid,
             'screenshot' => $this->screenshot,

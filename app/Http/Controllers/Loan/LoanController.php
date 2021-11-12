@@ -16,7 +16,12 @@ class LoanController extends Controller
 
     public function index()
     { 
-        return $this->success($this->service->all());  
+        return $this->success($this->service->allLoans());  
+    }
+
+    public function lending()
+    { 
+        return $this->success($this->service->allLending());  
     }
 
     public function show(Loan $loan)

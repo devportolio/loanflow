@@ -13,4 +13,9 @@ trait UserRelations
     {
         return $this->hasMany(\App\Models\Loan::class);
     }
+
+    public function lending()
+    {
+        return $this->hasMany(\App\Models\Loan::class, 'lender_id', 'id');
+    }
 }

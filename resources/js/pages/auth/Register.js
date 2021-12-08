@@ -3,9 +3,22 @@ import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
+import { 
+    Container,
+    FormControl,
+    FormLabel,
+    Input,
+    FormHelperText,
+    Heading,
+    VStack,
+    HStack,
+    Text,
+    Button
+} from '@chakra-ui/react';
+
 import { fetchRegister } from '../../store/authSlice';
 import { authRedirect } from '../../utilities/http';
-
+import { REQUIRED } from '../../constants/validation';
 
 export default function Register() {
     const history = useHistory()
@@ -19,29 +32,41 @@ export default function Register() {
     }
   
     return (
-        <div>
+        <Container px="10">
+            <Heading py="5">Register</Heading>
+            <Text color="blue">{isLoading&&'Loading....'}</Text>
+            {errorMessage?<Text color="red">{errorMessage}</Text>:""}
             <form onSubmit={handleSubmit(onSubmit)}>
-                <p>Register</p>
-                <p>{isLoading&&'Loading....'}</p>
-                {errorMessage?<p>{errorMessage}</p>:""}                
-                <p>
-                    <input placeholder="Name" type="text" {...register("name", { required: true })} />
-                    {errors.name && <div>This field is required</div>}
-                </p>
-                <p>
-                    <input placeholder="Email" type="email" {...register("email", { required: true })} />
-                    {errors.email && <div>This field is required</div>}
-                </p>
-                <p>
-                    <input placeholder="Password" type="password" {...register("password", { required: true })} />
-                    {errors.password && <div>This field is required</div>}
-                </p>
-                <input type="submit" />
+                <VStack spacing="5">
+                    <FormControl>
+                        <FormLabel>Full Name</FormLabel>
+                        <Input placeholder="Enter Full Name" type="name" {...register("name", { required: true })} />
+                        {errors.name && <FormHelperText color="red">{REQUIRED}</FormHelperText>}
+                    </FormControl>
+
+                    <FormControl>
+                        <FormLabel>Email address</FormLabel>
+                        <Input placeholder="Enter Email" type="email" {...register("email", { required: true })} />
+                        {errors.email && <FormHelperText color="red">{REQUIRED}</FormHelperText>}
+                    </FormControl>
+
+                    <FormControl>
+                        <FormLabel>Password</FormLabel>
+                        <Input placeholder="Enter Password" type="password" {...register("password", { required: true })} />
+                        {errors.password && <FormHelperText color="red">{REQUIRED}</FormHelperText>}
+                    </FormControl>
+
+                    <Button type="submit" w="100%" colorScheme="blue">Register</Button>
+                </VStack>
             </form>
-            <p>
-                Already has an account? <Link to="/login">Login</Link>
-            </p>            
-        </div>
+
+            <HStack justifyContent="center" mt="5">
+                <Text>Already has an account?</Text>
+                <Text color="blue.400" display="inline" ml="3">
+                        <Link to="/login">Login</Link>
+                </Text>
+            </HStack>
+        </Container>
     );
 }
 

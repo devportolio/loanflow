@@ -2,10 +2,24 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
+import { 
+    Container,
+    FormControl,
+    FormLabel,
+    Input,
+    FormHelperText,
+    Heading,
+    VStack,
+    HStack,
+    Text,
+    Button,
+} from '@chakra-ui/react';
 
 import { authRedirect } from '../../utilities/http';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchLogin } from '../../store/authSlice';
+import { REQUIRED } from '../../constants/validation';
+
 
 export default function Login() {
     const history = useHistory()
@@ -19,28 +33,40 @@ export default function Login() {
     }
 
     return (
-        <div>
+        <Container px="10">
+            <Heading py="5">Login</Heading>
+            <Text color="blue">{isLoading&&'Loading....'}</Text>
+            {errorMessage?<Text color="red">{errorMessage}</Text>:""}
             <form onSubmit={handleSubmit(onSubmit)}>
-                <p>Login</p>
-                <p>{isLoading&&'Loading....'}</p>
-                {errorMessage?<p>{errorMessage}</p>:""}
-                <p>
-                    <input placeholder="Email" type="email" {...register("email", { required: true })} />
-                    {errors.email && <div>This field is required</div>}
-                </p>
-                <p>
-                    <input placeholder="Password" type="password" {...register("password", { required: true })} />
-                    {errors.password && <div>This field is required</div>}
-                </p>
-                <input type="submit" value="Login"/>
+                <VStack spacing="5">
+                    <FormControl>
+                        <FormLabel>Email address</FormLabel>
+                        <Input placeholder="Enter Email" type="email" {...register("email", { required: true })} />
+                        {errors.email && <FormHelperText color="red">{REQUIRED}</FormHelperText>}
+                    </FormControl>
+
+                    <FormControl>
+                        <FormLabel>Password</FormLabel>
+                        <Input placeholder="Enter Password" type="password" {...register("password", { required: true })} />
+                        {errors.password && <FormHelperText color="red">{REQUIRED}</FormHelperText>}
+                    </FormControl>
+
+                    <Button type="submit" w="100%" colorScheme="blue">Login</Button>
+                </VStack>
             </form>
-            <p>
-                <Link to="/forgot-password">Forgot Password?</Link>
-            </p>
-            <p>
-                No account yet? <Link to="/register">Register</Link>
-            </p>
-        </div>
+
+            <HStack justifyContent="space-between" mt="5">
+                <Text color="blue.400">
+                    <Link to="/forgot-password">Forgot Password?</Link>
+                </Text>
+                <HStack>
+                    <Text>No account yet? </Text>
+                    <Text color="blue.400" ml="3">
+                        <Link to="/register">Register</Link>
+                    </Text>
+                </HStack>
+            </HStack>
+        </Container>
     );
 }
 
